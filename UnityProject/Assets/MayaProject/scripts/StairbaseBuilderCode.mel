@@ -1,4 +1,8 @@
 proc BuildStaircase(int $steps,int $length, int $width, int $height, int $offset, int $stepHeight, int $stepRotation)
 {
-    
+    for($i=0; $i<$steps; $i++)
+    {
+        polyCube -w $width -h $height -d $length;
+
+    }
 }
