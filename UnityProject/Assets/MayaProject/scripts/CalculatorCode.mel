@@ -1,0 +1,22 @@
+//function for each math method 
+//return values
+//1 argument float$input[]
+//calculate all arguments
+//return the result as a float data type
+//seperate function for every operator
+//sum, difference, multiplication, division, power, mean, median
+
+global proc math_sum(float $input[])
+{
+    float $result = 0;
+    for ($i=0; $i<size($input); $i++)
+    {
+        $result += $input[$i];
+    }
+    return $result;
+}
+
+global proc runMethod(float $arry[])
+{
+    print("Sum: " + math_sum($arry));
+}
