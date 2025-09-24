@@ -3,6 +3,12 @@ proc BuildStaircase(int $steps,int $length, int $width, int $height, int $offset
     for($i=0; $i<$steps; $i++)
     {
         polyCube -w $width -h $height -d $length;
-
+        move -r $offset ($i*$height) 0;
+        xform -ws -rotatePivot 0 0 0;
+        rotate -r 0 ($i * $stepRotation) 0;
     }
+    polyCylinder -r ($offset- ($width/2)) -h ($steps*$height);
+    move -r 0 ((($steps*$height)/2)-0.5) 0;
 }
+
+BuildStaircase(10, 2,4,1,3,1,30);

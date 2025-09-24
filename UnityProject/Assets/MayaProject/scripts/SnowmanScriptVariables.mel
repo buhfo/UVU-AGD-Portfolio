@@ -1,0 +1,16 @@
+int $subDiv = 20;
+int $UVNum = 2;
+int $axisXZ = 0;
+int $axisY = 1;
+int $hist = 1;
+int $worldXZ = 0;
+
+
+polyCylinder -r 1 -h 7 -sx $subDiv -sy $subDiv -ax $axisXZ $axisY $axisXZ -cuv $UVNum -ch $hist;
+move -relative -objectSpace -worldSpaceDistance $worldXZ 3.5 $worldXZ;
+
+polyCylinder -r 1.1 -h 2 -sx $subDiv -sy $subDiv -ax $axisXZ $axisY $axisXZ -cuv $UVNum -ch $hist;
+move -relative -objectSpace -worldSpaceDistance $worldXZ 8 $worldXZ;
+
+polyCone -r 1 -sx $subDiv -sy $subDiv -ax $axisXZ $axisY $axisXZ -cuv $UVNum -ch $hist;
+move -relative -objectSpace -worldSpaceDistance $worldXZ 10 $worldXZ;
