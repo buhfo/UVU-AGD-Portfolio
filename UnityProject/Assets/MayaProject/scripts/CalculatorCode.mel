@@ -1,12 +1,6 @@
-//function for each math method 
-//return values
-//1 argument float$input[]
-//calculate all arguments
-//return the result as a float data type
-//seperate function for every operator
-//sum, difference, multiplication, division, power, mean, median
-
-global proc math_sum(float $input[])
+// All Math Functions start here
+//Addition
+global proc float math_sum(float $input[])
 {
     float $result = 0;
     for ($i=0; $i<size($input); $i++)
@@ -16,7 +10,188 @@ global proc math_sum(float $input[])
     return $result;
 }
 
-global proc runMethod(float $arry[])
+// Subtraction
+global proc float math_diff(float $input[])
 {
-    print("Sum: " + math_sum($arry));
+    float $result = $input[0];
+    for ($i=1; $i<size($input); $i++)
+    {
+        $result -= $input[$i];
+    }
+    return $result;
+}
+
+// Multiplication
+global proc float math_mult(float $input[])
+{
+    float $result = 1;
+    for ($i=0; $i<size($input); $i++)
+    {
+        $result *= $input[$i];
+    }
+    return $result;
+}
+
+// Division
+global proc float math_div(float $input[])
+{
+    float $result = 1;
+    for ($i=0; $i<size($input); $i++)
+    {
+        $result /= $input[$i];
+    }
+    return $result;
+}
+
+// Power
+global proc float math_exp(float $input[])
+{
+    if(size($input)<2)
+    {
+        print("Math_exp needs at least 2 arguments");
+        return 0;
+    }
+    float $result = $input[0];
+    for ($i = 1; $i < size($input); $i++)
+    {
+        $result = `pow $result $input[$i]`;
+    }
+    return $result;
+}
+
+// Mean
+global proc float math_mean(float $input[])
+{
+    float $result = 0;
+    for ($i=0; $i<size($input); $i++)
+    {
+        $result += $input[$i];
+    }
+    $result /= size($input);
+    return $result;
+}
+
+//Median
+global proc float math_med(float $input[])
+{
+    int $arrySize = size($input);
+    float $arr[] = sort($input);
+    float $result = 0;
+    int $mid = 0;
+
+    //Median
+    //for odd array sizes
+    if ((`fmod $arrySize 2`) == 1)
+    {
+        $result = $arr[(int)floor($arrySize/2)];
+    }
+    else
+    {
+        $mid = $arrySize /2;
+        $result = ($arr[$mid-1]+ $arr[$mid]) / 2.0;
+    }
+    
+    return $result;
+}
+
+// Where all of the above methods are run
+global proc Calculator(string $funct, float $arry[])
+{
+    if ($funct == "Sum") {
+        for($i=0; $i<size($arry); $i++)
+        {
+            print($arry[$i]);
+            if($i!= (size($arry)-1))
+            {
+                print("+");
+            }
+        }
+        print(" = " + (string)(math_sum($arry)) + "\n");
+    } 
+    else if($funct == "Difference") 
+    {
+         for($i=0; $i<size($arry); $i++)
+        {
+            print($arry[$i]);
+            if($i!= (size($arry)-1))
+            {
+                print("-");
+            }
+        }
+        print(" = " + (string)(math_diff($arry)) + "\n");
+    } 
+    else if($funct == "Multiplied") 
+    {
+         for($i=0; $i<size($arry); $i++)
+        {
+            print($arry[$i]);
+            if($i!= (size($arry)-1))
+            {
+                print("*");
+            }
+        }
+        print(" = " + (string)(math_mult($arry)) + "\n");
+    } 
+    else if($funct == "Divided") 
+    {
+         for($i=0; $i<size($arry); $i++)
+        {
+            print($arry[$i]);
+            if($i!= (size($arry)-1))
+            {
+                print("/");
+            }
+        }
+        print(" = " + (string)(math_div($arry)) + "\n");
+    } 
+    else if($funct == "Power") 
+    {
+        for($i=0; $i<size($arry); $i++)
+        {
+            print($arry[$i]);
+            if($i!= (size($arry)-1))
+            {
+                print("^");
+            }
+        }
+        print(" = " + (string)(math_exp($arry)) + "\n");
+    } 
+    else if($funct == "Mean") 
+    {
+        print("The mean of ");
+        for($i=0; $i<size($arry); $i++)
+        {
+            print($arry[$i]);
+            if($i!= (size($arry)-1))
+            {
+                print(", ");
+            }
+            if($i == (size($arry)-2))
+            {
+                print("and ");
+            }
+        }
+        print(" is " + (string)(math_mean($arry)) + "\n");
+    } 
+    else if($funct == "Median") 
+    {
+        print("The median of ");
+        for($i=0; $i<size($arry); $i++)
+        {
+            print($arry[$i]);
+            if($i!= (size($arry)-1))
+            {
+                print(", ");
+            }
+            if($i == (size($arry)-2))
+            {
+                print("and ");
+            }
+        }
+        print(" is " + (string)(math_med($arry)) + "\n");
+    } 
+    else 
+    {
+        warning("Function name not recognized: " + $funct);
+    }
 }
