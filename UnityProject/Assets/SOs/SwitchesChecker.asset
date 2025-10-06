@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6df0c6962af14c60b2d5c35ebd9c64c, type: 3}
-  m_Name: MyScore
+  m_Name: SwitchesChecker
   m_EditorClassIdentifier: Assembly-CSharp::IntData
-  value: 10
+  value: 0
   minValue: 0
-  maxValue: 9
-  matchValue: 0
+  maxValue: 4
+  matchValue: 4
   valueOutOfRange:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 62fe16307ecda614cbaa44b86e3e3d2c, type: 2}
+      - m_Target: {fileID: 11400000, guid: 2907142d3c2f3614a8ba64ec41d09324, type: 2}
         m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
         m_MethodName: RaiseAction
         m_Mode: 1
@@ -48,4 +48,16 @@ MonoBehaviour:
       m_Calls: []
   valueComparison:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 906e88bcde1997449949f2f5a61e7251, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
