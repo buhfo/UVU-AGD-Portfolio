@@ -1,0 +1,64 @@
+// ===============================
+// Function to copy/place selected
+// ===============================
+global proc copyAndPlace(int $dupes, float $minX, float $maxX, float $minY, float $maxY, float $minZ, float $maxZ) {
+    string $selection[] = `ls -sl`;
+
+    if (size($selection) == 0) {
+        warning "Choose an object to clone.";
+        return;
+    }
+
+    for ($obj in $selection) {
+        for ($i = 0; $i < $dupes; $i++) {
+            string $dup[] = `duplicate $obj`;
+            
+            float $randX = rand($minX, $maxX);
+            float $randY = rand($minY, $maxY);
+            float $randZ = rand($minZ, $maxZ);
+            
+            move $randX $randY $randZ $dup[0];
+        }
+    }
+}
+
+// ===============================
+// button info
+// ===============================
+global proc randoPlaceo() {
+    int $dupes = `intFieldGrp -query -value1 numDupField`;
+    float $minX = `floatFieldGrp -query -value1 xRangeField`;
+    float $maxX = `floatFieldGrp -query -value2 xRangeField`;
+    float $minY = `floatFieldGrp -query -value1 yRangeField`;
+    float $maxY = `floatFieldGrp -query -value2 yRangeField`;
+    float $minZ = `floatFieldGrp -query -value1 zRangeField`;
+    float $maxZ = `floatFieldGrp -query -value2 zRangeField`;
+
+    copyAndPlace($dupes, $minX, $maxX, $minY, $maxY, $minZ, $maxZ);
+}
+
+// ===============================
+// Button UI
+// ===============================
+global proc showTool() {
+    if (`window -exists randomDuplicatorWin`) {
+        deleteUI randomDuplicatorWin;
+    }
+
+    window -title "Rando Place-o" -widthHeight 300 300 randomDuplicatorWin;
+    columnLayout -adjustableColumn true;
+
+    intFieldGrp -label "Amount:" -numberOfFields 1 numDupField;
+    floatFieldGrp -label "X Range:" -numberOfFields 2 xRangeField;
+    floatFieldGrp -label "Y Range:" -numberOfFields 2 yRangeField;
+    floatFieldGrp -label "Z Range:" -numberOfFields 2 zRangeField;
+
+    button -label "Gopher it" -command "randoPlaceo";
+
+    showWindow randomDuplicatorWin;
+}
+
+// ===============================
+// Launch the UI
+// ===============================
+showTool();
