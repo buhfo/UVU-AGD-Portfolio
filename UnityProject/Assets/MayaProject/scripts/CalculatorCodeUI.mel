@@ -1,0 +1,191 @@
+// =====================================================
+// Maya Math Calculator (MEL) - Button Version
+// =====================================================
+
+// All Math Functions start here
+//Addition
+global proc float math_sum(float $input[])
+{
+    float $result = 0;
+    for ($i=0; $i<size($input); $i++)
+    {
+        $result += $input[$i];
+    }
+    return $result;
+}
+
+// Subtraction
+global proc float math_diff(float $input[])
+{
+    float $result = $input[0];
+    for ($i=1; $i<size($input); $i++)
+    {
+        $result -= $input[$i];
+    }
+    return $result;
+}
+
+// Multiplication
+global proc float math_mult(float $input[])
+{
+    float $result = 1;
+    for ($i=0; $i<size($input); $i++)
+    {
+        $result *= $input[$i];
+    }
+    return $result;
+}
+
+// Division
+global proc float math_div(float $input[])
+{
+    float $result = 1;
+    for ($i=0; $i<size($input); $i++)
+    {
+        $result /= $input[$i];
+    }
+    return $result;
+}
+
+// Power
+global proc float math_exp(float $input[])
+{
+    if(size($input)<2)
+    {
+        print("Math_exp needs at least 2 arguments");
+        return 0;
+    }
+    float $result = $input[0];
+    for ($i = 1; $i < size($input); $i++)
+    {
+        $result = `pow $result $input[$i]`;
+    }
+    return $result;
+}
+
+// Mean
+global proc float math_mean(float $input[])
+{
+    float $result = 0;
+    for ($i=0; $i<size($input); $i++)
+    {
+        $result += $input[$i];
+    }
+    $result /= size($input);
+    return $result;
+}
+
+//Median
+global proc float math_med(float $input[])
+{
+    int $arrySize = size($input);
+    float $arr[] = sort($input);
+    float $result = 0;
+    int $mid = 0;
+
+    //Median
+    //for odd array sizes
+    if ((`fmod $arrySize 2`) == 1)
+    {
+        $result = $arr[(int)floor($arrySize/2)];
+    }
+    else
+    {
+        $mid = $arrySize /2;
+        $result = ($arr[$mid-1]+ $arr[$mid]) / 2.0;
+    }
+    
+    return $result;
+}
+
+
+// Changes string separated with commas into a float array
+global proc float[] parseInput(string $str)
+{
+    string $parts[];
+    tokenize($str, ",", $parts);
+
+    float $nums[];
+    for ($i=0; $i<size($parts); $i++)
+    {
+        string $trimmed = `strip($parts[$i])`;
+        $nums[$i] = (float)$trimmed;
+    }
+    return $nums;
+}
+
+// removes extra spaces
+global proc string strip(string $s)
+{
+    $s = substituteAllString($s, " ", "");
+    return $s;
+}
+
+// does the operations
+global proc doCalc(string $op)
+{
+    string $input = `textFieldGrp -q -text calcInput`;
+    if ($input == "")
+    {
+        warning("Enter numbers separated by commas");
+        return;
+    }
+
+    float $nums[] = `parseInput $input`;
+    float $result = 0;
+
+    if ($op == "Sum")          $result = `math_sum $nums`;
+    else if ($op == "Difference") $result = `math_diff $nums`;
+    else if ($op == "Multiply")   $result = `math_mult $nums`;
+    else if ($op == "Divide")     $result = `math_div $nums`;
+    else if ($op == "Power")      $result = `math_exp $nums`;
+    else if ($op == "Mean")       $result = `math_mean $nums`;
+    else if ($op == "Median")     $result = `math_med $nums`;
+
+    textField -e -text ("Result: " + (string)$result) calcOutput;
+}
+
+// Clears everything
+global proc calcClear()
+{
+    textFieldGrp -e -text "" calcInput;
+    textField -e -text "" calcOutput;
+}
+
+// Makes the UI
+global proc createCalculatorUI()
+{
+    if (`window -exists calculatorWindow`)
+        deleteUI calculatorWindow;
+
+    window -title "Calc (slang for calculator)" -widthHeight 300 300 calculatorWindow;
+    columnLayout -adjustableColumn true;
+
+    // Input
+    textFieldGrp -label "Input(Separate w/ ,)" -text "" calcInput;
+    separator -h 10;
+
+    // Buttons
+    rowColumnLayout -numberOfColumns 4 -columnSpacing 20 20;
+        button -label "+"         -c "doCalc(\"Sum\")";
+        button -label "-"        -c "doCalc(\"Difference\")";
+        button -label "*"    -c "doCalc(\"Multiply\")";
+        button -label "/"      -c "doCalc(\"Divide\")";
+        button -label "exp"       -c "doCalc(\"Power\")";
+        button -label "Mean"        -c "doCalc(\"Mean\")";
+        button -label "Median"      -c "doCalc(\"Median\")";
+        button -label "Clear"       -c "calcClear()";
+    setParent ..;
+
+    separator -h 10;
+
+    // Result
+    textField -editable false -text "" calcOutput;
+
+    showWindow calculatorWindow;
+}
+
+
+createCalculatorUI();
+
+//Just send this into maya to run
