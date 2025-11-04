@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: 3PropsCombo.ma
-//Last modified: Mon, Nov 03, 2025 07:03:54 PM
+//Last modified: Mon, Nov 03, 2025 07:09:10 PM
 //Codeset: 1252
 requires "fbxmaya" "2020.3.6";
 file -rdi 1 -ns "RockingChair" -rfn "RockingChairRN" -op "v=0;" -typ "mayaAscii"
@@ -25,17 +25,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202505300603-a12e894a3d";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "60945012-452E-07B8-4D2C-1196C7FD8342";
+fileInfo "UUID" "AF0E299F-4225-1E2A-61F5-E59792E8979C";
 createNode transform -s -n "persp";
 	rename -uid "4B02FE1E-4DB7-62F7-66D3-94B7377E148B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.79514711579154773 5.4698211005571871 4.4616841087405685 ;
+	setAttr ".t" -type "double3" 0.68728119463168369 4.8852930613079186 3.4687614306393453 ;
 	setAttr ".r" -type "double3" -30.338352729611522 6.2000000000009656 -3.9990841390363679e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "407E2379-4568-6B1B-7B8C-368F22A2A953";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 5.9853104265681312;
+	setAttr ".coi" 4.828070809935074;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -106,8 +106,8 @@ createNode mesh -n "GroundShape" -p "Ground";
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "32102FB3-4665-E25F-FF7E-8A8955722006";
-	setAttr -s 3 ".lnk";
-	setAttr -s 3 ".slnk";
+	setAttr -s 6 ".lnk";
+	setAttr -s 6 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
 	rename -uid "AF81A75C-4FBB-7789-D17F-659210485CE7";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
@@ -142,16 +142,19 @@ createNode polyPlane -n "polyPlane1";
 	setAttr ".cuv" 2;
 createNode reference -n "RockingChairRN";
 	rename -uid "47926C58-42E3-762B-058C-5C8BA948CC4D";
+	setAttr ".phl[1]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"RockingChairRN"
 		"RockingChairRN" 0
-		"RockingChairRN" 1873
+		"RockingChairRN" 1887
 		2 "|RockingChair:RockingChair" "visibility" " 1"
 		2 "|RockingChair:RockingChair" "translate" " -type \"double3\" 0 0 0"
 		2 "|RockingChair:RockingChair" "rotatePivot" " -type \"double3\" 0.10025036334991455 0 -0.18999773263931274"
 		
 		2 "|RockingChair:RockingChair" "scalePivot" " -type \"double3\" 0.10025036334991455 0 -0.18999773263931274"
 		
+		2 "|RockingChair:RockingChair|RockingChair:RockingChairShape" "instObjGroups.objectGroups" 
+		" -s 4"
 		2 "|RockingChair:RockingChair|RockingChair:RockingChairShape" "pnts" " -s 1868"
 		
 		2 "|RockingChair:RockingChair|RockingChair:RockingChairShape" "pnts[0]" " -type \"float3\" 0 2.27746110000000002 0"
@@ -3889,15 +3892,42 @@ createNode reference -n "RockingChairRN";
 		2 "|RockingChair:RockingChair|RockingChair:RockingChairShape" "pnts[1866]" 
 		" -type \"float3\" 0 2.27746110000000002 0"
 		2 "|RockingChair:RockingChair|RockingChair:RockingChairShape" "pnts[1867]" 
-		" -type \"float3\" 0 2.27746110000000002 0";
+		" -type \"float3\" 0 2.27746110000000002 0"
+		3 "RockingChair:groupId2.groupId" "|RockingChair:RockingChair|RockingChair:RockingChairShape.instObjGroups.objectGroups[1].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|RockingChair:RockingChair|RockingChair:RockingChairShape.instObjGroups.objectGroups[1].objectGrpColor" 
+		""
+		3 "|RockingChair:RockingChair|RockingChair:RockingChairShape.instObjGroups.objectGroups[1]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "RockingChair:groupId3.groupId" "|RockingChair:RockingChair|RockingChair:RockingChairShape.instObjGroups.objectGroups[2].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|RockingChair:RockingChair|RockingChair:RockingChairShape.instObjGroups.objectGroups[2].objectGrpColor" 
+		""
+		3 "|RockingChair:RockingChair|RockingChair:RockingChairShape.instObjGroups.objectGroups[2]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "RockingChair:groupId4.groupId" "|RockingChair:RockingChair|RockingChair:RockingChairShape.instObjGroups.objectGroups[3].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|RockingChair:RockingChair|RockingChair:RockingChairShape.instObjGroups.objectGroups[3].objectGrpColor" 
+		""
+		3 "|RockingChair:RockingChair|RockingChair:RockingChairShape.instObjGroups.objectGroups[3]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "RockingChair:groupId4.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "RockingChair:groupId3.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "RockingChair:groupId2.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		5 3 "RockingChairRN" "|RockingChair:RockingChair|RockingChair:RockingChairShape.instObjGroups" 
+		"RockingChairRN.placeHolderList[1]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "portableLanternRN";
 	rename -uid "894A2B5C-43B0-D9A2-1228-119397D011F1";
+	setAttr ".phl[1]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"portableLanternRN"
 		"portableLanternRN" 0
-		"portableLanternRN" 3179
+		"portableLanternRN" 3184
 		2 "|portableLantern:imagePlane1" "visibility" " 0"
 		2 "|portableLantern:Lantern" "visibility" " 1"
 		2 "|portableLantern:Lantern" "translate" " -type \"double3\" -0.56498093171219166 2.36165046691894531 -0.74700518883764744"
@@ -10251,7 +10281,18 @@ createNode reference -n "portableLanternRN";
 		
 		2 "|portableLantern:Lantern|portableLantern:LanternShape" "pnts[3168]" " -type \"float3\" 0.11051285 -2.10463909999999998 -0.66600888999999996"
 		
-		2 "|portableLantern:Lantern|portableLantern:LanternShape" "pnts[3169]" " -type \"float3\" -0.096698821000000004 -2.10463909999999998 -0.66489995000000002";
+		2 "|portableLantern:Lantern|portableLantern:LanternShape" "pnts[3169]" " -type \"float3\" -0.096698821000000004 -2.10463909999999998 -0.66489995000000002"
+		
+		3 "portableLantern:groupId1.groupId" "|portableLantern:Lantern|portableLantern:LanternShape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|portableLantern:Lantern|portableLantern:LanternShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|portableLantern:Lantern|portableLantern:LanternShape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "portableLantern:groupId1.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		5 3 "portableLanternRN" "|portableLantern:Lantern|portableLantern:LanternShape.instObjGroups" 
+		"portableLanternRN.placeHolderList[1]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "BetterPibballRN";
@@ -35717,6 +35758,98 @@ createNode bump2d -n "bump2d1";
 	setAttr ".bi" 1;
 	setAttr ".vc1" -type "float3" 0 3.9999999e-05 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode file -n "file6";
+	rename -uid "4913C033-4AF2-38DF-0692-319C16BABF47";
+	setAttr ".ftn" -type "string" "C:/Users/quinn/Documents/UVU/UVU-AGD-Portfolio/UnityProject/Assets/MayaProject//sourceimages/Chair/RockingChair_v01_standardSurface1_BaseColor.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "place2dTexture6";
+	rename -uid "AB4FBD5C-4ABC-7423-9D0F-E4AAF5EC6387";
+createNode aiStandardSurface -n "aiStandardSurface2";
+	rename -uid "D089E91E-423F-80B5-CC6F-7BB465978ED5";
+createNode shadingEngine -n "aiStandardSurface2SG";
+	rename -uid "13BAEE4B-4D5F-D3C3-B98C-1798F4F82951";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo1";
+	rename -uid "C6051B45-4FEA-25DA-B969-F29218FCCF52";
+createNode aiStandardSurface -n "Chair";
+	rename -uid "24FB5246-4787-232B-A053-8BB35816FFE3";
+createNode shadingEngine -n "aiStandardSurface3SG";
+	rename -uid "1D625437-44A8-CE06-26DE-4B9922991432";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo2";
+	rename -uid "64A2771C-486F-BF4D-8C2C-0FA99FB51DE2";
+createNode file -n "file7";
+	rename -uid "0C41663C-4260-4B10-C943-E5AB74F97DE3";
+	setAttr ".ftn" -type "string" "C:/Users/quinn/Documents/UVU/UVU-AGD-Portfolio/UnityProject/Assets/MayaProject//sourceimages/Chair/RockingChair_v01_standardSurface1_BaseColor.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "place2dTexture7";
+	rename -uid "F91ABB87-4222-6316-1672-E695FFA69C80";
+createNode file -n "file8";
+	rename -uid "7F944443-4598-CCCC-6129-0F91A8810226";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/quinn/Documents/UVU/UVU-AGD-Portfolio/UnityProject/Assets/MayaProject//sourceimages/Chair/RockingChair_v01_standardSurface1_Metallic.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "place2dTexture8";
+	rename -uid "B816E0CC-4F5E-A5A2-EF1C-12BB285E7387";
+createNode file -n "file9";
+	rename -uid "3693C693-48D1-FFB8-21EE-7BA4912E4D90";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/quinn/Documents/UVU/UVU-AGD-Portfolio/UnityProject/Assets/MayaProject//sourceimages/Chair/RockingChair_v01_standardSurface1_Roughness.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "place2dTexture9";
+	rename -uid "4BC320A2-4A2B-1EA6-B74A-F9B73C9AB7E0";
+createNode file -n "file10";
+	rename -uid "CA1160D6-43F5-6199-40AB-179A81C4525C";
+	setAttr ".ftn" -type "string" "C:/Users/quinn/Documents/UVU/UVU-AGD-Portfolio/UnityProject/Assets/MayaProject//sourceimages/Chair/RockingChair_v01_standardSurface1_Normal.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "place2dTexture10";
+	rename -uid "5ECE52CB-430F-640C-B778-1B852C721467";
+createNode bump2d -n "bump2d2";
+	rename -uid "1EBF5C8D-49E3-000B-D2D0-11BF3EE6B1A6";
+	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 3.9999999e-05 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode aiStandardSurface -n "Lantern";
+	rename -uid "2F1AB529-47BB-FB55-3CA1-689F023F30DD";
+createNode shadingEngine -n "aiStandardSurface4SG";
+	rename -uid "51765406-4CF9-40EF-1313-B5B559C07503";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo3";
+	rename -uid "F6A31E47-4BFC-AB75-C72E-049BFCDFB5A2";
+createNode file -n "file11";
+	rename -uid "665E098C-468B-CB0D-AF9D-8DBBF3CD5E5C";
+	setAttr ".ftn" -type "string" "C:/Users/quinn/Documents/UVU/UVU-AGD-Portfolio/UnityProject/Assets/MayaProject//sourceimages/lantern/Lantern_v01_standardSurface1_BaseColor.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "place2dTexture11";
+	rename -uid "676616ED-417A-43FA-3C3C-75A9BC69FB45";
+createNode file -n "file12";
+	rename -uid "F4C97A7D-40F5-4043-FBBA-CEB3E7AA1679";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/quinn/Documents/UVU/UVU-AGD-Portfolio/UnityProject/Assets/MayaProject//sourceimages/lantern/Lantern_v01_standardSurface1_Metallic.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "place2dTexture12";
+	rename -uid "AFA8F398-4C7B-8A8A-AEC9-E6A1EAE31B41";
+createNode file -n "file13";
+	rename -uid "021CCEE6-4DCD-30E1-AE68-0EB48F9AC658";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/quinn/Documents/UVU/UVU-AGD-Portfolio/UnityProject/Assets/MayaProject//sourceimages/lantern/Lantern_v01_standardSurface1_Roughness.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "place2dTexture13";
+	rename -uid "BA814C70-4C2D-149E-25E7-089675964A84";
+createNode file -n "file14";
+	rename -uid "DA82A02A-47EE-FD39-B6E4-9EBEDEB7A491";
+	setAttr ".ftn" -type "string" "C:/Users/quinn/Documents/UVU/UVU-AGD-Portfolio/UnityProject/Assets/MayaProject//sourceimages/lantern/Lantern_v01_standardSurface1_Normal.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "place2dTexture14";
+	rename -uid "48B1562A-4685-591E-73A5-11A651159D80";
+createNode bump2d -n "bump2d3";
+	rename -uid "5866EACB-44BF-AF6E-F658-8B824393C65F";
+	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 3.9999999e-05 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -35728,27 +35861,25 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 3 ".st";
+	setAttr -s 6 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 6 ".s";
+	setAttr -s 9 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 6 ".u";
+	setAttr -s 17 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 3 ".r";
 select -ne :defaultTextureList1;
-	setAttr -s 5 ".tx";
+	setAttr -s 14 ".tx";
 select -ne :standardSurface1;
-	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 5 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 4 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
+select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
@@ -35768,6 +35899,8 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :defaultHideFaceDataSet;
+connectAttr "RockingChairRN.phl[1]" "aiStandardSurface3SG.dsm" -na;
+connectAttr "portableLanternRN.phl[1]" "aiStandardSurface4SG.dsm" -na;
 connectAttr "file1.oc" "BetterPibballRN.phl[1]";
 connectAttr "aiStandardSurface1.out" "BetterPibballRN.phl[2]";
 connectAttr "aiStandardSurface1.msg" "BetterPibballRN.phl[3]";
@@ -35775,8 +35908,14 @@ connectAttr "aiStandardSurface1.msg" "BetterPibballRN.phl[4]";
 connectAttr "polyPlane1.out" "GroundShape.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiStandardSurface2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiStandardSurface3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiStandardSurface4SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiStandardSurface2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiStandardSurface3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiStandardSurface4SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
@@ -35900,18 +36039,266 @@ connectAttr "place2dTexture5.vc1" "file5.vc1";
 connectAttr "place2dTexture5.o" "file5.uv";
 connectAttr "place2dTexture5.ofs" "file5.fs";
 connectAttr "file5.oa" "bump2d1.bv";
+connectAttr ":defaultColorMgtGlobals.cme" "file6.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file6.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file6.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file6.ws";
+connectAttr "place2dTexture6.c" "file6.c";
+connectAttr "place2dTexture6.tf" "file6.tf";
+connectAttr "place2dTexture6.rf" "file6.rf";
+connectAttr "place2dTexture6.mu" "file6.mu";
+connectAttr "place2dTexture6.mv" "file6.mv";
+connectAttr "place2dTexture6.s" "file6.s";
+connectAttr "place2dTexture6.wu" "file6.wu";
+connectAttr "place2dTexture6.wv" "file6.wv";
+connectAttr "place2dTexture6.re" "file6.re";
+connectAttr "place2dTexture6.of" "file6.of";
+connectAttr "place2dTexture6.r" "file6.ro";
+connectAttr "place2dTexture6.n" "file6.n";
+connectAttr "place2dTexture6.vt1" "file6.vt1";
+connectAttr "place2dTexture6.vt2" "file6.vt2";
+connectAttr "place2dTexture6.vt3" "file6.vt3";
+connectAttr "place2dTexture6.vc1" "file6.vc1";
+connectAttr "place2dTexture6.o" "file6.uv";
+connectAttr "place2dTexture6.ofs" "file6.fs";
+connectAttr "aiStandardSurface2.out" "aiStandardSurface2SG.ss";
+connectAttr "GroundShape.iog" "aiStandardSurface2SG.dsm" -na;
+connectAttr "aiStandardSurface2SG.msg" "materialInfo1.sg";
+connectAttr "aiStandardSurface2.msg" "materialInfo1.m";
+connectAttr "aiStandardSurface2.msg" "materialInfo1.t" -na;
+connectAttr "file7.oc" "Chair.base_color";
+connectAttr "file8.oa" "Chair.metalness";
+connectAttr "file9.oa" "Chair.specular_roughness";
+connectAttr "bump2d2.o" "Chair.n";
+connectAttr "Chair.out" "aiStandardSurface3SG.ss";
+connectAttr "aiStandardSurface3SG.msg" "materialInfo2.sg";
+connectAttr "Chair.msg" "materialInfo2.m";
+connectAttr "Chair.msg" "materialInfo2.t" -na;
+connectAttr ":defaultColorMgtGlobals.cme" "file7.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file7.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file7.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file7.ws";
+connectAttr "place2dTexture7.c" "file7.c";
+connectAttr "place2dTexture7.tf" "file7.tf";
+connectAttr "place2dTexture7.rf" "file7.rf";
+connectAttr "place2dTexture7.mu" "file7.mu";
+connectAttr "place2dTexture7.mv" "file7.mv";
+connectAttr "place2dTexture7.s" "file7.s";
+connectAttr "place2dTexture7.wu" "file7.wu";
+connectAttr "place2dTexture7.wv" "file7.wv";
+connectAttr "place2dTexture7.re" "file7.re";
+connectAttr "place2dTexture7.of" "file7.of";
+connectAttr "place2dTexture7.r" "file7.ro";
+connectAttr "place2dTexture7.n" "file7.n";
+connectAttr "place2dTexture7.vt1" "file7.vt1";
+connectAttr "place2dTexture7.vt2" "file7.vt2";
+connectAttr "place2dTexture7.vt3" "file7.vt3";
+connectAttr "place2dTexture7.vc1" "file7.vc1";
+connectAttr "place2dTexture7.o" "file7.uv";
+connectAttr "place2dTexture7.ofs" "file7.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "file8.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file8.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file8.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file8.ws";
+connectAttr "place2dTexture8.c" "file8.c";
+connectAttr "place2dTexture8.tf" "file8.tf";
+connectAttr "place2dTexture8.rf" "file8.rf";
+connectAttr "place2dTexture8.mu" "file8.mu";
+connectAttr "place2dTexture8.mv" "file8.mv";
+connectAttr "place2dTexture8.s" "file8.s";
+connectAttr "place2dTexture8.wu" "file8.wu";
+connectAttr "place2dTexture8.wv" "file8.wv";
+connectAttr "place2dTexture8.re" "file8.re";
+connectAttr "place2dTexture8.of" "file8.of";
+connectAttr "place2dTexture8.r" "file8.ro";
+connectAttr "place2dTexture8.n" "file8.n";
+connectAttr "place2dTexture8.vt1" "file8.vt1";
+connectAttr "place2dTexture8.vt2" "file8.vt2";
+connectAttr "place2dTexture8.vt3" "file8.vt3";
+connectAttr "place2dTexture8.vc1" "file8.vc1";
+connectAttr "place2dTexture8.o" "file8.uv";
+connectAttr "place2dTexture8.ofs" "file8.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "file9.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file9.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file9.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file9.ws";
+connectAttr "place2dTexture9.c" "file9.c";
+connectAttr "place2dTexture9.tf" "file9.tf";
+connectAttr "place2dTexture9.rf" "file9.rf";
+connectAttr "place2dTexture9.mu" "file9.mu";
+connectAttr "place2dTexture9.mv" "file9.mv";
+connectAttr "place2dTexture9.s" "file9.s";
+connectAttr "place2dTexture9.wu" "file9.wu";
+connectAttr "place2dTexture9.wv" "file9.wv";
+connectAttr "place2dTexture9.re" "file9.re";
+connectAttr "place2dTexture9.of" "file9.of";
+connectAttr "place2dTexture9.r" "file9.ro";
+connectAttr "place2dTexture9.n" "file9.n";
+connectAttr "place2dTexture9.vt1" "file9.vt1";
+connectAttr "place2dTexture9.vt2" "file9.vt2";
+connectAttr "place2dTexture9.vt3" "file9.vt3";
+connectAttr "place2dTexture9.vc1" "file9.vc1";
+connectAttr "place2dTexture9.o" "file9.uv";
+connectAttr "place2dTexture9.ofs" "file9.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "file10.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file10.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file10.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file10.ws";
+connectAttr "place2dTexture10.c" "file10.c";
+connectAttr "place2dTexture10.tf" "file10.tf";
+connectAttr "place2dTexture10.rf" "file10.rf";
+connectAttr "place2dTexture10.mu" "file10.mu";
+connectAttr "place2dTexture10.mv" "file10.mv";
+connectAttr "place2dTexture10.s" "file10.s";
+connectAttr "place2dTexture10.wu" "file10.wu";
+connectAttr "place2dTexture10.wv" "file10.wv";
+connectAttr "place2dTexture10.re" "file10.re";
+connectAttr "place2dTexture10.of" "file10.of";
+connectAttr "place2dTexture10.r" "file10.ro";
+connectAttr "place2dTexture10.n" "file10.n";
+connectAttr "place2dTexture10.vt1" "file10.vt1";
+connectAttr "place2dTexture10.vt2" "file10.vt2";
+connectAttr "place2dTexture10.vt3" "file10.vt3";
+connectAttr "place2dTexture10.vc1" "file10.vc1";
+connectAttr "place2dTexture10.o" "file10.uv";
+connectAttr "place2dTexture10.ofs" "file10.fs";
+connectAttr "file10.oa" "bump2d2.bv";
+connectAttr "file11.oc" "Lantern.base_color";
+connectAttr "file12.oa" "Lantern.metalness";
+connectAttr "file13.oa" "Lantern.specular_roughness";
+connectAttr "bump2d3.o" "Lantern.n";
+connectAttr "Lantern.out" "aiStandardSurface4SG.ss";
+connectAttr "aiStandardSurface4SG.msg" "materialInfo3.sg";
+connectAttr "Lantern.msg" "materialInfo3.m";
+connectAttr "Lantern.msg" "materialInfo3.t" -na;
+connectAttr ":defaultColorMgtGlobals.cme" "file11.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file11.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file11.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file11.ws";
+connectAttr "place2dTexture11.c" "file11.c";
+connectAttr "place2dTexture11.tf" "file11.tf";
+connectAttr "place2dTexture11.rf" "file11.rf";
+connectAttr "place2dTexture11.mu" "file11.mu";
+connectAttr "place2dTexture11.mv" "file11.mv";
+connectAttr "place2dTexture11.s" "file11.s";
+connectAttr "place2dTexture11.wu" "file11.wu";
+connectAttr "place2dTexture11.wv" "file11.wv";
+connectAttr "place2dTexture11.re" "file11.re";
+connectAttr "place2dTexture11.of" "file11.of";
+connectAttr "place2dTexture11.r" "file11.ro";
+connectAttr "place2dTexture11.n" "file11.n";
+connectAttr "place2dTexture11.vt1" "file11.vt1";
+connectAttr "place2dTexture11.vt2" "file11.vt2";
+connectAttr "place2dTexture11.vt3" "file11.vt3";
+connectAttr "place2dTexture11.vc1" "file11.vc1";
+connectAttr "place2dTexture11.o" "file11.uv";
+connectAttr "place2dTexture11.ofs" "file11.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "file12.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file12.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file12.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file12.ws";
+connectAttr "place2dTexture12.c" "file12.c";
+connectAttr "place2dTexture12.tf" "file12.tf";
+connectAttr "place2dTexture12.rf" "file12.rf";
+connectAttr "place2dTexture12.mu" "file12.mu";
+connectAttr "place2dTexture12.mv" "file12.mv";
+connectAttr "place2dTexture12.s" "file12.s";
+connectAttr "place2dTexture12.wu" "file12.wu";
+connectAttr "place2dTexture12.wv" "file12.wv";
+connectAttr "place2dTexture12.re" "file12.re";
+connectAttr "place2dTexture12.of" "file12.of";
+connectAttr "place2dTexture12.r" "file12.ro";
+connectAttr "place2dTexture12.n" "file12.n";
+connectAttr "place2dTexture12.vt1" "file12.vt1";
+connectAttr "place2dTexture12.vt2" "file12.vt2";
+connectAttr "place2dTexture12.vt3" "file12.vt3";
+connectAttr "place2dTexture12.vc1" "file12.vc1";
+connectAttr "place2dTexture12.o" "file12.uv";
+connectAttr "place2dTexture12.ofs" "file12.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "file13.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file13.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file13.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file13.ws";
+connectAttr "place2dTexture13.c" "file13.c";
+connectAttr "place2dTexture13.tf" "file13.tf";
+connectAttr "place2dTexture13.rf" "file13.rf";
+connectAttr "place2dTexture13.mu" "file13.mu";
+connectAttr "place2dTexture13.mv" "file13.mv";
+connectAttr "place2dTexture13.s" "file13.s";
+connectAttr "place2dTexture13.wu" "file13.wu";
+connectAttr "place2dTexture13.wv" "file13.wv";
+connectAttr "place2dTexture13.re" "file13.re";
+connectAttr "place2dTexture13.of" "file13.of";
+connectAttr "place2dTexture13.r" "file13.ro";
+connectAttr "place2dTexture13.n" "file13.n";
+connectAttr "place2dTexture13.vt1" "file13.vt1";
+connectAttr "place2dTexture13.vt2" "file13.vt2";
+connectAttr "place2dTexture13.vt3" "file13.vt3";
+connectAttr "place2dTexture13.vc1" "file13.vc1";
+connectAttr "place2dTexture13.o" "file13.uv";
+connectAttr "place2dTexture13.ofs" "file13.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "file14.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file14.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file14.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file14.ws";
+connectAttr "place2dTexture14.c" "file14.c";
+connectAttr "place2dTexture14.tf" "file14.tf";
+connectAttr "place2dTexture14.rf" "file14.rf";
+connectAttr "place2dTexture14.mu" "file14.mu";
+connectAttr "place2dTexture14.mv" "file14.mv";
+connectAttr "place2dTexture14.s" "file14.s";
+connectAttr "place2dTexture14.wu" "file14.wu";
+connectAttr "place2dTexture14.wv" "file14.wv";
+connectAttr "place2dTexture14.re" "file14.re";
+connectAttr "place2dTexture14.of" "file14.of";
+connectAttr "place2dTexture14.r" "file14.ro";
+connectAttr "place2dTexture14.n" "file14.n";
+connectAttr "place2dTexture14.vt1" "file14.vt1";
+connectAttr "place2dTexture14.vt2" "file14.vt2";
+connectAttr "place2dTexture14.vt3" "file14.vt3";
+connectAttr "place2dTexture14.vc1" "file14.vc1";
+connectAttr "place2dTexture14.o" "file14.uv";
+connectAttr "place2dTexture14.ofs" "file14.fs";
+connectAttr "file14.oa" "bump2d3.bv";
+connectAttr "aiStandardSurface2SG.pa" ":renderPartition.st" -na;
+connectAttr "aiStandardSurface3SG.pa" ":renderPartition.st" -na;
+connectAttr "aiStandardSurface4SG.pa" ":renderPartition.st" -na;
 connectAttr "aiStandardSurface1.msg" ":defaultShaderList1.s" -na;
+connectAttr "aiStandardSurface2.msg" ":defaultShaderList1.s" -na;
+connectAttr "Chair.msg" ":defaultShaderList1.s" -na;
+connectAttr "Lantern.msg" ":defaultShaderList1.s" -na;
 connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture2.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture3.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture4.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture5.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "bump2d1.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture6.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture7.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture8.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture9.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture10.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "bump2d2.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture11.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture12.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture13.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture14.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "bump2d3.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file3.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file4.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file5.msg" ":defaultTextureList1.tx" -na;
-connectAttr "GroundShape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "file6.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file7.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file8.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file9.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file10.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file11.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file12.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file13.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file14.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file6.oc" ":standardSurface1.bc";
+connectAttr "file6.msg" ":initialMaterialInfo.t" -na;
 // End of 3PropsCombo.ma
