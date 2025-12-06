@@ -327,8 +327,9 @@ MonoBehaviour:
   triggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
-  triggerHoldTime: 0.01
+  enterHoldTime: 0.01
   repeatHoldTime: 0.1
+  exitHoldTime: 0.01
   canRepeat: 1
   canRepeatWithLimits: 0
   repeatLimit: 3
