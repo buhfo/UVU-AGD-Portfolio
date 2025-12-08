@@ -8,7 +8,7 @@ class SequenceRenamerUI():
     WINDOW_NAME = "SequenceRenamerWindow"
 
     @classmethod
-    def show(cls):
+    def create(cls):
         # Makes sure theres only one window
         if cmds.window(cls.WINDOW_NAME, exists=True):
             cmds.deleteUI(cls.WINDOW_NAME)
