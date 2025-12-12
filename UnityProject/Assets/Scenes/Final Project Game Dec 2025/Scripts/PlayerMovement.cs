@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(spawnCooldown);
         canSpawn = true;
-        print("Can Spawn Again");
+        onSpawnReady.Invoke();
     }
 
     public void toggleCanSpawn()

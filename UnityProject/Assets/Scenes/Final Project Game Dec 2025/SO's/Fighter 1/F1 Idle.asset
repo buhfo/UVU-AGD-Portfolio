@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10ea1262935ec4609a988bcb6bc9cee2, type: 3}
-  m_Name: Fighter 2 Hunt
-  m_EditorClassIdentifier: Assembly-CSharp::AiHunt
+  m_Script: {fileID: 11500000, guid: 7a6495a3a667844089e674ed69d00ea6, type: 3}
+  m_Name: F1 Idle
+  m_EditorClassIdentifier: Assembly-CSharp::AiIdle
   speed: 3.5
   angularSpeed: 120
-  destination: {fileID: 0}

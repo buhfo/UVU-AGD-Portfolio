@@ -17,8 +17,7 @@ GameObject:
   - component: {fileID: 271688344078963496}
   - component: {fileID: 8748644038880154984}
   - component: {fileID: -4641602057598896832}
-  - component: {fileID: 1113540847814860301}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fighter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,10 +151,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 119
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -209,13 +208,13 @@ MonoBehaviour:
   respondEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 612662709725147223}
-        m_TargetAssemblyTypeName: UnityEngine.BoxCollider, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: -4641602057598896832}
+        m_TargetAssemblyTypeName: FighterBehaviour, Assembly-CSharp
+        m_MethodName: ChangeBase
+        m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: AiBase, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -224,18 +223,6 @@ MonoBehaviour:
   respondLateEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 612662709725147223}
-        m_TargetAssemblyTypeName: UnityEngine.BoxCollider, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: -4641602057598896832}
         m_TargetAssemblyTypeName: FighterBehaviour, Assembly-CSharp
         m_MethodName: ChangeBase
@@ -285,7 +272,7 @@ MonoBehaviour:
         m_MethodName: ChangeBase
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: bc955bc8a33f74ea494c45bbe6d60fca, type: 2}
+          m_ObjectArgument: {fileID: 11400000, guid: 106da9e523931864b8f6ef7353b16d5d, type: 2}
           m_ObjectArgumentAssemblyTypeName: AiBase, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -307,55 +294,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1113540847814860301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2263177705243974311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a28a400391344b9c88e28b4820b5ed7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TriggerEventsBehaviour
-  startHoldTime: 0.1
-  awakeEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerEnterEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerEnterRepeatEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: e68ee0759a38d6546a740733c5f30ae1, type: 2}
-        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
-        m_MethodName: UpdateValue
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: -1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  triggerEnterEndEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerExitEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  enterHoldTime: 0.01
-  repeatHoldTime: 0.01
-  exitHoldTime: 0.01
-  canRepeat: 1
-  canRepeatWithLimits: 0
-  repeatLimit: 10
 --- !u!1 &4485849863208810837
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +305,7 @@ GameObject:
   - component: {fileID: 5875902582722794405}
   - component: {fileID: 6419775629970166894}
   - component: {fileID: 7291805940549342977}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: StunCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
