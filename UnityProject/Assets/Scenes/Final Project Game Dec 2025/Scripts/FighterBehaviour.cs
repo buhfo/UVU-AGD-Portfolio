@@ -10,7 +10,6 @@ public class FighterBehaviour : MonoBehaviour
     private AiBase aiBaseObj;
     private NavMeshAgent agent;
     public UnityEvent startEvent, triggerEnterEvent, triggerExitEvent;
-    
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
