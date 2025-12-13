@@ -31,15 +31,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2263177705243974311}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 50, y: 50, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5468866683974203348}
   - {fileID: 3653897595163513863}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &231759759187947814
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -47,7 +47,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2263177705243974311}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2372994558000725581, guid: 96aeb93759802b74aa387d8b20ae277e, type: 3}
 --- !u!23 &4092027554948708850
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -73,7 +73,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7f62f3b8dbfc57e45b948ade0d5fc34d, type: 2}
+  - {fileID: 2100000, guid: b1913bec1229e9245a3a01aa653b179f, type: 2}
+  - {fileID: 2100000, guid: b2961c6ce41512a44b9474d0383bdc73, type: 2}
+  - {fileID: 2100000, guid: d2abb971a753a074ba78475844406746, type: 2}
+  - {fileID: 2100000, guid: 21251fe11486d2c499bbdd441189d0c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -115,8 +118,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.04
+  m_Height: 0.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &6575635198509393836
@@ -128,7 +131,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2263177705243974311}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.04
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -137,8 +140,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
+  m_Height: 0.06
+  m_BaseOffset: 0.03
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!65 &612662709725147223
@@ -160,7 +163,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 0.5, z: 4}
+  m_Size: {x: 0.1, y: 0.02, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6742340680083005305
 MonoBehaviour:
@@ -273,8 +276,8 @@ Transform:
   m_GameObject: {fileID: 2857965283260881751}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.032, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.01, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8090152016986375916}
@@ -318,6 +321,42 @@ MonoBehaviour:
   triggerEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 11400000, guid: 36a8e085c9214154db49a1dfa383c10b, type: 2}
+        m_TargetAssemblyTypeName: QIntData, Assembly-CSharp
+        m_MethodName: UpdateValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 36a8e085c9214154db49a1dfa383c10b, type: 2}
+        m_TargetAssemblyTypeName: QIntData, Assembly-CSharp
+        m_MethodName: ValueIsZero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 7100cfc0e70db0e49afd6f7e372575fa, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 6474673430593264688}
         m_TargetAssemblyTypeName: DisableOrDestroyBehaviour, Assembly-CSharp
         m_MethodName: DestroyGameObject
@@ -340,7 +379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5468866683974203348}
   - component: {fileID: 9151697401454441247}
-  - component: {fileID: 6953748082977265754}
+  - component: {fileID: 4967818559329920676}
   m_Layer: 0
   m_Name: Damager
   m_TagString: Untagged
@@ -358,7 +397,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.01, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8090152016986375916}
@@ -382,9 +421,9 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 0.5, z: 2}
+  m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6953748082977265754
+--- !u!114 &4967818559329920676
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -393,9 +432,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5468576737245565362}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a28a400391344b9c88e28b4820b5ed7, type: 3}
+  m_Script: {fileID: 11500000, guid: 070ca092f80cd7347a1386a5357dff3f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TriggerEventsBehaviour
+  m_EditorClassIdentifier: Assembly-CSharp::QTriggerEventsBehaviour
   startHoldTime: 0.1
   awakeEvent:
     m_PersistentCalls:
@@ -417,7 +456,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: -0.01
+          m_FloatArgument: -0.1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -429,7 +468,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: -0.1
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2

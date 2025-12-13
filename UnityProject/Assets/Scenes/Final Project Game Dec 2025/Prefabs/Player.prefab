@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 231759759187947814}
   - component: {fileID: 4092027554948708850}
   - component: {fileID: 5719160331651332937}
-  - component: {fileID: 6474673430593264688}
   - component: {fileID: 7570551933181989780}
   - component: {fileID: 799186011061812517}
   - component: {fileID: 1782534462048253035}
@@ -31,13 +30,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2263177705243974311}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &231759759187947814
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -45,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2263177705243974311}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 2110113596202241861, guid: 7164a6dc0d367cd45a60e030d1277768, type: 3}
 --- !u!23 &4092027554948708850
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -71,7 +70,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b9ada4c4bf00e024193bb68c5a11b8d8, type: 2}
+  - {fileID: -6213699677198790256, guid: 494077e7b71a43942a3239f877633272, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,36 +112,10 @@ CapsuleCollider:
   m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.01
+  m_Height: 0.075
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6474673430593264688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2263177705243974311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db292f06e9d8b44a896010ae967eb294, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DisableOrDestroyBehaviour
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  beginDestroy:
-    m_PersistentCalls:
-      m_Calls: []
-  endDestroyEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  canSelfDestructOnStart: 0
-  canTrigger: 0
-  canDestroy: 0
-  state: 0
-  seconds: 0.1
+  m_Center: {x: 0, y: 0.01, z: 0}
 --- !u!114 &7570551933181989780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,9 +180,9 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 0.5, y: 1, z: 0.5}
+  m_Extents: {x: 0.01, y: 0.0375, z: 0.01}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.01, z: 0}
   m_TimeToStationary: 0.5
