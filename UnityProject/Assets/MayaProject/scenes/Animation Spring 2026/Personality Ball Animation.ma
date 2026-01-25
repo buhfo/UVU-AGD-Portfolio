@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Personality Ball Animation.ma
-//Last modified: Sun, Jan 25, 2026 12:09:36 PM
+//Last modified: Sun, Jan 25, 2026 12:30:48 PM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Ball_v1_0_1" -rfn "Ultimate_Ball_v1_0_1RN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/quinn/Documents/UVU/UVU-AGD-Portfolio/UnityProject/Assets/MayaProject//scenes/AnimRefRigs/Ultimate_Ball_v1.0.1.ma";
@@ -17,18 +17,18 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202505300603-a12e894a3d";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "43401E47-43C6-2A37-84C3-21A0370F1B27";
+fileInfo "UUID" "DEF9F6B5-4EC5-0A9D-020E-0C9D4F03DE57";
 createNode transform -s -n "persp";
 	rename -uid "1CC3AD28-4EC5-39DC-90AD-D6970FAB2E71";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.71100392308536398 2.443553419597559 -26.62374538590187 ;
+	setAttr ".t" -type "double3" -0.74054146841401458 3.21152959814229 -26.623745385901842 ;
 	setAttr ".r" -type "double3" 0 180.00000000000003 0 ;
 	setAttr ".rpt" -type "double3" 3.0642085322266616e-18 1.2231148529892369e-17 4.6177205166106239e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "10DFFEFA-4EA2-51E3-4253-DC932FD28E87";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 26.62374538590187;
+	setAttr ".coi" 26.623745385901842;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -160,7 +160,7 @@ createNode reference -n "Ultimate_Ball_v1_0_1RN";
 		2 "|Ultimate_Ball_v1_0_1:AniM_ball_Main|Ultimate_Ball_v1_0_1:CTRL_Root" "Ball_Type" 
 		" -cb 1 4"
 		2 "|Ultimate_Ball_v1_0_1:AniM_ball_Main|Ultimate_Ball_v1_0_1:ball_Grp|Ultimate_Ball_v1_0_1:CNT_Grp|Ultimate_Ball_v1_0_1:CTRL_Top_Grp|Ultimate_Ball_v1_0_1:CTRL_Top" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 0 -0.95 0"
 		2 "|Ultimate_Ball_v1_0_1:AniM_ball_Main|Ultimate_Ball_v1_0_1:ball_Grp|Ultimate_Ball_v1_0_1:CNT_Grp|Ultimate_Ball_v1_0_1:CTRL_Bottom_Grp|Ultimate_Ball_v1_0_1:CTRL_Bottom" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Ball_v1_0_1:AniM_ball_Main|Ultimate_Ball_v1_0_1:ball_Grp|Ultimate_Ball_v1_0_1:CNT_Grp|Ultimate_Ball_v1_0_1:CTRL_Main_Grp|Ultimate_Ball_v1_0_1:CTRL_Main" 
@@ -250,7 +250,7 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "9982A1AF-4FAD-3758-61E9-F3AB3535BCD5";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 32 -ast 1 -aet 48 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 59 -ast 1 -aet 59 ";
 	setAttr ".st" 6;
 createNode displayLayer -n "layer1";
 	rename -uid "F501B61F-4493-2AAD-9B44-A9A46F280267";
@@ -263,20 +263,24 @@ createNode polyPlane -n "polyPlane1";
 createNode animCurveTL -n "CTRL_Main_translateY";
 	rename -uid "4E16FAA3-482E-C78B-5EC9-D0808E1F0470";
 	setAttr ".tan" 28;
-	setAttr -s 5 ".ktv[0:4]"  1 12 7 0 13 0 15 0.25 17 0;
-	setAttr -s 5 ".kit[0:4]"  2 2 28 28 28;
-	setAttr -s 5 ".kot[0:4]"  2 2 28 28 28;
+	setAttr -s 9 ".ktv[0:8]"  1 12 7 0 13 0 15 0.25 17 0 31 0 38 5 39 5
+		 46 0;
+	setAttr -s 9 ".kit[0:8]"  2 2 28 28 28 28 28 28 
+		28;
+	setAttr -s 9 ".kot[0:8]"  2 2 28 28 28 28 28 28 
+		28;
 createNode animCurveTL -n "CTRL_Top_translateY";
 	rename -uid "C068F3A9-4E25-886A-C23E-DCBA874AF430";
 	setAttr ".tan" 28;
-	setAttr -s 7 ".ktv[0:6]"  1 2 6 2 9 -0.95 10 -0.95 14 0 16 -0.2 17 0;
+	setAttr -s 14 ".ktv[0:13]"  1 2 6 2 9 -0.95 10 -0.95 14 0 16 -0.2 17 0
+		 27 0 31 -0.95 34 1 38 0 42 1 45 -0.95 49 0;
 createNode animCurveTA -n "CTRL_Main_rotateZ";
 	rename -uid "57F411A4-40EE-DFDB-9BB7-2B92B5FBCDB5";
 	setAttr ".tan" 28;
 	setAttr -s 5 ".ktv[0:4]"  13 0 15 -2 21 2.5 24 -2.5 27 0;
 select -ne :time1;
-	setAttr ".o" 27;
-	setAttr ".unw" 27;
+	setAttr ".o" 31;
+	setAttr ".unw" 31;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
