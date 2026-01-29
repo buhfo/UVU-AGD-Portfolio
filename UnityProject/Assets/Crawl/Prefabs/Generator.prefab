@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1450744162947956240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5199259299291176113}
+  - component: {fileID: 2950044598611839294}
+  m_Layer: 0
+  m_Name: Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &5199259299291176113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450744162947956240}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2950044598611839294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450744162947956240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baca2dd506897ad469eef7d08fbcecd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: {x: 10, y: 10}
+  startPos: 0
+  halls:
+  - hall: {fileID: 504260956658035454, guid: 0c9ad8dea0becd446a29da28d508066b, type: 3}
+    minPosition: {x: 0, y: 0}
+    maxPosition: {x: 5, y: 5}
+    obligatory: 0
+  - hall: {fileID: 504260956658035454, guid: cf22212958b6d4648b83244b4c48978e, type: 3}
+    minPosition: {x: 0, y: 0}
+    maxPosition: {x: 10, y: 10}
+    obligatory: 0
+  - hall: {fileID: 504260956658035454, guid: 09daaa63bfc4ec044a4af2232152b566, type: 3}
+    minPosition: {x: 5, y: 5}
+    maxPosition: {x: 0, y: 0}
+    obligatory: 0
+  - hall: {fileID: 504260956658035454, guid: 9d856cfcd2d49454686de86bd2c44f51, type: 3}
+    minPosition: {x: 0, y: 0}
+    maxPosition: {x: 1, y: 1}
+    obligatory: 1
+  - hall: {fileID: 504260956658035454, guid: ecdbd8ad4398c1f449e8bf280634eb28, type: 3}
+    minPosition: {x: 0, y: 0}
+    maxPosition: {x: 10, y: 10}
+    obligatory: 0
+  - hall: {fileID: 504260956658035454, guid: d2b0585daa9a1d340bad4d836acec52d, type: 3}
+    minPosition: {x: 9, y: 9}
+    maxPosition: {x: 10, y: 10}
+    obligatory: 1
+  offset: {x: 2, y: 2}
