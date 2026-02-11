@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb38626f93e0f31448616849e4d79b94, type: 3}
+  m_Name: Crawl Normal Movement
+  m_EditorClassIdentifier: Assembly-CSharp::MovementData
+  distance: 0
+  speed: 0
+  turnRadius: 0
+  turnSpeed: 0
