@@ -2,62 +2,109 @@
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 
-[CreateAssetMenu(menuName = "Crawl/ScriptableObjects/EntityData")]
+[CreateAssetMenu(menuName = "Crawl/EntityData")]
 public class EntityData : ScriptableObject
 {
-    [SerializeField] private int Health, Experience, Attack;
-    // [SerializeField] private int value, minValue, maxValue;
+    [SerializeField] private int Health, HealthMax;
+    [SerializeField] private int Experience, ExperienceMax, Attack;
 
-    // public UnityEvent<float> valueOutOfRange;
-    // public UnityEvent onValueChanged, onValueZero;
+    public UnityEvent onHealthChanged, onHealthZero, onExperienceChanged, onExperienceZero, onAttackChanged;
 
-    // public int Value
-    // {
-    //     get => value;
-    //     set
-    //     {
-    //         this.value = value;
-    //         onValueChanged.Invoke();
-    //         ClampValue();
-    //     }
-    // }
 
-    // public void UpdateValue(int amount)
-    // {
-    //     value += amount;
-    // }
+    // Helper methods for modifying values, to avoid code repetition. These are private because they should only be used within this class, and not exposed to other classes.
 
-    // public void SetValue(EntityData data)
-    // {
-    //     value = data.value;
-    // }
+    // changes a value by adding to it, can be positive or negative
+    private void UpdateValue(ref int value, int amount)
+    {
+        value += amount;
+    }
     
-    // public void SetValue(int data)
-    // {
-    //     Value = data;
-    // }
+    // just directly changes a value to the new value, regardless of the current value
+    private void SetValue(ref int value, int data)
+    {
+        value = data;
+    }
     
-    // public void IncrementValue()
-    // {
-    //     value++;
-    //     onValueChanged.Invoke();
-    // }
+    // clamps the value to a maximum
+    private void ValueTopClamp(ref int value, int max)
+    {
+        if (value > max) value = max;
+    }
 
-    // private void ClampValue()
-    // {
-    //     if (!(Value < minValue) && !(Value > maxValue)) return;
-    //     valueOutOfRange.Invoke(Value);
-    //     Value = Mathf.Clamp(Value, minValue, maxValue);
-   
-    //     if (value == 0)
-    //     {
-    //         onValueZero.Invoke();
-    //     }
-    // }
+    // clamps the value to a minimum
+    private void ValueBottomClamp(ref int value, int min)
+    {
+        if (value < min) value = min;
+    }
 
-    // public void UpdateValueZeroCheck(int i)
-    // {
-    //     if (value + i < 0) return;
-    //     value += i;
-    // }
+    // returns true if the value is zero or less
+    private bool ZeroCheck(int value)
+    {
+        return value <= 0;
+    }
+
+
+    // change adds/subtracts from the current value, set replaces the current value with the new value
+
+    // Health modifiers
+    public void ChangeHealth(int amount)
+    {
+        UpdateValue(ref Health, amount);
+        ValueTopClamp(ref Health, HealthMax);
+        ValueBottomClamp(ref Health, 0);
+        onHealthChanged.Invoke();
+        if (ZeroCheck(Health))
+        {
+            onHealthZero.Invoke();
+        }
+    }
+    public void SetHealth(int data)
+    {
+        SetValue(ref Health, data);
+        ValueTopClamp(ref Health, HealthMax);
+        ValueBottomClamp(ref Health, 0);
+        onHealthChanged.Invoke();
+        if (ZeroCheck(Health))
+        {
+            onHealthZero.Invoke();
+        }
+    }
+
+    // Experience modifiers
+    public void ChangeExperience(int amount)
+    {
+        UpdateValue(ref Experience, amount);
+        ValueTopClamp(ref Experience, ExperienceMax);
+        ValueBottomClamp(ref Experience, 0);
+        onExperienceChanged.Invoke();
+        if (ZeroCheck(Experience))
+        {
+            onExperienceZero.Invoke();
+        }
+    }
+    public void SetExperience(int data)
+    {
+        SetValue(ref Experience, data);
+        ValueTopClamp(ref Experience, ExperienceMax);
+        ValueBottomClamp(ref Experience, 0);
+        onExperienceChanged.Invoke();
+        if (ZeroCheck(Experience))
+        {
+            onExperienceZero.Invoke();
+        }
+    }
+
+    // Attack modifiers
+    public void ChangeAttack(int amount)
+    {
+        UpdateValue(ref Attack, amount);
+        ValueBottomClamp(ref Attack, 0);
+        onAttackChanged.Invoke();
+    }
+    public void SetAttack(int data)
+    {
+        SetValue(ref Attack, data);
+        ValueBottomClamp(ref Attack, 0);
+        onAttackChanged.Invoke();
+    }
 }

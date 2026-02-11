@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb38626f93e0f31448616849e4d79b94, type: 3}
   m_Name: Crawl Normal Movement
   m_EditorClassIdentifier: Assembly-CSharp::MovementData
-  distance: 0
-  speed: 0
-  turnRadius: 0
-  turnSpeed: 0
+  distance: 1
+  turnRadius: 90
+  speed: 10
+  turnSpeed: 500

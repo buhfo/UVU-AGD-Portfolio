@@ -2,8 +2,10 @@
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 
-[CreateAssetMenu(menuName = "Crawl/ScriptableObjects/MovementData")]
+[CreateAssetMenu(menuName = "Crawl/MovementData")]
 public class MovementData : ScriptableObject
 {
-    [SerializeField] private float distance, speed, turnRadius, turnSpeed;
+    [SerializeField] private int distance, turnRadius;
+    [SerializeField] private float speed, turnSpeed;
+    
 }

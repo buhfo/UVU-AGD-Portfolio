@@ -12,15 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94440cd572df945428794b94aacad44d, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: Assembly-CSharp::EntityData
-  value: 0
-  minValue: 0
-  maxValue: 0
-  valueOutOfRange:
+  Health: 0
+  HealthMax: 0
+  Experience: 0
+  ExperienceMax: 0
+  Attack: 0
+  onHealthChanged:
     m_PersistentCalls:
       m_Calls: []
-  onValueChanged:
+  onHealthZero:
     m_PersistentCalls:
       m_Calls: []
-  onValueZero:
+  onExperienceChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onExperienceZero:
+    m_PersistentCalls:
+      m_Calls: []
+  onAttackChanged:
     m_PersistentCalls:
       m_Calls: []
