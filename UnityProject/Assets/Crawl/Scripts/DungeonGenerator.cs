@@ -5,6 +5,10 @@ using UnityEngine.UIElements;
 
 public class DungeonGenerator : MonoBehaviour
 {
+    // this script generates a maze using depth first search algorithm and then spawns halls based on the generated maze and the rules provided in the inspector
+
+    // Cell class represents each cell in the maze, it has a visited variable to check if the cell has been visited during the maze generation 
+    //and a status array to check which walls are open (0 - up, 1 - right, 2 - down, 3 - left)
     public class Cell
     {
         public bool visited = false;
@@ -13,14 +17,21 @@ public class DungeonGenerator : MonoBehaviour
 
     [System.Serializable]
 
+    // rule class represents the rules for spawning halls, it has a hall variable which is the prefab of the hall to spawn, 
+    //a minPosition and maxPosition variable which defines the area where the hall can spawn and an obligatory variable which defines if the hall must spawn in that area or not
     public class Rule 
     {
+        // hall prefab to spawn
         public GameObject hall;
+        // minimum area a hall can be spawned
         public Vector2Int minPosition;
+        // maximum area a hall can be spawned
         public Vector2Int maxPosition;
 
+        // a check to see if the hall must spawn in the area defined by minPosition and maxPosition or if it can spawn in that area but it's not obligatory
         public bool obligatory;
 
+        // this function checks if the hall can spawn in the given position based on the minPosition and maxPosition variables and returns 0 if it can't spawn, 1 if it can spawn and 2 if it must spawn
         public int ProbabilityOfSpawning(int x, int y) 
         {
             // 0 - Cant spawn, 1 - Can spawn, 2 - MUST spawn
@@ -34,13 +45,16 @@ public class DungeonGenerator : MonoBehaviour
         }
     }
 
-
+    // size of the maze
     public Vector2Int size;
+    // starting position of the maze generation
     public int startPos = 0;
+    // array of rules for spawning halls
     public Rule[] halls;
+    // offset for spawning halls, it defines the distance between each hall when spawned
     public Vector2 offset;
    
-
+    // list of cells that represents the maze
     List<Cell> board;
 
 
@@ -49,11 +63,9 @@ public class DungeonGenerator : MonoBehaviour
         MazeGenerator();
     }
 
-    void Update()
-    {
-        
-    }
 
+    // this function generates the dungeon by iterating through the board and checking if the cell has been visited, 
+    //if it has been visited it checks the rules for spawning halls and spawns the appropriate hall based on the rules
     void GenerateDungeon()
     {
         for (int i = 0; i < size.x; i++)
