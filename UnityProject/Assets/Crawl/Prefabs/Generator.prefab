@@ -47,28 +47,28 @@ MonoBehaviour:
   size: {x: 10, y: 10}
   startPos: 0
   halls:
-  - hall: {fileID: 2621757680616668006, guid: 74330d8b132683549bcf28772f5bc1ca, type: 3}
+  - hall: {fileID: 504260956658035454, guid: e2c2588175933f141aa06b5649c18547, type: 3}
     minPosition: {x: 0, y: 0}
     maxPosition: {x: 5, y: 5}
     obligatory: 0
-  - hall: {fileID: 2621757680616668006, guid: bd656b4ceb110ef4e9144a19c56be07c, type: 3}
+  - hall: {fileID: 504260956658035454, guid: e2c2588175933f141aa06b5649c18547, type: 3}
     minPosition: {x: 0, y: 0}
     maxPosition: {x: 10, y: 10}
     obligatory: 0
-  - hall: {fileID: 2621757680616668006, guid: b6853e9919321484ea0bc6b15606160b, type: 3}
+  - hall: {fileID: 504260956658035454, guid: e2c2588175933f141aa06b5649c18547, type: 3}
     minPosition: {x: 5, y: 5}
     maxPosition: {x: 0, y: 0}
     obligatory: 0
-  - hall: {fileID: 2621757680616668006, guid: 235b5e7d610a8ed4fa0f2ef87c931583, type: 3}
+  - hall: {fileID: 504260956658035454, guid: e2c2588175933f141aa06b5649c18547, type: 3}
     minPosition: {x: 0, y: 0}
     maxPosition: {x: 1, y: 1}
     obligatory: 0
-  - hall: {fileID: 2621757680616668006, guid: be735153b49fd1040af8cc07af22f620, type: 3}
+  - hall: {fileID: 504260956658035454, guid: e2c2588175933f141aa06b5649c18547, type: 3}
     minPosition: {x: 0, y: 0}
     maxPosition: {x: 10, y: 10}
     obligatory: 0
-  - hall: {fileID: 2621757680616668006, guid: cf4e89fca87b71b4fb2b991fcc55ff8a, type: 3}
+  - hall: {fileID: 504260956658035454, guid: c8d1eef4dbf951942b04b3a7c5c6b0c3, type: 3}
     minPosition: {x: 9, y: 9}
     maxPosition: {x: 10, y: 10}
-    obligatory: 0
-  offset: {x: 2, y: 2}
+    obligatory: 1
+  offset: {x: 3, y: 3}

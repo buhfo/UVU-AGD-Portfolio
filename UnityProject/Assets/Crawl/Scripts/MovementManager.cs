@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 namespace Crawl.Scripts
 {
-    [RequireComponent(typeof(MovementData))]
     public class MovementManager : MonoBehaviour
     {
         Animator animator;
