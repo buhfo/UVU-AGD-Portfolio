@@ -12,21 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94440cd572df945428794b94aacad44d, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: Assembly-CSharp::EntityData
-  Health: 0
-  HealthMax: 0
-  Experience: 0
-  ExperienceMax: 0
-  Attack: 0
+  health: 10
+  healthMax: 10
+  experience: 0
+  experienceMax: 100
+  attack: 1
   onHealthChanged:
     m_PersistentCalls:
       m_Calls: []
   onHealthZero:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: a7af994e13596a44383e8b2b6238f3c9, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onExperienceChanged:
     m_PersistentCalls:
       m_Calls: []
-  onExperienceZero:
+  onExperienceMax:
     m_PersistentCalls:
       m_Calls: []
   onAttackChanged:

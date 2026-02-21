@@ -9,9 +9,9 @@ namespace Crawl.Scripts
 
         // Cell class represents each cell in the maze, it has a visited variable to check if the cell has been visited during the maze generation 
         //and a status array to check which walls are open (0 - up, 1 - right, 2 - down, 3 - left)
-        public class Cell
+        private class Cell
         {
-            public bool visited = false;
+            public bool visited;
             public bool[] status = new bool[4];
         }
 
@@ -28,7 +28,7 @@ namespace Crawl.Scripts
             // maximum area a hall can be spawned
             public Vector2Int maxPosition;
 
-            // a check to see if the hall must spawn in the area defined by minPosition and maxPosition or if it can spawn in that area but it's not obligatory
+            // a check to see if the hall must spawn in the area defined by minPosition and maxPosition or if it can spawn in that area, but it's not obligatory
             public bool obligatory;
 
             // this function checks if the hall can spawn in the given position based on the minPosition and maxPosition variables and returns 0 if it can't spawn, 1 if it can spawn and 2 if it must spawn
@@ -48,7 +48,7 @@ namespace Crawl.Scripts
         // size of the maze
         public Vector2Int size;
         // starting position of the maze generation
-        public int startPos = 0;
+        public int startPos;
         // array of rules for spawning halls
         public Rule[] halls;
         // offset for spawning halls, it defines the distance between each hall when spawned
@@ -85,10 +85,12 @@ namespace Crawl.Scripts
                             if(p == 2)
                             {
                                 randomHall = k;
+                                Debug.Log("Break");
                                 break;
 
                             } else if(p == 1)
                             {
+                                Debug.Log("add");
                                 availableHalls.Add(k);
                             }
                         }

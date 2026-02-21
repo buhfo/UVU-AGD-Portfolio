@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 namespace Crawl.Scripts
 {
     [CreateAssetMenu(menuName = "Crawl/EntityData")]
     public class EntityData : ScriptableObject
     {
-        [SerializeField] private int Health, HealthMax;
-        [SerializeField] private int Experience, ExperienceMax, Attack;
+        [FormerlySerializedAs("Health")] [SerializeField] private int health;
+        [FormerlySerializedAs("HealthMax")] [SerializeField] private int healthMax;
+        [FormerlySerializedAs("Experience")] [SerializeField] private int experience;
+        [FormerlySerializedAs("ExperienceMax")] [SerializeField] private int experienceMax;
+        [FormerlySerializedAs("Attack")] [SerializeField] private int attack;
 
-        public UnityEvent onHealthChanged, onHealthZero, onExperienceChanged, onExperienceZero, onAttackChanged;
+        public UnityEvent onHealthChanged, onHealthZero, onExperienceChanged, onExperienceMax, onAttackChanged;
 
 
         // Helper methods for modifying values, to avoid code repetition. These are private because they should only be used within this class, and not exposed to other classes.
@@ -50,22 +54,22 @@ namespace Crawl.Scripts
         // Health modifiers
         public void ChangeHealth(int amount)
         {
-            UpdateValue(ref Health, amount);
-            ValueTopClamp(ref Health, HealthMax);
-            ValueBottomClamp(ref Health, 0);
+            UpdateValue(ref health, amount);
+            ValueTopClamp(ref health, healthMax);
+            ValueBottomClamp(ref health, 0);
             onHealthChanged.Invoke();
-            if (ZeroCheck(Health))
+            if (ZeroCheck(health))
             {
                 onHealthZero.Invoke();
             }
         }
         public void SetHealth(int data)
         {
-            SetValue(ref Health, data);
-            ValueTopClamp(ref Health, HealthMax);
-            ValueBottomClamp(ref Health, 0);
+            SetValue(ref health, data);
+            ValueTopClamp(ref health, healthMax);
+            ValueBottomClamp(ref health, 0);
             onHealthChanged.Invoke();
-            if (ZeroCheck(Health))
+            if (ZeroCheck(health))
             {
                 onHealthZero.Invoke();
             }
@@ -74,38 +78,38 @@ namespace Crawl.Scripts
         // Experience modifiers
         public void ChangeExperience(int amount)
         {
-            UpdateValue(ref Experience, amount);
-            ValueTopClamp(ref Experience, ExperienceMax);
-            ValueBottomClamp(ref Experience, 0);
+            UpdateValue(ref experience, amount);
+            ValueTopClamp(ref experience, experienceMax);
+            ValueBottomClamp(ref experience, 0);
             onExperienceChanged.Invoke();
-            if (ZeroCheck(Experience))
+            if (experience >= experienceMax)
             {
-                onExperienceZero.Invoke();
+                onExperienceMax.Invoke();
             }
         }
         public void SetExperience(int data)
         {
-            SetValue(ref Experience, data);
-            ValueTopClamp(ref Experience, ExperienceMax);
-            ValueBottomClamp(ref Experience, 0);
+            SetValue(ref experience, data);
+            ValueTopClamp(ref experience, experienceMax);
+            ValueBottomClamp(ref experience, 0);
             onExperienceChanged.Invoke();
-            if (ZeroCheck(Experience))
+            if (experience >= experienceMax)
             {
-                onExperienceZero.Invoke();
+                onExperienceMax.Invoke();
             }
         }
 
         // Attack modifiers
         public void ChangeAttack(int amount)
         {
-            UpdateValue(ref Attack, amount);
-            ValueBottomClamp(ref Attack, 0);
+            UpdateValue(ref attack, amount);
+            ValueBottomClamp(ref attack, 0);
             onAttackChanged.Invoke();
         }
         public void SetAttack(int data)
         {
-            SetValue(ref Attack, data);
-            ValueBottomClamp(ref Attack, 0);
+            SetValue(ref attack, data);
+            ValueBottomClamp(ref attack, 0);
             onAttackChanged.Invoke();
         }
     }
