@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.Serialization;
 
-[CreateAssetMenu(menuName = "Crawl/MovementData")]
-public class MovementData : ScriptableObject
+namespace Crawl.Scripts
 {
-    [SerializeField] private int distance, turnRadius;
-    [SerializeField] private float speed, turnSpeed;
+    [CreateAssetMenu(menuName = "Crawl/MovementData")]
+    public class MovementData : ScriptableObject
+    {
+        [SerializeField] public int distance;
+        [SerializeField] public float transitionSpeed, transitionRotationSpeed, turnRadius;
+        [SerializeField] public bool smoothTransition =  true;
     
+    }
 }

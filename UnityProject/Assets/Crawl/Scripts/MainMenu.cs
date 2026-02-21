@@ -1,21 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+namespace Crawl.Scripts
 {
-    public void PlayGame()
+    public class MainMenu : MonoBehaviour
     {
-        SceneManager.LoadScene(1);
-    }
+        public void PlayGame()
+        {
+            SceneManager.LoadScene(1);
+        }
 
-    public void QuitGame()
-    {
-        if (UnityEditor.EditorApplication.isPlaying)
+        public void QuitGame()
+        {
+            if (UnityEditor.EditorApplication.isPlaying)
             { UnityEditor.EditorApplication.isPlaying = false; }
 
-        else
-            Application.Quit();
+            else
+                Application.Quit();
+        }
     }
 }

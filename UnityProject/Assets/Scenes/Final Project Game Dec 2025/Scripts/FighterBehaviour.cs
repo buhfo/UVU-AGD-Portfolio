@@ -1,47 +1,51 @@
-﻿using UnityEngine;
+﻿using ArtisanDream.ToolsQuinn.AI.Scripts.Advanced;
+using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(NavMeshAgent))]
-[RequireComponent(typeof(Collider))]
-public class FighterBehaviour : MonoBehaviour
+namespace Scenes.Final_Project_Game_Dec_2025.Scripts
 {
-    public FighterStats aiStatsObj;
-    private AiBase aiBaseObj;
-    private NavMeshAgent agent;
-    public UnityEvent startEvent, triggerEnterEvent, triggerExitEvent;
-    private void Awake()
+    [RequireComponent(typeof(NavMeshAgent))]
+    [RequireComponent(typeof(Collider))]
+    public class FighterBehaviour : MonoBehaviour
     {
-        agent = GetComponent<NavMeshAgent>();
-    }
+        public FighterStats aiStatsObj;
+        private AiBase aiBaseObj;
+        private NavMeshAgent agent;
+        public UnityEvent startEvent, triggerEnterEvent, triggerExitEvent;
+        private void Awake()
+        {
+            agent = GetComponent<NavMeshAgent>();
+        }
 
-    private void Start()
-    {
-        startEvent.Invoke();
+        private void Start()
+        {
+            startEvent.Invoke();
         
-        if (aiStatsObj == null) return;
-        agent.speed = aiStatsObj.speed;
-        agent.acceleration = aiStatsObj.acceleration;
-        agent.angularSpeed = aiStatsObj.angularSpeed;
-        agent.stoppingDistance = aiStatsObj.stoppingDistance;
-    }
+            if (aiStatsObj == null) return;
+            agent.speed = aiStatsObj.speed;
+            agent.acceleration = aiStatsObj.acceleration;
+            agent.angularSpeed = aiStatsObj.angularSpeed;
+            agent.stoppingDistance = aiStatsObj.stoppingDistance;
+        }
 
-    public void ChangeBase(AiBase obj)
-    {
-        aiBaseObj = obj;
-    }
-    private void Update()
-    {
-        aiBaseObj.Navigate(agent);
-    }
+        public void ChangeBase(AiBase obj)
+        {
+            aiBaseObj = obj;
+        }
+        private void Update()
+        {
+            aiBaseObj.Navigate(agent);
+        }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        triggerEnterEvent.Invoke();
-    }
+        private void OnTriggerEnter(Collider other)
+        {
+            triggerEnterEvent.Invoke();
+        }
 
-    private void OnTriggerExit(Collider other)
-    {
-        triggerExitEvent.Invoke();
+        private void OnTriggerExit(Collider other)
+        {
+            triggerExitEvent.Invoke();
+        }
     }
 }

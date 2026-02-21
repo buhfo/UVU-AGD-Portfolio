@@ -9,21 +9,24 @@ using UnityEngine.Events;
 
 
 
-public class ClickBehavior : MonoBehaviour
+namespace Scenes.Final_Project_Game_Dec_2025.Scripts
 {
+    public class ClickBehavior : MonoBehaviour
+    {
 
-    public UnityEvent clickEvent;
+        public UnityEvent clickEvent;
     
-    private void OnMouseDown()
-    {
-        //print ("Clicked on " + gameObject.name);
-        print("Clicked on " + gameObject.name);
+        private void OnMouseDown()
+        {
+            //print ("Clicked on " + gameObject.name);
+            print("Clicked on " + gameObject.name);
 
-        onTriggerClick();
-    }
+            onTriggerClick();
+        }
 
-    private void onTriggerClick()
-    {
-        clickEvent.Invoke();
+        private void onTriggerClick()
+        {
+            clickEvent.Invoke();
+        }
     }
 }

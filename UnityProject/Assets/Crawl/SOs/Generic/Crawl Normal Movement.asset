@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Crawl Normal Movement
   m_EditorClassIdentifier: Assembly-CSharp::MovementData
   distance: 1
+  transitionSpeed: 10
+  transitionRotationSpeed: 500
   turnRadius: 90
-  speed: 10
-  turnSpeed: 500
+  smoothTransition: 1

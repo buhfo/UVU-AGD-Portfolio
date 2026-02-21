@@ -1,75 +1,80 @@
 ﻿using System;
-using UnityEngine;
-using TMPro;
-using UnityEngine.Events;
-using System.Globalization;
 using System.Collections;
+using System.Globalization;
+using ArtisanDream.ToolsQuinn.ActionsEvents;
+using ArtisanDream.ToolsQuinn.SingleVariables;
+using TMPro;
+using UnityEngine;
+using UnityEngine.Events;
 
-[RequireComponent(typeof(TextMeshProUGUI))]
-public class QTextMeshProBehaviour : MonoBehaviour
+namespace Scenes.Final_Project_Game_Dec_2025.Scripts
 {
-    [SerializeField] private GameAction gameActionObj;
-    [SerializeField] private UnityEvent awakeEvent, raiseEvent;
-
-    private TextMeshProUGUI textObj;
-    private WaitForSeconds waitForFixedUpdate;
-
-    private int currentNum;
-
-    private void Start()
+    [RequireComponent(typeof(TextMeshProUGUI))]
+    public class QTextMeshProBehaviour : MonoBehaviour
     {
-        waitForFixedUpdate = new WaitForSeconds(0.1f); // Set delay time for UpdateNumberCount
-        Awake();
-        awakeEvent.Invoke();
-    }
+        [SerializeField] private GameAction gameActionObj;
+        [SerializeField] private UnityEvent awakeEvent, raiseEvent;
 
-    private void OnDestroy()
-    {
-        if (gameActionObj != null) gameActionObj.RaiseNoArgs -= Raise;
-    }
+        private TextMeshProUGUI textObj;
+        private WaitForSeconds waitForFixedUpdate;
 
-    protected void Awake()
-    {
-        textObj = GetComponent<TextMeshProUGUI>();
-        if (gameActionObj != null) gameActionObj.RaiseNoArgs += Raise;
-    }
+        private int currentNum;
 
-    private void Raise() => raiseEvent.Invoke();
-    public void UpdateText(IntData intDataObj) => textObj.text = intDataObj.Value.ToString();
-    public void UpdateText(QIntData intDataObj) => textObj.text = intDataObj.Value.ToString();
-
-    public void UpdateText(string obj) => textObj.text = obj;
-
-    public void UpdateText(FloatData obj) => textObj.text = obj.Value.ToString(CultureInfo.CurrentCulture);
-
-    public void UpdateTextWithTime(FloatData obj)
-    {
-        TimeSpan timeSpanObj = TimeSpan.FromSeconds(obj.Value);
-        textObj.text = $"{timeSpanObj.Minutes}:{timeSpanObj.Seconds:d2}";
-    }
-
-    public void UpdateTextAsMoney(IntData obj)
-    {
-        textObj.text = obj.Value.ToString("C0");
-    }
-
-    public void StoreIntDataValue(IntData obj)
-    {
-        currentNum = obj.Value;
-    }
-
-    public void StartUpdateNumberCount(IntData obj)
-    {
-        StartCoroutine(UpdateNumberCount(obj));
-    }
-
-    private IEnumerator UpdateNumberCount(IntData intData)
-    {
-        while (intData.Value != currentNum)
+        private void Start()
         {
-            currentNum -= 5; // You may want to adjust the decrement value here
-            textObj.text = currentNum.ToString("C0");
-            yield return waitForFixedUpdate;
+            waitForFixedUpdate = new WaitForSeconds(0.1f); // Set delay time for UpdateNumberCount
+            Awake();
+            awakeEvent.Invoke();
+        }
+
+        private void OnDestroy()
+        {
+            if (gameActionObj != null) gameActionObj.RaiseNoArgs -= Raise;
+        }
+
+        protected void Awake()
+        {
+            textObj = GetComponent<TextMeshProUGUI>();
+            if (gameActionObj != null) gameActionObj.RaiseNoArgs += Raise;
+        }
+
+        private void Raise() => raiseEvent.Invoke();
+        public void UpdateText(IntData intDataObj) => textObj.text = intDataObj.Value.ToString();
+        public void UpdateText(QIntData intDataObj) => textObj.text = intDataObj.Value.ToString();
+
+        public void UpdateText(string obj) => textObj.text = obj;
+
+        public void UpdateText(FloatData obj) => textObj.text = obj.Value.ToString(CultureInfo.CurrentCulture);
+
+        public void UpdateTextWithTime(FloatData obj)
+        {
+            TimeSpan timeSpanObj = TimeSpan.FromSeconds(obj.Value);
+            textObj.text = $"{timeSpanObj.Minutes}:{timeSpanObj.Seconds:d2}";
+        }
+
+        public void UpdateTextAsMoney(IntData obj)
+        {
+            textObj.text = obj.Value.ToString("C0");
+        }
+
+        public void StoreIntDataValue(IntData obj)
+        {
+            currentNum = obj.Value;
+        }
+
+        public void StartUpdateNumberCount(IntData obj)
+        {
+            StartCoroutine(UpdateNumberCount(obj));
+        }
+
+        private IEnumerator UpdateNumberCount(IntData intData)
+        {
+            while (intData.Value != currentNum)
+            {
+                currentNum -= 5; // You may want to adjust the decrement value here
+                textObj.text = currentNum.ToString("C0");
+                yield return waitForFixedUpdate;
+            }
         }
     }
 }

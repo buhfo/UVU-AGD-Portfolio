@@ -1,71 +1,74 @@
-﻿using UnityEngine;
+﻿using ArtisanDream.ToolsQuinn.SingleVariables;
+using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
-[CreateAssetMenu(menuName = "ScriptableObjects/QIntData")]
-public class QIntData : ScriptableObject
+namespace Scenes.Final_Project_Game_Dec_2025.Scripts
 {
-    [SerializeField] private int value, minValue, maxValue;
-
-    public UnityEvent<float> valueOutOfRange;
-    public UnityEvent onValueChanged, onValueZero;
-
-    public int Value
+    [CreateAssetMenu(menuName = "ScriptableObjects/QIntData")]
+    public class QIntData : ScriptableObject
     {
-        get => value;
-        set
+        [SerializeField] private int value, minValue, maxValue;
+
+        public UnityEvent<float> valueOutOfRange;
+        public UnityEvent onValueChanged, onValueZero;
+
+        public int Value
         {
-            this.value = value;
+            get => value;
+            set
+            {
+                this.value = value;
+                onValueChanged.Invoke();
+                ClampValue();
+            }
+        }
+
+        public void UpdateValue(int amount)
+        {
+            value += amount;
+        }
+
+        public void SetValue(IntData data)
+        {
+            value = data.Value;
+        }
+    
+        public void SetValue(int data)
+        {
+            Value = data;
+        }
+    
+        public void IncrementValue()
+        {
+            value++;
             onValueChanged.Invoke();
-            ClampValue();
         }
-    }
 
-    public void UpdateValue(int amount)
-    {
-        value += amount;
-    }
-
-    public void SetValue(IntData data)
-    {
-        value = data.Value;
-    }
-    
-    public void SetValue(int data)
-    {
-        Value = data;
-    }
-    
-    public void IncrementValue()
-    {
-        value++;
-        onValueChanged.Invoke();
-    }
-
-    private void ClampValue()
-    {
-        if (!(Value < minValue) && !(Value > maxValue)) return;
-        valueOutOfRange.Invoke(Value);
-        Value = Mathf.Clamp(Value, minValue, maxValue);
+        private void ClampValue()
+        {
+            if (!(Value < minValue) && !(Value > maxValue)) return;
+            valueOutOfRange.Invoke(Value);
+            Value = Mathf.Clamp(Value, minValue, maxValue);
    
-        if (value == 0)
-        {
-            onValueZero.Invoke();
+            if (value == 0)
+            {
+                onValueZero.Invoke();
+            }
         }
-    }
 
-    public void UpdateValueZeroCheck(int i)
-    {
-        if (value + i < 0) return;
-        value += i;
-    }
-
-    public void ValueIsZero()
-    {
-        if (value == 0)
+        public void UpdateValueZeroCheck(int i)
         {
-            onValueZero.Invoke();
+            if (value + i < 0) return;
+            value += i;
         }
+
+        public void ValueIsZero()
+        {
+            if (value == 0)
+            {
+                onValueZero.Invoke();
+            }
         
+        }
     }
 }

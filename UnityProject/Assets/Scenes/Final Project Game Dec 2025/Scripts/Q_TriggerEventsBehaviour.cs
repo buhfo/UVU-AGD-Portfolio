@@ -1,42 +1,45 @@
 using System.Collections;
+using ArtisanDream.ToolsQuinn.Bahaviours;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class QTriggerEventsBehaviour : MonoEventsBehaviour
+namespace Scenes.Final_Project_Game_Dec_2025.Scripts
 {
-    public UnityEvent triggerEnterEvent, triggerEnterRepeatEvent, triggerEnterEndEvent, triggerExitEvent;
-    private WaitForSeconds waitEnterObj, waitRepeatObj, waitExitObj;
-    public float enterHoldTime = 0.01f, repeatHoldTime = 0.01f, exitHoldTime = 0.01f;
-    public bool canRepeat, canRepeatWithLimits;
-    private bool repeat;
-    public int repeatLimit = 10;
-
-    protected override void Awake()
+    public class QTriggerEventsBehaviour : MonoEventsBehaviour
     {
-        base.Awake();
-        waitEnterObj = new WaitForSeconds(enterHoldTime);
-        waitRepeatObj = new WaitForSeconds(repeatHoldTime);
-        waitExitObj = new WaitForSeconds(exitHoldTime);
-    }
+        public UnityEvent triggerEnterEvent, triggerEnterRepeatEvent, triggerEnterEndEvent, triggerExitEvent;
+        private WaitForSeconds waitEnterObj, waitRepeatObj, waitExitObj;
+        public float enterHoldTime = 0.01f, repeatHoldTime = 0.01f, exitHoldTime = 0.01f;
+        public bool canRepeat, canRepeatWithLimits;
+        private bool repeat;
+        public int repeatLimit = 10;
 
-    private IEnumerator OnTriggerEnter(Collider other)
-    {
-        yield return waitEnterObj;
-        triggerEnterEvent.Invoke();
-        
-        if (canRepeatWithLimits)
+        protected override void Awake()
         {
-            var count = 0;
-            while (repeat && count < repeatLimit)
-            {
-                yield return waitRepeatObj;
-                triggerEnterRepeatEvent.Invoke();
-                count++;
-            }
+            base.Awake();
+            waitEnterObj = new WaitForSeconds(enterHoldTime);
+            waitRepeatObj = new WaitForSeconds(repeatHoldTime);
+            waitExitObj = new WaitForSeconds(exitHoldTime);
         }
+
+        private IEnumerator OnTriggerEnter(Collider other)
+        {
+            yield return waitEnterObj;
+            triggerEnterEvent.Invoke();
         
-        if (canRepeat)
-            repeat = true;
+            if (canRepeatWithLimits)
+            {
+                var count = 0;
+                while (repeat && count < repeatLimit)
+                {
+                    yield return waitRepeatObj;
+                    triggerEnterRepeatEvent.Invoke();
+                    count++;
+                }
+            }
+        
+            if (canRepeat)
+                repeat = true;
             while (repeat)
             {
                 yield return waitRepeatObj;
@@ -44,14 +47,15 @@ public class QTriggerEventsBehaviour : MonoEventsBehaviour
             }
         
 
-        yield return waitExitObj;
-        triggerEnterEndEvent.Invoke();
-    }
+            yield return waitExitObj;
+            triggerEnterEndEvent.Invoke();
+        }
     
 
-    private void OnTriggerExit(Collider other)
-    {
-        repeat = false;
-        triggerExitEvent.Invoke();
+        private void OnTriggerExit(Collider other)
+        {
+            repeat = false;
+            triggerExitEvent.Invoke();
+        }
     }
 }
