@@ -63,8 +63,8 @@ MonoBehaviour:
     minPosition: {x: 0, y: 0}
     maxPosition: {x: 1, y: 1}
     obligatory: 0
-  - hall: {fileID: 504260956658035454, guid: e2c2588175933f141aa06b5649c18547, type: 3}
-    minPosition: {x: 0, y: 0}
+  - hall: {fileID: 504260956658035454, guid: 4108cad86cb609542a5f90ae26b3c8d7, type: 3}
+    minPosition: {x: 5, y: 5}
     maxPosition: {x: 10, y: 10}
     obligatory: 0
   - hall: {fileID: 504260956658035454, guid: c8d1eef4dbf951942b04b3a7c5c6b0c3, type: 3}

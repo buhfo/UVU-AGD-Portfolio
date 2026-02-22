@@ -17,6 +17,7 @@ MonoBehaviour:
   experience: 30
   experienceMax: 30
   attack: 1
+  tempo: 2
   onHealthChanged:
     m_PersistentCalls:
       m_Calls: []

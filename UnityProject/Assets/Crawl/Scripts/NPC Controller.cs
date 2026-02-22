@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
@@ -7,37 +8,36 @@ namespace Crawl.Scripts
     public class NpcController : MonoBehaviour
     {
         private MovementManager movementManager;
-        private SimpleCoroutineBehaviour movementTimer;
-        private MovementData movementInsideData;
-        public EntityData template;
-        public EntityData playerDmg;
+        public EntityData template, playerStats;
         [HideInInspector]
         public EntityData entityData;
-        public UnityEvent takeDamage;
-        public UnityEvent deathActivate;
+        public UnityEvent takeDamage, deathActivate, attackPlayer;
+        
+        private float seconds;
+        
+        private WaitForSeconds waitForSeconds;
         
         /// <summary>
         ///  0 = forward
         ///  1 = left
         ///  2 = right
+        ///  3 = attack
         /// </summary>
         private int lastMovement;
         
         private void Awake()
         {
             movementManager = GetComponent<MovementManager>();
-            movementTimer = GetComponent<SimpleCoroutineBehaviour>();
-            movementInsideData = movementManager.movementData;
-            
             entityData = Instantiate(template);
             
-            // if (entityData == null)
-            // {
-            //     AssignData();
-            // }
-
             // Subscribe THIS GameObject to the event
             entityData.onHealthZero.AddListener(HandleDeath);
+            
+            seconds = entityData.tempo;
+        }
+        private void Start()
+        {
+            StartCoroutine(MovementLoop());
         }
 
         private void HandleDeath()
@@ -51,19 +51,7 @@ namespace Crawl.Scripts
             movementManager.MoveForward();
             lastMovement = 0;
         }
-
-        private void AssignData()
-        {
-            // Create a unique instance of Entity Data for this GameObject
-            entityData = ScriptableObject.CreateInstance<EntityData>();
-
-            //initialize default values
-            entityData.health = template.health;
-            entityData.healthMax = template.healthMax;
-            entityData.experience = template.experience;
-            entityData.experienceMax = template.experienceMax;
-            entityData.attack = template.attack;
-        }
+        
         
         // this chooses whether to turn left or right but it still needs to be called though
         private void Rotate()
@@ -83,27 +71,37 @@ namespace Crawl.Scripts
                     break;
             }
         }
+        
 
 
-        public void StartMoving()
+        private IEnumerator MovementLoop()
         {
-            if (movementManager.wallInFront) Rotate();
-            else Forward();
+            while (true)
+            {
+                if (movementManager.wallInFront)
+                    Rotate();
+                else if (movementManager.playerInFront)
+                    DamagePlayer();
+                else
+                    Forward();
+
+                yield return new WaitForSeconds(seconds);
+            }
         }
         
         private void OnTriggerEnter(Collider other)
         {
-            // if (!other.CompareTag("Player")) return;
+            if (!other.CompareTag("Player")) return;
             takeDamage.Invoke();
-            entityData.ChangeHealth(playerDmg.attack * -1);
+            entityData.ChangeHealth(playerStats.attack * -1);
+        }
 
 
+        public void DamagePlayer()
+        {
+            playerStats.ChangeHealth(-entityData.attack);
         }
         
-        // if it can go forward, it should go forward
-        // if it cant it should turn until it can go forward 
-        // this script needs to reference the movement manager script in some way
-        // if the player is in front of it, it should attack
     }
     
     

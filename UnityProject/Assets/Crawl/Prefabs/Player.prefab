@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1871575650758229102
 Transform:
   m_ObjectHideFlags: 0
@@ -241,6 +241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementData: {fileID: 11400000, guid: 960d9f05f91ac0c46ad2c3907a04cbd7, type: 2}
   wallInFront: 0
+  PlayerInFront: 0
 --- !u!114 &8583603347983815405
 MonoBehaviour:
   m_ObjectHideFlags: 0

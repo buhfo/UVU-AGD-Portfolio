@@ -20,7 +20,8 @@ namespace Crawl.Scripts
         // COLLISION CHECKS //
         //------------------//
         [HideInInspector]
-        public bool wallInFront;
+        public bool wallInFront, enemyInFront, enemyBehind, playerInFront;
+
         private bool noWall;
         private bool wallBehind;
         private bool noWallBehind;
@@ -40,11 +41,14 @@ namespace Crawl.Scripts
         private void Start()
         {
             // your target position at the start is where you currently are.
+            FixPosition();
+        }
+
+        private void FixPosition()
+        {
             targetGridPos = Vector3Int.RoundToInt(transform.position);
             targetRotation = transform.eulerAngles;
         }
-
-
 
         //----------------------------------------//
         // WALL CHECKS & CALL FOR MOVEMENT SCRIPT //
@@ -63,6 +67,24 @@ namespace Crawl.Scripts
                 {
                     wallInFront = false;
                 }
+
+                if (hitinfo.collider.CompareTag("Player"))
+                {
+                    playerInFront = true;
+                }
+                else
+                {
+                    playerInFront = false;
+                }
+                
+                if (hitinfo.collider.CompareTag("Enemy"))
+                {
+                    enemyInFront = true;
+                }
+                else
+                {
+                    enemyInFront = false;
+                }
             }
 
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.back), out RaycastHit backhitinfo, 1.25f))
@@ -75,6 +97,15 @@ namespace Crawl.Scripts
                 if (backhitinfo.collider.CompareTag("Open"))
                 {        
                     wallBehind = false;
+                }
+                
+                if (backhitinfo.collider.CompareTag("Enemy"))
+                {
+                    enemyBehind = true;
+                }
+                else
+                {
+                    enemyBehind = false;
                 }
             }
             ////////////////////////////////////////////
@@ -144,6 +175,7 @@ namespace Crawl.Scripts
         {
             if (AtRest)
             {
+                FixPosition();
                 if (wallInFront == false)
                 {
                     targetGridPos += (transform.forward *  movementData.distance);

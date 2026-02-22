@@ -12,6 +12,7 @@ namespace Crawl.Scripts
         [FormerlySerializedAs("Experience")] [SerializeField] public int experience;
         [FormerlySerializedAs("ExperienceMax")] [SerializeField] public int experienceMax;
         [FormerlySerializedAs("Attack")] [SerializeField] public int attack;
+        public float tempo = 2;
 
         public UnityEvent onHealthChanged, onHealthZero, onExperienceChanged, onExperienceMax, onAttackChanged;
 

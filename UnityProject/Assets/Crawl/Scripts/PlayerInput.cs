@@ -32,8 +32,8 @@ namespace Crawl.Scripts
 
         private void Update()
         {
-            if (Input.GetKeyUp(forward)) controller.MoveForward();
-            if (Input.GetKeyUp(back)) controller.MoveBackward();
+            if (Input.GetKeyUp(forward) && !controller.enemyInFront) controller.MoveForward();
+            if (Input.GetKeyUp(back) && !controller.enemyBehind) controller.MoveBackward();
             if (Input.GetKeyUp(turnLeft)) controller.RotateLeft();
             if (Input.GetKeyUp(turnRight)) controller.RotateRight();
             if (Input.GetKeyUp(interact)) interactEvent.Invoke();
