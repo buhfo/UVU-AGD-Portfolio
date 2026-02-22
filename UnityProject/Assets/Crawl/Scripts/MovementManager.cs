@@ -19,7 +19,8 @@ namespace Crawl.Scripts
         //------------------//
         // COLLISION CHECKS //
         //------------------//
-        private bool wallInFront;
+        [HideInInspector]
+        public bool wallInFront;
         private bool noWall;
         private bool wallBehind;
         private bool noWallBehind;

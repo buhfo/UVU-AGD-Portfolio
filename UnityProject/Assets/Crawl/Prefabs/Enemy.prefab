@@ -13,9 +13,11 @@ GameObject:
   - component: {fileID: 5948292221589097698}
   - component: {fileID: 8054776589654987574}
   - component: {fileID: 3014751148238150035}
+  - component: {fileID: 920272664462158300}
+  - component: {fileID: 7417218250157745858}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,3 +129,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Crawl.Scripts.MovementManager
   movementData: {fileID: 11400000, guid: 960d9f05f91ac0c46ad2c3907a04cbd7, type: 2}
+  wallInFront: 0
+--- !u!114 &920272664462158300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6067521914493877834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dddc4feb0596c48960f376224a327d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Crawl.Scripts.EnemyController
+--- !u!114 &7417218250157745858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6067521914493877834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8327ca5ce18ed4725ae75f76e0f07d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SimpleCoroutineBehaviour
+  seconds: 1
+  event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 920272664462158300}
+        m_TargetAssemblyTypeName: Crawl.Scripts.NpcController, Assembly-CSharp
+        m_MethodName: StartMoving
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

@@ -7,11 +7,11 @@ namespace Crawl.Scripts
     [CreateAssetMenu(menuName = "Crawl/EntityData")]
     public class EntityData : ScriptableObject
     {
-        [FormerlySerializedAs("Health")] [SerializeField] private int health;
-        [FormerlySerializedAs("HealthMax")] [SerializeField] private int healthMax;
-        [FormerlySerializedAs("Experience")] [SerializeField] private int experience;
-        [FormerlySerializedAs("ExperienceMax")] [SerializeField] private int experienceMax;
-        [FormerlySerializedAs("Attack")] [SerializeField] private int attack;
+        [FormerlySerializedAs("Health")] [SerializeField] public int health;
+        [FormerlySerializedAs("HealthMax")] [SerializeField] public int healthMax;
+        [FormerlySerializedAs("Experience")] [SerializeField] public int experience;
+        [FormerlySerializedAs("ExperienceMax")] [SerializeField] public int experienceMax;
+        [FormerlySerializedAs("Attack")] [SerializeField] public int attack;
 
         public UnityEvent onHealthChanged, onHealthZero, onExperienceChanged, onExperienceMax, onAttackChanged;
 
