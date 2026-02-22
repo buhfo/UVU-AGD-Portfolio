@@ -85,12 +85,10 @@ namespace Crawl.Scripts
                             if(p == 2)
                             {
                                 randomHall = k;
-                                Debug.Log("Break");
                                 break;
 
                             } else if(p == 1)
                             {
-                                Debug.Log("add");
                                 availableHalls.Add(k);
                             }
                         }

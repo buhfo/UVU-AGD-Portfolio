@@ -1,5 +1,5 @@
-using System;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 namespace Crawl.Scripts
@@ -10,8 +10,11 @@ namespace Crawl.Scripts
         private SimpleCoroutineBehaviour movementTimer;
         private MovementData movementInsideData;
         public EntityData template;
+        public EntityData playerDmg;
         [HideInInspector]
         public EntityData entityData;
+        public UnityEvent takeDamage;
+        public UnityEvent deathActivate;
         
         /// <summary>
         ///  0 = forward
@@ -25,11 +28,24 @@ namespace Crawl.Scripts
             movementManager = GetComponent<MovementManager>();
             movementTimer = GetComponent<SimpleCoroutineBehaviour>();
             movementInsideData = movementManager.movementData;
-            if (entityData == null)
-            {
-                AssignData();
-            }
+            
+            entityData = Instantiate(template);
+            
+            // if (entityData == null)
+            // {
+            //     AssignData();
+            // }
+
+            // Subscribe THIS GameObject to the event
+            entityData.onHealthZero.AddListener(HandleDeath);
         }
+
+        private void HandleDeath()
+        {
+            deathActivate.Invoke();
+            Destroy(gameObject);
+        }
+
         private void Forward()
         {
             movementManager.MoveForward();
@@ -75,14 +91,22 @@ namespace Crawl.Scripts
             else Forward();
         }
         
-        
-        
-        
-        
+        private void OnTriggerEnter(Collider other)
+        {
+            // if (!other.CompareTag("Player")) return;
+            takeDamage.Invoke();
+            entityData.ChangeHealth(playerDmg.attack * -1);
+
+
+        }
         
         // if it can go forward, it should go forward
         // if it cant it should turn until it can go forward 
         // this script needs to reference the movement manager script in some way
         // if the player is in front of it, it should attack
     }
+    
+    
+    
+    
 }
