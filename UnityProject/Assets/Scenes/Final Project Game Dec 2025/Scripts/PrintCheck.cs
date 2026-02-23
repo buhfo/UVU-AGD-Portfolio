@@ -1,12 +1,14 @@
 using UnityEngine;
-using UnityEngine.Events;
 
-public class PrintCheck : MonoBehaviour
+namespace Scenes.Final_Project_Game_Dec_2025.Scripts
 {
-    public string printMessage = "Hello, World!";
-
-    public void PrintCheckRun()
+    public class PrintCheck : MonoBehaviour
     {
-        Debug.Log(printMessage);
+        public string printMessage = "Hello, World!";
+
+        public void PrintCheckRun()
+        {
+            Debug.Log(printMessage);
+        }
     }
 }

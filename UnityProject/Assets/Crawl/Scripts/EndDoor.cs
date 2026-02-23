@@ -1,15 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EndDoor : MonoBehaviour
+namespace Crawl.Scripts
 {
-    private void OnTriggerEnter(Collider other)
+    public class EndDoor : MonoBehaviour
     {
-        if(other.gameObject.tag == "Player")
+        public string nextScene = "generation";
+        private void OnTriggerEnter(Collider other)
         {
-            SceneManager.LoadScene(0);
+            if(other.gameObject.CompareTag("Player"))
+            {
+                SceneManager.LoadScene(nextScene);
+            }
         }
     }
 }
