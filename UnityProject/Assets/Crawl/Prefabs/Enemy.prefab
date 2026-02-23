@@ -130,7 +130,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Crawl.Scripts.MovementManager
   movementData: {fileID: 11400000, guid: 960d9f05f91ac0c46ad2c3907a04cbd7, type: 2}
   wallInFront: 0
-  PlayerInFront: 0
+  enemyInFront: 0
+  enemyBehind: 0
+  playerInFront: 0
 --- !u!114 &920272664462158300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,7 +153,19 @@ MonoBehaviour:
       m_Calls: []
   deathActivate:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 5cd9c36a1a2ad7b4d8f6d85f9b1a9486, type: 2}
+        m_TargetAssemblyTypeName: Crawl.Scripts.EntityData, Assembly-CSharp
+        m_MethodName: ChangeExperience
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: b8eab6c75a519a34bac6d37653f97389, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Crawl.Scripts.EntityData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   attackPlayer:
     m_PersistentCalls:
       m_Calls: []

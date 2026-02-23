@@ -15,7 +15,7 @@ MonoBehaviour:
   health: 10
   healthMax: 10
   experience: 0
-  experienceMax: 100
+  experienceMax: 2147483647
   attack: 1
   tempo: 2
   onHealthChanged:

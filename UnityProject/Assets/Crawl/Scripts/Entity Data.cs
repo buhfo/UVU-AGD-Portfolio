@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 
@@ -88,6 +89,17 @@ namespace Crawl.Scripts
                 onExperienceMax.Invoke();
             }
         }
+        public void ChangeExperience(EntityData entityData)
+        {
+            UpdateValue(ref experience, entityData.experience);
+            ValueTopClamp(ref experience, experienceMax);
+            ValueBottomClamp(ref experience, 0);
+            onExperienceChanged.Invoke();
+            if (experience >= experienceMax)
+            {
+                onExperienceMax.Invoke();
+            }
+        }
         public void SetExperience(int data)
         {
             SetValue(ref experience, data);
@@ -112,6 +124,12 @@ namespace Crawl.Scripts
             SetValue(ref attack, data);
             ValueBottomClamp(ref attack, 0);
             onAttackChanged.Invoke();
+        }
+
+        public void ResetValues()
+        {
+            SetValue(ref health, healthMax);
+            SetValue(ref experience, 0);
         }
     }
 }

@@ -3,11 +3,19 @@ using UnityEngine.SceneManagement;
 
 namespace Crawl.Scripts
 {
-    public class MainMenu : MonoBehaviour
+    public class SceneController : MonoBehaviour
     {
-        public void PlayGame()
+        public string sceneOne;
+        public string sceneTwo;
+        
+        public void SceneOne()
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(sceneOne);
+        }
+
+        public void SceneTwo()
+        {
+            SceneManager.LoadScene(sceneTwo);
         }
 
         public void QuitGame()
