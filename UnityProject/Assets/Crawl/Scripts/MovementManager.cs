@@ -5,6 +5,9 @@ namespace Crawl.Scripts
 {
     public class MovementManager : MonoBehaviour
     {
+        // I need to fix all the raycast stuff.
+        
+        
         Animator animator;
         AudioSource audioSource;
     
@@ -56,7 +59,7 @@ namespace Crawl.Scripts
         private void FixedUpdate()
         {
             // I can probably remove this stuff from the fixed update area///////////////////
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hitinfo, 1.25f))
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hitinfo, movementData.rayLength))
             {
                 if (hitinfo.collider.CompareTag("Wall"))
                 {
@@ -87,7 +90,7 @@ namespace Crawl.Scripts
                 }
             }
 
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.back), out RaycastHit backhitinfo, 1.25f))
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.back), out RaycastHit backhitinfo, movementData.rayLength))
             {
                 if (backhitinfo.collider.CompareTag("Wall"))
                 {

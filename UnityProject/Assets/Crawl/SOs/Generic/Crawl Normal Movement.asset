@@ -16,4 +16,5 @@ MonoBehaviour:
   transitionSpeed: 10
   transitionRotationSpeed: 500
   turnRadius: 90
+  rayLength: 1.25
   smoothTransition: 1
