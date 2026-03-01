@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Deadlift animation.ma
-//Last modified: Sun, Feb 22, 2026 09:51:02 PM
+//Last modified: Sun, Feb 22, 2026 10:22:19 PM
 //Codeset: 1252
 file -rdi 1 -ns "Barbell" -rfn "BarbellRN" -op "v=0;" -typ "mayaAscii" "C:/Users/quinn/Documents/UVU/UVU-AGD-Portfolio/UnityProject/Assets/MayaProject//scenes/Items/Barbell.ma";
 file -rdi 1 -ns "Ultimate_Bony_v1_0_5" -rfn "Ultimate_Bony_v1_0_5RN" -op "v=0;"
@@ -9,15 +9,15 @@ file -r -ns "Barbell" -dr 1 -rfn "BarbellRN" -op "v=0;" -typ "mayaAscii" "C:/Use
 file -r -ns "Ultimate_Bony_v1_0_5" -dr 1 -rfn "Ultimate_Bony_v1_0_5RN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/quinn/Documents/UVU/UVU-AGD-Portfolio/UnityProject/Assets/MayaProject//scenes/AnimRefRigs/Ultimate_Bony_v1.0.5.ma";
 requires maya "2025ff03";
-requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiAreaLight"
-		 -nodeType "aiImagerDenoiserOidn" "mtoa" "5.4.8.2";
+requires -nodeType "aiOptions" -nodeType "aiAOV" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter"
+		 -nodeType "aiAreaLight" -nodeType "aiImagerDenoiserOidn" "mtoa" "5.4.8.2";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202505300603-a12e894a3d";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "105556F0-49CA-11B6-4101-069AFE2EFF1F";
+fileInfo "UUID" "C095F4A8-4DAF-A59B-0FE0-A9BFF8CB7489";
 createNode transform -s -n "persp";
 	rename -uid "6E8F0792-4C96-D1B8-1780-F9B8506F772A";
 	setAttr ".v" no;
@@ -138,22 +138,22 @@ createNode aiAreaLight -n "aiAreaLightShape3" -p "aiAreaLight3";
 	setAttr ".ai_translator" -type "string" "quad";
 	setAttr ".aal" -type "attributeAlias" 4 "exposure" "aiExposure" "normalize" "aiNormalize" ;
 createNode fosterParent -n "Ultimate_Bony_v1_0_5RNfosterParent1";
-	rename -uid "1E2E14EE-4A37-AEFC-2E3C-DDA9927A62A8";
+	rename -uid "4B254D3B-42D9-62A6-ED7A-FF970022683D";
 createNode nurbsCurve -n "Bony_ROOTCShapeDeformed" -p "Ultimate_Bony_v1_0_5RNfosterParent1";
 	rename -uid "F1D5CB95-48FA-E4AC-61B6-58BBD6CF8690";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "C3C28803-4592-8AFE-147E-53B771FE1918";
+	rename -uid "8F4A60F4-42C7-DFF3-9B88-45BE675609BA";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "85D776F7-435E-4BF1-6FA6-25B8E415A591";
+	rename -uid "1426E914-4188-2165-E068-098AC816E450";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "64504B36-4B16-A65B-74F7-439C2698B4F2";
+	rename -uid "603010CE-4E0D-B0FC-1AAA-11BD57BFA1ED";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "5FF4FA93-40F0-72F1-8AB6-39A0A8FCA5F8";
+	rename -uid "34DB5702-4A02-80A4-6F07-A3AF9FEC729D";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
@@ -161,21 +161,22 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "362A387A-4753-C181-154B-56BB6607F849";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "9C2D80D8-4676-0081-20BC-A2A17DC361D0";
+	rename -uid "EF86D97B-499B-80CC-93E7-23BFA7C8A55D";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "25B3D7C8-4813-B4B6-B361-85AD1DD174C8";
 	setAttr ".g" yes;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "9707D19F-446C-1E0E-6E5B-9A89B75D0B7D";
 	addAttr -ci true -sn "ARV_options" -ln "ARV_options" -dt "string";
-	setAttr ".AA_samples" 2;
+	setAttr -s 6 ".aovs";
+	setAttr ".AA_samples" 4;
 	setAttr ".version" -type "string" "5.4.8.2";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "CA856B52-41A1-6364-9B5C-B1B25556C289";
 	setAttr ".ai_translator" -type "string" "gaussian";
 createNode aiAOVDriver -s -n "defaultArnoldDriver";
 	rename -uid "C553C731-418D-C5E7-51E3-5FB4AB8B485D";
-	setAttr ".ai_translator" -type "string" "jpeg";
+	setAttr ".ai_translator" -type "string" "png";
 	setAttr ".color_management" 1;
 createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	rename -uid "3307C16F-425B-4CE3-72FE-F1ADD7926E78";
@@ -189,7 +190,7 @@ createNode reference -n "BarbellRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BarbellRN"
 		"BarbellRN" 0
-		"BarbellRN" 529
+		"BarbellRN" 11
 		2 "|Barbell:Barbell" "translate" " -type \"double3\" 0 0 0.7258538141571691"
 		
 		2 "|Barbell:Barbell" "rotate" " -type \"double3\" 0 0 0"
@@ -197,1050 +198,39 @@ createNode reference -n "BarbellRN";
 		2 "|Barbell:Barbell" "rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Barbell:Barbell" "scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts" " -s 522"
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[0]" " -type \"float3\" -3.2489425999999999 1.30901719999999999 4.00211429999999968"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[1]" " -type \"float3\" -3.39098219999999984 1.58778569999999997 3.718035"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[2]" " -type \"float3\" -3.61221410000000009 1.80901740000000011 3.27557110000000007"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[3]" " -type \"float3\" -3.89098260000000007 1.951057 2.71803429999999979"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[4]" " -type \"float3\" -4.19999979999999962 2.00000050000000007 2.09999989999999981"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[5]" " -type \"float3\" -4.509017 1.951057 1.48196569999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[6]" " -type \"float3\" -4.78778550000000003 1.80901719999999999 0.92442893999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[7]" " -type \"float3\" -5.009017 1.58778550000000007 0.48196541999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[8]" " -type \"float3\" -5.1510568000000001 1.30901719999999999 0.19788634999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[9]" " -type \"float3\" -5.19999979999999962 1 0.099999428000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[10]" " -type \"float3\" -5.1510568000000001 0.69098282 0.19788634999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[11]" " -type \"float3\" -5.009017 0.41221476000000001 0.48196554000000003"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[12]" " -type \"float3\" -4.78778509999999979 0.19098282 0.92442917999999996"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[13]" " -type \"float3\" -4.509017 0.048943519999999997 1.4819658"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[14]" " -type \"float3\" -4.19999979999999962 0 2.09999989999999981"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[15]" " -type \"float3\" -3.89098290000000002 0.048943519999999997 2.71803380000000017"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[16]" " -type \"float3\" -3.61221460000000016 0.19098282 3.27557039999999988"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[17]" " -type \"float3\" -3.39098290000000002 0.41221476000000001 3.718034"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[18]" " -type \"float3\" -3.24894330000000009 0.69098305999999998 4.0021129000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[19]" " -type \"float3\" -3.19999980000000006 1 4.09999990000000025"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[20]" " -type \"float3\" -3.64894220000000002 1.30901719999999999 4.20211410000000019"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[21]" " -type \"float3\" -3.79098179999999996 1.58778569999999997 3.91803480000000004"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[22]" " -type \"float3\" -4.01221419999999984 1.80901740000000011 3.47557120000000008"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[23]" " -type \"float3\" -4.29098220000000019 1.951057 2.91803409999999985"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[24]" " -type \"float3\" -4.59999939999999974 2.00000050000000007 2.29999969999999987"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[25]" " -type \"float3\" -4.90901660000000017 1.951057 1.6819655"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[26]" " -type \"float3\" -5.18778510000000015 1.80901719999999999 1.12442869999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[27]" " -type \"float3\" -5.40901660000000017 1.58778550000000007 0.68196522999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[28]" " -type \"float3\" -5.55105640000000022 1.30901719999999999 0.39788615999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[29]" " -type \"float3\" -5.59999939999999974 1 0.29999924"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[30]" " -type \"float3\" -5.55105640000000022 0.69098282 0.39788615999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[31]" " -type \"float3\" -5.40901660000000017 0.41221476000000001 0.68196535000000003"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[32]" " -type \"float3\" -5.18778469999999992 0.19098282 1.124429"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[33]" " -type \"float3\" -4.90901660000000017 0.048943519999999997 1.68196560000000006"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[34]" " -type \"float3\" -4.59999939999999974 0 2.29999969999999987"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[35]" " -type \"float3\" -4.29098220000000019 0.048943519999999997 2.91803359999999978"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[36]" " -type \"float3\" -4.01221419999999984 0.19098282 3.47557019999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[37]" " -type \"float3\" -3.79098250000000014 0.41221476000000001 3.9180337999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[38]" " -type \"float3\" -3.64894290000000021 0.69098305999999998 4.20211269999999981"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[39]" " -type \"float3\" -3.59999940000000018 1 4.29999969999999987"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[40]" " -type \"float3\" -3.441525 1.24644350000000004 3.61694929999999992"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[41]" " -type \"float3\" -3.5548027000000002 1.4687631000000001 3.39039439999999992"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[42]" " -type \"float3\" -3.73123670000000018 1.64519719999999992 3.03752639999999996"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[43]" " -type \"float3\" -3.95355649999999992 1.75847479999999989 2.59288670000000021"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[44]" " -type \"float3\" -4.19999979999999962 1.79750750000000004 2.09999989999999981"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[45]" " -type \"float3\" -4.44644309999999976 1.7584746 1.60711319999999991"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[46]" " -type \"float3\" -4.66876270000000027 1.64519689999999996 1.16247389999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[47]" " -type \"float3\" -4.8451966999999998 1.4687631000000001 0.80960608000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[48]" " -type \"float3\" -4.95847420000000039 1.24644329999999992 0.58305096999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[49]" " -type \"float3\" -4.99750709999999998 1 0.50498544999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[50]" " -type \"float3\" -4.95847420000000039 0.75355673000000001 0.58305096999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[51]" " -type \"float3\" -4.8451966999999998 0.53123712999999995 0.80960608000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[52]" " -type \"float3\" -4.66876270000000027 0.35480308999999999 1.162474"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[53]" " -type \"float3\" -4.44644309999999976 0.24152565000000001 1.60711340000000003"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[54]" " -type \"float3\" -4.19999979999999962 0.20249295 2.09999989999999981"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[55]" " -type \"float3\" -3.95355649999999992 0.24152565000000001 2.59288620000000014"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[56]" " -type \"float3\" -3.73123689999999986 0.35480308999999999 3.03752570000000022"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[57]" " -type \"float3\" -3.55480309999999999 0.53123712999999995 3.39039329999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[58]" " -type \"float3\" -3.44152550000000002 0.75355673000000001 3.61694840000000006"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[59]" " -type \"float3\" -3.40249280000000009 1.00000019999999989 3.695014"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[60]" " -type \"float3\" -3.84152460000000007 1.24644350000000004 3.81694909999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[61]" " -type \"float3\" -3.95480229999999988 1.4687631000000001 3.59039429999999982"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[62]" " -type \"float3\" -4.13123609999999974 1.64519719999999992 3.23752620000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[63]" " -type \"float3\" -4.35355619999999988 1.75847479999999989 2.79288649999999983"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[64]" " -type \"float3\" -4.599999 1.79750750000000004 2.2999995000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[65]" " -type \"float3\" -4.8464432000000004 1.7584746 1.80711329999999992"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[66]" " -type \"float3\" -5.06876230000000039 1.64519689999999996 1.36247370000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[67]" " -type \"float3\" -5.24519629999999992 1.4687631000000001 1.00960589999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[68]" " -type \"float3\" -5.35847379999999962 1.24644329999999992 0.78305077999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[69]" " -type \"float3\" -5.3975067000000001 1 0.70498525999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[70]" " -type \"float3\" -5.35847379999999962 0.75355673000000001 0.78305077999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[71]" " -type \"float3\" -5.24519629999999992 0.53123712999999995 1.00960589999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[72]" " -type \"float3\" -5.06876230000000039 0.35480308999999999 1.36247380000000007"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[73]" " -type \"float3\" -4.84644269999999988 0.24152565000000001 1.80711320000000009"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[74]" " -type \"float3\" -4.59999939999999974 0.20249270999999999 2.29999969999999987"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[75]" " -type \"float3\" -4.35355619999999988 0.24152565000000001 2.792886"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[76]" " -type \"float3\" -4.13123660000000026 0.35480308999999999 3.23752549999999983"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[77]" " -type \"float3\" -3.95480279999999995 0.53123712999999995 3.5903931"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[78]" " -type \"float3\" -3.84152510000000014 0.75355673000000001 3.81694820000000012"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[79]" " -type \"float3\" -3.80249240000000022 1.00000019999999989 3.89501380000000008"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[80]" " -type \"float3\" -3.5415249000000002 1.24644350000000004 3.66694930000000019"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[81]" " -type \"float3\" -3.65480260000000001 1.4687631000000001 3.44039440000000019"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[82]" " -type \"float3\" -3.83123659999999999 1.64519719999999992 3.08752629999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[83]" " -type \"float3\" -4.053556 1.7584746 2.64288640000000008"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[84]" " -type \"float3\" -4.29999969999999987 1.79750750000000004 2.14999990000000007"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[85]" " -type \"float3\" -4.546443 1.7584746 1.65711319999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[86]" " -type \"float3\" -4.76876310000000014 1.64519719999999992 1.21247410000000011"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[87]" " -type \"float3\" -4.94519660000000005 1.4687631000000001 0.85960603000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[88]" " -type \"float3\" -5.05847409999999975 1.24644329999999992 0.63305091999999996"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[89]" " -type \"float3\" -5.097507 1 0.55498539999999996"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[90]" " -type \"float3\" -5.05847409999999975 0.75355673000000001 0.63305091999999996"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[91]" " -type \"float3\" -4.94519660000000005 0.53123712999999995 0.85960603000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[92]" " -type \"float3\" -4.76876310000000014 0.35480331999999998 1.21247419999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[93]" " -type \"float3\" -4.546443 0.24152565000000001 1.65711330000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[94]" " -type \"float3\" -4.29999969999999987 0.20249295 2.14999990000000007"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[95]" " -type \"float3\" -4.05355639999999973 0.24152565000000001 2.64288619999999996"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[96]" " -type \"float3\" -3.83123730000000018 0.35480331999999998 3.08752579999999988"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[97]" " -type \"float3\" -3.654803 0.53123712999999995 3.44039319999999993"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[98]" " -type \"float3\" -3.54152539999999982 0.75355673000000001 3.66694830000000005"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[99]" " -type \"float3\" -3.5024926999999999 1.00000019999999989 3.745014"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[100]" " -type \"float3\" -3.74152469999999981 1.24644350000000004 3.7669492"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[101]" " -type \"float3\" -3.85480240000000007 1.4687631000000001 3.54039429999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[102]" " -type \"float3\" -4.03123620000000038 1.64519719999999992 3.1875262000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[103]" " -type \"float3\" -4.2535558 1.7584746 2.74288629999999989"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[104]" " -type \"float3\" -4.49999950000000037 1.79750750000000004 2.24999979999999988"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[105]" " -type \"float3\" -4.74644279999999963 1.7584746 1.75711309999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[106]" " -type \"float3\" -4.96876289999999976 1.64519719999999992 1.312474"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[107]" " -type \"float3\" -5.14519639999999967 1.4687631000000001 0.95960593000000005"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[108]" " -type \"float3\" -5.25847390000000026 1.24644329999999992 0.73305081999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[109]" " -type \"float3\" -5.29750679999999985 1 0.65498531000000004"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[110]" " -type \"float3\" -5.25847390000000026 0.75355673000000001 0.73305081999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[111]" " -type \"float3\" -5.14519639999999967 0.53123712999999995 0.95960593000000005"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[112]" " -type \"float3\" -4.96876289999999976 0.35480331999999998 1.31247409999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[113]" " -type \"float3\" -4.74644279999999963 0.24152541 1.75711320000000004"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[114]" " -type \"float3\" -4.49999950000000037 0.20249295 2.24999979999999988"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[115]" " -type \"float3\" -4.25355629999999962 0.24152588999999999 2.74288610000000022"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[116]" " -type \"float3\" -4.03123710000000024 0.35480331999999998 3.18752570000000013"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[117]" " -type \"float3\" -3.85480279999999986 0.53123712999999995 3.54039310000000018"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[118]" " -type \"float3\" -3.74152519999999988 0.75355673000000001 3.76694819999999986"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[119]" " -type \"float3\" -3.70249249999999996 1.00000019999999989 3.8450139000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[120]" " -type \"float3\" -4.02298120000000026 1.09000950000000008 2.70403739999999981"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[121]" " -type \"float3\" -4.06435350000000017 1.1712072 2.62129279999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[122]" " -type \"float3\" -4.12879229999999975 1.23564619999999992 2.4924141999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[123]" " -type \"float3\" -4.20999 1.27701880000000001 2.33001760000000013"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[124]" " -type \"float3\" -4.29999920000000024 1.29127480000000006 2.14999990000000007"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[125]" " -type \"float3\" -4.390008 1.27701880000000001 1.969982"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[126]" " -type \"float3\" -4.47120669999999976 1.23564619999999992 1.80758620000000003"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[127]" " -type \"float3\" -4.535646 1.171207 1.67870769999999991"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[128]" " -type \"float3\" -4.57701829999999976 1.090009 1.59596249999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[129]" " -type \"float3\" -4.59127430000000025 1 1.56745040000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[130]" " -type \"float3\" -4.57701829999999976 0.90999125999999997 1.59596239999999989"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[131]" " -type \"float3\" -4.53564640000000008 0.82879329000000002 1.67870769999999991"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[132]" " -type \"float3\" -4.47120669999999976 0.76435399000000004 1.807586"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[133]" " -type \"float3\" -4.39000840000000014 0.72298145000000003 1.96998209999999996"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[134]" " -type \"float3\" -4.29999969999999987 0.70872544999999998 2.14999960000000012"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[135]" " -type \"float3\" -4.209991 0.72298145000000003 2.33001730000000018"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[136]" " -type \"float3\" -4.12879280000000026 0.76435399000000004 2.49241329999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[137]" " -type \"float3\" -4.06435390000000041 0.82879305000000003 2.62129160000000017"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[138]" " -type \"float3\" -4.02298120000000026 0.90999125999999997 2.70403670000000007"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[139]" " -type \"float3\" -4.00872519999999977 1.00000069999999996 2.73254919999999979"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[140]" " -type \"float3\" -4.222981 1.09000950000000008 2.80403730000000007"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[141]" " -type \"float3\" -4.26435329999999979 1.1712072 2.72129269999999979"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[142]" " -type \"float3\" -4.32879259999999988 1.23564619999999992 2.59241410000000005"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[143]" " -type \"float3\" -4.40998979999999996 1.27701880000000001 2.43001749999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[144]" " -type \"float3\" -4.49999950000000037 1.291275 2.25"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[145]" " -type \"float3\" -4.59000780000000042 1.27701880000000001 2.06998209999999983"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[146]" " -type \"float3\" -4.67120650000000026 1.23564619999999992 1.90758610000000006"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[147]" " -type \"float3\" -4.73564580000000035 1.171207 1.77870759999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[148]" " -type \"float3\" -4.77701810000000027 1.090009 1.69596239999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[149]" " -type \"float3\" -4.79127409999999987 1 1.66745030000000005"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[150]" " -type \"float3\" -4.77701810000000027 0.90999125999999997 1.69596229999999992"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[151]" " -type \"float3\" -4.73564619999999969 0.82879329000000002 1.77870759999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[152]" " -type \"float3\" -4.67120650000000026 0.76435399000000004 1.90758589999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[153]" " -type \"float3\" -4.59000830000000004 0.72298145000000003 2.06998209999999983"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[154]" " -type \"float3\" -4.49999950000000037 0.70872544999999998 2.24999949999999993"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[155]" " -type \"float3\" -4.4099908000000001 0.72298145000000003 2.43001719999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[156]" " -type \"float3\" -4.32879259999999988 0.76435399000000004 2.5924132000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[157]" " -type \"float3\" -4.26435380000000031 0.82879305000000003 2.72129149999999997"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[158]" " -type \"float3\" -4.222981 0.90999125999999997 2.80403659999999988"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[159]" " -type \"float3\" -4.208725 1.00000069999999996 2.83254910000000004"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[160]" " -type \"float3\" -3.922981 1.09000950000000008 2.65403749999999983"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[161]" " -type \"float3\" -3.96435329999999997 1.1712072 2.57129289999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[162]" " -type \"float3\" -4.02879240000000038 1.23564619999999992 2.44241429999999982"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[163]" " -type \"float3\" -4.10999059999999972 1.277019 2.28001789999999982"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[164]" " -type \"float3\" -4.19999979999999962 1.291275 2.10000009999999993"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[165]" " -type \"float3\" -4.29000849999999989 1.277019 1.91998230000000003"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[166]" " -type \"float3\" -4.37120680000000039 1.23564619999999992 1.75758619999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[167]" " -type \"float3\" -4.43564609999999959 1.171207 1.62870779999999993"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[168]" " -type \"float3\" -4.4770184000000004 1.090009 1.54596259999999996"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[169]" " -type \"float3\" -4.4912744 1 1.51745050000000004"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[170]" " -type \"float3\" -4.4770184000000004 0.90999125999999997 1.54596249999999991"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[171]" " -type \"float3\" -4.43564609999999959 0.82879305000000003 1.62870749999999997"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[172]" " -type \"float3\" -4.37120680000000039 0.76435399000000004 1.757586"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[173]" " -type \"float3\" -4.29000849999999989 0.72298145000000003 1.91998219999999997"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[174]" " -type \"float3\" -4.19999979999999962 0.70872544999999998 2.09999970000000014"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[175]" " -type \"float3\" -4.10999110000000023 0.72298145000000003 2.28001740000000019"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[176]" " -type \"float3\" -4.02879290000000001 0.76435399000000004 2.44241330000000012"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[177]" " -type \"float3\" -3.96435380000000004 0.82879305000000003 2.57129170000000018"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[178]" " -type \"float3\" -3.9229813 0.90999125999999997 2.65403680000000008"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[179]" " -type \"float3\" -3.90872529999999996 1.00000069999999996 2.68254919999999997"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[180]" " -type \"float3\" -4.32298090000000013 1.09000950000000008 2.85403729999999989"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[181]" " -type \"float3\" -4.36435320000000004 1.1712072 2.77129270000000005"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[182]" " -type \"float3\" -4.428792 1.23564619999999992 2.64241409999999988"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[183]" " -type \"float3\" -4.50999019999999984 1.277019 2.48001769999999988"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[184]" " -type \"float3\" -4.59999939999999974 1.291275 2.3"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[185]" " -type \"float3\" -4.69000820000000029 1.277019 2.11998219999999993"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[186]" " -type \"float3\" -4.77120639999999963 1.23564619999999992 1.95758610000000011"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[187]" " -type \"float3\" -4.83564569999999971 1.171207 1.82870759999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[188]" " -type \"float3\" -4.877018 1.090009 1.74596240000000003"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[189]" " -type \"float3\" -4.891274 1 1.7174503000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[190]" " -type \"float3\" -4.877018 0.90999125999999997 1.74596229999999997"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[191]" " -type \"float3\" -4.83564569999999971 0.82879305000000003 1.82870730000000004"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[192]" " -type \"float3\" -4.77120639999999963 0.76435399000000004 1.95758579999999993"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[193]" " -type \"float3\" -4.69000820000000029 0.72298145000000003 2.119982"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[194]" " -type \"float3\" -4.59999939999999974 0.70872544999999998 2.2999995000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[195]" " -type \"float3\" -4.50999070000000035 0.72298145000000003 2.48001719999999981"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[196]" " -type \"float3\" -4.42879250000000013 0.76435399000000004 2.64241310000000018"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[197]" " -type \"float3\" -4.36435369999999967 0.82879305000000003 2.7712914999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[198]" " -type \"float3\" -4.32298090000000013 0.90999125999999997 2.85403660000000015"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[199]" " -type \"float3\" -4.30872489999999964 1.00000069999999996 2.882549"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[200]" " -type \"float3\" -4.16024879999999975 1.0129163000000001 2.17950180000000016"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[201]" " -type \"float3\" -4.16618539999999982 1.02456759999999991 2.16762850000000018"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[202]" " -type \"float3\" -4.17543220000000037 1.03381440000000002 2.14913510000000008"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[203]" " -type \"float3\" -4.18708369999999963 1.03975130000000004 2.12583179999999983"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[204]" " -type \"float3\" -4.19999979999999962 1.04179690000000003 2.09999989999999981"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[205]" " -type \"float3\" -4.21291539999999998 1.03975130000000004 2.07416819999999991"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[206]" " -type \"float3\" -4.22456739999999975 1.03381440000000002 2.05086520000000005"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[207]" " -type \"float3\" -4.23381420000000031 1.02456759999999991 2.0323715"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[208]" " -type \"float3\" -4.23975089999999977 1.01291580000000003 2.02049779999999979"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[209]" " -type \"float3\" -4.24179650000000041 1 2.01640649999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[210]" " -type \"float3\" -4.23975089999999977 0.98708415000000005 2.02049779999999979"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[211]" " -type \"float3\" -4.23381420000000031 0.97543263000000002 2.03237129999999988"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[212]" " -type \"float3\" -4.22456739999999975 0.96618605000000002 2.0508649000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[213]" " -type \"float3\" -4.2129158999999996 0.96024918999999997 2.07416819999999991"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[214]" " -type \"float3\" -4.19999979999999962 0.95820355000000001 2.09999970000000014"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[215]" " -type \"float3\" -4.18708420000000014 0.96024918999999997 2.12583140000000004"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[216]" " -type \"float3\" -4.1754327 0.96618605000000002 2.14913460000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[217]" " -type \"float3\" -4.16618590000000033 0.97543263000000002 2.167628"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[218]" " -type \"float3\" -4.16024879999999975 0.98708439000000003 2.1795015000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[219]" " -type \"float3\" -4.15820309999999971 1.00000050000000007 2.18359330000000007"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[220]" " -type \"float3\" -4.515563 1.0274357999999999 2.46887230000000013"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[221]" " -type \"float3\" -4.52817340000000002 1.05218459999999991 2.44365219999999983"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[222]" " -type \"float3\" -4.54781480000000027 1.071826 2.40436909999999981"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[223]" " -type \"float3\" -4.57256410000000013 1.08443669999999992 2.35487009999999986"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[224]" " -type \"float3\" -4.59999939999999974 1.08878180000000002 2.3"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[225]" " -type \"float3\" -4.6274343 1.08443669999999992 2.24513009999999991"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[226]" " -type \"float3\" -4.65218349999999958 1.071826 2.195631"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[227]" " -type \"float3\" -4.67182540000000035 1.05218459999999991 2.15634820000000005"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[228]" " -type \"float3\" -4.68443580000000015 1.02743509999999993 2.13112689999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[229]" " -type \"float3\" -4.6887812999999996 1 2.12243629999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[230]" " -type \"float3\" -4.68443580000000015 0.97256494000000004 2.13112689999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[231]" " -type \"float3\" -4.67182540000000035 0.94781565999999995 2.15634779999999981"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[232]" " -type \"float3\" -4.652184 0.92817426000000003 2.19563059999999988"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[233]" " -type \"float3\" -4.6274343 0.91556382000000003 2.24512979999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[234]" " -type \"float3\" -4.59999939999999974 0.91121839999999998 2.2999991999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[235]" " -type \"float3\" -4.57256459999999976 0.91556382000000003 2.35486940000000011"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[236]" " -type \"float3\" -4.54781529999999989 0.92817426000000003 2.40436840000000007"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[237]" " -type \"float3\" -4.52817389999999964 0.94781565999999995 2.443651"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[238]" " -type \"float3\" -4.51556349999999984 0.97256516999999998 2.46887210000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[239]" " -type \"float3\" -4.51121809999999979 1.000001 2.47756290000000012"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[240]" " -type \"float3\" -6.515564 1.02743669999999998 3.46887230000000013"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[241]" " -type \"float3\" -6.528173 1.05218459999999991 3.44365260000000006"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[242]" " -type \"float3\" -6.59999939999999974 1 3.2999995000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[243]" " -type \"float3\" -6.54781390000000041 1.0718255000000001 3.4043698"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[244]" " -type \"float3\" -6.57256459999999976 1.08443690000000004 3.35486890000000004"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[245]" " -type \"float3\" -6.59999849999999988 1.08878180000000002 3.30000019999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[246]" " -type \"float3\" -6.6274343 1.08443690000000004 3.24513009999999991"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[247]" " -type \"float3\" -6.65218349999999958 1.0718255000000001 3.19563029999999992"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[248]" " -type \"float3\" -6.67182540000000035 1.0521855 3.1563485"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[249]" " -type \"float3\" -6.68443580000000015 1.0274357999999999 3.13112710000000005"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[250]" " -type \"float3\" -6.68878169999999983 0.99999857000000003 3.12243680000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[251]" " -type \"float3\" -6.68443580000000015 0.97256564999999995 3.1311258999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[252]" " -type \"float3\" -6.67182540000000035 0.94781590000000004 3.15634680000000012"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[253]" " -type \"float3\" -6.652184 0.92817402000000004 3.195632"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[254]" " -type \"float3\" -6.6274343 0.91556358000000004 3.24512979999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[255]" " -type \"float3\" -6.599999 0.91121817000000005 3.29999969999999987"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[256]" " -type \"float3\" -6.57256410000000013 0.91556358000000004 3.35486910000000016"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[257]" " -type \"float3\" -6.54781529999999989 0.92817353999999996 3.40436769999999989"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[258]" " -type \"float3\" -6.52817389999999964 0.94781590000000004 3.44365120000000013"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[259]" " -type \"float3\" -6.515563 0.97256421999999998 3.46887159999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[260]" " -type \"float3\" -6.51121809999999979 1.000001 3.47756270000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[261]" " -type \"float3\" 3.2489425999999999 1.30901719999999999 -4.00211429999999968"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[262]" " -type \"float3\" 3.39098219999999984 1.58778569999999997 -3.718035"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[263]" " -type \"float3\" 3.61221410000000009 1.80901740000000011 -3.27557110000000007"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[264]" " -type \"float3\" 3.89098260000000007 1.951057 -2.71803429999999979"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[265]" " -type \"float3\" 4.19999979999999962 2.00000050000000007 -2.09999989999999981"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[266]" " -type \"float3\" 4.509017 1.951057 -1.48196550000000005"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[267]" " -type \"float3\" 4.78778550000000003 1.80901719999999999 -0.92442893999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[268]" " -type \"float3\" 5.009017 1.58778550000000007 -0.48196541999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[269]" " -type \"float3\" 5.1510568000000001 1.30901719999999999 -0.19788634999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[270]" " -type \"float3\" 5.19999979999999962 1 -0.099999428000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[271]" " -type \"float3\" 5.1510568000000001 0.69098282 -0.19788634999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[272]" " -type \"float3\" 5.009017 0.41221476000000001 -0.48196554000000003"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[273]" " -type \"float3\" 4.78778509999999979 0.19098282 -0.92442917999999996"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[274]" " -type \"float3\" 4.509017 0.048943519999999997 -1.4819658"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[275]" " -type \"float3\" 4.19999979999999962 0 -2.09999989999999981"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[276]" " -type \"float3\" 3.89098290000000002 0.048943519999999997 -2.71803380000000017"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[277]" " -type \"float3\" 3.61221460000000016 0.19098282 -3.27557039999999988"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[278]" " -type \"float3\" 3.39098290000000002 0.41221476000000001 -3.71803380000000017"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[279]" " -type \"float3\" 3.24894330000000009 0.69098305999999998 -4.0021129000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[280]" " -type \"float3\" 3.19999980000000006 1 -4.09999990000000025"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[281]" " -type \"float3\" 3.64894220000000002 1.30901719999999999 -4.20211410000000019"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[282]" " -type \"float3\" 3.79098179999999996 1.58778569999999997 -3.91803480000000004"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[283]" " -type \"float3\" 4.01221419999999984 1.80901740000000011 -3.47557120000000008"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[284]" " -type \"float3\" 4.29098220000000019 1.951057 -2.91803409999999985"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[285]" " -type \"float3\" 4.59999939999999974 2.00000050000000007 -2.29999969999999987"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[286]" " -type \"float3\" 4.90901660000000017 1.951057 -1.68196539999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[287]" " -type \"float3\" 5.18778510000000015 1.80901719999999999 -1.12442869999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[288]" " -type \"float3\" 5.40901660000000017 1.58778550000000007 -0.68196522999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[289]" " -type \"float3\" 5.55105640000000022 1.30901719999999999 -0.39788615999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[290]" " -type \"float3\" 5.59999939999999974 1 -0.29999924"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[291]" " -type \"float3\" 5.55105640000000022 0.69098282 -0.39788615999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[292]" " -type \"float3\" 5.40901660000000017 0.41221476000000001 -0.68196535000000003"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[293]" " -type \"float3\" 5.18778469999999992 0.19098282 -1.124429"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[294]" " -type \"float3\" 4.90901660000000017 0.048943519999999997 -1.68196560000000006"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[295]" " -type \"float3\" 4.59999939999999974 0 -2.29999969999999987"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[296]" " -type \"float3\" 4.29098220000000019 0.048943519999999997 -2.91803359999999978"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[297]" " -type \"float3\" 4.01221419999999984 0.19098282 -3.47557019999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[298]" " -type \"float3\" 3.79098250000000014 0.41221476000000001 -3.91803359999999978"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[299]" " -type \"float3\" 3.64894290000000021 0.69098305999999998 -4.20211269999999981"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[300]" " -type \"float3\" 3.59999940000000018 1 -4.29999969999999987"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[301]" " -type \"float3\" 3.441525 1.24644350000000004 -3.61694929999999992"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[302]" " -type \"float3\" 3.5548027000000002 1.4687631000000001 -3.3903941999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[303]" " -type \"float3\" 3.73123670000000018 1.64519719999999992 -3.03752639999999996"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[304]" " -type \"float3\" 3.95355649999999992 1.75847479999999989 -2.59288670000000021"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[305]" " -type \"float3\" 4.19999979999999962 1.79750750000000004 -2.09999989999999981"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[306]" " -type \"float3\" 4.44644309999999976 1.7584746 -1.60711319999999991"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[307]" " -type \"float3\" 4.66876270000000027 1.64519689999999996 -1.16247379999999989"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[308]" " -type \"float3\" 4.8451966999999998 1.4687631000000001 -0.80960608000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[309]" " -type \"float3\" 4.95847420000000039 1.24644329999999992 -0.58305096999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[310]" " -type \"float3\" 4.99750709999999998 1 -0.50498544999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[311]" " -type \"float3\" 4.95847420000000039 0.75355673000000001 -0.58305096999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[312]" " -type \"float3\" 4.8451966999999998 0.53123712999999995 -0.80960608000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[313]" " -type \"float3\" 4.66876270000000027 0.35480308999999999 -1.16247389999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[314]" " -type \"float3\" 4.44644309999999976 0.24152565000000001 -1.60711340000000003"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[315]" " -type \"float3\" 4.19999979999999962 0.20249295 -2.09999989999999981"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[316]" " -type \"float3\" 3.95355649999999992 0.24152565000000001 -2.59288620000000014"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[317]" " -type \"float3\" 3.73123689999999986 0.35480308999999999 -3.03752539999999982"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[318]" " -type \"float3\" 3.55480309999999999 0.53123712999999995 -3.39039329999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[319]" " -type \"float3\" 3.44152550000000002 0.75355673000000001 -3.61694840000000006"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[320]" " -type \"float3\" 3.40249280000000009 1.00000019999999989 -3.695014"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[321]" " -type \"float3\" 3.84152460000000007 1.24644350000000004 -3.81694909999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[322]" " -type \"float3\" 3.95480229999999988 1.4687631000000001 -3.590394"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[323]" " -type \"float3\" 4.13123609999999974 1.64519719999999992 -3.23752620000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[324]" " -type \"float3\" 4.35355619999999988 1.75847479999999989 -2.79288649999999983"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[325]" " -type \"float3\" 4.599999 1.79750750000000004 -2.2999995000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[326]" " -type \"float3\" 4.8464432000000004 1.7584746 -1.80711329999999992"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[327]" " -type \"float3\" 5.06876230000000039 1.64519689999999996 -1.36247359999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[328]" " -type \"float3\" 5.24519629999999992 1.4687631000000001 -1.00960589999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[329]" " -type \"float3\" 5.35847379999999962 1.24644329999999992 -0.78305077999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[330]" " -type \"float3\" 5.3975067000000001 1 -0.70498525999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[331]" " -type \"float3\" 5.35847379999999962 0.75355673000000001 -0.78305077999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[332]" " -type \"float3\" 5.24519629999999992 0.53123712999999995 -1.00960589999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[333]" " -type \"float3\" 5.06876230000000039 0.35480308999999999 -1.36247370000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[334]" " -type \"float3\" 4.84644269999999988 0.24152565000000001 -1.80711320000000009"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[335]" " -type \"float3\" 4.59999939999999974 0.20249270999999999 -2.29999969999999987"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[336]" " -type \"float3\" 4.35355619999999988 0.24152565000000001 -2.792886"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[337]" " -type \"float3\" 4.13123660000000026 0.35480308999999999 -3.23752519999999988"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[338]" " -type \"float3\" 3.95480279999999995 0.53123712999999995 -3.5903931"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[339]" " -type \"float3\" 3.84152510000000014 0.75355673000000001 -3.81694820000000012"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[340]" " -type \"float3\" 3.80249240000000022 1.00000019999999989 -3.89501380000000008"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[341]" " -type \"float3\" 3.5415249000000002 1.24644350000000004 -3.66694930000000019"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[342]" " -type \"float3\" 3.65480260000000001 1.4687631000000001 -3.44039420000000007"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[343]" " -type \"float3\" 3.83123659999999999 1.64519719999999992 -3.08752629999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[344]" " -type \"float3\" 4.053556 1.7584746 -2.64288640000000008"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[345]" " -type \"float3\" 4.29999969999999987 1.79750750000000004 -2.14999990000000007"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[346]" " -type \"float3\" 4.546443 1.7584746 -1.65711319999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[347]" " -type \"float3\" 4.76876310000000014 1.64519719999999992 -1.212474"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[348]" " -type \"float3\" 4.94519660000000005 1.4687631000000001 -0.85960603000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[349]" " -type \"float3\" 5.05847409999999975 1.24644329999999992 -0.63305091999999996"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[350]" " -type \"float3\" 5.097507 1 -0.55498539999999996"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[351]" " -type \"float3\" 5.05847409999999975 0.75355673000000001 -0.63305091999999996"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[352]" " -type \"float3\" 4.94519660000000005 0.53123712999999995 -0.85960603000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[353]" " -type \"float3\" 4.76876310000000014 0.35480331999999998 -1.21247410000000011"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[354]" " -type \"float3\" 4.546443 0.24152565000000001 -1.65711330000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[355]" " -type \"float3\" 4.29999969999999987 0.20249295 -2.14999990000000007"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[356]" " -type \"float3\" 4.05355639999999973 0.24152565000000001 -2.64288619999999996"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[357]" " -type \"float3\" 3.83123730000000018 0.35480331999999998 -3.0875256000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[358]" " -type \"float3\" 3.654803 0.53123712999999995 -3.44039319999999993"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[359]" " -type \"float3\" 3.54152539999999982 0.75355673000000001 -3.66694830000000005"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[360]" " -type \"float3\" 3.5024926999999999 1.00000019999999989 -3.745014"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[361]" " -type \"float3\" 3.74152469999999981 1.24644350000000004 -3.7669492"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[362]" " -type \"float3\" 3.85480240000000007 1.4687631000000001 -3.54039409999999988"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[363]" " -type \"float3\" 4.03123620000000038 1.64519719999999992 -3.1875262000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[364]" " -type \"float3\" 4.2535558 1.7584746 -2.74288629999999989"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[365]" " -type \"float3\" 4.49999950000000037 1.79750750000000004 -2.24999979999999988"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[366]" " -type \"float3\" 4.74644279999999963 1.7584746 -1.75711309999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[367]" " -type \"float3\" 4.96876289999999976 1.64519719999999992 -1.31247390000000008"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[368]" " -type \"float3\" 5.14519639999999967 1.4687631000000001 -0.95960593000000005"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[369]" " -type \"float3\" 5.25847390000000026 1.24644329999999992 -0.73305081999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[370]" " -type \"float3\" 5.29750679999999985 1 -0.65498531000000004"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[371]" " -type \"float3\" 5.25847390000000026 0.75355673000000001 -0.73305081999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[372]" " -type \"float3\" 5.14519639999999967 0.53123712999999995 -0.95960593000000005"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[373]" " -type \"float3\" 4.96876289999999976 0.35480331999999998 -1.312474"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[374]" " -type \"float3\" 4.74644279999999963 0.24152541 -1.75711320000000004"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[375]" " -type \"float3\" 4.49999950000000037 0.20249295 -2.24999979999999988"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[376]" " -type \"float3\" 4.25355629999999962 0.24152588999999999 -2.74288610000000022"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[377]" " -type \"float3\" 4.03123710000000024 0.35480331999999998 -3.18752550000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[378]" " -type \"float3\" 3.85480279999999986 0.53123712999999995 -3.54039310000000018"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[379]" " -type \"float3\" 3.74152519999999988 0.75355673000000001 -3.76694819999999986"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[380]" " -type \"float3\" 3.70249249999999996 1.00000019999999989 -3.8450139000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[381]" " -type \"float3\" 4.02298120000000026 1.09000950000000008 -2.70403720000000014"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[382]" " -type \"float3\" 4.06435350000000017 1.1712072 -2.62129279999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[383]" " -type \"float3\" 4.12879229999999975 1.23564619999999992 -2.4924141999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[384]" " -type \"float3\" 4.20999 1.27701880000000001 -2.33001760000000013"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[385]" " -type \"float3\" 4.29999920000000024 1.29127480000000006 -2.14999990000000007"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[386]" " -type \"float3\" 4.390008 1.27701880000000001 -1.969982"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[387]" " -type \"float3\" 4.47120669999999976 1.23564619999999992 -1.80758609999999997"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[388]" " -type \"float3\" 4.535646 1.171207 -1.67870760000000008"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[389]" " -type \"float3\" 4.57701829999999976 1.090009 -1.59596249999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[390]" " -type \"float3\" 4.59127430000000025 1 -1.56745040000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[391]" " -type \"float3\" 4.57701829999999976 0.90999125999999997 -1.59596239999999989"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[392]" " -type \"float3\" 4.53564640000000008 0.82879329000000002 -1.67870760000000008"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[393]" " -type \"float3\" 4.47120669999999976 0.76435399000000004 -1.807586"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[394]" " -type \"float3\" 4.39000840000000014 0.72298145000000003 -1.96998209999999996"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[395]" " -type \"float3\" 4.29999969999999987 0.70872544999999998 -2.14999960000000012"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[396]" " -type \"float3\" 4.209991 0.72298145000000003 -2.33001730000000018"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[397]" " -type \"float3\" 4.12879280000000026 0.76435399000000004 -2.49241329999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[398]" " -type \"float3\" 4.06435390000000041 0.82879305000000003 -2.62129160000000017"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[399]" " -type \"float3\" 4.02298120000000026 0.90999125999999997 -2.70403670000000007"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[400]" " -type \"float3\" 4.00872519999999977 1.00000069999999996 -2.732549"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[401]" " -type \"float3\" 4.222981 1.09000950000000008 -2.80403709999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[402]" " -type \"float3\" 4.26435329999999979 1.1712072 -2.72129269999999979"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[403]" " -type \"float3\" 4.32879259999999988 1.23564619999999992 -2.59241410000000005"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[404]" " -type \"float3\" 4.40998979999999996 1.27701880000000001 -2.43001749999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[405]" " -type \"float3\" 4.49999950000000037 1.291275 -2.25"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[406]" " -type \"float3\" 4.59000780000000042 1.27701880000000001 -2.06998209999999983"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[407]" " -type \"float3\" 4.67120650000000026 1.23564619999999992 -1.907586"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[408]" " -type \"float3\" 4.73564580000000035 1.171207 -1.77870750000000011"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[409]" " -type \"float3\" 4.77701810000000027 1.090009 -1.69596239999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[410]" " -type \"float3\" 4.79127409999999987 1 -1.66745030000000005"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[411]" " -type \"float3\" 4.77701810000000027 0.90999125999999997 -1.69596229999999992"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[412]" " -type \"float3\" 4.73564619999999969 0.82879329000000002 -1.77870750000000011"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[413]" " -type \"float3\" 4.67120650000000026 0.76435399000000004 -1.90758589999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[414]" " -type \"float3\" 4.59000830000000004 0.72298145000000003 -2.06998209999999983"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[415]" " -type \"float3\" 4.49999950000000037 0.70872544999999998 -2.24999949999999993"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[416]" " -type \"float3\" 4.4099908000000001 0.72298145000000003 -2.43001719999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[417]" " -type \"float3\" 4.32879259999999988 0.76435399000000004 -2.5924132000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[418]" " -type \"float3\" 4.26435380000000031 0.82879305000000003 -2.72129149999999997"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[419]" " -type \"float3\" 4.222981 0.90999125999999997 -2.80403659999999988"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[420]" " -type \"float3\" 4.208725 1.00000069999999996 -2.83254889999999993"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[421]" " -type \"float3\" 3.922981 1.09000950000000008 -2.65403719999999987"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[422]" " -type \"float3\" 3.96435329999999997 1.1712072 -2.57129289999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[423]" " -type \"float3\" 4.02879240000000038 1.23564619999999992 -2.44241429999999982"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[424]" " -type \"float3\" 4.10999059999999972 1.277019 -2.28001789999999982"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[425]" " -type \"float3\" 4.19999979999999962 1.291275 -2.10000009999999993"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[426]" " -type \"float3\" 4.29000849999999989 1.277019 -1.91998230000000003"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[427]" " -type \"float3\" 4.37120680000000039 1.23564619999999992 -1.75758609999999993"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[428]" " -type \"float3\" 4.43564609999999959 1.171207 -1.62870760000000003"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[429]" " -type \"float3\" 4.4770184000000004 1.090009 -1.54596259999999996"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[430]" " -type \"float3\" 4.4912744 1 -1.51745050000000004"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[431]" " -type \"float3\" 4.4770184000000004 0.90999125999999997 -1.54596249999999991"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[432]" " -type \"float3\" 4.43564609999999959 0.82879305000000003 -1.62870739999999992"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[433]" " -type \"float3\" 4.37120680000000039 0.76435399000000004 -1.757586"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[434]" " -type \"float3\" 4.29000849999999989 0.72298145000000003 -1.91998219999999997"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[435]" " -type \"float3\" 4.19999979999999962 0.70872544999999998 -2.09999970000000014"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[436]" " -type \"float3\" 4.10999110000000023 0.72298145000000003 -2.28001740000000019"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[437]" " -type \"float3\" 4.02879290000000001 0.76435399000000004 -2.44241330000000012"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[438]" " -type \"float3\" 3.96435380000000004 0.82879305000000003 -2.57129170000000018"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[439]" " -type \"float3\" 3.9229813 0.90999125999999997 -2.65403680000000008"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[440]" " -type \"float3\" 3.90872529999999996 1.00000069999999996 -2.682549"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[441]" " -type \"float3\" 4.32298090000000013 1.09000950000000008 -2.854037"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[442]" " -type \"float3\" 4.36435320000000004 1.1712072 -2.77129270000000005"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[443]" " -type \"float3\" 4.428792 1.23564619999999992 -2.64241409999999988"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[444]" " -type \"float3\" 4.50999019999999984 1.277019 -2.48001769999999988"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[445]" " -type \"float3\" 4.59999939999999974 1.291275 -2.3"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[446]" " -type \"float3\" 4.69000820000000029 1.277019 -2.11998219999999993"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[447]" " -type \"float3\" 4.77120639999999963 1.23564619999999992 -1.95758589999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[448]" " -type \"float3\" 4.83564569999999971 1.171207 -1.82870749999999993"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[449]" " -type \"float3\" 4.877018 1.090009 -1.74596240000000003"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[450]" " -type \"float3\" 4.891274 1 -1.7174503000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[451]" " -type \"float3\" 4.877018 0.90999125999999997 -1.74596229999999997"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[452]" " -type \"float3\" 4.83564569999999971 0.82879305000000003 -1.82870719999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[453]" " -type \"float3\" 4.77120639999999963 0.76435399000000004 -1.95758579999999993"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[454]" " -type \"float3\" 4.69000820000000029 0.72298145000000003 -2.119982"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[455]" " -type \"float3\" 4.59999939999999974 0.70872544999999998 -2.2999995000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[456]" " -type \"float3\" 4.50999070000000035 0.72298145000000003 -2.48001719999999981"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[457]" " -type \"float3\" 4.42879250000000013 0.76435399000000004 -2.64241310000000018"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[458]" " -type \"float3\" 4.36435369999999967 0.82879305000000003 -2.7712914999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[459]" " -type \"float3\" 4.32298090000000013 0.90999125999999997 -2.85403660000000015"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[460]" " -type \"float3\" 4.30872489999999964 1.00000069999999996 -2.88254879999999991"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[461]" " -type \"float3\" 4.16024879999999975 1.0129163000000001 -2.17950180000000016"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[462]" " -type \"float3\" 4.16618539999999982 1.02456759999999991 -2.16762850000000018"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[463]" " -type \"float3\" 4.17543220000000037 1.03381440000000002 -2.14913510000000008"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[464]" " -type \"float3\" 4.18708369999999963 1.03975130000000004 -2.12583179999999983"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[465]" " -type \"float3\" 4.19999979999999962 1.04179690000000003 -2.09999989999999981"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[466]" " -type \"float3\" 4.21291539999999998 1.03975130000000004 -2.07416819999999991"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[467]" " -type \"float3\" 4.22456739999999975 1.03381440000000002 -2.05086520000000005"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[468]" " -type \"float3\" 4.23381420000000031 1.02456759999999991 -2.0323715"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[469]" " -type \"float3\" 4.23975089999999977 1.01291580000000003 -2.02049779999999979"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[470]" " -type \"float3\" 4.24179650000000041 1 -2.01640649999999999"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[471]" " -type \"float3\" 4.23975089999999977 0.98708415000000005 -2.02049779999999979"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[472]" " -type \"float3\" 4.23381420000000031 0.97543263000000002 -2.03237129999999988"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[473]" " -type \"float3\" 4.22456739999999975 0.96618605000000002 -2.0508649000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[474]" " -type \"float3\" 4.2129158999999996 0.96024918999999997 -2.07416819999999991"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[475]" " -type \"float3\" 4.19999979999999962 0.95820355000000001 -2.09999970000000014"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[476]" " -type \"float3\" 4.18708420000000014 0.96024918999999997 -2.12583140000000004"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[477]" " -type \"float3\" 4.1754327 0.96618605000000002 -2.14913460000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[478]" " -type \"float3\" 4.16618590000000033 0.97543263000000002 -2.167628"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[479]" " -type \"float3\" 4.16024879999999975 0.98708439000000003 -2.1795015000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[480]" " -type \"float3\" 4.15820309999999971 1.00000050000000007 -2.18359330000000007"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[481]" " -type \"float3\" 4.515563 1.0274357999999999 -2.46887230000000013"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[482]" " -type \"float3\" 4.52817340000000002 1.05218459999999991 -2.44365219999999983"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[483]" " -type \"float3\" 4.54781480000000027 1.071826 -2.40436909999999981"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[484]" " -type \"float3\" 4.57256410000000013 1.08443669999999992 -2.35487009999999986"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[485]" " -type \"float3\" 4.59999939999999974 1.08878180000000002 -2.3"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[486]" " -type \"float3\" 4.6274343 1.08443669999999992 -2.24513009999999991"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[487]" " -type \"float3\" 4.65218349999999958 1.071826 -2.195631"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[488]" " -type \"float3\" 4.67182540000000035 1.05218459999999991 -2.156348"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[489]" " -type \"float3\" 4.68443580000000015 1.02743509999999993 -2.13112689999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[490]" " -type \"float3\" 4.6887812999999996 1 -2.12243629999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[491]" " -type \"float3\" 4.68443580000000015 0.97256494000000004 -2.13112689999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[492]" " -type \"float3\" 4.67182540000000035 0.94781565999999995 -2.15634779999999981"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[493]" " -type \"float3\" 4.652184 0.92817426000000003 -2.19563059999999988"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[494]" " -type \"float3\" 4.6274343 0.91556382000000003 -2.24512979999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[495]" " -type \"float3\" 4.59999939999999974 0.91121839999999998 -2.2999991999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[496]" " -type \"float3\" 4.57256459999999976 0.91556382000000003 -2.35486940000000011"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[497]" " -type \"float3\" 4.54781529999999989 0.92817426000000003 -2.40436840000000007"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[498]" " -type \"float3\" 4.52817389999999964 0.94781565999999995 -2.443651"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[499]" " -type \"float3\" 4.51556349999999984 0.97256516999999998 -2.46887210000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[500]" " -type \"float3\" 4.51121809999999979 1.000001 -2.47756290000000012"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[501]" " -type \"float3\" 6.515564 1.02743669999999998 -3.46887230000000013"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[502]" " -type \"float3\" 6.528173 1.05218459999999991 -3.44365260000000006"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[503]" " -type \"float3\" 6.59999939999999974 1 -3.2999995000000002"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[504]" " -type \"float3\" 6.54781390000000041 1.0718255000000001 -3.4043698"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[505]" " -type \"float3\" 6.57256459999999976 1.08443690000000004 -3.35486890000000004"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[506]" " -type \"float3\" 6.59999849999999988 1.08878180000000002 -3.30000019999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[507]" " -type \"float3\" 6.6274343 1.08443690000000004 -3.24513009999999991"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[508]" " -type \"float3\" 6.65218349999999958 1.0718255000000001 -3.19563029999999992"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[509]" " -type \"float3\" 6.67182540000000035 1.0521855 -3.1563485"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[510]" " -type \"float3\" 6.68443580000000015 1.0274357999999999 -3.13112710000000005"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[511]" " -type \"float3\" 6.68878169999999983 0.99999857000000003 -3.12243680000000001"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[512]" " -type \"float3\" 6.68443580000000015 0.97256564999999995 -3.1311258999999998"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[513]" " -type \"float3\" 6.67182540000000035 0.94781590000000004 -3.15634680000000012"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[514]" " -type \"float3\" 6.652184 0.92817402000000004 -3.195632"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[515]" " -type \"float3\" 6.6274343 0.91556358000000004 -3.24512979999999995"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[516]" " -type \"float3\" 6.599999 0.91121817000000005 -3.29999969999999987"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[517]" " -type \"float3\" 6.57256410000000013 0.91556358000000004 -3.35486910000000016"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[518]" " -type \"float3\" 6.54781529999999989 0.92817353999999996 -3.40436739999999993"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[519]" " -type \"float3\" 6.52817389999999964 0.94781590000000004 -3.44365120000000013"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[520]" " -type \"float3\" 6.515563 0.97256421999999998 -3.46887159999999994"
-		
-		2 "|Barbell:Barbell|Barbell:BarbellShape" "pnts[521]" " -type \"float3\" 6.51121809999999979 1.000001 -3.47756270000000001"
-		
+		2 "|Barbell:Barbell|Barbell:BarbellShape" "pt[0:165]" (" -type \"float3\" -3.2489425999999999 1.30901719999999999 4.00211429999999968 -3.39098219999999984 1.58778569999999997 3.718035 -3.61221410000000009 1.80901740000000011 3.27557110000000007 -3.89098260000000007 1.951057 2.71803429999999979 -4.19999979999999962 2.00000050000000007 2.09999989999999981 -4.509017 1.951057 1.48196569999999994 -4.78778550000000003 1.80901719999999999 0.92442893999999998 -5.009017 1.58778550000000007 0.48196541999999998 -5.1510568000000001 1.30901719999999999 0.19788634999999999 -5.19999979999999962 1 0.099999428000000001 -5.1510568000000001 0.69098282 0.19788634999999999 -5.009017 0.41221476000000001 0.48196554000000003 -4.78778509999999979 0.19098282 0.92442917999999996 -4.509017 0.048943519999999997 1.4819658 -4.19999979999999962 0 2.09999989999999981 -3.89098290000000002 0.048943519999999997 2.71803380000000017 -3.61221460000000016 0.19098282 3.27557039999999988 -3.39098290000000002 0.41221476000000001 3.718034 -3.24894330000000009 0.69098305999999998 4.0021129000000002 -3.19999980"
+		+ "000000006 1 4.09999990000000025 -3.64894220000000002 1.30901719999999999 4.20211410000000019 -3.79098179999999996 1.58778569999999997 3.91803480000000004 -4.01221419999999984 1.80901740000000011 3.47557120000000008 -4.29098220000000019 1.951057 2.91803409999999985 -4.59999939999999974 2.00000050000000007 2.29999969999999987 -4.90901660000000017 1.951057 1.6819655 -5.18778510000000015 1.80901719999999999 1.12442869999999995 -5.40901660000000017 1.58778550000000007 0.68196522999999998 -5.55105640000000022 1.30901719999999999 0.39788615999999999 -5.59999939999999974 1 0.29999924 -5.55105640000000022 0.69098282 0.39788615999999999 -5.40901660000000017 0.41221476000000001 0.68196535000000003 -5.18778469999999992 0.19098282 1.124429 -4.90901660000000017 0.048943519999999997 1.68196560000000006 -4.59999939999999974 0 2.29999969999999987 -4.29098220000000019 0.048943519999999997 2.91803359999999978 -4.01221419999999984 0.19098282 3.47557019999999994 -3.79098250000000014 0.41221476000000001 3.9180337999999999 -3.64894"
+		+ "290000000021 0.69098305999999998 4.20211269999999981 -3.59999940000000018 1 4.29999969999999987 -3.441525 1.24644350000000004 3.61694929999999992 -3.5548027000000002 1.4687631000000001 3.39039439999999992 -3.73123670000000018 1.64519719999999992 3.03752639999999996 -3.95355649999999992 1.75847479999999989 2.59288670000000021 -4.19999979999999962 1.79750750000000004 2.09999989999999981 -4.44644309999999976 1.7584746 1.60711319999999991 -4.66876270000000027 1.64519689999999996 1.16247389999999995 -4.8451966999999998 1.4687631000000001 0.80960608000000001 -4.95847420000000039 1.24644329999999992 0.58305096999999995 -4.99750709999999998 1 0.50498544999999995 -4.95847420000000039 0.75355673000000001 0.58305096999999995 -4.8451966999999998 0.53123712999999995 0.80960608000000001 -4.66876270000000027 0.35480308999999999 1.162474 -4.44644309999999976 0.24152565000000001 1.60711340000000003 -4.19999979999999962 0.20249295 2.09999989999999981 -3.95355649999999992 0.24152565000000001 2.59288620000000014 -3.7312368999999"
+		+ "9986 0.35480308999999999 3.03752570000000022 -3.55480309999999999 0.53123712999999995 3.39039329999999994 -3.44152550000000002 0.75355673000000001 3.61694840000000006 -3.40249280000000009 1.00000019999999989 3.695014 -3.84152460000000007 1.24644350000000004 3.81694909999999998 -3.95480229999999988 1.4687631000000001 3.59039429999999982 -4.13123609999999974 1.64519719999999992 3.23752620000000002 -4.35355619999999988 1.75847479999999989 2.79288649999999983 -4.599999 1.79750750000000004 2.2999995000000002 -4.8464432000000004 1.7584746 1.80711329999999992 -5.06876230000000039 1.64519689999999996 1.36247370000000001 -5.24519629999999992 1.4687631000000001 1.00960589999999995 -5.35847379999999962 1.24644329999999992 0.78305077999999995 -5.3975067000000001 1 0.70498525999999995 -5.35847379999999962 0.75355673000000001 0.78305077999999995 -5.24519629999999992 0.53123712999999995 1.00960589999999995 -5.06876230000000039 0.35480308999999999 1.36247380000000007 -4.84644269999999988 0.24152565000000001 1.807113200000000"
+		+ "09 -4.59999939999999974 0.20249270999999999 2.29999969999999987 -4.35355619999999988 0.24152565000000001 2.792886 -4.13123660000000026 0.35480308999999999 3.23752549999999983 -3.95480279999999995 0.53123712999999995 3.5903931 -3.84152510000000014 0.75355673000000001 3.81694820000000012 -3.80249240000000022 1.00000019999999989 3.89501380000000008 -3.5415249000000002 1.24644350000000004 3.66694930000000019 -3.65480260000000001 1.4687631000000001 3.44039440000000019 -3.83123659999999999 1.64519719999999992 3.08752629999999995 -4.053556 1.7584746 2.64288640000000008 -4.29999969999999987 1.79750750000000004 2.14999990000000007 -4.546443 1.7584746 1.65711319999999995 -4.76876310000000014 1.64519719999999992 1.21247410000000011 -4.94519660000000005 1.4687631000000001 0.85960603000000002 -5.05847409999999975 1.24644329999999992 0.63305091999999996 -5.097507 1 0.55498539999999996 -5.05847409999999975 0.75355673000000001 0.63305091999999996 -4.94519660000000005 0.53123712999999995 0.85960603000000002 -4.768763100000000"
+		+ "14 0.35480331999999998 1.21247419999999995 -4.546443 0.24152565000000001 1.65711330000000001 -4.29999969999999987 0.20249295 2.14999990000000007 -4.05355639999999973 0.24152565000000001 2.64288619999999996 -3.83123730000000018 0.35480331999999998 3.08752579999999988 -3.654803 0.53123712999999995 3.44039319999999993 -3.54152539999999982 0.75355673000000001 3.66694830000000005 -3.5024926999999999 1.00000019999999989 3.745014 -3.74152469999999981 1.24644350000000004 3.7669492 -3.85480240000000007 1.4687631000000001 3.54039429999999999 -4.03123620000000038 1.64519719999999992 3.1875262000000002 -4.2535558 1.7584746 2.74288629999999989 -4.49999950000000037 1.79750750000000004 2.24999979999999988 -4.74644279999999963 1.7584746 1.75711309999999998 -4.96876289999999976 1.64519719999999992 1.312474 -5.14519639999999967 1.4687631000000001 0.95960593000000005 -5.25847390000000026 1.24644329999999992 0.73305081999999999 -5.29750679999999985 1 0.65498531000000004 -5.25847390000000026 0.75355673000000001 0.7330508199999999"
+		+ "9 -5.14519639999999967 0.53123712999999995 0.95960593000000005 -4.96876289999999976 0.35480331999999998 1.31247409999999998 -4.74644279999999963 0.24152541 1.75711320000000004 -4.49999950000000037 0.20249295 2.24999979999999988 -4.25355629999999962 0.24152588999999999 2.74288610000000022 -4.03123710000000024 0.35480331999999998 3.18752570000000013 -3.85480279999999986 0.53123712999999995 3.54039310000000018 -3.74152519999999988 0.75355673000000001 3.76694819999999986 -3.70249249999999996 1.00000019999999989 3.8450139000000001 -4.02298120000000026 1.09000950000000008 2.70403739999999981 -4.06435350000000017 1.1712072 2.62129279999999998 -4.12879229999999975 1.23564619999999992 2.4924141999999998 -4.20999 1.27701880000000001 2.33001760000000013 -4.29999920000000024 1.29127480000000006 2.14999990000000007 -4.390008 1.27701880000000001 1.969982 -4.47120669999999976 1.23564619999999992 1.80758620000000003 -4.535646 1.171207 1.67870769999999991 -4.57701829999999976 1.090009 1.59596249999999995 -4.59127430000000025 "
+		+ "1 1.56745040000000002 -4.57701829999999976 0.90999125999999997 1.59596239999999989 -4.53564640000000008 0.82879329000000002 1.67870769999999991 -4.47120669999999976 0.76435399000000004 1.807586 -4.39000840000000014 0.72298145000000003 1.96998209999999996 -4.29999969999999987 0.70872544999999998 2.14999960000000012 -4.209991 0.72298145000000003 2.33001730000000018 -4.12879280000000026 0.76435399000000004 2.49241329999999994 -4.06435390000000041 0.82879305000000003 2.62129160000000017 -4.02298120000000026 0.90999125999999997 2.70403670000000007 -4.00872519999999977 1.00000069999999996 2.73254919999999979 -4.222981 1.09000950000000008 2.80403730000000007 -4.26435329999999979 1.1712072 2.72129269999999979 -4.32879259999999988 1.23564619999999992 2.59241410000000005 -4.40998979999999996 1.27701880000000001 2.43001749999999994 -4.49999950000000037 1.291275 2.25 -4.59000780000000042 1.27701880000000001 2.06998209999999983 -4.67120650000000026 1.23564619999999992 1.90758610000000006 -4.73564580000000035 1.171207 1.77"
+		+ "870759999999994 -4.77701810000000027 1.090009 1.69596239999999998 -4.79127409999999987 1 1.66745030000000005 -4.77701810000000027 0.90999125999999997 1.69596229999999992 -4.73564619999999969 0.82879329000000002 1.77870759999999994 -4.67120650000000026 0.76435399000000004 1.90758589999999995 -4.59000830000000004 0.72298145000000003 2.06998209999999983 -4.49999950000000037 0.70872544999999998 2.24999949999999993 -4.4099908000000001 0.72298145000000003 2.43001719999999999 -4.32879259999999988 0.76435399000000004 2.5924132000000002 -4.26435380000000031 0.82879305000000003 2.72129149999999997 -4.222981 0.90999125999999997 2.80403659999999988 -4.208725 1.00000069999999996 2.83254910000000004 -3.922981 1.09000950000000008 2.65403749999999983 -3.96435329999999997 1.1712072 2.57129289999999999 -4.02879240000000038 1.23564619999999992 2.44241429999999982 -4.10999059999999972 1.277019 2.28001789999999982 -4.19999979999999962 1.291275 2.10000009999999993 -4.29000849999999989 1.277019 1.91998230000000003"
+		)
+		2 "|Barbell:Barbell|Barbell:BarbellShape" "pt[166:331]" (" -4.37120680000000039 1.23564619999999992 1.75758619999999999 -4.43564609999999959 1.171207 1.62870779999999993 -4.4770184000000004 1.090009 1.54596259999999996 -4.4912744 1 1.51745050000000004 -4.4770184000000004 0.90999125999999997 1.54596249999999991 -4.43564609999999959 0.82879305000000003 1.62870749999999997 -4.37120680000000039 0.76435399000000004 1.757586 -4.29000849999999989 0.72298145000000003 1.91998219999999997 -4.19999979999999962 0.70872544999999998 2.09999970000000014 -4.10999110000000023 0.72298145000000003 2.28001740000000019 -4.02879290000000001 0.76435399000000004 2.44241330000000012 -3.96435380000000004 0.82879305000000003 2.57129170000000018 -3.9229813 0.90999125999999997 2.65403680000000008 -3.90872529999999996 1.00000069999999996 2.68254919999999997 -4.32298090000000013 1.09000950000000008 2.85403729999999989 -4.36435320000000004 1.1712072 2.77129270000000005 -4.428792 1.23564619999999992 2.64241409999999988 -4.50999019999999984 1.277019 2.48001769999999988 -4.59999939999999974 1.291275 "
+		+ "2.3 -4.69000820000000029 1.277019 2.11998219999999993 -4.77120639999999963 1.23564619999999992 1.95758610000000011 -4.83564569999999971 1.171207 1.82870759999999999 -4.877018 1.090009 1.74596240000000003 -4.891274 1 1.7174503000000001 -4.877018 0.90999125999999997 1.74596229999999997 -4.83564569999999971 0.82879305000000003 1.82870730000000004 -4.77120639999999963 0.76435399000000004 1.95758579999999993 -4.69000820000000029 0.72298145000000003 2.119982 -4.59999939999999974 0.70872544999999998 2.2999995000000002 -4.50999070000000035 0.72298145000000003 2.48001719999999981 -4.42879250000000013 0.76435399000000004 2.64241310000000018 -4.36435369999999967 0.82879305000000003 2.7712914999999998 -4.32298090000000013 0.90999125999999997 2.85403660000000015 -4.30872489999999964 1.00000069999999996 2.882549 -4.16024879999999975 1.0129163000000001 2.17950180000000016 -4.16618539999999982 1.02456759999999991 2.16762850000000018 -4.17543220000000037 1.03381440000000002 2.14913510000000008 -4.18708369999999963 1.039751300"
+		+ "00000004 2.12583179999999983 -4.19999979999999962 1.04179690000000003 2.09999989999999981 -4.21291539999999998 1.03975130000000004 2.07416819999999991 -4.22456739999999975 1.03381440000000002 2.05086520000000005 -4.23381420000000031 1.02456759999999991 2.0323715 -4.23975089999999977 1.01291580000000003 2.02049779999999979 -4.24179650000000041 1 2.01640649999999999 -4.23975089999999977 0.98708415000000005 2.02049779999999979 -4.23381420000000031 0.97543263000000002 2.03237129999999988 -4.22456739999999975 0.96618605000000002 2.0508649000000001 -4.2129158999999996 0.96024918999999997 2.07416819999999991 -4.19999979999999962 0.95820355000000001 2.09999970000000014 -4.18708420000000014 0.96024918999999997 2.12583140000000004 -4.1754327 0.96618605000000002 2.14913460000000001 -4.16618590000000033 0.97543263000000002 2.167628 -4.16024879999999975 0.98708439000000003 2.1795015000000002 -4.15820309999999971 1.00000050000000007 2.18359330000000007 -4.515563 1.0274357999999999 2.46887230000000013 -4.52817340000000002 1"
+		+ ".05218459999999991 2.44365219999999983 -4.54781480000000027 1.071826 2.40436909999999981 -4.57256410000000013 1.08443669999999992 2.35487009999999986 -4.59999939999999974 1.08878180000000002 2.3 -4.6274343 1.08443669999999992 2.24513009999999991 -4.65218349999999958 1.071826 2.195631 -4.67182540000000035 1.05218459999999991 2.15634820000000005 -4.68443580000000015 1.02743509999999993 2.13112689999999994 -4.6887812999999996 1 2.12243629999999994 -4.68443580000000015 0.97256494000000004 2.13112689999999994 -4.67182540000000035 0.94781565999999995 2.15634779999999981 -4.652184 0.92817426000000003 2.19563059999999988 -4.6274343 0.91556382000000003 2.24512979999999995 -4.59999939999999974 0.91121839999999998 2.2999991999999998 -4.57256459999999976 0.91556382000000003 2.35486940000000011 -4.54781529999999989 0.92817426000000003 2.40436840000000007 -4.52817389999999964 0.94781565999999995 2.443651 -4.51556349999999984 0.97256516999999998 2.46887210000000001 -4.51121809999999979 1.000001 2.47756290000000012 -6.515564"
+		+ " 1.02743669999999998 3.46887230000000013 -6.528173 1.05218459999999991 3.44365260000000006 -6.59999939999999974 1 3.2999995000000002 -6.54781390000000041 1.0718255000000001 3.4043698 -6.57256459999999976 1.08443690000000004 3.35486890000000004 -6.59999849999999988 1.08878180000000002 3.30000019999999994 -6.6274343 1.08443690000000004 3.24513009999999991 -6.65218349999999958 1.0718255000000001 3.19563029999999992 -6.67182540000000035 1.0521855 3.1563485 -6.68443580000000015 1.0274357999999999 3.13112710000000005 -6.68878169999999983 0.99999857000000003 3.12243680000000001 -6.68443580000000015 0.97256564999999995 3.1311258999999998 -6.67182540000000035 0.94781590000000004 3.15634680000000012 -6.652184 0.92817402000000004 3.195632 -6.6274343 0.91556358000000004 3.24512979999999995 -6.599999 0.91121817000000005 3.29999969999999987 -6.57256410000000013 0.91556358000000004 3.35486910000000016 -6.54781529999999989 0.92817353999999996 3.40436769999999989 -6.52817389999999964 0.94781590000000004 3.44365120000000013 -6"
+		+ ".515563 0.97256421999999998 3.46887159999999994 -6.51121809999999979 1.000001 3.47756270000000001 3.2489425999999999 1.30901719999999999 -4.00211429999999968 3.39098219999999984 1.58778569999999997 -3.718035 3.61221410000000009 1.80901740000000011 -3.27557110000000007 3.89098260000000007 1.951057 -2.71803429999999979 4.19999979999999962 2.00000050000000007 -2.09999989999999981 4.509017 1.951057 -1.48196550000000005 4.78778550000000003 1.80901719999999999 -0.92442893999999998 5.009017 1.58778550000000007 -0.48196541999999998 5.1510568000000001 1.30901719999999999 -0.19788634999999999 5.19999979999999962 1 -0.099999428000000001 5.1510568000000001 0.69098282 -0.19788634999999999 5.009017 0.41221476000000001 -0.48196554000000003 4.78778509999999979 0.19098282 -0.92442917999999996 4.509017 0.048943519999999997 -1.4819658 4.19999979999999962 0 -2.09999989999999981 3.89098290000000002 0.048943519999999997 -2.71803380000000017 3.61221460000000016 0.19098282 -3.27557039999999988 3.39098290000000002 0.41221476000000001"
+		+ " -3.71803380000000017 3.24894330000000009 0.69098305999999998 -4.0021129000000002 3.19999980000000006 1 -4.09999990000000025 3.64894220000000002 1.30901719999999999 -4.20211410000000019 3.79098179999999996 1.58778569999999997 -3.91803480000000004 4.01221419999999984 1.80901740000000011 -3.47557120000000008 4.29098220000000019 1.951057 -2.91803409999999985 4.59999939999999974 2.00000050000000007 -2.29999969999999987 4.90901660000000017 1.951057 -1.68196539999999994 5.18778510000000015 1.80901719999999999 -1.12442869999999995 5.40901660000000017 1.58778550000000007 -0.68196522999999998 5.55105640000000022 1.30901719999999999 -0.39788615999999999 5.59999939999999974 1 -0.29999924 5.55105640000000022 0.69098282 -0.39788615999999999 5.40901660000000017 0.41221476000000001 -0.68196535000000003 5.18778469999999992 0.19098282 -1.124429 4.90901660000000017 0.048943519999999997 -1.68196560000000006 4.59999939999999974 0 -2.29999969999999987 4.29098220000000019 0.048943519999999997 -2.91803359999999978 4.012214199999999"
+		+ "84 0.19098282 -3.47557019999999994 3.79098250000000014 0.41221476000000001 -3.91803359999999978 3.64894290000000021 0.69098305999999998 -4.20211269999999981 3.59999940000000018 1 -4.29999969999999987 3.441525 1.24644350000000004 -3.61694929999999992 3.5548027000000002 1.4687631000000001 -3.3903941999999998 3.73123670000000018 1.64519719999999992 -3.03752639999999996 3.95355649999999992 1.75847479999999989 -2.59288670000000021 4.19999979999999962 1.79750750000000004 -2.09999989999999981 4.44644309999999976 1.7584746 -1.60711319999999991 4.66876270000000027 1.64519689999999996 -1.16247379999999989 4.8451966999999998 1.4687631000000001 -0.80960608000000001 4.95847420000000039 1.24644329999999992 -0.58305096999999995 4.99750709999999998 1 -0.50498544999999995 4.95847420000000039 0.75355673000000001 -0.58305096999999995 4.8451966999999998 0.53123712999999995 -0.80960608000000001 4.66876270000000027 0.35480308999999999 -1.16247389999999995 4.44644309999999976 0.24152565000000001 -1.60711340000000003 4.1999997999999"
+		+ "9962 0.20249295 -2.09999989999999981 3.95355649999999992 0.24152565000000001 -2.59288620000000014 3.73123689999999986 0.35480308999999999 -3.03752539999999982 3.55480309999999999 0.53123712999999995 -3.39039329999999994 3.44152550000000002 0.75355673000000001 -3.61694840000000006 3.40249280000000009 1.00000019999999989 -3.695014 3.84152460000000007 1.24644350000000004 -3.81694909999999998 3.95480229999999988 1.4687631000000001 -3.590394 4.13123609999999974 1.64519719999999992 -3.23752620000000002 4.35355619999999988 1.75847479999999989 -2.79288649999999983 4.599999 1.79750750000000004 -2.2999995000000002 4.8464432000000004 1.7584746 -1.80711329999999992 5.06876230000000039 1.64519689999999996 -1.36247359999999995 5.24519629999999992 1.4687631000000001 -1.00960589999999995 5.35847379999999962 1.24644329999999992 -0.78305077999999995 5.3975067000000001 1 -0.70498525999999995 5.35847379999999962 0.75355673000000001 -0.78305077999999995"
+		)
+		2 "|Barbell:Barbell|Barbell:BarbellShape" "pt[332:497]" (" 5.24519629999999992 0.53123712999999995 -1.00960589999999995 5.06876230000000039 0.35480308999999999 -1.36247370000000001 4.84644269999999988 0.24152565000000001 -1.80711320000000009 4.59999939999999974 0.20249270999999999 -2.29999969999999987 4.35355619999999988 0.24152565000000001 -2.792886 4.13123660000000026 0.35480308999999999 -3.23752519999999988 3.95480279999999995 0.53123712999999995 -3.5903931 3.84152510000000014 0.75355673000000001 -3.81694820000000012 3.80249240000000022 1.00000019999999989 -3.89501380000000008 3.5415249000000002 1.24644350000000004 -3.66694930000000019 3.65480260000000001 1.4687631000000001 -3.44039420000000007 3.83123659999999999 1.64519719999999992 -3.08752629999999995 4.053556 1.7584746 -2.64288640000000008 4.29999969999999987 1.79750750000000004 -2.14999990000000007 4.546443 1.7584746 -1.65711319999999995 4.76876310000000014 1.64519719999999992 -1.212474 4.94519660000000005 1.4687631000000001 -0.85960603000000002 5.05847409999999975 1.24644329999999992 -0.63305091999999996 5."
+		+ "097507 1 -0.55498539999999996 5.05847409999999975 0.75355673000000001 -0.63305091999999996 4.94519660000000005 0.53123712999999995 -0.85960603000000002 4.76876310000000014 0.35480331999999998 -1.21247410000000011 4.546443 0.24152565000000001 -1.65711330000000001 4.29999969999999987 0.20249295 -2.14999990000000007 4.05355639999999973 0.24152565000000001 -2.64288619999999996 3.83123730000000018 0.35480331999999998 -3.0875256000000002 3.654803 0.53123712999999995 -3.44039319999999993 3.54152539999999982 0.75355673000000001 -3.66694830000000005 3.5024926999999999 1.00000019999999989 -3.745014 3.74152469999999981 1.24644350000000004 -3.7669492 3.85480240000000007 1.4687631000000001 -3.54039409999999988 4.03123620000000038 1.64519719999999992 -3.1875262000000002 4.2535558 1.7584746 -2.74288629999999989 4.49999950000000037 1.79750750000000004 -2.24999979999999988 4.74644279999999963 1.7584746 -1.75711309999999998 4.96876289999999976 1.64519719999999992 -1.31247390000000008 5.14519639999999967 1.4687631000000001 -0.9"
+		+ "5960593000000005 5.25847390000000026 1.24644329999999992 -0.73305081999999999 5.29750679999999985 1 -0.65498531000000004 5.25847390000000026 0.75355673000000001 -0.73305081999999999 5.14519639999999967 0.53123712999999995 -0.95960593000000005 4.96876289999999976 0.35480331999999998 -1.312474 4.74644279999999963 0.24152541 -1.75711320000000004 4.49999950000000037 0.20249295 -2.24999979999999988 4.25355629999999962 0.24152588999999999 -2.74288610000000022 4.03123710000000024 0.35480331999999998 -3.18752550000000001 3.85480279999999986 0.53123712999999995 -3.54039310000000018 3.74152519999999988 0.75355673000000001 -3.76694819999999986 3.70249249999999996 1.00000019999999989 -3.8450139000000001 4.02298120000000026 1.09000950000000008 -2.70403720000000014 4.06435350000000017 1.1712072 -2.62129279999999998 4.12879229999999975 1.23564619999999992 -2.4924141999999998 4.20999 1.27701880000000001 -2.33001760000000013 4.29999920000000024 1.29127480000000006 -2.14999990000000007 4.390008 1.27701880000000001 -1.969982 4."
+		+ "47120669999999976 1.23564619999999992 -1.80758609999999997 4.535646 1.171207 -1.67870760000000008 4.57701829999999976 1.090009 -1.59596249999999995 4.59127430000000025 1 -1.56745040000000002 4.57701829999999976 0.90999125999999997 -1.59596239999999989 4.53564640000000008 0.82879329000000002 -1.67870760000000008 4.47120669999999976 0.76435399000000004 -1.807586 4.39000840000000014 0.72298145000000003 -1.96998209999999996 4.29999969999999987 0.70872544999999998 -2.14999960000000012 4.209991 0.72298145000000003 -2.33001730000000018 4.12879280000000026 0.76435399000000004 -2.49241329999999994 4.06435390000000041 0.82879305000000003 -2.62129160000000017 4.02298120000000026 0.90999125999999997 -2.70403670000000007 4.00872519999999977 1.00000069999999996 -2.732549 4.222981 1.09000950000000008 -2.80403709999999995 4.26435329999999979 1.1712072 -2.72129269999999979 4.32879259999999988 1.23564619999999992 -2.59241410000000005 4.40998979999999996 1.27701880000000001 -2.43001749999999994 4.49999950000000037 1.291275 -2.2"
+		+ "5 4.59000780000000042 1.27701880000000001 -2.06998209999999983 4.67120650000000026 1.23564619999999992 -1.907586 4.73564580000000035 1.171207 -1.77870750000000011 4.77701810000000027 1.090009 -1.69596239999999998 4.79127409999999987 1 -1.66745030000000005 4.77701810000000027 0.90999125999999997 -1.69596229999999992 4.73564619999999969 0.82879329000000002 -1.77870750000000011 4.67120650000000026 0.76435399000000004 -1.90758589999999995 4.59000830000000004 0.72298145000000003 -2.06998209999999983 4.49999950000000037 0.70872544999999998 -2.24999949999999993 4.4099908000000001 0.72298145000000003 -2.43001719999999999 4.32879259999999988 0.76435399000000004 -2.5924132000000002 4.26435380000000031 0.82879305000000003 -2.72129149999999997 4.222981 0.90999125999999997 -2.80403659999999988 4.208725 1.00000069999999996 -2.83254889999999993 3.922981 1.09000950000000008 -2.65403719999999987 3.96435329999999997 1.1712072 -2.57129289999999999 4.02879240000000038 1.23564619999999992 -2.44241429999999982 4.10999059999999972 "
+		+ "1.277019 -2.28001789999999982 4.19999979999999962 1.291275 -2.10000009999999993 4.29000849999999989 1.277019 -1.91998230000000003 4.37120680000000039 1.23564619999999992 -1.75758609999999993 4.43564609999999959 1.171207 -1.62870760000000003 4.4770184000000004 1.090009 -1.54596259999999996 4.4912744 1 -1.51745050000000004 4.4770184000000004 0.90999125999999997 -1.54596249999999991 4.43564609999999959 0.82879305000000003 -1.62870739999999992 4.37120680000000039 0.76435399000000004 -1.757586 4.29000849999999989 0.72298145000000003 -1.91998219999999997 4.19999979999999962 0.70872544999999998 -2.09999970000000014 4.10999110000000023 0.72298145000000003 -2.28001740000000019 4.02879290000000001 0.76435399000000004 -2.44241330000000012 3.96435380000000004 0.82879305000000003 -2.57129170000000018 3.9229813 0.90999125999999997 -2.65403680000000008 3.90872529999999996 1.00000069999999996 -2.682549 4.32298090000000013 1.09000950000000008 -2.854037 4.36435320000000004 1.1712072 -2.77129270000000005 4.428792 1.235646199999"
+		+ "99992 -2.64241409999999988 4.50999019999999984 1.277019 -2.48001769999999988 4.59999939999999974 1.291275 -2.3 4.69000820000000029 1.277019 -2.11998219999999993 4.77120639999999963 1.23564619999999992 -1.95758589999999999 4.83564569999999971 1.171207 -1.82870749999999993 4.877018 1.090009 -1.74596240000000003 4.891274 1 -1.7174503000000001 4.877018 0.90999125999999997 -1.74596229999999997 4.83564569999999971 0.82879305000000003 -1.82870719999999998 4.77120639999999963 0.76435399000000004 -1.95758579999999993 4.69000820000000029 0.72298145000000003 -2.119982 4.59999939999999974 0.70872544999999998 -2.2999995000000002 4.50999070000000035 0.72298145000000003 -2.48001719999999981 4.42879250000000013 0.76435399000000004 -2.64241310000000018 4.36435369999999967 0.82879305000000003 -2.7712914999999998 4.32298090000000013 0.90999125999999997 -2.85403660000000015 4.30872489999999964 1.00000069999999996 -2.88254879999999991 4.16024879999999975 1.0129163000000001 -2.17950180000000016 4.16618539999999982 1.02456759999999"
+		+ "991 -2.16762850000000018 4.17543220000000037 1.03381440000000002 -2.14913510000000008 4.18708369999999963 1.03975130000000004 -2.12583179999999983 4.19999979999999962 1.04179690000000003 -2.09999989999999981 4.21291539999999998 1.03975130000000004 -2.07416819999999991 4.22456739999999975 1.03381440000000002 -2.05086520000000005 4.23381420000000031 1.02456759999999991 -2.0323715 4.23975089999999977 1.01291580000000003 -2.02049779999999979 4.24179650000000041 1 -2.01640649999999999 4.23975089999999977 0.98708415000000005 -2.02049779999999979 4.23381420000000031 0.97543263000000002 -2.03237129999999988 4.22456739999999975 0.96618605000000002 -2.0508649000000001 4.2129158999999996 0.96024918999999997 -2.07416819999999991 4.19999979999999962 0.95820355000000001 -2.09999970000000014 4.18708420000000014 0.96024918999999997 -2.12583140000000004 4.1754327 0.96618605000000002 -2.14913460000000001 4.16618590000000033 0.97543263000000002 -2.167628 4.16024879999999975 0.98708439000000003 -2.1795015000000002 4.158203099999"
+		+ "99971 1.00000050000000007 -2.18359330000000007 4.515563 1.0274357999999999 -2.46887230000000013 4.52817340000000002 1.05218459999999991 -2.44365219999999983 4.54781480000000027 1.071826 -2.40436909999999981 4.57256410000000013 1.08443669999999992 -2.35487009999999986 4.59999939999999974 1.08878180000000002 -2.3 4.6274343 1.08443669999999992 -2.24513009999999991 4.65218349999999958 1.071826 -2.195631 4.67182540000000035 1.05218459999999991 -2.156348 4.68443580000000015 1.02743509999999993 -2.13112689999999994 4.6887812999999996 1 -2.12243629999999994 4.68443580000000015 0.97256494000000004 -2.13112689999999994 4.67182540000000035 0.94781565999999995 -2.15634779999999981 4.652184 0.92817426000000003 -2.19563059999999988 4.6274343 0.91556382000000003 -2.24512979999999995 4.59999939999999974 0.91121839999999998 -2.2999991999999998 4.57256459999999976 0.91556382000000003 -2.35486940000000011 4.54781529999999989 0.92817426000000003 -2.40436840000000007"
+		)
+		2 "|Barbell:Barbell|Barbell:BarbellShape" "pt[498:521]" (" 4.52817389999999964 0.94781565999999995 -2.443651 4.51556349999999984 0.97256516999999998 -2.46887210000000001 4.51121809999999979 1.000001 -2.47756290000000012 6.515564 1.02743669999999998 -3.46887230000000013 6.528173 1.05218459999999991 -3.44365260000000006 6.59999939999999974 1 -3.2999995000000002 6.54781390000000041 1.0718255000000001 -3.4043698 6.57256459999999976 1.08443690000000004 -3.35486890000000004 6.59999849999999988 1.08878180000000002 -3.30000019999999994 6.6274343 1.08443690000000004 -3.24513009999999991 6.65218349999999958 1.0718255000000001 -3.19563029999999992 6.67182540000000035 1.0521855 -3.1563485 6.68443580000000015 1.0274357999999999 -3.13112710000000005 6.68878169999999983 0.99999857000000003 -3.12243680000000001 6.68443580000000015 0.97256564999999995 -3.1311258999999998 6.67182540000000035 0.94781590000000004 -3.15634680000000012 6.652184 0.92817402000000004 -3.195632 6.6274343 0.91556358000000004 -3.24512979999999995 6.599999 0.91121817000000005 -3.29999969999999987 6.572564100000"
+		+ "00013 0.91556358000000004 -3.35486910000000016 6.54781529999999989 0.92817353999999996 -3.40436739999999993 6.52817389999999964 0.94781590000000004 -3.44365120000000013 6.515563 0.97256421999999998 -3.46887159999999994 6.51121809999999979 1.000001 -3.47756270000000001"
+		)
 		5 4 "BarbellRN" "|Barbell:Barbell.drawOverride" "BarbellRN.placeHolderList[1]" 
 		"";
 	setAttr ".ptag" -type "string" "";
@@ -1455,28 +445,16 @@ createNode reference -n "Ultimate_Bony_v1_0_5RN";
 		"Ultimate_Bony_v1_0_5RN" 227
 		0 "|Ultimate_Bony_v1_0_5RNfosterParent1|Bony_ROOTCShapeDeformed" "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_ROOTCG|Ultimate_Bony_v1_0_5:Bony_ROOTC" 
 		"-s -r "
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT" "GlobalScale" 
-		" -k 1"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_ROOTCG|Ultimate_Bony_v1_0_5:Bony_ROOTC" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_ROOTCG|Ultimate_Bony_v1_0_5:Bony_ROOTC|Ultimate_Bony_v1_0_5:Bony_ROOTCShape" 
 		"intermediateObject" " 1"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_ROOTCG|Ultimate_Bony_v1_0_5:Bony_ROOTC|Ultimate_Bony_v1_0_5:Bony_ROOTCShape" 
 		"inPlace" " 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lArmSwitchCG|Ultimate_Bony_v1_0_5:Bony_lArmSwitchC" 
-		"SwitchIkFk" " -k 1"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lWristIKCG|Ultimate_Bony_v1_0_5:Bony_lWristIKC" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lWristIKCG|Ultimate_Bony_v1_0_5:Bony_lWristIKC" 
-		"Stretch" " -k 1"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rArmSwitchCG|Ultimate_Bony_v1_0_5:Bony_rArmSwitchC" 
-		"SwitchIkFk" " -k 1"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rWristIKCG|Ultimate_Bony_v1_0_5:Bony_rWristIKC" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rWristIKCG|Ultimate_Bony_v1_0_5:Bony_rWristIKC" 
-		"Stretch" " -k 1"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rWristIKCG|Ultimate_Bony_v1_0_5:Bony_rWristIKC" 
-		"ElbowLock" " -k 1"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rShoulderFKCG2|Ultimate_Bony_v1_0_5:Bony_rShoulderFKCG|Ultimate_Bony_v1_0_5:Bony_rShoulderFKC" 
 		"scaleX" " 1"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rShoulderFKCG2|Ultimate_Bony_v1_0_5:Bony_rShoulderFKCG|Ultimate_Bony_v1_0_5:Bony_rShoulderFKC" 
@@ -1489,19 +467,31 @@ createNode reference -n "Ultimate_Bony_v1_0_5RN";
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rPalmCG|Ultimate_Bony_v1_0_5:Bony_rPalmC|Ultimate_Bony_v1_0_5:Bony_rFinger2J3CG|Ultimate_Bony_v1_0_5:Bony_rFinger2J3C" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "Ultimate_Bony_v1_0_5:char_body_blinn1SG" "aiCustomAOVs" " -s 3"
+		2 "Ultimate_Bony_v1_0_5:char_body_blinn1SG" "aiCustomAOVs" " -s 6"
 		2 "Ultimate_Bony_v1_0_5:char_body_blinn1SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
 		
 		2 "Ultimate_Bony_v1_0_5:char_body_blinn1SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
 		2 "Ultimate_Bony_v1_0_5:char_body_blinn1SG" "aiCustomAOVs[2].aovName" " -type \"string\" \"shadow\""
 		
-		2 "Ultimate_Bony_v1_0_5:char_body_blinn5SG" "aiCustomAOVs" " -s 3"
+		2 "Ultimate_Bony_v1_0_5:char_body_blinn1SG" "aiCustomAOVs[3].aovName" " -type \"string\" \"shadow_mask\""
+		
+		2 "Ultimate_Bony_v1_0_5:char_body_blinn1SG" "aiCustomAOVs[4].aovName" " -type \"string\" \"shadow_diff\""
+		
+		2 "Ultimate_Bony_v1_0_5:char_body_blinn1SG" "aiCustomAOVs[5].aovName" " -type \"string\" \"shadow_matte\""
+		
+		2 "Ultimate_Bony_v1_0_5:char_body_blinn5SG" "aiCustomAOVs" " -s 6"
 		2 "Ultimate_Bony_v1_0_5:char_body_blinn5SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
 		
 		2 "Ultimate_Bony_v1_0_5:char_body_blinn5SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
 		2 "Ultimate_Bony_v1_0_5:char_body_blinn5SG" "aiCustomAOVs[2].aovName" " -type \"string\" \"shadow\""
+		
+		2 "Ultimate_Bony_v1_0_5:char_body_blinn5SG" "aiCustomAOVs[3].aovName" " -type \"string\" \"shadow_mask\""
+		
+		2 "Ultimate_Bony_v1_0_5:char_body_blinn5SG" "aiCustomAOVs[4].aovName" " -type \"string\" \"shadow_diff\""
+		
+		2 "Ultimate_Bony_v1_0_5:char_body_blinn5SG" "aiCustomAOVs[5].aovName" " -type \"string\" \"shadow_matte\""
 		
 		5 4 "Ultimate_Bony_v1_0_5RN" "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT.GlobalScale" 
 		"Ultimate_Bony_v1_0_5RN.placeHolderList[1]" ""
@@ -1923,7 +913,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
 		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"all\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1071\n            -height 714\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1070\n            -height 714\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
@@ -1947,8 +937,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n"
 		+ "\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1071\\n    -height 714\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1071\\n    -height 714\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1070\\n    -height 714\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1070\\n    -height 714\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -2012,9 +1002,9 @@ createNode animCurveTA -n "Bony_ROOTC_rotateX";
 	rename -uid "11FB3C09-4C68-7BD4-21CC-DFA48F883E93";
 	setAttr ".tan" 28;
 	setAttr -s 14 ".ktv[0:13]"  1 78.555459903170686 12 49.744041968903836
-		 18 45.545852618459726 20 45.545852618459726 25 41.377293771197053 49 41.738209533467796
-		 62 28.90854731190305 67 19.34364424094867 73 5.5913334928233942 79 -14.217508384880672
-		 83 -29.135892340171363 97 -69.771810680689029 105 -69.771810680689029 121 78.555459903170686;
+		 18 45.545852618459726 20 45.545852618459726 25 41.377293771197053 49 41.738209533467803
+		 62 28.90854731190305 67 19.34364424094867 73 5.5913334928233951 79 -14.217508384880672
+		 83 -29.135892340171363 97 -69.771810680689043 105 -69.771810680689043 121 78.555459903170686;
 	setAttr -s 14 ".kit[1:13]"  1 1 28 28 28 28 28 28 
 		28 28 28 1 1;
 	setAttr -s 14 ".kot[1:13]"  1 1 28 28 28 28 28 28 
@@ -2407,7 +1397,7 @@ createNode animCurveTA -n "Bony_rFinger2J3C_rotateY";
 createNode animCurveTA -n "Bony_rFinger2J3C_rotateZ";
 	rename -uid "B2D1ABD8-4185-BCE5-17E3-42961AC96AAC";
 	setAttr ".tan" 28;
-	setAttr -s 2 ".ktv[0:1]"  1 -81.08474001614951 121 -81.08474001614951;
+	setAttr -s 2 ".ktv[0:1]"  1 -81.084740016149524 121 -81.084740016149524;
 createNode animCurveTA -n "Bony_rToeIKC_rotateX";
 	rename -uid "590E769A-445A-868C-48C9-569479C18F25";
 	setAttr ".tan" 28;
@@ -2994,9 +1984,32 @@ createNode animCurveTU -n "Bony_lWristIKC_Stretch";
 createNode polyPlane -n "polyPlane1";
 	rename -uid "E9BD377C-412C-69AD-88AA-449148D7579B";
 	setAttr ".cuv" 2;
+createNode aiAOV -n "aiAOV_diffuse";
+	rename -uid "0AE9A7B2-4305-3875-EDE5-CD85B6AE32C7";
+	setAttr ".aovn" -type "string" "diffuse";
+	setAttr ".aovt" 5;
+createNode aiAOV -n "aiAOV_specular";
+	rename -uid "78994A89-40A6-DE91-C7BD-2D845703F421";
+	setAttr ".aovn" -type "string" "specular";
+	setAttr ".aovt" 5;
+createNode aiAOV -n "aiAOV_shadow_mask";
+	rename -uid "2A0EF6A2-43E7-5C5C-A6C6-F1A84724727C";
+	setAttr ".aovn" -type "string" "shadow_mask";
+	setAttr ".aovt" 4;
+createNode aiAOV -n "aiAOV_shadow_diff";
+	rename -uid "7BECBE77-4321-345C-C373-DBA23181739E";
+	setAttr ".aovn" -type "string" "shadow_diff";
+	setAttr ".aovt" 5;
+createNode aiAOV -n "aiAOV_shadow";
+	rename -uid "E0F8CF1C-4AF3-1D7F-045D-B8BDA7C00FCF";
+	setAttr ".aovn" -type "string" "shadow";
+	setAttr ".aovt" 5;
+createNode aiAOV -n "aiAOV_shadow_matte";
+	rename -uid "B248DE10-4858-DD0C-02A9-DC899E985E08";
+	setAttr ".aovn" -type "string" "shadow_matte";
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 101;
+	setAttr ".unw" 101;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -3024,33 +2037,38 @@ select -ne :initialShadingGroup;
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr -s 5 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 3 ".aovs";
+	setAttr -s 6 ".aovs";
 	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[1].aov_name" -type "string" "specular";
 	setAttr ".aovs[2].aov_name" -type "string" "shadow";
-	setAttr ".aal" -type "attributeAlias" 6 "ai_aov_diffuse" "aiCustomAOVs[0].aovName" "ai_aov_specular" "aiCustomAOVs[1].aovName" "ai_aov_shadow" "aiCustomAOVs[2].aovName" ;
+	setAttr ".aovs[3].aov_name" -type "string" "shadow_mask";
+	setAttr ".aovs[4].aov_name" -type "string" "shadow_diff";
+	setAttr ".aovs[5].aov_name" -type "string" "shadow_matte";
+	setAttr ".aal" -type "attributeAlias" 12 "ai_aov_diffuse" "aiCustomAOVs[0]" "ai_aov_specular" "aiCustomAOVs[1]" "ai_aov_shadow" "aiCustomAOVs[2]" "ai_aov_shadow_mask" "aiCustomAOVs[3].aovName" "ai_aov_shadow_diff" "aiCustomAOVs[4].aovName" "ai_aov_shadow_matte" "aiCustomAOVs[5].aovName" ;
 select -ne :initialParticleSE;
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".ro" yes;
-	setAttr -s 3 ".aovs";
+	setAttr -s 6 ".aovs";
 	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[1].aov_name" -type "string" "specular";
 	setAttr ".aovs[2].aov_name" -type "string" "shadow";
-	setAttr ".aal" -type "attributeAlias" 6 "ai_aov_diffuse" "aiCustomAOVs[0].aovName" "ai_aov_specular" "aiCustomAOVs[1].aovName" "ai_aov_shadow" "aiCustomAOVs[2].aovName" ;
+	setAttr ".aovs[3].aov_name" -type "string" "shadow_mask";
+	setAttr ".aovs[4].aov_name" -type "string" "shadow_diff";
+	setAttr ".aovs[5].aov_name" -type "string" "shadow_matte";
+	setAttr ".aal" -type "attributeAlias" 12 "ai_aov_diffuse" "aiCustomAOVs[0]" "ai_aov_specular" "aiCustomAOVs[1]" "ai_aov_shadow" "aiCustomAOVs[2]" "ai_aov_shadow_mask" "aiCustomAOVs[3].aovName" "ai_aov_shadow_diff" "aiCustomAOVs[4].aovName" "ai_aov_shadow_matte" "aiCustomAOVs[5].aovName" ;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
 	setAttr ".outf" 51;
-	setAttr ".imfkey" -type "string" "jpeg";
-	setAttr ".an" yes;
+	setAttr ".imfkey" -type "string" "png";
 	setAttr ".ef" 120;
 	setAttr ".pff" yes;
-	setAttr ".peie" 0;
-	setAttr ".ifp" -type "string" "deadLift";
+	setAttr ".ifp" -type "string" "<Scene>_<RenderPass>";
+	setAttr ".rv" -type "string" "1";
 	setAttr ".dss" -type "string" "standardSurface1";
 select -ne :defaultResolution;
-	setAttr ".w" 1280;
-	setAttr ".h" 720;
+	setAttr ".w" 1920;
+	setAttr ".h" 1080;
 	setAttr ".pa" 1;
 	setAttr ".dar" 1.7769999504089355;
 select -ne :defaultLightSet;
@@ -3284,10 +2302,28 @@ connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drive
 		 -na;
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
+connectAttr "aiAOV_diffuse.msg" ":defaultArnoldRenderOptions.aovs" -na;
+connectAttr "aiAOV_specular.msg" ":defaultArnoldRenderOptions.aovs" -na;
+connectAttr "aiAOV_shadow_mask.msg" ":defaultArnoldRenderOptions.aovs" -na;
+connectAttr "aiAOV_shadow_diff.msg" ":defaultArnoldRenderOptions.aovs" -na;
+connectAttr "aiAOV_shadow.msg" ":defaultArnoldRenderOptions.aovs" -na;
+connectAttr "aiAOV_shadow_matte.msg" ":defaultArnoldRenderOptions.aovs" -na;
 connectAttr "Ultimate_Bony_v1_0_5RNfosterParent1.msg" "Ultimate_Bony_v1_0_5RN.fp"
 		;
 connectAttr "layerManager.dli[1]" "Barbell1.id";
 connectAttr ":time1.o" "expression1.tim";
+connectAttr ":defaultArnoldDriver.msg" "aiAOV_diffuse.out[0].drvr";
+connectAttr ":defaultArnoldFilter.msg" "aiAOV_diffuse.out[0].ftr";
+connectAttr ":defaultArnoldDriver.msg" "aiAOV_specular.out[0].drvr";
+connectAttr ":defaultArnoldFilter.msg" "aiAOV_specular.out[0].ftr";
+connectAttr ":defaultArnoldDriver.msg" "aiAOV_shadow_mask.out[0].drvr";
+connectAttr ":defaultArnoldFilter.msg" "aiAOV_shadow_mask.out[0].ftr";
+connectAttr ":defaultArnoldDriver.msg" "aiAOV_shadow_diff.out[0].drvr";
+connectAttr ":defaultArnoldFilter.msg" "aiAOV_shadow_diff.out[0].ftr";
+connectAttr ":defaultArnoldDriver.msg" "aiAOV_shadow.out[0].drvr";
+connectAttr ":defaultArnoldFilter.msg" "aiAOV_shadow.out[0].ftr";
+connectAttr ":defaultArnoldDriver.msg" "aiAOV_shadow_matte.out[0].drvr";
+connectAttr ":defaultArnoldFilter.msg" "aiAOV_shadow_matte.out[0].ftr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "aiAreaLightShape1.ltd" ":lightList1.l" -na;
 connectAttr "aiAreaLightShape2.ltd" ":lightList1.l" -na;
