@@ -79,13 +79,14 @@ namespace Crawl.Scripts
             while (true)
             {
                 if (_movementManager.frontBlocked)
-                    Rotate();
-                else if (_movementManager.playerInFront)
-                    DamagePlayer();
+                    if (_movementManager.playerInFront)
+                        DamagePlayer();
+                    else Rotate();
                 else
                     Forward();
         
                 yield return new WaitForSeconds(_seconds);
+                _movementManager.CheckSurroundings();
             }
         }
         

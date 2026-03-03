@@ -9,9 +9,6 @@ namespace Crawl.Scripts
         [Header("Movement Settings")]
         public MovementData movementData;
         
-        [Header("Raycast Settings")]
-        public LayerMask player;
-        
         private bool _isMoving;
         [HideInInspector]
         public bool frontBlocked;
@@ -29,7 +26,7 @@ namespace Crawl.Scripts
         // RAY CHECKING
         // ================================
 
-        private void CheckSurroundings()
+        public void CheckSurroundings()
         {
             Vector3 origin = transform.position + Vector3.up * 0.5f;
 
@@ -41,15 +38,7 @@ namespace Crawl.Scripts
                 frontBlocked = true;
 
                 // Check tag
-                if (hit.collider.CompareTag("Player"))
-                {
-                    playerInFront = true;
-                    Debug.Log("Player detected in front!");
-                }
-                else
-                {
-                    playerInFront = false;
-                }
+                playerInFront = hit.collider.CompareTag("Player");
             }
             else
             {
