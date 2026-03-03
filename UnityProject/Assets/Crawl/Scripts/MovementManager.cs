@@ -33,23 +33,33 @@ namespace Crawl.Scripts
         {
             Vector3 origin = transform.position + Vector3.up * 0.5f;
 
-            frontBlocked = Physics.Raycast(
-                origin,
-                transform.forward,
-                movementData.rayLength
-            );
+            RaycastHit hit;
 
+            // FRONT CHECK (anything)
+            if (Physics.Raycast(origin, transform.forward, out hit, movementData.rayLength))
+            {
+                frontBlocked = true;
+
+                // Check tag
+                if (hit.collider.CompareTag("Player"))
+                {
+                    playerInFront = true;
+                    Debug.Log("Player detected in front!");
+                }
+                else
+                {
+                    playerInFront = false;
+                }
+            }
+            else
+            {
+                frontBlocked = false;
+                playerInFront = false;
+            }
             _backBlocked = Physics.Raycast(
                 origin,
                 -transform.forward,
                 movementData.rayLength
-            );
-            
-            playerInFront = Physics.Raycast(
-                origin,
-                transform.forward,
-                movementData.rayLength,
-                player
             );
             
             Debug.Log(playerInFront);
@@ -105,6 +115,15 @@ namespace Crawl.Scripts
             Quaternion targetRotation = Quaternion.Euler(
                 transform.eulerAngles + Vector3.up * movementData.turnRadius
             );
+
+            StartCoroutine(MoveTo(transform.position, targetRotation));
+        }
+        
+        public void IdleHere()
+        {
+            if (_isMoving) return;
+
+            Quaternion targetRotation = transform.rotation;
 
             StartCoroutine(MoveTo(transform.position, targetRotation));
         }
