@@ -35,10 +35,10 @@ namespace Crawl.Scripts
             
             seconds = entityData.tempo;
         }
-        private void Start()
-        {
-            StartCoroutine(MovementLoop());
-        }
+        // private void Start()
+        // {
+        //     StartCoroutine(MovementLoop());
+        // }
 
         private void HandleDeath()
         {
@@ -74,20 +74,20 @@ namespace Crawl.Scripts
         
 
 
-        private IEnumerator MovementLoop()
-        {
-            while (true)
-            {
-                if (movementManager.wallInFront)
-                    Rotate();
-                else if (movementManager.playerInFront)
-                    DamagePlayer();
-                else
-                    Forward();
-
-                yield return new WaitForSeconds(seconds);
-            }
-        }
+        // private IEnumerator MovementLoop()
+        // {
+        //     while (true)
+        //     {
+        //         if (movementManager.wallInFront)
+        //             Rotate();
+        //         else if (movementManager.playerInFront)
+        //             DamagePlayer();
+        //         else
+        //             Forward();
+        //
+        //         yield return new WaitForSeconds(seconds);
+        //     }
+        // }
         
         private void OnTriggerEnter(Collider other)
         {
