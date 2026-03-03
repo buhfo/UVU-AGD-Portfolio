@@ -1,95 +1,157 @@
 using UnityEngine;
+using System.Collections;
+
 
 namespace Crawl.Scripts
 {
     public class MovementManager : MonoBehaviour
     {
-        // I need to fix all the raycast stuff.
-        Animator _animator;
-        AudioSource _audioSource;
-    
-        //----------------//
-        //   TRANSITIONS  //
-        //----------------//
+        [Header("Movement Settings")]
         public MovementData movementData;
-
-
-        //----------------//
-        //    MOVEMENTS   //
-        //----------------//
-        Vector3 _targetGridPos;
-        Vector3 _targetRotation;
         
-//-----------------------//
-// Player Start Position //
-//-----------------------//
+        [Header("Raycast Settings")]
+        public LayerMask player;
+        
+        private bool _isMoving;
+        [HideInInspector]
+        public bool frontBlocked;
+        private bool _backBlocked;
+        [HideInInspector]
+        public bool playerInFront;
+
         private void Start()
         {
-            // your target position at the start is where you currently are.
-            FixPosition();
+            transform.position = Vector3Int.RoundToInt(transform.position);
+            CheckSurroundings();
         }
 
-        private void FixPosition()
+        // ================================
+        // RAY CHECKING
+        // ================================
+
+        private void CheckSurroundings()
         {
-            _targetGridPos = Vector3Int.RoundToInt(transform.position);
-            _targetRotation = transform.eulerAngles;
-        }
+            Vector3 origin = transform.position + Vector3.up * 0.5f;
 
-        //----------------------------------------//
-        // WALL CHECKS & CALL FOR MOVEMENT SCRIPT //
-        //----------------------------------------//
-        private void FixedUpdate()
-        {
-            MovePlayer();
-        }
+            frontBlocked = Physics.Raycast(
+                origin,
+                transform.forward,
+                movementData.rayLength
+            );
 
-
-
-        //-----------------//
-        // MOVEMENT SCRIPT //
-        //-----------------//
-        void MovePlayer()
-        {
-            var targetPosition = _targetGridPos;
-
+            _backBlocked = Physics.Raycast(
+                origin,
+                -transform.forward,
+                movementData.rayLength
+            );
             
-            // makes sure that your rotation stays within the 0-360 range
-            if (_targetRotation.y > 270 && _targetRotation.y < 361f) _targetRotation.y = 0f;
-            if (_targetRotation.y < 0f) _targetRotation.y = 270f;
-
+            playerInFront = Physics.Raycast(
+                origin,
+                transform.forward,
+                movementData.rayLength,
+                player
+            );
             
-            // Just moves you from point a to b without animation
+            Debug.Log(playerInFront);
+            Debug.DrawRay(origin, transform.forward * movementData.rayLength, Color.red, 0.5f);
+            Debug.DrawRay(origin, -transform.forward * movementData.rayLength, Color.blue, 0.5f);
+        }
+        
+        // ================================
+        // INPUT FUNCTIONS
+        // ================================
+
+        public void MoveForward()
+        {
+            if (_isMoving) return;
+
+            CheckSurroundings();
+            if (frontBlocked) return;
+
+            Vector3 targetPosition = Vector3Int.RoundToInt(transform.position)
+                                     + transform.forward * movementData.distance;
+
+            StartCoroutine(MoveTo(targetPosition, transform.rotation));
+        }
+
+        public void MoveBackward()
+        {
+            if (_isMoving) return;
+
+            CheckSurroundings();
+            if (_backBlocked) return;
+
+            Vector3 targetPosition = Vector3Int.RoundToInt(transform.position)
+                                     - transform.forward * movementData.distance;
+
+            StartCoroutine(MoveTo(targetPosition, transform.rotation));
+        }
+
+        public void RotateLeft()
+        {
+            if (_isMoving) return;
+
+            Quaternion targetRotation = Quaternion.Euler(
+                transform.eulerAngles - Vector3.up * movementData.turnRadius
+            );
+
+            StartCoroutine(MoveTo(transform.position, targetRotation));
+        }
+
+        public void RotateRight()
+        {
+            if (_isMoving) return;
+
+            Quaternion targetRotation = Quaternion.Euler(
+                transform.eulerAngles + Vector3.up * movementData.turnRadius
+            );
+
+            StartCoroutine(MoveTo(transform.position, targetRotation));
+        }
+
+        // ================================
+        // MOVEMENT COROUTINE
+        // ================================
+
+        private IEnumerator MoveTo(Vector3 targetPosition, Quaternion targetRotation)
+        {
+            _isMoving = true;
+
             if (!movementData.smoothTransition)
             {
                 transform.position = targetPosition;
-                transform.rotation = Quaternion.Euler(_targetRotation);
-            } 
-            else // moves you with an animation
-            {
-                transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * movementData.transitionSpeed);
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(_targetRotation), Time.deltaTime * movementData.transitionRotationSpeed);
+                transform.rotation = targetRotation;
             }
-        }
-        public void RotateLeft()
-        {
-            _targetRotation -= Vector3.up * movementData.turnRadius;
-        }
-        public void RotateRight()
-        {
-            _targetRotation += Vector3.up * movementData.turnRadius;
-        }
-        public void MoveForward()
-        {
-            FixPosition();
+            else
+            {
+                while (
+                    Vector3.Distance(transform.position, targetPosition) > 0.001f ||
+                    Quaternion.Angle(transform.rotation, targetRotation) > 0.1f
+                )
+                {
+                    transform.position = Vector3.MoveTowards(
+                        transform.position,
+                        targetPosition,
+                        movementData.transitionSpeed * Time.deltaTime
+                    );
 
-            _targetGridPos += (transform.forward *  movementData.distance);
-        
-        }
-        public void MoveBackward()
-        {
+                    transform.rotation = Quaternion.RotateTowards(
+                        transform.rotation,
+                        targetRotation,
+                        movementData.transitionRotationSpeed * Time.deltaTime
+                    );
 
-            _targetGridPos -= (transform.forward *  movementData.distance);
+                    yield return null;
+                }
+            }
 
+            transform.position = targetPosition;
+            transform.rotation = targetRotation;
+
+            _isMoving = false;
+
+            // 🔥 Re-check after movement finishes
+            CheckSurroundings();
         }
     }
 }
