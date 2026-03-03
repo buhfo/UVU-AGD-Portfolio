@@ -454,6 +454,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Generator
       objectReference: {fileID: 0}
+    - target: {fileID: 2950044598611839294, guid: 9bdca1f1b42e3f14188f4607ec84ad57, type: 3}
+      propertyPath: halls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950044598611839294, guid: 9bdca1f1b42e3f14188f4607ec84ad57, type: 3}
+      propertyPath: halls.Array.data[0].hall
+      value: 
+      objectReference: {fileID: 504260956658035454, guid: 8a6c5c5760f85294aae1069aac380390, type: 3}
+    - target: {fileID: 2950044598611839294, guid: 9bdca1f1b42e3f14188f4607ec84ad57, type: 3}
+      propertyPath: halls.Array.data[1].hall
+      value: 
+      objectReference: {fileID: 504260956658035454, guid: 8a6c5c5760f85294aae1069aac380390, type: 3}
     - target: {fileID: 5199259299291176113, guid: 9bdca1f1b42e3f14188f4607ec84ad57, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
