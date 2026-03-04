@@ -182,7 +182,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d69c9b16a928913419b2e9a457caff7a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -241,9 +241,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Crawl.Scripts.MovementManager
   movementData: {fileID: 11400000, guid: 960d9f05f91ac0c46ad2c3907a04cbd7, type: 2}
-  player:
-    serializedVersion: 2
-    m_Bits: 256
   frontBlocked: 0
   playerInFront: 0
 --- !u!114 &920272664462158300
