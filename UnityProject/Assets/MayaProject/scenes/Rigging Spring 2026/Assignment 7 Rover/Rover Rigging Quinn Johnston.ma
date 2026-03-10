@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Rover Rigging Quinn Johnston.ma
-//Last modified: Thu, Mar 05, 2026 04:29:55 PM
+//Last modified: Tue, Mar 10, 2026 03:07:11 PM
 //Codeset: 1252
 requires "fbxmaya" "2020.3.6";
 file -rdi 1 -ns "rover_model" -rfn "rover_modelRN" -op "fbx" -typ "FBX" "C:/Users/11005048/Documents/UVU/UVU-AGD-Portfolio/UnityProject/Assets/MayaProject//scenes/Rigging Spring 2026/Assignment 7 Rover/rover_model.fbx";
@@ -14,17 +14,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202505300603-a12e894a3d";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 22631)";
-fileInfo "UUID" "E24BB189-4EC6-B3B0-81DC-1A961C5B6A9C";
+fileInfo "UUID" "40C04AAF-40E5-7EF1-C9FB-718D2EFA09A9";
 createNode transform -s -n "persp";
 	rename -uid "38B2B9F8-4508-4727-92D2-16A0255712A3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 255.17802313371681 287.7937741337833 355.16805535224353 ;
-	setAttr ".r" -type "double3" -24.338352729545182 -1399.7999999994599 6.246212134359455e-15 ;
+	setAttr ".t" -type "double3" 60.939746970610123 98.215082013471829 414.00313394732717 ;
+	setAttr ".r" -type "double3" -5.138352729670669 -2875.3999999998118 -2.4928380793364673e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "71C80292-4324-A4ED-5CD6-B99F78D0734F";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 479.00770532028719;
+	setAttr ".coi" 399.20869980746352;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -39,7 +39,7 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 374.13409930231916;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
@@ -49,13 +49,13 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "FB348EEA-48E1-3DF4-FB85-5F8B735816F5";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 0 1000.1 ;
+	setAttr ".t" -type "double3" 8.3285560063677799 46.902284190917001 1000.1 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "0C08FC9E-4209-C485-ADDE-A997870ED471";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 106.86240974386367;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -79,206 +79,191 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "Right_side";
-	rename -uid "8F4C39E0-4676-10C3-D092-E99E52AA5AEB";
-	setAttr ".rp" -type "double3" -28.75 31.667922973632812 -15.530292987823486 ;
-	setAttr ".sp" -type "double3" -28.75 31.667922973632812 -15.530292987823486 ;
-createNode clusterHandle -n "Right_sideShape" -p "Right_side";
-	rename -uid "D9B5BA1B-4C97-6449-BD18-61BE5B240E0F";
-	setAttr ".ihi" 0;
-	setAttr -k off ".v";
-	setAttr ".or" -type "double3" -28.75 31.667922973632812 -15.530292987823486 ;
-createNode transform -n "cluster1Handle";
-	rename -uid "807CAF3D-4CC7-8641-528B-05A7CF5AB094";
-	setAttr ".rp" -type "double3" -27.5 36.260425567626953 26.886308670043945 ;
-	setAttr ".sp" -type "double3" -27.5 36.260425567626953 26.886308670043945 ;
-createNode clusterHandle -n "cluster1HandleShape" -p "cluster1Handle";
-	rename -uid "6D61B88D-446C-81F1-7440-0EB8A4E8FE23";
-	setAttr ".ihi" 0;
-	setAttr -k off ".v";
-	setAttr ".or" -type "double3" -27.5 36.260425567626953 26.886308670043945 ;
-createNode transform -n "cluster2Handle";
-	rename -uid "A805C69C-437C-D281-63D6-F393CF316A05";
-	setAttr ".rp" -type "double3" -25.854949951171875 38.371124267578125 22.469694137573242 ;
-	setAttr ".sp" -type "double3" -25.854949951171875 38.371124267578125 22.469694137573242 ;
-createNode clusterHandle -n "cluster2HandleShape" -p "cluster2Handle";
-	rename -uid "CDDB8EDA-4DE2-9682-14F0-23BC747D0A66";
-	setAttr ".ihi" 0;
-	setAttr -k off ".v";
-	setAttr ".or" -type "double3" -25.854949951171875 38.371124267578125 22.469694137573242 ;
-createNode transform -n "cluster3Handle";
+createNode transform -n "camera_arm_base_rotate";
 	rename -uid "7650FAAC-466B-B65F-966E-DCA4ED3012DE";
 	setAttr ".rp" -type "double3" 0 50.453742980957031 44.266950607299805 ;
 	setAttr ".sp" -type "double3" 0 50.453742980957031 44.266950607299805 ;
-createNode clusterHandle -n "cluster3HandleShape" -p "cluster3Handle";
+createNode clusterHandle -n "camera_arm_base_rotateShape" -p "camera_arm_base_rotate";
 	rename -uid "4B1B1583-4BEC-9DF1-385A-98ABF3D9EBEB";
 	setAttr ".ihi" 0;
 	setAttr -k off ".v";
 	setAttr ".or" -type "double3" 0 50.453742980957031 44.266950607299805 ;
-createNode transform -n "cluster4Handle";
-	rename -uid "047A2B88-4858-BD70-2CEA-A1927AAF2628";
-	setAttr ".rp" -type "double3" -27.018994331359863 66.803646087646484 26.263787746429443 ;
-	setAttr ".sp" -type "double3" -27.018994331359863 66.803646087646484 26.263787746429443 ;
-createNode clusterHandle -n "cluster4HandleShape" -p "cluster4Handle";
-	rename -uid "97A431D4-4B32-19C4-08E3-3381E2F4E1E0";
-	setAttr ".ihi" 0;
-	setAttr -k off ".v";
-	setAttr ".or" -type "double3" -27.018994331359863 66.803646087646484 26.263787746429443 ;
-createNode transform -n "cluster5Handle";
-	rename -uid "A7BE02D3-46CB-43B6-1F0B-96AE4CA42174";
-	setAttr ".rp" -type "double3" -62.834753036499023 66.667961120605469 1.7787489891052246 ;
-	setAttr ".sp" -type "double3" -62.834753036499023 66.667961120605469 1.7787489891052246 ;
-createNode clusterHandle -n "cluster5HandleShape" -p "cluster5Handle";
-	rename -uid "0C039BCF-4B64-06D5-9C19-8B95954F4FAA";
-	setAttr ".ihi" 0;
-	setAttr -k off ".v";
-	setAttr ".or" -type "double3" -62.834753036499023 66.667961120605469 1.7787489891052246 ;
-createNode transform -n "cluster6Handle";
+createNode transform -n "back_panel_rotate";
 	rename -uid "2234FEAA-4C1B-8A5D-1944-0B8325A82407";
 	setAttr ".rp" -type "double3" 0 66.617935180664062 -39.871994018554688 ;
 	setAttr ".sp" -type "double3" 0 66.617935180664062 -39.871994018554688 ;
-createNode clusterHandle -n "cluster6HandleShape" -p "cluster6Handle";
+createNode clusterHandle -n "back_panel_rotateShape" -p "back_panel_rotate";
 	rename -uid "CCD13985-4768-6FCC-8FC5-8F95609958BB";
 	setAttr ".ihi" 0;
 	setAttr -k off ".v";
 	setAttr ".or" -type "double3" 0 66.617935180664062 -39.871994018554688 ;
-createNode transform -n "cluster7Handle";
+createNode transform -n "panel_1_rotate";
 	rename -uid "1B9DFADB-48B3-21C4-E1CD-788BCB9CB9EB";
 	setAttr ".rp" -type "double3" 27.018994331359863 66.803646087646484 26.263787746429443 ;
 	setAttr ".sp" -type "double3" 27.018994331359863 66.803646087646484 26.263787746429443 ;
-createNode clusterHandle -n "cluster7HandleShape" -p "cluster7Handle";
+createNode clusterHandle -n "panel_1_rotateShape" -p "panel_1_rotate";
 	rename -uid "6FC0A281-4EBD-0352-83C1-D4B0F92D27BF";
 	setAttr ".ihi" 0;
 	setAttr -k off ".v";
 	setAttr ".or" -type "double3" 27.018994331359863 66.803646087646484 26.263787746429443 ;
-createNode transform -n "cluster8Handle";
+createNode transform -n "panel_2_rotate";
 	rename -uid "43E5A16D-4C2B-43F0-8EE9-6B957E8B451A";
 	setAttr ".rp" -type "double3" 62.834753036499023 66.667961120605469 1.7787489891052246 ;
 	setAttr ".sp" -type "double3" 62.834753036499023 66.667961120605469 1.7787489891052246 ;
-createNode clusterHandle -n "cluster8HandleShape" -p "cluster8Handle";
+createNode clusterHandle -n "panel_2_rotateShape" -p "panel_2_rotate";
 	rename -uid "B628D992-455F-E436-4283-0E99BCA29EA9";
 	setAttr ".ihi" 0;
 	setAttr -k off ".v";
 	setAttr ".or" -type "double3" 62.834753036499023 66.667961120605469 1.7787489891052246 ;
-createNode transform -n "cluster9Handle";
+createNode transform -n "pole_rotate";
 	rename -uid "9649255D-4708-B1D0-523E-97B30D253223";
 	setAttr ".rp" -type "double3" 0.21690011024475098 81.526897430419922 45.20849609375 ;
 	setAttr ".sp" -type "double3" 0.21690011024475098 81.526897430419922 45.20849609375 ;
-createNode clusterHandle -n "cluster9HandleShape" -p "cluster9Handle";
+createNode clusterHandle -n "pole_rotateShape" -p "pole_rotate";
 	rename -uid "DFA9C41A-4163-1028-74AA-17B556EDA56D";
 	setAttr ".ihi" 0;
 	setAttr -k off ".v";
 	setAttr ".or" -type "double3" 0.21690011024475098 81.526897430419922 45.20849609375 ;
-createNode transform -n "cluster10Handle";
+createNode transform -n "head_camera_rotate";
 	rename -uid "CAA9A45A-4DF1-BEE8-0FC8-1091C6FCC92A";
 	setAttr ".rp" -type "double3" 0.23721504211425781 130.5069580078125 45.132041931152344 ;
 	setAttr ".sp" -type "double3" 0.23721504211425781 130.5069580078125 45.132041931152344 ;
-createNode clusterHandle -n "cluster10HandleShape" -p "cluster10Handle";
+createNode clusterHandle -n "head_camera_rotateShape" -p "head_camera_rotate";
 	rename -uid "D3B82A4D-415B-88E3-EF02-5AB436B32C35";
 	setAttr ".ihi" 0;
 	setAttr -k off ".v";
 	setAttr ".or" -type "double3" 0.23721504211425781 130.5069580078125 45.132041931152344 ;
-createNode transform -n "cluster11Handle";
+createNode transform -n "dish_arm_rotate";
 	rename -uid "A6B6C347-47F4-57C2-4215-2493527D66BF";
 	setAttr ".rp" -type "double3" 38.537914276123047 75.426124572753906 -25.038944244384766 ;
 	setAttr ".sp" -type "double3" 38.537914276123047 75.426124572753906 -25.038944244384766 ;
-createNode clusterHandle -n "cluster11HandleShape" -p "cluster11Handle";
+createNode clusterHandle -n "dish_arm_rotateShape" -p "dish_arm_rotate";
 	rename -uid "B80753BD-49A3-E209-8986-A995F47BDAEC";
 	setAttr ".ihi" 0;
 	setAttr -k off ".v";
 	setAttr ".or" -type "double3" 38.537914276123047 75.426124572753906 -25.038944244384766 ;
-createNode transform -n "cluster12Handle";
+createNode transform -n "Dish_rotate_head";
 	rename -uid "F7E5FAA1-4E33-E58B-2EEA-C38AB8D53114";
 	setAttr ".rp" -type "double3" 49.198602676391602 83.047214508056641 -25.053479194641113 ;
 	setAttr ".sp" -type "double3" 49.198602676391602 83.047214508056641 -25.053479194641113 ;
-createNode clusterHandle -n "cluster12HandleShape" -p "cluster12Handle";
+createNode clusterHandle -n "Dish_rotate_headShape" -p "Dish_rotate_head";
 	rename -uid "7BD9F1C0-45BD-8B76-71E9-059D20F00EB3";
 	setAttr ".ihi" 0;
 	setAttr -k off ".v";
 	setAttr ".or" -type "double3" 49.198602676391602 83.047214508056641 -25.053479194641113 ;
-createNode transform -n "cluster13Handle";
+createNode transform -n "camera_arm_shoulder";
 	rename -uid "59ADEB55-4D50-CB3A-A0E5-E8A66185B082";
+	setAttr ".t" -type "double3" -3.8999989032745361 0 0 ;
 	setAttr ".rp" -type "double3" 2.8999999165534973 43.553741455078125 44.266956329345703 ;
 	setAttr ".sp" -type "double3" 2.8999999165534973 43.553741455078125 44.266956329345703 ;
-createNode clusterHandle -n "cluster13HandleShape" -p "cluster13Handle";
+createNode clusterHandle -n "camera_arm_shoulderShape" -p "camera_arm_shoulder";
 	rename -uid "0F70348F-4368-E872-7332-7E8C2157DE88";
 	setAttr ".ihi" 0;
 	setAttr -k off ".v";
 	setAttr ".or" -type "double3" 2.8999999165534973 43.553741455078125 44.266956329345703 ;
-createNode transform -n "cluster14Handle";
+createNode transform -n "camera_arm_mid_handle";
 	rename -uid "057131A1-4A62-5A8A-B0CF-E8A51AFC3CFD";
+	setAttr ".t" -type "double3" -3.4999989867210388 0 0 ;
 	setAttr ".rp" -type "double3" 2.5 60.120716094970703 79.794136047363281 ;
 	setAttr ".sp" -type "double3" 2.5 60.120716094970703 79.794136047363281 ;
-createNode clusterHandle -n "cluster14HandleShape" -p "cluster14Handle";
+createNode clusterHandle -n "camera_arm_mid_handleShape" -p "camera_arm_mid_handle";
 	rename -uid "90B6CC6C-43CB-4CF9-B72A-8089B5411FDE";
 	setAttr ".ihi" 0;
 	setAttr -k off ".v";
 	setAttr ".or" -type "double3" 2.5 60.120716094970703 79.794136047363281 ;
-createNode transform -n "cluster15Handle";
+createNode transform -n "camera_arm_end_handle";
 	rename -uid "C88AA678-40AF-4F18-7077-609A201A8458";
 	setAttr ".rp" -type "double3" -0.99999898672103882 30.675849914550781 62.794164657592773 ;
 	setAttr ".sp" -type "double3" -0.99999898672103882 30.675849914550781 62.794164657592773 ;
-createNode clusterHandle -n "cluster15HandleShape" -p "cluster15Handle";
+createNode clusterHandle -n "camera_arm_end_handleShape" -p "camera_arm_end_handle";
 	rename -uid "36E5A629-40D5-12B4-043E-73B304F268E7";
 	setAttr ".ihi" 0;
 	setAttr -k off ".v";
 	setAttr ".or" -type "double3" -0.99999898672103882 30.675849914550781 62.794164657592773 ;
-createNode transform -n "cluster16Handle";
+createNode transform -n "Camera_handle";
 	rename -uid "79A6CCC1-4F9C-8775-F2EB-FD97F3837BCD";
 	setAttr ".rp" -type "double3" -5.9999995231628418 29.732301712036133 62.83013916015625 ;
 	setAttr ".sp" -type "double3" -5.9999995231628418 29.732301712036133 62.83013916015625 ;
-createNode clusterHandle -n "cluster16HandleShape" -p "cluster16Handle";
+createNode clusterHandle -n "Camera_handleShape" -p "Camera_handle";
 	rename -uid "8F79527C-41E4-0FF6-8295-19BA401C6F0C";
 	setAttr ".ihi" 0;
 	setAttr -k off ".v";
 	setAttr ".or" -type "double3" -5.9999995231628418 29.732301712036133 62.83013916015625 ;
-createNode transform -n "cluster17Handle";
-	rename -uid "5C941B77-46A1-A6B7-0DBC-CFBBB26C1BAA";
-	setAttr ".rp" -type "double3" 27.5 36.260425567626953 26.886307716369629 ;
-	setAttr ".sp" -type "double3" 27.5 36.260425567626953 26.886307716369629 ;
-createNode clusterHandle -n "cluster17HandleShape" -p "cluster17Handle";
-	rename -uid "C38C31F0-40E8-EE10-AB14-22814AD1406F";
-	setAttr ".ihi" 0;
-	setAttr -k off ".v";
-	setAttr ".or" -type "double3" 27.5 36.260425567626953 26.886307716369629 ;
-createNode transform -n "cluster18Handle";
-	rename -uid "B0DF03DA-47D1-0A93-B7A7-FB9E8B968FC8";
-	setAttr ".rp" -type "double3" 25.854949951171875 38.371124267578125 22.469694137573242 ;
-	setAttr ".sp" -type "double3" 25.854949951171875 38.371124267578125 22.469694137573242 ;
-createNode clusterHandle -n "cluster18HandleShape" -p "cluster18Handle";
-	rename -uid "80FBC035-4279-DB72-E4E3-81AC1EB9BEB9";
-	setAttr ".ihi" 0;
-	setAttr -k off ".v";
-	setAttr ".or" -type "double3" 25.854949951171875 38.371124267578125 22.469694137573242 ;
-createNode transform -n "cluster19Handle";
+createNode transform -n "Back_Legs";
 	rename -uid "E201D682-4412-656C-D4D0-74A0C958AE62";
+	setAttr ".t" -type "double3" -1.3108005523681641 0 0 ;
 	setAttr ".rp" -type "double3" 28.75 31.667922973632812 -15.530292987823486 ;
 	setAttr ".sp" -type "double3" 28.75 31.667922973632812 -15.530292987823486 ;
-createNode clusterHandle -n "cluster19HandleShape" -p "cluster19Handle";
+createNode clusterHandle -n "Back_LegsShape" -p "Back_Legs";
 	rename -uid "54DABBD1-4B4E-C94F-D7D3-3289DAF837F2";
 	setAttr ".ihi" 0;
 	setAttr -k off ".v";
 	setAttr ".or" -type "double3" 28.75 31.667922973632812 -15.530292987823486 ;
-createNode transform -n "cluster20Handle";
-	rename -uid "7B34EE16-4748-CB34-0DC2-C9B2C9C6F8E5";
-	setAttr ".rp" -type "double3" -31.535399436950684 16.588626861572266 67.947307586669922 ;
-	setAttr ".sp" -type "double3" -31.535399436950684 16.588626861572266 67.947307586669922 ;
-createNode clusterHandle -n "cluster20HandleShape" -p "cluster20Handle";
-	rename -uid "147EE932-4AA6-A0BE-375D-1BA1425B5419";
+createNode transform -n "Wheel_2_spin";
+	rename -uid "B2075B4F-48ED-FF62-7151-E18C2B9CA028";
+	setAttr ".rp" -type "double3" 45.832927703857422 12.365534782409668 3.7739600837230682 ;
+	setAttr ".sp" -type "double3" 45.832927703857422 12.365534782409668 3.7739600837230682 ;
+createNode clusterHandle -n "Wheel_2_spinShape" -p "Wheel_2_spin";
+	rename -uid "898C137A-458A-99BC-D5E3-19848A7B300F";
 	setAttr ".ihi" 0;
 	setAttr -k off ".v";
-	setAttr ".or" -type "double3" -31.535399436950684 16.588626861572266 67.947307586669922 ;
-createNode transform -n "cluster21Handle";
-	rename -uid "A397D371-441C-45A2-DD04-3DAFB05053E5";
-	setAttr ".rp" -type "double3" 31.535399436950684 16.588626861572266 67.947307586669922 ;
-	setAttr ".sp" -type "double3" 31.535399436950684 16.588626861572266 67.947307586669922 ;
-createNode clusterHandle -n "cluster21HandleShape" -p "cluster21Handle";
-	rename -uid "80AC212C-477D-C00B-CCF6-33A83327DE8B";
+	setAttr ".or" -type "double3" 45.832927703857422 12.365534782409668 3.7739600837230682 ;
+createNode transform -n "Wheel_3_spin";
+	rename -uid "5E239101-434A-87A7-48D5-00BB7FBBBC87";
+	setAttr ".rp" -type "double3" 55.291950225830078 12.365534782409668 -44.093990325927734 ;
+	setAttr ".sp" -type "double3" 55.291950225830078 12.365534782409668 -44.093990325927734 ;
+createNode clusterHandle -n "Wheel_3_spinShape" -p "Wheel_3_spin";
+	rename -uid "3021B555-4355-ED2B-1D89-79A31500CF05";
 	setAttr ".ihi" 0;
 	setAttr -k off ".v";
-	setAttr ".or" -type "double3" 31.535399436950684 16.588626861572266 67.947307586669922 ;
+	setAttr ".or" -type "double3" 55.291950225830078 12.365534782409668 -44.093990325927734 ;
+createNode transform -n "Wheel_1_spin";
+	rename -uid "D7A6F90E-4096-6D6A-30C5-A3BA5158D355";
+	setAttr ".rp" -type "double3" 44.909458160400391 12.365534782409668 67.956008911132812 ;
+	setAttr ".sp" -type "double3" 44.909458160400391 12.365534782409668 67.956008911132812 ;
+createNode clusterHandle -n "Wheel_1_spinShape" -p "Wheel_1_spin";
+	rename -uid "C0F7B072-4872-985E-DD77-92BA5FF7CF0E";
+	setAttr ".ihi" 0;
+	setAttr -k off ".v";
+	setAttr ".or" -type "double3" 44.909458160400391 12.365534782409668 67.956008911132812 ;
+createNode transform -n "Wheel_3_rotate";
+	rename -uid "91E3AD97-48F1-7E4B-4D1B-A788F350B18F";
+	setAttr ".rp" -type "double3" 41.996601104736328 15.342021465301514 -44.030288696289062 ;
+	setAttr ".sp" -type "double3" 41.996601104736328 15.342021465301514 -44.030288696289062 ;
+createNode clusterHandle -n "Wheel_3_rotateShape" -p "Wheel_3_rotate";
+	rename -uid "85FB180A-4689-F093-EDB8-12BC9597CFDB";
+	setAttr ".ihi" 0;
+	setAttr -k off ".v";
+	setAttr ".or" -type "double3" 41.996601104736328 15.342021465301514 -44.030288696289062 ;
+createNode transform -n "Wheel_1_rotate";
+	rename -uid "BC3809CA-40DB-0F74-B25E-6D83B7707B5B";
+	setAttr ".rp" -type "double3" 31.522500038146973 15.338626384735107 67.969707489013672 ;
+	setAttr ".sp" -type "double3" 31.522500038146973 15.338626384735107 67.969707489013672 ;
+createNode clusterHandle -n "Wheel_1_rotateShape" -p "Wheel_1_rotate";
+	rename -uid "228EA736-4BCC-3944-A9B6-66B1022E6E94";
+	setAttr ".ihi" 0;
+	setAttr -k off ".v";
+	setAttr ".or" -type "double3" 31.522500038146973 15.338626384735107 67.969707489013672 ;
+createNode transform -n "Wheel_2_rotate";
+	rename -uid "FF0ED837-4CDC-0607-8E0A-B09AA34253C9";
+	setAttr ".rp" -type "double3" 36 12.317923545837402 3.8197090625762939 ;
+	setAttr ".sp" -type "double3" 36 12.317923545837402 3.8197090625762939 ;
+createNode clusterHandle -n "Wheel_2_rotateShape" -p "Wheel_2_rotate";
+	rename -uid "07FD5B91-4709-DA27-F67B-8DBC4DFEF258";
+	setAttr ".ihi" 0;
+	setAttr -k off ".v";
+	setAttr ".or" -type "double3" 36 12.317923545837402 3.8197090625762939 ;
+createNode transform -n "main_Leg_rotate";
+	rename -uid "EA1546B6-4CF9-9B8E-FA8D-309A40EB4584";
+	setAttr ".rp" -type "double3" 27.439199447631836 37.892923355102539 22.544707298278809 ;
+	setAttr ".sp" -type "double3" 27.439199447631836 37.892923355102539 22.544707298278809 ;
+createNode clusterHandle -n "main_Leg_rotateShape" -p "main_Leg_rotate";
+	rename -uid "4F778BE2-41B2-3F3E-B553-FDB9C0FBC188";
+	setAttr ".ihi" 0;
+	setAttr -k off ".v";
+	setAttr ".or" -type "double3" 27.439199447631836 37.892923355102539 22.544707298278809 ;
 createNode fosterParent -n "rover_modelRNfosterParent1";
-	rename -uid "63E9CC87-4077-2437-70F6-17BB52610169";
+	rename -uid "F35DADD8-442D-15C1-AB08-9CB67A667189";
 createNode mesh -n "Camera_GeoShapeTag" -p "rover_modelRNfosterParent1";
 	rename -uid "E5A2DDA4-4322-A0EA-D2C1-2C8B4407B8E1";
 	setAttr -k off ".v";
@@ -444,14 +429,70 @@ createNode mesh -n "R_Front_Leg_GeoShapeDeformed" -p "rover_modelRNfosterParent1
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "L_Wheel_03_GeoShapeTag" -p "rover_modelRNfosterParent1";
+	rename -uid "4783CE3B-4F99-02E4-932E-F6955832201C";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 2 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "cluster24";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "vtx[17]";
+	setAttr ".gtag[1].gtagnm" -type "string" "cluster25";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 37 "e[41]" "e[73]" "e[104]" "e[135]" "e[166]" "e[197]" "e[228]" "e[259]" "e[290]" "e[321]" "e[352]" "e[383]" "e[414]" "e[445]" "e[476]" "e[507]" "e[538]" "e[569]" "e[600]" "e[631]" "e[662]" "e[693]" "e[724]" "e[755]" "e[786]" "e[817]" "e[848]" "e[879]" "e[910]" "e[941]" "e[972]" "e[1003]" "e[1034]" "e[1065]" "e[1096]" "e[1127]" "e[1145]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "L_Wheel_03_GeoShapeDeformed" -p "rover_modelRNfosterParent1";
+	rename -uid "F85340D5-4D02-3CF4-F831-C99C89485704";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "L_Wheel_02_GeoShapeTag" -p "rover_modelRNfosterParent1";
+	rename -uid "8DA98BD3-441A-9DDE-E7F8-04A88BAE3848";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".gtag[0].gtagnm" -type "string" "cluster23";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 37 "e[41]" "e[73]" "e[104]" "e[135]" "e[166]" "e[197]" "e[228]" "e[259]" "e[290]" "e[321]" "e[352]" "e[383]" "e[414]" "e[445]" "e[476]" "e[507]" "e[538]" "e[569]" "e[600]" "e[631]" "e[662]" "e[693]" "e[724]" "e[755]" "e[786]" "e[817]" "e[848]" "e[879]" "e[910]" "e[941]" "e[972]" "e[1003]" "e[1034]" "e[1065]" "e[1096]" "e[1127]" "e[1145]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "L_Wheel_02_GeoShapeDeformed" -p "rover_modelRNfosterParent1";
+	rename -uid "8D4C991E-4F38-2800-30C2-DEAF8B64A573";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 createNode mesh -n "L_Rear_Hub_GeoShapeTag" -p "rover_modelRNfosterParent1";
 	rename -uid "5756FF1F-4A71-4DA4-49D2-80BDF07D4D37";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr -s 4 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "cluster19";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 19 "e[0]" "e[2]" "e[4:5]" "e[8:9]" "e[12:13]" "e[16:17]" "e[19:20]" "e[23]" "e[26]" "e[29]" "e[32]" "e[35]" "e[38]" "e[41]" "e[43]" "e[46]" "e[49]" "e[52]" "e[56]";
+	setAttr ".gtag[1].gtagnm" -type "string" "cluster22";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[100:101]";
+	setAttr ".gtag[2].gtagnm" -type "string" "cluster28";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 12 "e[355]" "e[361]" "e[366]" "e[371]" "e[375]" "e[379]" "e[385]" "e[389]" "e[396]" "e[401]" "e[406]" "e[410]";
+	setAttr ".gtag[3].gtagnm" -type "string" "cluster30";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 3 "e[131]" "e[140]" "e[144:145]";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -459,6 +500,78 @@ createNode mesh -n "L_Rear_Hub_GeoShapeTag" -p "rover_modelRNfosterParent1";
 	setAttr ".cdvm[0]"  0 1 1;
 createNode mesh -n "L_Rear_Hub_GeoShapeDeformed" -p "rover_modelRNfosterParent1";
 	rename -uid "0F7FC5F8-4222-3D74-E5B8-F4B2B7709C44";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "L_Rear_Leg_GeoShapeTag" -p "rover_modelRNfosterParent1";
+	rename -uid "C69FA5E1-407A-7DF7-7998-06AF33385DEA";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".gtag[0].gtagnm" -type "string" "cluster31";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[0:1]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "L_Rear_Leg_GeoShapeDeformed" -p "rover_modelRNfosterParent1";
+	rename -uid "A5E2737C-409A-F747-EDE9-C89BF33757A7";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "L_Wheel_01_GeoShapeTag" -p "rover_modelRNfosterParent1";
+	rename -uid "962C5DF1-4C63-F41F-DF87-FFB359FFD35F";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 2 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "cluster26";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "vtx[17]";
+	setAttr ".gtag[1].gtagnm" -type "string" "cluster27";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 37 "e[41]" "e[73]" "e[104]" "e[135]" "e[166]" "e[197]" "e[228]" "e[259]" "e[290]" "e[321]" "e[352]" "e[383]" "e[414]" "e[445]" "e[476]" "e[507]" "e[538]" "e[569]" "e[600]" "e[631]" "e[662]" "e[693]" "e[724]" "e[755]" "e[786]" "e[817]" "e[848]" "e[879]" "e[910]" "e[941]" "e[972]" "e[1003]" "e[1034]" "e[1065]" "e[1096]" "e[1127]" "e[1145]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "L_Wheel_01_GeoShapeDeformed" -p "rover_modelRNfosterParent1";
+	rename -uid "93A84393-4DEC-DA6A-00FB-C1B6AC40B77F";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "L_Front_Hub_GeoShapeTag" -p "rover_modelRNfosterParent1";
+	rename -uid "809D2101-4D79-9E03-C335-B994C00C357B";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".gtag[0].gtagnm" -type "string" "cluster29";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 12 "e[45]" "e[51]" "e[56]" "e[61]" "e[65]" "e[69]" "e[75]" "e[79]" "e[86]" "e[91]" "e[96]" "e[100]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "L_Front_Hub_GeoShapeDeformed" -p "rover_modelRNfosterParent1";
+	rename -uid "BD51EA37-4380-D8C8-7EF5-E9A2DA2893A4";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -604,6 +717,7 @@ createNode mesh -n "L_Solar_Panel_01_GeoShapeDeformed" -p "rover_modelRNfosterPa
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.49374999105930328 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -729,20 +843,20 @@ createNode mesh -n "Body_GeoShapeDeformed" -p "rover_modelRNfosterParent1";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "53024DDC-43DA-1421-A3E8-85BEFE7FBAE5";
+	rename -uid "403D5E01-48C1-FD68-1CC8-4E887E1F2532";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "886E17CB-4FA9-BBAB-31E1-C19FB1A8D37A";
+	rename -uid "A6CCBB76-4995-A708-B665-D1B3574E66D3";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "BEE5CD1A-406D-CEE4-EC75-F88C6A922B77";
+	rename -uid "C098DDA5-4BF8-A148-A1FB-FDA455609F67";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "88BB403D-4A5B-218D-1DCE-8EB0207628E5";
+	rename -uid "A930923B-4A78-7F5F-BD2D-E98E0034691A";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "C919E69D-422C-43AD-AF86-B288659B742F";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "FE14731E-4BF9-6164-9C62-8095495560C5";
+	rename -uid "E26F63C9-4AF3-B243-4395-86B3E040904B";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "0D4E874B-44FF-426D-BE0D-EBB693636A2C";
 	setAttr ".g" yes;
@@ -763,7 +877,7 @@ createNode aiImagerDenoiserOidn -s -n "defaultArnoldDenoiser";
 	rename -uid "4CD080A1-491C-0F0E-7D1E-D3BC8D56312C";
 createNode reference -n "rover_modelRN";
 	rename -uid "6F2851A5-4F27-F8D7-760B-34B823554006";
-	setAttr -s 60 ".phl";
+	setAttr -s 68 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -824,10 +938,18 @@ createNode reference -n "rover_modelRN";
 	setAttr ".phl[58]" 0;
 	setAttr ".phl[59]" 0;
 	setAttr ".phl[60]" 0;
+	setAttr ".phl[61]" 0;
+	setAttr ".phl[62]" 0;
+	setAttr ".phl[63]" 0;
+	setAttr ".phl[64]" 0;
+	setAttr ".phl[65]" 0;
+	setAttr ".phl[66]" 0;
+	setAttr ".phl[67]" 0;
+	setAttr ".phl[68]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"rover_modelRN"
 		"rover_modelRN" 0
-		"rover_modelRN" 153
+		"rover_modelRN" 190
 		0 "|rover_modelRNfosterParent1|Body_GeoShapeDeformed" "|rover_model:Geometry|rover_model:Body_Geo" 
 		"-s -r "
 		0 "|rover_modelRNfosterParent1|Body_GeoShapeTag" "|rover_model:Geometry|rover_model:Body_Geo" 
@@ -872,9 +994,29 @@ createNode reference -n "rover_modelRN";
 		"-s -r "
 		0 "|rover_modelRNfosterParent1|L_Front_Leg_GeoShapeTag" "|rover_model:Geometry|rover_model:L_Front_Leg_Geo" 
 		"-s -r "
+		0 "|rover_modelRNfosterParent1|L_Front_Hub_GeoShapeDeformed" "|rover_model:Geometry|rover_model:L_Front_Hub_Geo" 
+		"-s -r "
+		0 "|rover_modelRNfosterParent1|L_Front_Hub_GeoShapeTag" "|rover_model:Geometry|rover_model:L_Front_Hub_Geo" 
+		"-s -r "
+		0 "|rover_modelRNfosterParent1|L_Wheel_01_GeoShapeDeformed" "|rover_model:Geometry|rover_model:L_Wheel_01_Geo" 
+		"-s -r "
+		0 "|rover_modelRNfosterParent1|L_Wheel_01_GeoShapeTag" "|rover_model:Geometry|rover_model:L_Wheel_01_Geo" 
+		"-s -r "
+		0 "|rover_modelRNfosterParent1|L_Rear_Leg_GeoShapeDeformed" "|rover_model:Geometry|rover_model:L_Rear_Leg_Geo" 
+		"-s -r "
+		0 "|rover_modelRNfosterParent1|L_Rear_Leg_GeoShapeTag" "|rover_model:Geometry|rover_model:L_Rear_Leg_Geo" 
+		"-s -r "
 		0 "|rover_modelRNfosterParent1|L_Rear_Hub_GeoShapeDeformed" "|rover_model:Geometry|rover_model:L_Rear_Hub_Geo" 
 		"-s -r "
 		0 "|rover_modelRNfosterParent1|L_Rear_Hub_GeoShapeTag" "|rover_model:Geometry|rover_model:L_Rear_Hub_Geo" 
+		"-s -r "
+		0 "|rover_modelRNfosterParent1|L_Wheel_02_GeoShapeDeformed" "|rover_model:Geometry|rover_model:L_Wheel_02_Geo" 
+		"-s -r "
+		0 "|rover_modelRNfosterParent1|L_Wheel_02_GeoShapeTag" "|rover_model:Geometry|rover_model:L_Wheel_02_Geo" 
+		"-s -r "
+		0 "|rover_modelRNfosterParent1|L_Wheel_03_GeoShapeDeformed" "|rover_model:Geometry|rover_model:L_Wheel_03_Geo" 
+		"-s -r "
+		0 "|rover_modelRNfosterParent1|L_Wheel_03_GeoShapeTag" "|rover_model:Geometry|rover_model:L_Wheel_03_Geo" 
 		"-s -r "
 		0 "|rover_modelRNfosterParent1|R_Front_Leg_GeoShapeDeformed" "|rover_model:Geometry|rover_model:R_Front_Leg_Geo" 
 		"-s -r "
@@ -909,11 +1051,13 @@ createNode reference -n "rover_modelRN";
 		"intermediateObject" " 1"
 		2 "|rover_model:Geometry|rover_model:Body_Geo|rover_model:Body_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.49974951148033142 0.49974998831748962"
+		2 "|rover_model:Geometry|rover_model:Neck_Geo" "visibility" " 1"
 		2 "|rover_model:Geometry|rover_model:Neck_Geo|rover_model:Neck_GeoShape" 
 		"intermediateObject" " 1"
 		2 "|rover_model:Geometry|rover_model:Neck_Geo|rover_model:Neck_GeoShape" 
 		"uvPivot" " -type \"double2\" 0 0.48076900839805603"
 		2 "|rover_model:Geometry|rover_model:Head_Geo" "visibility" " 1"
+		2 "|rover_model:Geometry|rover_model:Head_Gauges_Geo" "visibility" " 1"
 		2 "|rover_model:Geometry|rover_model:Head_Gauges_Geo|rover_model:Head_Gauges_GeoShape" 
 		"intermediateObject" " 1"
 		2 "|rover_model:Geometry|rover_model:Head_Gauges_Geo|rover_model:Head_Gauges_GeoShape" 
@@ -923,26 +1067,37 @@ createNode reference -n "rover_modelRN";
 		"intermediateObject" " 1"
 		2 "|rover_model:Geometry|rover_model:Dish_Base_Geo|rover_model:Dish_Base_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.49999973177909851 0.5000002384185791"
+		2 "|rover_model:Geometry|rover_model:Dish_Geo" "visibility" " 1"
 		2 "|rover_model:Geometry|rover_model:Dish_Geo|rover_model:Dish_GeoShape" 
 		"intermediateObject" " 1"
 		2 "|rover_model:Geometry|rover_model:Dish_Geo|rover_model:Dish_GeoShape" 
 		"uvPivot" " -type \"double2\" 1.25299853086471558 0.29294799591298215"
+		2 "|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo" "visibility" " 1"
+		
 		2 "|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo|rover_model:L_Solar_Panel_01_GeoShape" 
 		"intermediateObject" " 1"
 		2 "|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo|rover_model:L_Solar_Panel_01_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.5 0.49374999105930328"
+		2 "|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo" "visibility" " 1"
+		
 		2 "|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo|rover_model:L_Solar_Panel_02_GeoShape" 
 		"intermediateObject" " 1"
 		2 "|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo|rover_model:L_Solar_Panel_02_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.5 0.49374999105930328"
+		2 "|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo" "visibility" " 1"
+		
 		2 "|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo|rover_model:R_Solar_Panel_01_GeoShape" 
 		"intermediateObject" " 1"
 		2 "|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo|rover_model:R_Solar_Panel_01_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.5 0.49374999105930328"
+		2 "|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo" "visibility" " 1"
+		
 		2 "|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo|rover_model:R_Solar_Panel_02_GeoShape" 
 		"intermediateObject" " 1"
 		2 "|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo|rover_model:R_Solar_Panel_02_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.5 0.49374999105930328"
+		2 "|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo" "visibility" " 1"
+		
 		2 "|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo|rover_model:Rear_Solar_Panel_GeoShape" 
 		"intermediateObject" " 1"
 		2 "|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo|rover_model:Rear_Solar_Panel_GeoShape" 
@@ -953,14 +1108,25 @@ createNode reference -n "rover_modelRN";
 		2 "|rover_model:Geometry|rover_model:L_Front_Leg_Geo|rover_model:L_Front_Leg_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.49999998509883881 0.37998949314351194"
 		2 "|rover_model:Geometry|rover_model:L_Front_Hub_Geo" "visibility" " 1"
+		2 "|rover_model:Geometry|rover_model:L_Front_Hub_Geo|rover_model:L_Front_Hub_GeoShape" 
+		"intermediateObject" " 1"
 		2 "|rover_model:Geometry|rover_model:L_Wheel_01_Geo" "visibility" " 1"
+		2 "|rover_model:Geometry|rover_model:L_Wheel_01_Geo|rover_model:L_Wheel_01_GeoShape" 
+		"intermediateObject" " 1"
 		2 "|rover_model:Geometry|rover_model:L_Rear_Leg_Geo" "visibility" " 1"
 		2 "|rover_model:Geometry|rover_model:L_Rear_Leg_Geo|rover_model:L_Rear_Leg_GeoShape" 
-		"intermediateObject" " 0"
+		"intermediateObject" " 1"
+		2 "|rover_model:Geometry|rover_model:L_Rear_Hub_Geo" "visibility" " 1"
 		2 "|rover_model:Geometry|rover_model:L_Rear_Hub_Geo|rover_model:L_Rear_Hub_GeoShape" 
 		"intermediateObject" " 1"
 		2 "|rover_model:Geometry|rover_model:L_Rear_Hub_Geo|rover_model:L_Rear_Hub_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.45808398723602295 0.49999999496503733"
+		2 "|rover_model:Geometry|rover_model:L_Wheel_02_Geo" "visibility" " 1"
+		2 "|rover_model:Geometry|rover_model:L_Wheel_02_Geo|rover_model:L_Wheel_02_GeoShape" 
+		"intermediateObject" " 1"
+		2 "|rover_model:Geometry|rover_model:L_Wheel_03_Geo" "visibility" " 1"
+		2 "|rover_model:Geometry|rover_model:L_Wheel_03_Geo|rover_model:L_Wheel_03_GeoShape" 
+		"intermediateObject" " 1"
 		2 "|rover_model:Geometry|rover_model:R_Front_Leg_Geo" "visibility" " 1"
 		2 "|rover_model:Geometry|rover_model:R_Front_Leg_Geo|rover_model:R_Front_Leg_GeoShape" 
 		"intermediateObject" " 1"
@@ -969,10 +1135,12 @@ createNode reference -n "rover_modelRN";
 		2 "|rover_model:Geometry|rover_model:R_Front_Hub_Geo" "visibility" " 1"
 		2 "|rover_model:Geometry|rover_model:R_Wheel_01_Geo" "visibility" " 1"
 		2 "|rover_model:Geometry|rover_model:R_Rear_Leg_Geo" "visibility" " 1"
+		2 "|rover_model:Geometry|rover_model:R_Rear_Hub_Geo" "visibility" " 1"
 		2 "|rover_model:Geometry|rover_model:R_Rear_Hub_Geo|rover_model:R_Rear_Hub_GeoShape" 
 		"intermediateObject" " 1"
 		2 "|rover_model:Geometry|rover_model:R_Rear_Hub_Geo|rover_model:R_Rear_Hub_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.45808398723602295 0.49999999496503733"
+		2 "|rover_model:Geometry|rover_model:R_Wheel_02_Geo" "visibility" " 1"
 		2 "|rover_model:Geometry|rover_model:R_Wheel_03_Geo" "visibility" " 1"
 		2 "|rover_model:Geometry|rover_model:Camera_Base_Geo" "visibility" " 1"
 		2 "|rover_model:Geometry|rover_model:Camera_Base_Geo|rover_model:Camera_Base_GeoShape" 
@@ -980,6 +1148,8 @@ createNode reference -n "rover_modelRN";
 		2 "|rover_model:Geometry|rover_model:Camera_Base_Geo|rover_model:Camera_Base_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.51850001513957977 0.49999901148839854"
 		2 "|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo" "visibility" " 1"
+		
+		2 "|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo" "translate" " -type \"double3\" -1.76716314169844413 0 0"
 		
 		2 "|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo|rover_model:Camera_Lower_Arm_GeoShape" 
 		"intermediateObject" " 1"
@@ -997,98 +1167,99 @@ createNode reference -n "rover_modelRN";
 		"intermediateObject" " 1"
 		2 "|rover_model:Geometry|rover_model:Camera_Attachment_Geo|rover_model:Camera_Attachment_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.42255799795384519 0.50000049496884458"
+		2 "|rover_model:Geometry|rover_model:Camera_Geo" "visibility" " 1"
 		2 "|rover_model:Geometry|rover_model:Camera_Geo|rover_model:Camera_GeoShape" 
 		"intermediateObject" " 1"
 		2 "|rover_model:Geometry|rover_model:Camera_Geo|rover_model:Camera_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.66264697909355164 0.50292101502418518"
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Body_Geo|rover_model:Body_GeoShape.outMesh" 
-		"rover_modelRN.placeHolderList[1]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Body_Geo|rover_model:Body_GeoShape.outMesh" 
-		"rover_modelRN.placeHolderList[2]" ""
 		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Body_Geo|rover_model:Body_GeoShape.worldMesh" 
-		"rover_modelRN.placeHolderList[3]" ""
+		"rover_modelRN.placeHolderList[1]" ""
 		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Neck_Geo|rover_model:Neck_GeoShape.outMesh" 
-		"rover_modelRN.placeHolderList[4]" ""
+		"rover_modelRN.placeHolderList[2]" ""
 		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Neck_Geo|rover_model:Neck_GeoShape.worldMesh" 
-		"rover_modelRN.placeHolderList[5]" ""
+		"rover_modelRN.placeHolderList[3]" ""
 		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Head_Gauges_Geo|rover_model:Head_Gauges_GeoShape.outMesh" 
-		"rover_modelRN.placeHolderList[6]" ""
+		"rover_modelRN.placeHolderList[4]" ""
 		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Head_Gauges_Geo|rover_model:Head_Gauges_GeoShape.worldMesh" 
-		"rover_modelRN.placeHolderList[7]" ""
+		"rover_modelRN.placeHolderList[5]" ""
 		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Dish_Base_Geo|rover_model:Dish_Base_GeoShape.outMesh" 
-		"rover_modelRN.placeHolderList[8]" ""
+		"rover_modelRN.placeHolderList[6]" ""
 		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Dish_Base_Geo|rover_model:Dish_Base_GeoShape.worldMesh" 
-		"rover_modelRN.placeHolderList[9]" ""
+		"rover_modelRN.placeHolderList[7]" ""
 		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Dish_Geo|rover_model:Dish_GeoShape.outMesh" 
-		"rover_modelRN.placeHolderList[10]" ""
+		"rover_modelRN.placeHolderList[8]" ""
 		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Dish_Geo|rover_model:Dish_GeoShape.worldMesh" 
-		"rover_modelRN.placeHolderList[11]" ""
+		"rover_modelRN.placeHolderList[9]" ""
 		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo|rover_model:L_Solar_Panel_01_GeoShape.outMesh" 
-		"rover_modelRN.placeHolderList[12]" ""
+		"rover_modelRN.placeHolderList[10]" ""
 		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo|rover_model:L_Solar_Panel_01_GeoShape.worldMesh" 
-		"rover_modelRN.placeHolderList[13]" ""
+		"rover_modelRN.placeHolderList[11]" ""
 		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo|rover_model:L_Solar_Panel_02_GeoShape.outMesh" 
-		"rover_modelRN.placeHolderList[14]" ""
+		"rover_modelRN.placeHolderList[12]" ""
 		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo|rover_model:L_Solar_Panel_02_GeoShape.worldMesh" 
-		"rover_modelRN.placeHolderList[15]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo|rover_model:R_Solar_Panel_01_GeoShape.outMesh" 
-		"rover_modelRN.placeHolderList[16]" ""
+		"rover_modelRN.placeHolderList[13]" ""
 		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo|rover_model:R_Solar_Panel_01_GeoShape.worldMesh" 
-		"rover_modelRN.placeHolderList[17]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo|rover_model:R_Solar_Panel_02_GeoShape.outMesh" 
-		"rover_modelRN.placeHolderList[18]" ""
+		"rover_modelRN.placeHolderList[14]" ""
 		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo|rover_model:R_Solar_Panel_02_GeoShape.worldMesh" 
-		"rover_modelRN.placeHolderList[19]" ""
+		"rover_modelRN.placeHolderList[15]" ""
 		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo|rover_model:Rear_Solar_Panel_GeoShape.outMesh" 
-		"rover_modelRN.placeHolderList[20]" ""
+		"rover_modelRN.placeHolderList[16]" ""
 		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo|rover_model:Rear_Solar_Panel_GeoShape.worldMesh" 
-		"rover_modelRN.placeHolderList[21]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Front_Leg_Geo|rover_model:L_Front_Leg_GeoShape.outMesh" 
-		"rover_modelRN.placeHolderList[22]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Front_Leg_Geo|rover_model:L_Front_Leg_GeoShape.outMesh" 
-		"rover_modelRN.placeHolderList[23]" ""
+		"rover_modelRN.placeHolderList[17]" ""
 		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Front_Leg_Geo|rover_model:L_Front_Leg_GeoShape.worldMesh" 
+		"rover_modelRN.placeHolderList[18]" ""
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Front_Hub_Geo|rover_model:L_Front_Hub_GeoShape.outMesh" 
+		"rover_modelRN.placeHolderList[19]" ""
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Front_Hub_Geo|rover_model:L_Front_Hub_GeoShape.worldMesh" 
+		"rover_modelRN.placeHolderList[20]" ""
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Wheel_01_Geo|rover_model:L_Wheel_01_GeoShape.outMesh" 
+		"rover_modelRN.placeHolderList[21]" ""
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Wheel_01_Geo|rover_model:L_Wheel_01_GeoShape.worldMesh" 
+		"rover_modelRN.placeHolderList[22]" ""
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Rear_Leg_Geo|rover_model:L_Rear_Leg_GeoShape.outMesh" 
+		"rover_modelRN.placeHolderList[23]" ""
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Rear_Leg_Geo|rover_model:L_Rear_Leg_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[24]" ""
 		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Rear_Hub_Geo|rover_model:L_Rear_Hub_GeoShape.outMesh" 
 		"rover_modelRN.placeHolderList[25]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Rear_Hub_Geo|rover_model:L_Rear_Hub_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Rear_Hub_Geo|rover_model:L_Rear_Hub_GeoShape.outMesh" 
 		"rover_modelRN.placeHolderList[26]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:R_Front_Leg_Geo|rover_model:R_Front_Leg_GeoShape.outMesh" 
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Rear_Hub_Geo|rover_model:L_Rear_Hub_GeoShape.outMesh" 
 		"rover_modelRN.placeHolderList[27]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:R_Front_Leg_Geo|rover_model:R_Front_Leg_GeoShape.outMesh" 
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Rear_Hub_Geo|rover_model:L_Rear_Hub_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[28]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:R_Front_Leg_Geo|rover_model:R_Front_Leg_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Wheel_02_Geo|rover_model:L_Wheel_02_GeoShape.outMesh" 
 		"rover_modelRN.placeHolderList[29]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:R_Rear_Hub_Geo|rover_model:R_Rear_Hub_GeoShape.outMesh" 
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Wheel_02_Geo|rover_model:L_Wheel_02_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[30]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:R_Rear_Hub_Geo|rover_model:R_Rear_Hub_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Wheel_03_Geo|rover_model:L_Wheel_03_GeoShape.outMesh" 
 		"rover_modelRN.placeHolderList[31]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Base_Geo|rover_model:Camera_Base_GeoShape.outMesh" 
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:L_Wheel_03_Geo|rover_model:L_Wheel_03_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[32]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Base_Geo|rover_model:Camera_Base_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:R_Front_Leg_Geo|rover_model:R_Front_Leg_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[33]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo|rover_model:Camera_Lower_Arm_GeoShape.outMesh" 
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:R_Rear_Hub_Geo|rover_model:R_Rear_Hub_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[34]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo|rover_model:Camera_Lower_Arm_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Base_Geo|rover_model:Camera_Base_GeoShape.outMesh" 
 		"rover_modelRN.placeHolderList[35]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo|rover_model:Camera_Upper_Arm_GeoShape.outMesh" 
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Base_Geo|rover_model:Camera_Base_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[36]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo|rover_model:Camera_Upper_Arm_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo|rover_model:Camera_Lower_Arm_GeoShape.outMesh" 
 		"rover_modelRN.placeHolderList[37]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Attachment_Geo|rover_model:Camera_Attachment_GeoShape.outMesh" 
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo|rover_model:Camera_Lower_Arm_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[38]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Attachment_Geo|rover_model:Camera_Attachment_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo|rover_model:Camera_Upper_Arm_GeoShape.outMesh" 
 		"rover_modelRN.placeHolderList[39]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Geo|rover_model:Camera_GeoShape.outMesh" 
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo|rover_model:Camera_Upper_Arm_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[40]" ""
-		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Geo|rover_model:Camera_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Attachment_Geo|rover_model:Camera_Attachment_GeoShape.outMesh" 
 		"rover_modelRN.placeHolderList[41]" ""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[42]" 
-		""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[43]" 
-		""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[44]" 
-		""
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Attachment_Geo|rover_model:Camera_Attachment_GeoShape.worldMesh" 
+		"rover_modelRN.placeHolderList[42]" ""
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Geo|rover_model:Camera_GeoShape.outMesh" 
+		"rover_modelRN.placeHolderList[43]" ""
+		5 3 "rover_modelRN" "|rover_model:Geometry|rover_model:Camera_Geo|rover_model:Camera_GeoShape.worldMesh" 
+		"rover_modelRN.placeHolderList[44]" ""
 		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[45]" 
 		""
 		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[46]" 
@@ -1120,6 +1291,22 @@ createNode reference -n "rover_modelRN";
 		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[59]" 
 		""
 		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[60]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[61]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[62]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[63]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[64]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[65]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[66]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[67]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[68]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -1129,15 +1316,15 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 655\n            -height 330\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 655\n            -height 329\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
-		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 655\n            -height 329\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
 		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1317\n            -height 706\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
@@ -1170,93 +1357,85 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "FA904C64-450C-A163-47AA-87AC1FFBA862";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
-createNode cluster -n "Right_sideCluster";
-	rename -uid "992C5275-49BC-118D-26EB-DEBF3ECC0593";
-	setAttr ".ip[0].gtg" -type "string" "cluster1";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster1";
-	rename -uid "AAA015CB-4ADD-868E-21C8-44BBF038E460";
-	setAttr ".ip[0].gtg" -type "string" "cluster1";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster2";
-	rename -uid "51CDE51C-42F8-D063-D4E3-97A3D3CC54EA";
-	setAttr ".ip[0].gtg" -type "string" "cluster2";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster3";
-	rename -uid "A5B17B74-4724-C30B-F542-A1818C3227CB";
-	setAttr ".ip[0].gtg" -type "string" "cluster3";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster4";
-	rename -uid "244DEB84-4E12-365A-BD31-C999108C42E4";
-	setAttr ".ip[0].gtg" -type "string" "cluster4";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster5";
-	rename -uid "2E42EEC4-44AC-EE56-438B-5DAC0BDE45E4";
-	setAttr ".ip[0].gtg" -type "string" "cluster5";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster6";
-	rename -uid "96E481F1-44C4-109C-DCFC-7B8AE95AE917";
-	setAttr ".ip[0].gtg" -type "string" "cluster6";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster7";
-	rename -uid "D1550303-4CB1-05E7-09B0-16ACF97D1EF9";
-	setAttr ".ip[0].gtg" -type "string" "cluster7";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster8";
-	rename -uid "CB6799D4-4EE9-D583-1B64-3B9904B4DC64";
-	setAttr ".ip[0].gtg" -type "string" "cluster8";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster9";
-	rename -uid "3BDBDD9C-458C-C110-7981-43A22BA84A3D";
-	setAttr ".ip[0].gtg" -type "string" "cluster9";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster10";
-	rename -uid "5510CD7B-4BA7-36FB-2AC9-1A863D2C023B";
-	setAttr ".ip[0].gtg" -type "string" "cluster10";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster11";
-	rename -uid "841966BE-4312-BF20-1CA0-C8AE5499BD9D";
-	setAttr ".ip[0].gtg" -type "string" "cluster11";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster12";
-	rename -uid "E270135A-4951-7B27-B098-2C87E347D404";
-	setAttr ".ip[0].gtg" -type "string" "cluster12";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster13";
-	rename -uid "B5677516-4F98-9C0A-5373-96858976C8F0";
-	setAttr ".ip[0].gtg" -type "string" "cluster13";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster14";
-	rename -uid "5241B05D-4BA1-E9BC-D773-459039176E6C";
-	setAttr ".ip[0].gtg" -type "string" "cluster14";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster15";
-	rename -uid "3CFE531D-4C40-3A4B-24D6-1DAE057FAE14";
-	setAttr ".ip[0].gtg" -type "string" "cluster15";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster16";
-	rename -uid "CE7A6134-4016-5FA9-629B-61A19B9E7B17";
-	setAttr ".ip[0].gtg" -type "string" "cluster16";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster17";
-	rename -uid "E5DF8C44-4DFD-F788-C849-4C80D9EBB50A";
-	setAttr ".ip[0].gtg" -type "string" "cluster17";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster18";
-	rename -uid "09356D60-468A-F516-7671-68BC89AC9C8C";
-	setAttr ".ip[0].gtg" -type "string" "cluster18";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster19";
+createNode cluster -n "Back_LegsCluster";
 	rename -uid "9ECBCEF5-452E-036A-4252-5BAA73498612";
 	setAttr ".ip[0].gtg" -type "string" "cluster19";
 	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster20";
-	rename -uid "0768113A-41E1-C471-89F4-CE95F503008F";
-	setAttr ".ip[0].gtg" -type "string" "cluster20";
+createNode cluster -n "Camera_handleCluster";
+	rename -uid "CE7A6134-4016-5FA9-629B-61A19B9E7B17";
+	setAttr ".ip[0].gtg" -type "string" "cluster16";
 	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode cluster -n "cluster21";
-	rename -uid "7DAF9C45-4387-D2A3-AD2D-429936E33676";
-	setAttr ".ip[0].gtg" -type "string" "cluster21";
+createNode cluster -n "camera_arm_end_handleCluster";
+	rename -uid "3CFE531D-4C40-3A4B-24D6-1DAE057FAE14";
+	setAttr ".ip[0].gtg" -type "string" "cluster15";
+	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode cluster -n "camera_arm_mid_handleCluster";
+	rename -uid "5241B05D-4BA1-E9BC-D773-459039176E6C";
+	setAttr ".ip[0].gtg" -type "string" "cluster14";
+	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode cluster -n "camera_arm_shoulderCluster";
+	rename -uid "B5677516-4F98-9C0A-5373-96858976C8F0";
+	setAttr ".ip[0].gtg" -type "string" "cluster13";
+	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode cluster -n "Dish_rotate_headCluster";
+	rename -uid "E270135A-4951-7B27-B098-2C87E347D404";
+	setAttr ".ip[0].gtg" -type "string" "cluster12";
+	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode cluster -n "dish_arm_rotateCluster";
+	rename -uid "841966BE-4312-BF20-1CA0-C8AE5499BD9D";
+	setAttr ".ip[0].gtg" -type "string" "cluster11";
+	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode cluster -n "head_camera_rotateCluster";
+	rename -uid "5510CD7B-4BA7-36FB-2AC9-1A863D2C023B";
+	setAttr ".ip[0].gtg" -type "string" "cluster10";
+	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode cluster -n "pole_rotateCluster";
+	rename -uid "3BDBDD9C-458C-C110-7981-43A22BA84A3D";
+	setAttr ".ip[0].gtg" -type "string" "cluster9";
+	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode cluster -n "panel_2_rotateCluster";
+	rename -uid "CB6799D4-4EE9-D583-1B64-3B9904B4DC64";
+	setAttr ".ip[0].gtg" -type "string" "cluster8";
+	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode cluster -n "panel_1_rotateCluster";
+	rename -uid "D1550303-4CB1-05E7-09B0-16ACF97D1EF9";
+	setAttr ".ip[0].gtg" -type "string" "cluster7";
+	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode cluster -n "back_panel_rotateCluster";
+	rename -uid "96E481F1-44C4-109C-DCFC-7B8AE95AE917";
+	setAttr ".ip[0].gtg" -type "string" "cluster6";
+	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode cluster -n "camera_arm_base_rotateCluster";
+	rename -uid "A5B17B74-4724-C30B-F542-A1818C3227CB";
+	setAttr ".ip[0].gtg" -type "string" "cluster3";
+	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode cluster -n "Wheel_2_spinCluster";
+	rename -uid "9C9D976E-4E8D-464F-D150-4DA16AB1054E";
+	setAttr ".ip[0].gtg" -type "string" "cluster23";
+	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode cluster -n "Wheel_3_spinCluster";
+	rename -uid "98A76A78-4A39-58E2-6DBA-9CBCB33B5FAC";
+	setAttr ".ip[0].gtg" -type "string" "cluster25";
+	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode cluster -n "Wheel_1_spinCluster";
+	rename -uid "BED551C8-4F2A-B09A-A3FD-D897E2C930E7";
+	setAttr ".ip[0].gtg" -type "string" "cluster27";
+	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode cluster -n "Wheel_3_rotateCluster";
+	rename -uid "D993B6B4-4B2A-1195-4958-BE9F81234C0D";
+	setAttr ".ip[0].gtg" -type "string" "cluster28";
+	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode cluster -n "Wheel_1_rotateCluster";
+	rename -uid "A15D300E-41E5-46CF-EAB4-D9A9FCB78A20";
+	setAttr ".ip[0].gtg" -type "string" "cluster29";
+	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode cluster -n "Wheel_2_rotateCluster";
+	rename -uid "B84412E1-44D4-7EFA-B133-4FA3ED6E8F7F";
+	setAttr ".ip[0].gtg" -type "string" "cluster30";
+	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode cluster -n "main_Leg_rotateCluster";
+	rename -uid "A7AA8FCF-4349-D99C-770F-EEACA44D4875";
+	setAttr ".ip[0].gtg" -type "string" "cluster31";
 	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 select -ne :time1;
 	setAttr ".o" 1;
@@ -1301,85 +1480,105 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-connectAttr "rover_modelRN.phl[1]" "cluster18.orggeom[0]";
-connectAttr "rover_modelRN.phl[2]" "cluster2.orggeom[0]";
-connectAttr "rover_modelRN.phl[3]" "Body_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[4]" "cluster9.orggeom[0]";
-connectAttr "rover_modelRN.phl[5]" "Neck_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[6]" "cluster10.orggeom[0]";
-connectAttr "rover_modelRN.phl[7]" "Head_Gauges_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[8]" "cluster11.orggeom[0]";
-connectAttr "rover_modelRN.phl[9]" "Dish_Base_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[10]" "cluster12.orggeom[0]";
-connectAttr "rover_modelRN.phl[11]" "Dish_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[12]" "cluster7.orggeom[0]";
-connectAttr "rover_modelRN.phl[13]" "L_Solar_Panel_01_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[14]" "cluster8.orggeom[0]";
-connectAttr "rover_modelRN.phl[15]" "L_Solar_Panel_02_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[16]" "cluster4.orggeom[0]";
-connectAttr "rover_modelRN.phl[17]" "R_Solar_Panel_01_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[18]" "cluster5.orggeom[0]";
-connectAttr "rover_modelRN.phl[19]" "R_Solar_Panel_02_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[20]" "cluster6.orggeom[0]";
-connectAttr "rover_modelRN.phl[21]" "Rear_Solar_Panel_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[22]" "cluster21.orggeom[0]";
-connectAttr "rover_modelRN.phl[23]" "cluster17.orggeom[0]";
-connectAttr "rover_modelRN.phl[24]" "L_Front_Leg_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[25]" "cluster19.orggeom[0]";
-connectAttr "rover_modelRN.phl[26]" "L_Rear_Hub_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[27]" "cluster20.orggeom[0]";
-connectAttr "rover_modelRN.phl[28]" "cluster1.orggeom[0]";
-connectAttr "rover_modelRN.phl[29]" "R_Front_Leg_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[30]" "Right_sideCluster.orggeom[0]";
-connectAttr "rover_modelRN.phl[31]" "R_Rear_Hub_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[32]" "cluster3.orggeom[0]";
-connectAttr "rover_modelRN.phl[33]" "Camera_Base_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[34]" "cluster13.orggeom[0]";
-connectAttr "rover_modelRN.phl[35]" "Camera_Lower_Arm_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[36]" "cluster14.orggeom[0]";
-connectAttr "rover_modelRN.phl[37]" "Camera_Upper_Arm_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[38]" "cluster15.orggeom[0]";
-connectAttr "rover_modelRN.phl[39]" "Camera_Attachment_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[40]" "cluster16.orggeom[0]";
-connectAttr "rover_modelRN.phl[41]" "Camera_GeoShapeTag.i";
-connectAttr "R_Rear_Hub_GeoShapeDeformed.iog" "rover_modelRN.phl[42]";
-connectAttr "R_Front_Leg_GeoShapeDeformed.iog" "rover_modelRN.phl[43]";
-connectAttr "Body_GeoShapeDeformed.iog" "rover_modelRN.phl[44]";
-connectAttr "Camera_Base_GeoShapeDeformed.iog" "rover_modelRN.phl[45]";
-connectAttr "R_Solar_Panel_01_GeoShapeDeformed.iog" "rover_modelRN.phl[46]";
-connectAttr "R_Solar_Panel_02_GeoShapeDeformed.iog" "rover_modelRN.phl[47]";
-connectAttr "Rear_Solar_Panel_GeoShapeDeformed.iog" "rover_modelRN.phl[48]";
-connectAttr "L_Solar_Panel_01_GeoShapeDeformed.iog" "rover_modelRN.phl[49]";
-connectAttr "L_Solar_Panel_02_GeoShapeDeformed.iog" "rover_modelRN.phl[50]";
-connectAttr "Neck_GeoShapeDeformed.iog" "rover_modelRN.phl[51]";
-connectAttr "Head_Gauges_GeoShapeDeformed.iog" "rover_modelRN.phl[52]";
-connectAttr "Dish_Base_GeoShapeDeformed.iog" "rover_modelRN.phl[53]";
-connectAttr "Dish_GeoShapeDeformed.iog" "rover_modelRN.phl[54]";
-connectAttr "Camera_Lower_Arm_GeoShapeDeformed.iog" "rover_modelRN.phl[55]";
-connectAttr "Camera_Upper_Arm_GeoShapeDeformed.iog" "rover_modelRN.phl[56]";
-connectAttr "Camera_Attachment_GeoShapeDeformed.iog" "rover_modelRN.phl[57]";
-connectAttr "Camera_GeoShapeDeformed.iog" "rover_modelRN.phl[58]";
-connectAttr "L_Front_Leg_GeoShapeDeformed.iog" "rover_modelRN.phl[59]";
-connectAttr "L_Rear_Hub_GeoShapeDeformed.iog" "rover_modelRN.phl[60]";
-connectAttr "cluster16.og[0]" "Camera_GeoShapeDeformed.i";
-connectAttr "cluster15.og[0]" "Camera_Attachment_GeoShapeDeformed.i";
-connectAttr "cluster14.og[0]" "Camera_Upper_Arm_GeoShapeDeformed.i";
-connectAttr "cluster13.og[0]" "Camera_Lower_Arm_GeoShapeDeformed.i";
-connectAttr "cluster3.og[0]" "Camera_Base_GeoShapeDeformed.i";
-connectAttr "Right_sideCluster.og[0]" "R_Rear_Hub_GeoShapeDeformed.i";
-connectAttr "cluster20.og[0]" "R_Front_Leg_GeoShapeDeformed.i";
-connectAttr "cluster19.og[0]" "L_Rear_Hub_GeoShapeDeformed.i";
-connectAttr "cluster21.og[0]" "L_Front_Leg_GeoShapeDeformed.i";
-connectAttr "cluster6.og[0]" "Rear_Solar_Panel_GeoShapeDeformed.i";
-connectAttr "cluster5.og[0]" "R_Solar_Panel_02_GeoShapeDeformed.i";
-connectAttr "cluster4.og[0]" "R_Solar_Panel_01_GeoShapeDeformed.i";
-connectAttr "cluster8.og[0]" "L_Solar_Panel_02_GeoShapeDeformed.i";
-connectAttr "cluster7.og[0]" "L_Solar_Panel_01_GeoShapeDeformed.i";
-connectAttr "cluster12.og[0]" "Dish_GeoShapeDeformed.i";
-connectAttr "cluster11.og[0]" "Dish_Base_GeoShapeDeformed.i";
-connectAttr "cluster10.og[0]" "Head_Gauges_GeoShapeDeformed.i";
-connectAttr "cluster9.og[0]" "Neck_GeoShapeDeformed.i";
-connectAttr "cluster18.og[0]" "Body_GeoShapeDeformed.i";
+connectAttr "rover_modelRN.phl[1]" "Body_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[2]" "pole_rotateCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[3]" "Neck_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[4]" "head_camera_rotateCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[5]" "Head_Gauges_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[6]" "dish_arm_rotateCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[7]" "Dish_Base_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[8]" "Dish_rotate_headCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[9]" "Dish_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[10]" "panel_1_rotateCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[11]" "L_Solar_Panel_01_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[12]" "panel_2_rotateCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[13]" "L_Solar_Panel_02_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[14]" "R_Solar_Panel_01_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[15]" "R_Solar_Panel_02_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[16]" "back_panel_rotateCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[17]" "Rear_Solar_Panel_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[18]" "L_Front_Leg_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[19]" "Wheel_1_rotateCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[20]" "L_Front_Hub_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[21]" "Wheel_1_spinCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[22]" "L_Wheel_01_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[23]" "main_Leg_rotateCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[24]" "L_Rear_Leg_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[25]" "Back_LegsCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[26]" "Wheel_3_rotateCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[27]" "Wheel_2_rotateCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[28]" "L_Rear_Hub_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[29]" "Wheel_2_spinCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[30]" "L_Wheel_02_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[31]" "Wheel_3_spinCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[32]" "L_Wheel_03_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[33]" "R_Front_Leg_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[34]" "R_Rear_Hub_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[35]" "camera_arm_base_rotateCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[36]" "Camera_Base_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[37]" "camera_arm_shoulderCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[38]" "Camera_Lower_Arm_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[39]" "camera_arm_mid_handleCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[40]" "Camera_Upper_Arm_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[41]" "camera_arm_end_handleCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[42]" "Camera_Attachment_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[43]" "Camera_handleCluster.orggeom[0]";
+connectAttr "rover_modelRN.phl[44]" "Camera_GeoShapeTag.i";
+connectAttr "R_Rear_Hub_GeoShapeDeformed.iog" "rover_modelRN.phl[45]";
+connectAttr "R_Front_Leg_GeoShapeDeformed.iog" "rover_modelRN.phl[46]";
+connectAttr "Body_GeoShapeDeformed.iog" "rover_modelRN.phl[47]";
+connectAttr "Camera_Base_GeoShapeDeformed.iog" "rover_modelRN.phl[48]";
+connectAttr "R_Solar_Panel_01_GeoShapeDeformed.iog" "rover_modelRN.phl[49]";
+connectAttr "R_Solar_Panel_02_GeoShapeDeformed.iog" "rover_modelRN.phl[50]";
+connectAttr "Rear_Solar_Panel_GeoShapeDeformed.iog" "rover_modelRN.phl[51]";
+connectAttr "L_Solar_Panel_01_GeoShapeDeformed.iog" "rover_modelRN.phl[52]";
+connectAttr "L_Solar_Panel_02_GeoShapeDeformed.iog" "rover_modelRN.phl[53]";
+connectAttr "Neck_GeoShapeDeformed.iog" "rover_modelRN.phl[54]";
+connectAttr "Head_Gauges_GeoShapeDeformed.iog" "rover_modelRN.phl[55]";
+connectAttr "Dish_Base_GeoShapeDeformed.iog" "rover_modelRN.phl[56]";
+connectAttr "Dish_GeoShapeDeformed.iog" "rover_modelRN.phl[57]";
+connectAttr "Camera_Lower_Arm_GeoShapeDeformed.iog" "rover_modelRN.phl[58]";
+connectAttr "Camera_Upper_Arm_GeoShapeDeformed.iog" "rover_modelRN.phl[59]";
+connectAttr "Camera_Attachment_GeoShapeDeformed.iog" "rover_modelRN.phl[60]";
+connectAttr "Camera_GeoShapeDeformed.iog" "rover_modelRN.phl[61]";
+connectAttr "L_Front_Leg_GeoShapeDeformed.iog" "rover_modelRN.phl[62]";
+connectAttr "L_Rear_Hub_GeoShapeDeformed.iog" "rover_modelRN.phl[63]";
+connectAttr "L_Wheel_02_GeoShapeDeformed.iog" "rover_modelRN.phl[64]";
+connectAttr "L_Wheel_03_GeoShapeDeformed.iog" "rover_modelRN.phl[65]";
+connectAttr "L_Wheel_01_GeoShapeDeformed.iog" "rover_modelRN.phl[66]";
+connectAttr "L_Front_Hub_GeoShapeDeformed.iog" "rover_modelRN.phl[67]";
+connectAttr "L_Rear_Leg_GeoShapeDeformed.iog" "rover_modelRN.phl[68]";
+connectAttr "Camera_handleCluster.og[0]" "Camera_GeoShapeDeformed.i";
+connectAttr "camera_arm_end_handleCluster.og[0]" "Camera_Attachment_GeoShapeDeformed.i"
+		;
+connectAttr "camera_arm_mid_handleCluster.og[0]" "Camera_Upper_Arm_GeoShapeDeformed.i"
+		;
+connectAttr "camera_arm_shoulderCluster.og[0]" "Camera_Lower_Arm_GeoShapeDeformed.i"
+		;
+connectAttr "camera_arm_base_rotateCluster.og[0]" "Camera_Base_GeoShapeDeformed.i"
+		;
+connectAttr "R_Rear_Hub_GeoShapeTag.w" "R_Rear_Hub_GeoShapeDeformed.i";
+connectAttr "R_Front_Leg_GeoShapeTag.w" "R_Front_Leg_GeoShapeDeformed.i";
+connectAttr "Wheel_3_spinCluster.og[0]" "L_Wheel_03_GeoShapeDeformed.i";
+connectAttr "Wheel_2_spinCluster.og[0]" "L_Wheel_02_GeoShapeDeformed.i";
+connectAttr "Wheel_2_rotateCluster.og[0]" "L_Rear_Hub_GeoShapeDeformed.i";
+connectAttr "main_Leg_rotateCluster.og[0]" "L_Rear_Leg_GeoShapeDeformed.i";
+connectAttr "Wheel_1_spinCluster.og[0]" "L_Wheel_01_GeoShapeDeformed.i";
+connectAttr "Wheel_1_rotateCluster.og[0]" "L_Front_Hub_GeoShapeDeformed.i";
+connectAttr "L_Front_Leg_GeoShapeTag.w" "L_Front_Leg_GeoShapeDeformed.i";
+connectAttr "back_panel_rotateCluster.og[0]" "Rear_Solar_Panel_GeoShapeDeformed.i"
+		;
+connectAttr "R_Solar_Panel_02_GeoShapeTag.w" "R_Solar_Panel_02_GeoShapeDeformed.i"
+		;
+connectAttr "R_Solar_Panel_01_GeoShapeTag.w" "R_Solar_Panel_01_GeoShapeDeformed.i"
+		;
+connectAttr "panel_2_rotateCluster.og[0]" "L_Solar_Panel_02_GeoShapeDeformed.i";
+connectAttr "panel_1_rotateCluster.og[0]" "L_Solar_Panel_01_GeoShapeDeformed.i";
+connectAttr "Dish_rotate_headCluster.og[0]" "Dish_GeoShapeDeformed.i";
+connectAttr "dish_arm_rotateCluster.og[0]" "Dish_Base_GeoShapeDeformed.i";
+connectAttr "head_camera_rotateCluster.og[0]" "Head_Gauges_GeoShapeDeformed.i";
+connectAttr "pole_rotateCluster.og[0]" "Neck_GeoShapeDeformed.i";
+connectAttr "Body_GeoShapeTag.w" "Body_GeoShapeDeformed.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -1393,71 +1592,70 @@ connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drive
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "rover_modelRNfosterParent1.msg" "rover_modelRN.fp";
-connectAttr "R_Rear_Hub_GeoShapeTag.w" "Right_sideCluster.ip[0].ig";
-connectAttr "Right_side.wm" "Right_sideCluster.ma";
-connectAttr "Right_sideShape.x" "Right_sideCluster.x";
-connectAttr "R_Front_Leg_GeoShapeTag.w" "cluster1.ip[0].ig";
-connectAttr "cluster1Handle.wm" "cluster1.ma";
-connectAttr "cluster1HandleShape.x" "cluster1.x";
-connectAttr "Body_GeoShapeTag.w" "cluster2.ip[0].ig";
-connectAttr "cluster2Handle.wm" "cluster2.ma";
-connectAttr "cluster2HandleShape.x" "cluster2.x";
-connectAttr "Camera_Base_GeoShapeTag.w" "cluster3.ip[0].ig";
-connectAttr "cluster3Handle.wm" "cluster3.ma";
-connectAttr "cluster3HandleShape.x" "cluster3.x";
-connectAttr "R_Solar_Panel_01_GeoShapeTag.w" "cluster4.ip[0].ig";
-connectAttr "cluster4Handle.wm" "cluster4.ma";
-connectAttr "cluster4HandleShape.x" "cluster4.x";
-connectAttr "R_Solar_Panel_02_GeoShapeTag.w" "cluster5.ip[0].ig";
-connectAttr "cluster5Handle.wm" "cluster5.ma";
-connectAttr "cluster5HandleShape.x" "cluster5.x";
-connectAttr "Rear_Solar_Panel_GeoShapeTag.w" "cluster6.ip[0].ig";
-connectAttr "cluster6Handle.wm" "cluster6.ma";
-connectAttr "cluster6HandleShape.x" "cluster6.x";
-connectAttr "L_Solar_Panel_01_GeoShapeTag.w" "cluster7.ip[0].ig";
-connectAttr "cluster7Handle.wm" "cluster7.ma";
-connectAttr "cluster7HandleShape.x" "cluster7.x";
-connectAttr "L_Solar_Panel_02_GeoShapeTag.w" "cluster8.ip[0].ig";
-connectAttr "cluster8Handle.wm" "cluster8.ma";
-connectAttr "cluster8HandleShape.x" "cluster8.x";
-connectAttr "Neck_GeoShapeTag.w" "cluster9.ip[0].ig";
-connectAttr "cluster9Handle.wm" "cluster9.ma";
-connectAttr "cluster9HandleShape.x" "cluster9.x";
-connectAttr "Head_Gauges_GeoShapeTag.w" "cluster10.ip[0].ig";
-connectAttr "cluster10Handle.wm" "cluster10.ma";
-connectAttr "cluster10HandleShape.x" "cluster10.x";
-connectAttr "Dish_Base_GeoShapeTag.w" "cluster11.ip[0].ig";
-connectAttr "cluster11Handle.wm" "cluster11.ma";
-connectAttr "cluster11HandleShape.x" "cluster11.x";
-connectAttr "Dish_GeoShapeTag.w" "cluster12.ip[0].ig";
-connectAttr "cluster12Handle.wm" "cluster12.ma";
-connectAttr "cluster12HandleShape.x" "cluster12.x";
-connectAttr "Camera_Lower_Arm_GeoShapeTag.w" "cluster13.ip[0].ig";
-connectAttr "cluster13Handle.wm" "cluster13.ma";
-connectAttr "cluster13HandleShape.x" "cluster13.x";
-connectAttr "Camera_Upper_Arm_GeoShapeTag.w" "cluster14.ip[0].ig";
-connectAttr "cluster14Handle.wm" "cluster14.ma";
-connectAttr "cluster14HandleShape.x" "cluster14.x";
-connectAttr "Camera_Attachment_GeoShapeTag.w" "cluster15.ip[0].ig";
-connectAttr "cluster15Handle.wm" "cluster15.ma";
-connectAttr "cluster15HandleShape.x" "cluster15.x";
-connectAttr "Camera_GeoShapeTag.w" "cluster16.ip[0].ig";
-connectAttr "cluster16Handle.wm" "cluster16.ma";
-connectAttr "cluster16HandleShape.x" "cluster16.x";
-connectAttr "L_Front_Leg_GeoShapeTag.w" "cluster17.ip[0].ig";
-connectAttr "cluster17Handle.wm" "cluster17.ma";
-connectAttr "cluster17HandleShape.x" "cluster17.x";
-connectAttr "cluster2.og[0]" "cluster18.ip[0].ig";
-connectAttr "cluster18Handle.wm" "cluster18.ma";
-connectAttr "cluster18HandleShape.x" "cluster18.x";
-connectAttr "L_Rear_Hub_GeoShapeTag.w" "cluster19.ip[0].ig";
-connectAttr "cluster19Handle.wm" "cluster19.ma";
-connectAttr "cluster19HandleShape.x" "cluster19.x";
-connectAttr "cluster1.og[0]" "cluster20.ip[0].ig";
-connectAttr "cluster20Handle.wm" "cluster20.ma";
-connectAttr "cluster20HandleShape.x" "cluster20.x";
-connectAttr "cluster17.og[0]" "cluster21.ip[0].ig";
-connectAttr "cluster21Handle.wm" "cluster21.ma";
-connectAttr "cluster21HandleShape.x" "cluster21.x";
+connectAttr "L_Rear_Hub_GeoShapeTag.w" "Back_LegsCluster.ip[0].ig";
+connectAttr "Back_Legs.wm" "Back_LegsCluster.ma";
+connectAttr "Back_LegsShape.x" "Back_LegsCluster.x";
+connectAttr "Camera_GeoShapeTag.w" "Camera_handleCluster.ip[0].ig";
+connectAttr "Camera_handle.wm" "Camera_handleCluster.ma";
+connectAttr "Camera_handleShape.x" "Camera_handleCluster.x";
+connectAttr "Camera_Attachment_GeoShapeTag.w" "camera_arm_end_handleCluster.ip[0].ig"
+		;
+connectAttr "camera_arm_end_handle.wm" "camera_arm_end_handleCluster.ma";
+connectAttr "camera_arm_end_handleShape.x" "camera_arm_end_handleCluster.x";
+connectAttr "Camera_Upper_Arm_GeoShapeTag.w" "camera_arm_mid_handleCluster.ip[0].ig"
+		;
+connectAttr "camera_arm_mid_handle.wm" "camera_arm_mid_handleCluster.ma";
+connectAttr "camera_arm_mid_handleShape.x" "camera_arm_mid_handleCluster.x";
+connectAttr "Camera_Lower_Arm_GeoShapeTag.w" "camera_arm_shoulderCluster.ip[0].ig"
+		;
+connectAttr "camera_arm_shoulder.wm" "camera_arm_shoulderCluster.ma";
+connectAttr "camera_arm_shoulderShape.x" "camera_arm_shoulderCluster.x";
+connectAttr "Dish_GeoShapeTag.w" "Dish_rotate_headCluster.ip[0].ig";
+connectAttr "Dish_rotate_head.wm" "Dish_rotate_headCluster.ma";
+connectAttr "Dish_rotate_headShape.x" "Dish_rotate_headCluster.x";
+connectAttr "Dish_Base_GeoShapeTag.w" "dish_arm_rotateCluster.ip[0].ig";
+connectAttr "dish_arm_rotate.wm" "dish_arm_rotateCluster.ma";
+connectAttr "dish_arm_rotateShape.x" "dish_arm_rotateCluster.x";
+connectAttr "Head_Gauges_GeoShapeTag.w" "head_camera_rotateCluster.ip[0].ig";
+connectAttr "head_camera_rotate.wm" "head_camera_rotateCluster.ma";
+connectAttr "head_camera_rotateShape.x" "head_camera_rotateCluster.x";
+connectAttr "Neck_GeoShapeTag.w" "pole_rotateCluster.ip[0].ig";
+connectAttr "pole_rotate.wm" "pole_rotateCluster.ma";
+connectAttr "pole_rotateShape.x" "pole_rotateCluster.x";
+connectAttr "L_Solar_Panel_02_GeoShapeTag.w" "panel_2_rotateCluster.ip[0].ig";
+connectAttr "panel_2_rotate.wm" "panel_2_rotateCluster.ma";
+connectAttr "panel_2_rotateShape.x" "panel_2_rotateCluster.x";
+connectAttr "L_Solar_Panel_01_GeoShapeTag.w" "panel_1_rotateCluster.ip[0].ig";
+connectAttr "panel_1_rotate.wm" "panel_1_rotateCluster.ma";
+connectAttr "panel_1_rotateShape.x" "panel_1_rotateCluster.x";
+connectAttr "Rear_Solar_Panel_GeoShapeTag.w" "back_panel_rotateCluster.ip[0].ig"
+		;
+connectAttr "back_panel_rotate.wm" "back_panel_rotateCluster.ma";
+connectAttr "back_panel_rotateShape.x" "back_panel_rotateCluster.x";
+connectAttr "Camera_Base_GeoShapeTag.w" "camera_arm_base_rotateCluster.ip[0].ig"
+		;
+connectAttr "camera_arm_base_rotate.wm" "camera_arm_base_rotateCluster.ma";
+connectAttr "camera_arm_base_rotateShape.x" "camera_arm_base_rotateCluster.x";
+connectAttr "L_Wheel_02_GeoShapeTag.w" "Wheel_2_spinCluster.ip[0].ig";
+connectAttr "Wheel_2_spin.wm" "Wheel_2_spinCluster.ma";
+connectAttr "Wheel_2_spinShape.x" "Wheel_2_spinCluster.x";
+connectAttr "L_Wheel_03_GeoShapeTag.w" "Wheel_3_spinCluster.ip[0].ig";
+connectAttr "Wheel_3_spin.wm" "Wheel_3_spinCluster.ma";
+connectAttr "Wheel_3_spinShape.x" "Wheel_3_spinCluster.x";
+connectAttr "L_Wheel_01_GeoShapeTag.w" "Wheel_1_spinCluster.ip[0].ig";
+connectAttr "Wheel_1_spin.wm" "Wheel_1_spinCluster.ma";
+connectAttr "Wheel_1_spinShape.x" "Wheel_1_spinCluster.x";
+connectAttr "Back_LegsCluster.og[0]" "Wheel_3_rotateCluster.ip[0].ig";
+connectAttr "Wheel_3_rotate.wm" "Wheel_3_rotateCluster.ma";
+connectAttr "Wheel_3_rotateShape.x" "Wheel_3_rotateCluster.x";
+connectAttr "L_Front_Hub_GeoShapeTag.w" "Wheel_1_rotateCluster.ip[0].ig";
+connectAttr "Wheel_1_rotate.wm" "Wheel_1_rotateCluster.ma";
+connectAttr "Wheel_1_rotateShape.x" "Wheel_1_rotateCluster.x";
+connectAttr "Wheel_3_rotateCluster.og[0]" "Wheel_2_rotateCluster.ip[0].ig";
+connectAttr "Wheel_2_rotate.wm" "Wheel_2_rotateCluster.ma";
+connectAttr "Wheel_2_rotateShape.x" "Wheel_2_rotateCluster.x";
+connectAttr "L_Rear_Leg_GeoShapeTag.w" "main_Leg_rotateCluster.ip[0].ig";
+connectAttr "main_Leg_rotate.wm" "main_Leg_rotateCluster.ma";
+connectAttr "main_Leg_rotateShape.x" "main_Leg_rotateCluster.x";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of Rover Rigging Quinn Johnston.ma
