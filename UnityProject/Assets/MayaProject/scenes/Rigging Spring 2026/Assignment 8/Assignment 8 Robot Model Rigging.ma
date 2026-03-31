@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Assignment 8 Robot Model Rigging.ma
-//Last modified: Tue, Mar 31, 2026 01:18:43 PM
+//Last modified: Tue, Mar 31, 2026 01:48:29 PM
 //Codeset: 1252
 requires "fbxmaya" "2020.3.9";
 file -rdi 1 -ns "robot_model" -rfn "robot_modelRN" -op "fbx" -typ "FBX" "C:/Users/quinn/Documents/UVU/UVU-AGD-Portfolio/UnityProject/Assets/MayaProject//scenes/Rigging Spring 2026/Assignment 8/robot_model.fbx";
@@ -9,26 +9,25 @@ requires maya "2026";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.5.4.2";
-requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 22631)";
-fileInfo "UUID" "617CB7F8-4F84-4935-39F8-F488B1BEDA38";
+fileInfo "UUID" "9D533962-4C24-404A-06D8-ADA8198BDD96";
 createNode transform -s -n "persp";
 	rename -uid "51FDF56C-4F08-4257-3C27-C3806B2BE569";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -43.85249799856247 68.739132880763094 186.01399357712802 ;
-	setAttr ".r" -type "double3" -8.4000000000004515 -735.99999999998613 -2.0679557755332767e-16 ;
+	setAttr ".t" -type "double3" -92.042758033974181 144.28471807245856 114.44121892551287 ;
+	setAttr ".r" -type "double3" -29.400000000001274 -754.39999999995553 -1.9273437461018762e-15 ;
 	setAttr ".rpt" -type "double3" -2.1700873091634069e-15 -3.6506402567447407e-15 -1.9406040241085658e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "EEA25AA5-4BCA-2C0A-E244-0B8B9990DFCD";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 31.560573249471236;
-	setAttr ".coi" 236.05925638960943;
+	setAttr ".coi" 193.84105612517487;
 	setAttr ".ow" 49.256471405679967;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
@@ -1191,7 +1190,6 @@ createNode joint -n "Ankle_RK_Jnt_L" -p "Knee_RK_Jnt_L";
 	setAttr ".dla" yes;
 createNode joint -n "Hip_Ball_Socket_FK_Jnt_R" -p "hips_FK_Jnt";
 	rename -uid "1CD5C2E6-4FFA-11A0-1689-CBA139FF1DA3";
-	setAttr ".t" -type "double3" 24.181294482421876 0.39899625045776599 -9.96575 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
@@ -1202,7 +1200,6 @@ createNode joint -n "Upper_Leg_FK_Jnt_R" -p "Hip_Ball_Socket_FK_Jnt_R";
 	rename -uid "837EB247-4206-AD8C-93B7-579B7962DC7E";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 6;
-	setAttr ".t" -type "double3" -18.987650000000002 0.14442000000000021 2.7206999999999937 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
@@ -1211,7 +1208,6 @@ createNode joint -n "Upper_Leg_FK_Jnt_R" -p "Hip_Ball_Socket_FK_Jnt_R";
 	setAttr ".radi" 3;
 createNode joint -n "Knee_FK_Jnt_R" -p "Upper_Leg_FK_Jnt_R";
 	rename -uid "D3AEFCEE-4C97-A1A1-1ACF-EF9C32869E42";
-	setAttr ".t" -type "double3" 32.925499999999964 -8.8817841970012523e-16 3.5527136788005009e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
@@ -1220,8 +1216,6 @@ createNode joint -n "Knee_FK_Jnt_R" -p "Upper_Leg_FK_Jnt_R";
 	setAttr ".radi" 3;
 createNode joint -n "Ankle_FK_Jnt_R" -p "Knee_FK_Jnt_R";
 	rename -uid "70890F02-4EF9-D814-D218-FB9DFFD7AB25";
-	setAttr ".t" -type "double3" 40.35480000000004 5.773159728050814e-15 3.907985046680551e-14 ;
-	setAttr ".r" -type "double3" 0 0 1.4033418597069752e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
@@ -1230,33 +1224,252 @@ createNode joint -n "Ankle_FK_Jnt_R" -p "Knee_FK_Jnt_R";
 createNode joint -n "Big_FK_Jnt_Toe_Jnt_R" -p "Ankle_FK_Jnt_R";
 	rename -uid "07F7A418-4761-1580-F7A3-06B006ACBA2B";
 	setAttr ".ove" yes;
-	setAttr ".t" -type "double3" 10.614349999999998 -2.3430169999992785 10.552900000000154 ;
-	setAttr ".r" -type "double3" 3.9184433675630525e-12 1.6427221479500753e-41 -4.8040018528449484e-28 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" -90 0 0 ;
 	setAttr ".radi" 3;
+createNode parentConstraint -n "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1" -p "Big_FK_Jnt_Toe_Jnt_R";
+	rename -uid "DAB0B0F7-4808-14D2-5B4F-2C8F1017D9C7";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Big_Toe_Jnt_R_FK_CTRLW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -1.3322676295501878e-14 3.5527136788005009e-15 
+		-8.8817841970012523e-16 ;
+	setAttr ".rst" -type "double3" 10.614349999999998 -2.3430169999992785 10.552900000000157 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Big_FK_Jnt_Toe_Jnt_R_scaleConstraint1" -p "Big_FK_Jnt_Toe_Jnt_R";
+	rename -uid "CA0D9B50-4E62-86F1-0377-D69A85808128";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Big_Toe_Jnt_R_FK_CTRLW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
 createNode joint -n "pointer_Toe_FK_Jnt_R" -p "Ankle_FK_Jnt_R";
 	rename -uid "787FA5AE-49C4-B38D-30BC-36930054C326";
 	setAttr ".ove" yes;
-	setAttr ".t" -type "double3" 8.8528599999999891 -13.544050000000002 -9.1660012913052924e-13 ;
-	setAttr ".r" -type "double3" 0 0 1.4033418597069752e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" 5.7055094273191919e-15 0 0 ;
 	setAttr ".radi" 3;
+createNode parentConstraint -n "pointer_Toe_FK_Jnt_R_parentConstraint1" -p "pointer_Toe_FK_Jnt_R";
+	rename -uid "EDE70F4E-4120-6E1D-A10D-F18EEFC88686";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "pointer_Toe_Jnt_R_FK_CTRLW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -1.4210854715202004e-14 0 -3.5527136788005009e-15 ;
+	setAttr ".rst" -type "double3" 8.8528599999999891 -13.54405 -9.1660012913052924e-13 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "pointer_Toe_FK_Jnt_R_scaleConstraint1" -p "pointer_Toe_FK_Jnt_R";
+	rename -uid "E830F484-446F-2017-2B54-23935CCF6B16";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "pointer_Toe_Jnt_R_FK_CTRLW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
 createNode joint -n "pinky_Toe_FK_Jnt_R" -p "Ankle_FK_Jnt_R";
 	rename -uid "572FFFCE-489F-030F-B4C6-EAB72D1F2888";
 	setAttr ".ove" yes;
-	setAttr ".t" -type "double3" 10.61434999999998 -2.343017000000724 -10.552999999999852 ;
-	setAttr ".r" -type "double3" 3.9120822582001259e-12 -7.0167092985348342e-15 1.2020547796000533e-13 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" 90 0 0 ;
 	setAttr ".radi" 3;
+createNode parentConstraint -n "pinky_Toe_FK_Jnt_R_parentConstraint1" -p "pinky_Toe_FK_Jnt_R";
+	rename -uid "71511F61-48DB-DE2C-E795-F4890E217B1F";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "pinky_Toe_Jnt_R_FK_CTRLW0" -dv 1 
+		-min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -1.3322676295501878e-14 7.1054273576010019e-15 
+		3.9968028886505635e-15 ;
+	setAttr ".tg[0].tor" -type "double3" -1.2722218725854067e-14 0 0 ;
+	setAttr ".lr" -type "double3" 1.2722218725854067e-14 0 0 ;
+	setAttr ".rst" -type "double3" 10.614349999999982 -2.3430170000007249 -10.552999999999837 ;
+	setAttr ".rsrr" -type "double3" 1.2722218725854067e-14 0 0 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "pinky_Toe_FK_Jnt_R_scaleConstraint1" -p "pinky_Toe_FK_Jnt_R";
+	rename -uid "DAAE8CF3-40EF-AC0C-C84E-C9AE9DC6E05B";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "pinky_Toe_Jnt_R_FK_CTRLW0" -dv 1 
+		-min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "Ankle_FK_Jnt_R_parentConstraint1" -p "Ankle_FK_Jnt_R";
+	rename -uid "533A141F-48D9-C2DD-E2AA-79BC4A619EDA";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Ankle_Jnt_R_FK_CTRLW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -1.4210854715202004e-14 -1.7763568394002505e-15 
+		-7.1054273576010019e-15 ;
+	setAttr ".rst" -type "double3" 40.35480000000004 5.773159728050814e-15 3.5527136788005009e-14 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Ankle_FK_Jnt_R_scaleConstraint1" -p "Ankle_FK_Jnt_R";
+	rename -uid "E791A73F-4D8A-67B8-B4DD-8597C076AE73";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Ankle_Jnt_R_FK_CTRLW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "Knee_FK_Jnt_R_parentConstraint1" -p "Knee_FK_Jnt_R";
+	rename -uid "20818875-4C9C-B801-B021-75B0DF31FED5";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Knee_Jnt_R_FK_CTRLW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -7.1054273576010019e-15 -1.7763568394002505e-15 
+		-3.5527136788005009e-15 ;
+	setAttr ".rst" -type "double3" 32.925499999999957 -1.3322676295501878e-15 2.8421709430404007e-14 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Knee_FK_Jnt_R_scaleConstraint1" -p "Knee_FK_Jnt_R";
+	rename -uid "67D5175F-4579-6BB3-DB01-85A26E73B1FF";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Knee_Jnt_R_FK_CTRLW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "Upper_Leg_FK_Jnt_R_parentConstraint1" -p "Upper_Leg_FK_Jnt_R";
+	rename -uid "E56BE457-4873-46F9-E086-CE93C56157B7";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Upper_Leg_Jnt_R_FK_CTRLW0" -dv 1 
+		-min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -1.4210854715202004e-14 -1.3322676295501878e-15 
+		3.5527136788005009e-15 ;
+	setAttr ".tg[0].tor" -type "double3" -8.6247399051145635e-45 0 0 ;
+	setAttr ".rst" -type "double3" -18.98765 0.14442000000000155 2.7206999999999795 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Upper_Leg_FK_Jnt_R_scaleConstraint1" -p "Upper_Leg_FK_Jnt_R";
+	rename -uid "D8DD1FF8-49C0-CFE0-8451-A3B4FACBBFB8";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Upper_Leg_Jnt_R_FK_CTRLW0" -dv 1 
+		-min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
 createNode joint -n "Upper_Leg_IK_Jnt_R" -p "Hip_Ball_Socket_FK_Jnt_R";
 	rename -uid "3A466842-4219-59A1-DB6C-4C82722A4E81";
 	setAttr ".v" no;
@@ -1312,6 +1525,42 @@ createNode joint -n "Ankle_RK_Jnt_R" -p "Knee_RK_Jnt_R";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
+createNode parentConstraint -n "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1" -p "Hip_Ball_Socket_FK_Jnt_R";
+	rename -uid "A7897101-49A6-4E55-3DB5-F285305492B4";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Hip_Ball_Socket_Jnt_R_FK_CTRLW0" 
+		-dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0 -4.4408920985006262e-16 0 ;
+	setAttr ".rst" -type "double3" 24.181294482421876 0.39899625045776554 -9.96575 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Hip_Ball_Socket_FK_Jnt_R_scaleConstraint1" -p "Hip_Ball_Socket_FK_Jnt_R";
+	rename -uid "6AC04806-4404-403C-0D15-08BF140AFCC5";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Hip_Ball_Socket_Jnt_R_FK_CTRLW0" 
+		-dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
 createNode parentConstraint -n "hips_FK_Jnt_parentConstraint1" -p "hips_FK_Jnt";
 	rename -uid "E85B1F64-4AE2-75C1-C3D7-AF9F928930AF";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "hips_Jnt_CTRLW0" -dv 1 -min 0 -at "double";
@@ -1949,10 +2198,9 @@ createNode nurbsCurve -n "pinky_Toe_Jnt_L_FK_CTRLShape" -p "pinky_Toe_Jnt_L_FK_C
 		2.9508561688553101 -12.572993613285824 -3.9180581244560999
 		;
 createNode transform -n "Hip_Ball_Socket_Jnt_R_FK_CTRL_GRP" -p "hips_Jnt_FK_CTRL";
-	rename -uid "E6DCF4B2-4C83-C08B-B237-C0A4F4D50552";
-	setAttr ".t" -type "double3" 24.181297302246094 0.39899587631225497 -9.9657487869262695 ;
-	setAttr ".r" -type "double3" 180 90 0 ;
-	setAttr ".s" -type "double3" 1 1 -1 ;
+	rename -uid "6D352156-4745-037E-2526-9EB508980179";
+	setAttr ".t" -type "double3" 24.181294482421876 0.39899625045776554 -9.96575 ;
+	setAttr ".r" -type "double3" -180 -90 0 ;
 createNode transform -n "Hip_Ball_Socket_Jnt_R_FK_CTRL" -p "Hip_Ball_Socket_Jnt_R_FK_CTRL_GRP";
 	rename -uid "D2CF3B75-4CCF-4F24-985D-32832F5A3351";
 createNode nurbsCurve -n "Hip_Ball_Socket_Jnt_R_FK_CTRLShape" -p "Hip_Ball_Socket_Jnt_R_FK_CTRL";
@@ -1962,28 +2210,26 @@ createNode nurbsCurve -n "Hip_Ball_Socket_Jnt_R_FK_CTRLShape" -p "Hip_Ball_Socke
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
-		37.778015181990106 4.7982373409884731e-17 -3.07827273824245
-		35.285122431406371 6.7857323231109122e-17 -1.1081941875543877
-		-3.134446499564898 4.7982373409884719e-17 -0.78361162489122438
-		-4.4327767502175526 3.5177356190060272e-33 -5.7448982375248304e-17
-		-3.134446499564898 -4.7982373409884725e-17 0.78361162489122449
-		35.285122431406371 -6.7857323231109171e-17 1.1081941875543884
-		37.778015181990106 -4.7982373409884719e-17 3.0782727382424482
-		41.516204708686146 -9.2536792101100989e-33 1.511240500779959e-16
-		37.778015181990106 4.7982373409884731e-17 -3.07827273824245
-		35.285122431406371 6.7857323231109122e-17 -1.1081941875543877
-		-3.134446499564898 4.7982373409884719e-17 -0.78361162489122438
+		-37.778015181990106 4.7982373409884731e-17 -3.07827273824245
+		-35.285122431406371 6.7857323231109122e-17 -1.1081941875543877
+		3.134446499564898 4.7982373409884719e-17 -0.78361162489122438
+		4.4327767502175526 3.5177356190060272e-33 -5.7448982375248304e-17
+		3.134446499564898 -4.7982373409884725e-17 0.78361162489122449
+		-35.285122431406371 -6.7857323231109171e-17 1.1081941875543884
+		-37.778015181990106 -4.7982373409884719e-17 3.0782727382424482
+		-41.516204708686146 -9.2536792101100989e-33 1.511240500779959e-16
+		-37.778015181990106 4.7982373409884731e-17 -3.07827273824245
+		-35.285122431406371 6.7857323231109122e-17 -1.1081941875543877
+		3.134446499564898 4.7982373409884719e-17 -0.78361162489122438
 		;
 createNode transform -n "Upper_Leg_Jnt_R_FK_CTRL_GRP" -p "Hip_Ball_Socket_Jnt_R_FK_CTRL";
-	rename -uid "CDC56F46-405D-5FAF-7503-FBA4A3A224AF";
-	setAttr ".v" no;
-	setAttr ".t" -type "double3" 18.987685203552239 0.14441537857055753 2.7207260131836222 ;
-	setAttr ".r" -type "double3" -179.99999999999608 -89.999999999999929 0 ;
-	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999989 1 ;
+	rename -uid "18260FB2-472A-A354-957B-9A8F27943C8E";
+	setAttr ".t" -type "double3" -18.987650000000002 0.14442000000000021 2.7206999999999937 ;
+	setAttr ".r" -type "double3" 180 -89.999999999999929 0 ;
 createNode transform -n "Upper_Leg_Jnt_R_FK_CTRL" -p "Upper_Leg_Jnt_R_FK_CTRL_GRP";
 	rename -uid "BCE43F3B-4106-5EFA-8290-DEB68895611C";
-	setAttr ".rp" -type "double3" 0 0 -3.5527136788005009e-15 ;
-	setAttr ".sp" -type "double3" 0 0 -3.5527136788005009e-15 ;
+	setAttr ".rp" -type "double3" 3.5527136788005009e-15 -3.944304526105059e-30 -2.4375801971329265e-28 ;
+	setAttr ".sp" -type "double3" 3.5527136788005009e-15 -3.944304526105059e-30 -2.4375801971329265e-28 ;
 createNode nurbsCurve -n "Upper_Leg_Jnt_R_FK_CTRLShape" -p "Upper_Leg_Jnt_R_FK_CTRL";
 	rename -uid "09A021AD-462E-DBFC-0C65-D3BD2475BD48";
 	setAttr -k off ".v";
@@ -1991,22 +2237,21 @@ createNode nurbsCurve -n "Upper_Leg_Jnt_R_FK_CTRLShape" -p "Upper_Leg_Jnt_R_FK_C
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
-		-5.757884809186168e-16 9.4033394986946934 -9.4033394986946952
-		-8.1428787877330951e-16 8.1428787877330951e-16 -13.298330250652652
-		-5.757884809186166e-16 -9.4033394986946934 -9.4033394986946917
-		-4.2212827428072326e-32 -13.298330250652658 -6.893877885029796e-16
-		5.757884809186167e-16 -9.4033394986946934 9.4033394986946934
-		8.142878787733101e-16 -1.332102836352387e-15 13.298330250652661
-		5.757884809186166e-16 9.4033394986946934 9.4033394986946917
-		1.1104415052132118e-31 13.298330250652658 1.8134886009359508e-15
-		-5.757884809186168e-16 9.4033394986946934 -9.4033394986946952
-		-8.1428787877330951e-16 8.1428787877330951e-16 -13.298330250652652
-		-5.757884809186166e-16 -9.4033394986946934 -9.4033394986946917
+		4.1285021597191177e-15 9.4033394986946934 -9.4033394986946917
+		4.3670015575738108e-15 8.1428787877330557e-16 -13.298330250652649
+		4.1285021597191177e-15 -9.4033394986946934 -9.4033394986946881
+		3.5527136788005009e-15 -13.298330250652658 2.8633258902972774e-15
+		2.9769251978818841e-15 -9.4033394986946934 9.403339498694697
+		2.738425800027191e-15 -1.332102836352391e-15 13.298330250652665
+		2.9769251978818841e-15 9.4033394986946934 9.4033394986946952
+		3.5527136788005009e-15 13.298330250652658 5.366202279736208e-15
+		4.1285021597191177e-15 9.4033394986946934 -9.4033394986946917
+		4.3670015575738108e-15 8.1428787877330557e-16 -13.298330250652649
+		4.1285021597191177e-15 -9.4033394986946934 -9.4033394986946881
 		;
 createNode transform -n "Knee_Jnt_R_FK_CTRL_GRP" -p "Upper_Leg_Jnt_R_FK_CTRL";
-	rename -uid "D40E4BE2-4EB8-90BF-327B-06BC7C935D59";
-	setAttr ".t" -type "double3" 32.925476074218722 0 6.3948846218409017e-14 ;
-	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 1 ;
+	rename -uid "479AC580-43C6-9D41-66B8-D89F9E9131AB";
+	setAttr ".t" -type "double3" 32.925499999999957 -8.8817841970012523e-16 3.5527136788005009e-14 ;
 createNode transform -n "Knee_Jnt_R_FK_CTRL" -p "Knee_Jnt_R_FK_CTRL_GRP";
 	rename -uid "E213C97E-485E-7A76-4979-D486AD9345CD";
 createNode nurbsCurve -n "Knee_Jnt_R_FK_CTRLShape" -p "Knee_Jnt_R_FK_CTRL";
@@ -2016,21 +2261,21 @@ createNode nurbsCurve -n "Knee_Jnt_R_FK_CTRLShape" -p "Knee_Jnt_R_FK_CTRL";
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
-		8.4689339810293413e-14 5.6380688442744757 -9.4033394986947272
-		8.4450840412438717e-14 -3.765270654420215 -9.7506413151721034
-		8.450850882790754e-14 -13.168610153114912 -12.356533554511371
-		1.7053025658242404e-13 -23.693990995284835 -6.9305641925934404e-14
-		8.6021747754516328e-14 -13.168610153114912 12.356533554511284
-		8.6079416169985327e-14 -3.7652706544202168 9.7506413151720892
-		8.5840916772130645e-14 5.6380688442744757 9.4033394986946597
-		8.5265128291212022e-14 9.533059596232448 -2.7811323730602321e-14
-		8.4689339810293413e-14 5.6380688442744757 -9.4033394986947272
-		8.4450840412438717e-14 -3.765270654420215 -9.7506413151721034
-		8.450850882790754e-14 -13.168610153114912 -12.356533554511371
+		-8.4689339810293413e-14 5.6380688442744757 -9.4033394986947272
+		-8.4450840412438717e-14 -3.765270654420215 -9.7506413151721034
+		-8.450850882790754e-14 -13.168610153114912 -12.356533554511371
+		-1.7053025658242404e-13 -23.693990995284835 -6.9305641925934404e-14
+		-8.6021747754516328e-14 -13.168610153114912 12.356533554511284
+		-8.6079416169985327e-14 -3.7652706544202168 9.7506413151720892
+		-8.5840916772130645e-14 5.6380688442744757 9.4033394986946597
+		-8.5265128291212022e-14 9.533059596232448 -2.7811323730602321e-14
+		-8.4689339810293413e-14 5.6380688442744757 -9.4033394986947272
+		-8.4450840412438717e-14 -3.765270654420215 -9.7506413151721034
+		-8.450850882790754e-14 -13.168610153114912 -12.356533554511371
 		;
 createNode transform -n "Ankle_Jnt_R_FK_CTRL_GRP" -p "Knee_Jnt_R_FK_CTRL";
-	rename -uid "5CE1E4C8-4B5E-96CB-0CCC-7495D803B02C";
-	setAttr ".t" -type "double3" 40.354835510253913 -8.8817841970012523e-16 -7.460698725481052e-14 ;
+	rename -uid "ED15BF69-482B-7010-1226-B5AFC26F4200";
+	setAttr ".t" -type "double3" 40.35480000000004 5.773159728050814e-15 3.907985046680551e-14 ;
 createNode transform -n "Ankle_Jnt_R_FK_CTRL" -p "Ankle_Jnt_R_FK_CTRL_GRP";
 	rename -uid "83D93BA9-4966-1593-49AD-81A737B2DCC9";
 createNode nurbsCurve -n "Ankle_Jnt_R_FK_CTRLShape" -p "Ankle_Jnt_R_FK_CTRL";
@@ -2052,62 +2297,10 @@ createNode nurbsCurve -n "Ankle_Jnt_R_FK_CTRLShape" -p "Ankle_Jnt_R_FK_CTRL";
 		16.534516811370846 -9.2323389369966424 -27.704854688859633
 		16.534516811370846 -17.907489685166421 -12.676229590447486
 		;
-createNode transform -n "pinky_Toe_Jnt_R_FK_CTRL_GRP" -p "Ankle_Jnt_R_FK_CTRL";
-	rename -uid "172D46CF-4A42-8D50-312B-2FA57A436D84";
-	setAttr ".t" -type "double3" 10.614314079284632 -2.3430214524261728 10.552917480468711 ;
-	setAttr ".r" -type "double3" -90.000000000003936 0 0 ;
-	setAttr ".s" -type "double3" 1 1 1.0000000000000002 ;
-createNode transform -n "pinky_Toe_Jnt_R_FK_CTRL" -p "pinky_Toe_Jnt_R_FK_CTRL_GRP";
-	rename -uid "9E5DECBA-444E-268D-0F47-D594361A8840";
-createNode nurbsCurve -n "pinky_Toe_Jnt_R_FK_CTRLShape" -p "pinky_Toe_Jnt_R_FK_CTRL";
-	rename -uid "5B588C63-4180-1766-D61B-89A149B8870A";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		6.7031123349381483 -10.406627505729467 -3.9180581244561008
-		4.8269842518967288 -11.489810559507646 -5.5409709377719256
-		2.9508561688553101 -12.572993613285824 -3.9180581244560999
-		2.173738472110518 -13.021662724693453 1.918470263158049e-14
-		2.9508561688553101 -12.572993613285824 3.9180581244561448
-		4.8269842518967288 -11.489810559507646 5.540970937771954
-		6.7031123349381483 -10.406627505729467 3.9180581244561443
-		7.4802300316829466 -9.9579583943218406 2.0227567793846713e-14
-		6.7031123349381483 -10.406627505729467 -3.9180581244561008
-		4.8269842518967288 -11.489810559507646 -5.5409709377719256
-		2.9508561688553101 -12.572993613285824 -3.9180581244560999
-		;
-createNode transform -n "pointer_Toe_Jnt_R_FK_CTRL_GRP" -p "Ankle_Jnt_R_FK_CTRL";
-	rename -uid "E503B967-4BD8-CD12-B2C9-DE98A57A9FC4";
-	setAttr ".t" -type "double3" 8.8528208732604501 -13.544027805328362 1.1444092493206881e-05 ;
-	setAttr ".s" -type "double3" 1 1.0000000000000002 1 ;
-createNode transform -n "pointer_Toe_Jnt_R_FK_CTRL" -p "pointer_Toe_Jnt_R_FK_CTRL_GRP";
-	rename -uid "2184E2E3-40E7-7508-BF17-E7A71C015DAD";
-createNode nurbsCurve -n "pointer_Toe_Jnt_R_FK_CTRLShape" -p "pointer_Toe_Jnt_R_FK_CTRL";
-	rename -uid "63185BCF-4168-EF2A-E8CC-789878F9C22B";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		8.5960935211224978 -14.659093611881708 -3.9180581244561008
-		6.7199654380810792 -15.742276665659887 -5.5409709377719256
-		4.8438373550396605 -16.825459719438065 -3.9180581244560999
-		4.0667196582948684 -17.274128830845694 1.9219037243354876e-14
-		4.8438373550396605 -16.825459719438065 3.9180581244561448
-		6.7199654380810792 -15.742276665659887 5.540970937771954
-		8.5960935211224978 -14.659093611881708 3.9180581244561443
-		9.3732112178672935 -14.210424500474081 2.0261902405621099e-14
-		8.5960935211224978 -14.659093611881708 -3.9180581244561008
-		6.7199654380810792 -15.742276665659887 -5.5409709377719256
-		4.8438373550396605 -16.825459719438065 -3.9180581244560999
-		;
 createNode transform -n "Big_Toe_Jnt_R_FK_CTRL_GRP" -p "Ankle_Jnt_R_FK_CTRL";
-	rename -uid "C5B8098B-42F0-FEF0-D454-DF8D1D5EB375";
-	setAttr ".t" -type "double3" 10.614314079284611 -2.3430214524276272 -10.552921295166087 ;
-	setAttr ".r" -type "double3" 89.999999999996078 0 0 ;
-	setAttr ".s" -type "double3" 1 1 1.0000000000000002 ;
+	rename -uid "1F19D0AB-4B10-66FB-038E-EAB33F52FF3F";
+	setAttr ".t" -type "double3" 10.614349999999998 -2.3430169999992794 10.552900000000154 ;
+	setAttr ".r" -type "double3" -90 0 0 ;
 createNode transform -n "Big_Toe_Jnt_R_FK_CTRL" -p "Big_Toe_Jnt_R_FK_CTRL_GRP";
 	rename -uid "D7E6EDED-448A-B869-B3BB-E08C47E842F7";
 createNode nurbsCurve -n "Big_Toe_Jnt_R_FK_CTRLShape" -p "Big_Toe_Jnt_R_FK_CTRL";
@@ -2129,8 +2322,57 @@ createNode nurbsCurve -n "Big_Toe_Jnt_R_FK_CTRLShape" -p "Big_Toe_Jnt_R_FK_CTRL"
 		5.2809666010734464 -11.16657416009487 -5.5409709377719381
 		3.4048385180320277 -12.249757213873048 -3.9180581244561221
 		;
+createNode transform -n "pointer_Toe_Jnt_R_FK_CTRL_GRP" -p "Ankle_Jnt_R_FK_CTRL";
+	rename -uid "3B78F971-4831-AB34-9D14-7E9912D8A907";
+	setAttr ".t" -type "double3" 8.8528599999999891 -13.544050000000002 -9.2015284280932974e-13 ;
+createNode transform -n "pointer_Toe_Jnt_R_FK_CTRL" -p "pointer_Toe_Jnt_R_FK_CTRL_GRP";
+	rename -uid "2184E2E3-40E7-7508-BF17-E7A71C015DAD";
+createNode nurbsCurve -n "pointer_Toe_Jnt_R_FK_CTRLShape" -p "pointer_Toe_Jnt_R_FK_CTRL";
+	rename -uid "63185BCF-4168-EF2A-E8CC-789878F9C22B";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		8.5960935211224978 -14.659093611881708 -3.9180581244561008
+		6.7199654380810792 -15.742276665659887 -5.5409709377719256
+		4.8438373550396605 -16.825459719438065 -3.9180581244560999
+		4.0667196582948684 -17.274128830845694 1.9219037243354876e-14
+		4.8438373550396605 -16.825459719438065 3.9180581244561448
+		6.7199654380810792 -15.742276665659887 5.540970937771954
+		8.5960935211224978 -14.659093611881708 3.9180581244561443
+		9.3732112178672935 -14.210424500474081 2.0261902405621099e-14
+		8.5960935211224978 -14.659093611881708 -3.9180581244561008
+		6.7199654380810792 -15.742276665659887 -5.5409709377719256
+		4.8438373550396605 -16.825459719438065 -3.9180581244560999
+		;
+createNode transform -n "pinky_Toe_Jnt_R_FK_CTRL_GRP" -p "Ankle_Jnt_R_FK_CTRL";
+	rename -uid "9B640EEC-4CB5-3CFE-2FC1-6BB6563D0E27";
+	setAttr ".t" -type "double3" 10.61434999999998 -2.3430170000007227 -10.552999999999852 ;
+	setAttr ".r" -type "double3" 90.000000000000014 0 0 ;
+createNode transform -n "pinky_Toe_Jnt_R_FK_CTRL" -p "pinky_Toe_Jnt_R_FK_CTRL_GRP";
+	rename -uid "9E5DECBA-444E-268D-0F47-D594361A8840";
+createNode nurbsCurve -n "pinky_Toe_Jnt_R_FK_CTRLShape" -p "pinky_Toe_Jnt_R_FK_CTRL";
+	rename -uid "5B588C63-4180-1766-D61B-89A149B8870A";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		6.7031123349381483 -10.406627505729467 -3.9180581244561008
+		4.8269842518967288 -11.489810559507646 -5.5409709377719256
+		2.9508561688553101 -12.572993613285824 -3.9180581244560999
+		2.173738472110518 -13.021662724693453 1.918470263158049e-14
+		2.9508561688553101 -12.572993613285824 3.9180581244561448
+		4.8269842518967288 -11.489810559507646 5.540970937771954
+		6.7031123349381483 -10.406627505729467 3.9180581244561443
+		7.4802300316829466 -9.9579583943218406 2.0227567793846713e-14
+		6.7031123349381483 -10.406627505729467 -3.9180581244561008
+		4.8269842518967288 -11.489810559507646 -5.5409709377719256
+		2.9508561688553101 -12.572993613285824 -3.9180581244560999
+		;
 createNode fosterParent -n "robot_modelRNfosterParent1";
-	rename -uid "87690137-403B-9796-5CAF-89B10BB7A403";
+	rename -uid "72A2F3B6-4629-CEC2-5D03-BB8F284D7842";
 createNode mesh -n "Robot_GeoShapeTag" -p "robot_modelRNfosterParent1";
 	rename -uid "2560DD4E-4165-DD59-8F71-DBBB8F667246";
 	setAttr -k off ".v";
@@ -2243,15 +2485,15 @@ createNode mesh -n "Robot_GeoShapeDeformed" -p "robot_modelRNfosterParent1";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "1CC07E02-4E34-171F-F0A9-FE80947B7DE8";
+	rename -uid "B894E8E3-4D5F-D854-F5B6-F88B926CF8F1";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "4786CEB0-44F5-B632-5DCD-1F806ED949DB";
+	rename -uid "8CE25362-4FF6-8422-13BB-A0B4BD6DBCC5";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "E0F8CB36-4032-3F7C-C561-E5834EA2E912";
+	rename -uid "C33CA7F5-4EF9-6490-4DFC-C6ACA50188B6";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "9FBE11CF-4773-7BFD-7F76-C78858D2D6ED";
+	rename -uid "99D03314-47CD-64CF-1143-48AC5B888DFF";
 	setAttr ".cdl" 5;
 	setAttr -s 5 ".dli[1:4]"  5 2 3 4;
 	setAttr -s 4 ".dli";
@@ -2259,7 +2501,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "4EC9DC17-4CB3-FA8A-4545-3A920C0BDE60";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "7D2E71B7-464E-BFBC-1392-3B9F569D878A";
+	rename -uid "CCD6D48E-47D2-48C5-FA58-73A20204DF0E";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "81610281-49D8-F458-0B10-A99BFD561473";
 	setAttr ".g" yes;
@@ -2319,15 +2561,15 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 606\n            -height 330\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 605\n            -height 329\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
-		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 606\n            -height 329\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
 		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1218\n            -height 706\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
@@ -2355,7 +2597,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
 		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
 		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
-		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
+		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
 		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1218\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1218\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
@@ -2433,6 +2675,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "robot_modelRN.phl[1]" "Robot_GeoShapeTag.i";
 connectAttr "Robot_GeoShapeDeformed.iog" "robot_modelRN.phl[2]";
 connectAttr "SKEL_layer.di" "Skeleton.do";
@@ -3251,18 +3495,322 @@ connectAttr "Hip_Ball_Socket_FK_Jnt_L.s" "Upper_Leg_RK_Jnt_L.is";
 connectAttr "Upper_Leg_RK_Jnt_L.s" "Knee_RK_Jnt_L.is";
 connectAttr "Knee_RK_Jnt_L.s" "Ankle_RK_Jnt_L.is";
 connectAttr "hips_FK_Jnt.s" "Hip_Ball_Socket_FK_Jnt_R.is";
+connectAttr "Hip_Ball_Socket_FK_Jnt_R_scaleConstraint1.csx" "Hip_Ball_Socket_FK_Jnt_R.sx"
+		;
+connectAttr "Hip_Ball_Socket_FK_Jnt_R_scaleConstraint1.csy" "Hip_Ball_Socket_FK_Jnt_R.sy"
+		;
+connectAttr "Hip_Ball_Socket_FK_Jnt_R_scaleConstraint1.csz" "Hip_Ball_Socket_FK_Jnt_R.sz"
+		;
+connectAttr "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.ctx" "Hip_Ball_Socket_FK_Jnt_R.tx"
+		;
+connectAttr "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.cty" "Hip_Ball_Socket_FK_Jnt_R.ty"
+		;
+connectAttr "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.ctz" "Hip_Ball_Socket_FK_Jnt_R.tz"
+		;
+connectAttr "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.crx" "Hip_Ball_Socket_FK_Jnt_R.rx"
+		;
+connectAttr "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.cry" "Hip_Ball_Socket_FK_Jnt_R.ry"
+		;
+connectAttr "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.crz" "Hip_Ball_Socket_FK_Jnt_R.rz"
+		;
 connectAttr "Hip_Ball_Socket_FK_Jnt_R.s" "Upper_Leg_FK_Jnt_R.is";
+connectAttr "Upper_Leg_FK_Jnt_R_scaleConstraint1.csx" "Upper_Leg_FK_Jnt_R.sx";
+connectAttr "Upper_Leg_FK_Jnt_R_scaleConstraint1.csy" "Upper_Leg_FK_Jnt_R.sy";
+connectAttr "Upper_Leg_FK_Jnt_R_scaleConstraint1.csz" "Upper_Leg_FK_Jnt_R.sz";
+connectAttr "Upper_Leg_FK_Jnt_R_parentConstraint1.ctx" "Upper_Leg_FK_Jnt_R.tx";
+connectAttr "Upper_Leg_FK_Jnt_R_parentConstraint1.cty" "Upper_Leg_FK_Jnt_R.ty";
+connectAttr "Upper_Leg_FK_Jnt_R_parentConstraint1.ctz" "Upper_Leg_FK_Jnt_R.tz";
+connectAttr "Upper_Leg_FK_Jnt_R_parentConstraint1.crx" "Upper_Leg_FK_Jnt_R.rx";
+connectAttr "Upper_Leg_FK_Jnt_R_parentConstraint1.cry" "Upper_Leg_FK_Jnt_R.ry";
+connectAttr "Upper_Leg_FK_Jnt_R_parentConstraint1.crz" "Upper_Leg_FK_Jnt_R.rz";
 connectAttr "Upper_Leg_FK_Jnt_R.s" "Knee_FK_Jnt_R.is";
+connectAttr "Knee_FK_Jnt_R_scaleConstraint1.csx" "Knee_FK_Jnt_R.sx";
+connectAttr "Knee_FK_Jnt_R_scaleConstraint1.csy" "Knee_FK_Jnt_R.sy";
+connectAttr "Knee_FK_Jnt_R_scaleConstraint1.csz" "Knee_FK_Jnt_R.sz";
+connectAttr "Knee_FK_Jnt_R_parentConstraint1.ctx" "Knee_FK_Jnt_R.tx";
+connectAttr "Knee_FK_Jnt_R_parentConstraint1.cty" "Knee_FK_Jnt_R.ty";
+connectAttr "Knee_FK_Jnt_R_parentConstraint1.ctz" "Knee_FK_Jnt_R.tz";
+connectAttr "Knee_FK_Jnt_R_parentConstraint1.crx" "Knee_FK_Jnt_R.rx";
+connectAttr "Knee_FK_Jnt_R_parentConstraint1.cry" "Knee_FK_Jnt_R.ry";
+connectAttr "Knee_FK_Jnt_R_parentConstraint1.crz" "Knee_FK_Jnt_R.rz";
 connectAttr "Knee_FK_Jnt_R.s" "Ankle_FK_Jnt_R.is";
+connectAttr "Ankle_FK_Jnt_R_scaleConstraint1.csx" "Ankle_FK_Jnt_R.sx";
+connectAttr "Ankle_FK_Jnt_R_scaleConstraint1.csy" "Ankle_FK_Jnt_R.sy";
+connectAttr "Ankle_FK_Jnt_R_scaleConstraint1.csz" "Ankle_FK_Jnt_R.sz";
+connectAttr "Ankle_FK_Jnt_R_parentConstraint1.ctx" "Ankle_FK_Jnt_R.tx";
+connectAttr "Ankle_FK_Jnt_R_parentConstraint1.cty" "Ankle_FK_Jnt_R.ty";
+connectAttr "Ankle_FK_Jnt_R_parentConstraint1.ctz" "Ankle_FK_Jnt_R.tz";
+connectAttr "Ankle_FK_Jnt_R_parentConstraint1.crx" "Ankle_FK_Jnt_R.rx";
+connectAttr "Ankle_FK_Jnt_R_parentConstraint1.cry" "Ankle_FK_Jnt_R.ry";
+connectAttr "Ankle_FK_Jnt_R_parentConstraint1.crz" "Ankle_FK_Jnt_R.rz";
 connectAttr "Ankle_FK_Jnt_R.s" "Big_FK_Jnt_Toe_Jnt_R.is";
+connectAttr "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.ctx" "Big_FK_Jnt_Toe_Jnt_R.tx"
+		;
+connectAttr "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.cty" "Big_FK_Jnt_Toe_Jnt_R.ty"
+		;
+connectAttr "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.ctz" "Big_FK_Jnt_Toe_Jnt_R.tz"
+		;
+connectAttr "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.crx" "Big_FK_Jnt_Toe_Jnt_R.rx"
+		;
+connectAttr "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.cry" "Big_FK_Jnt_Toe_Jnt_R.ry"
+		;
+connectAttr "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.crz" "Big_FK_Jnt_Toe_Jnt_R.rz"
+		;
+connectAttr "Big_FK_Jnt_Toe_Jnt_R_scaleConstraint1.csx" "Big_FK_Jnt_Toe_Jnt_R.sx"
+		;
+connectAttr "Big_FK_Jnt_Toe_Jnt_R_scaleConstraint1.csy" "Big_FK_Jnt_Toe_Jnt_R.sy"
+		;
+connectAttr "Big_FK_Jnt_Toe_Jnt_R_scaleConstraint1.csz" "Big_FK_Jnt_Toe_Jnt_R.sz"
+		;
+connectAttr "Big_FK_Jnt_Toe_Jnt_R.ro" "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.cro"
+		;
+connectAttr "Big_FK_Jnt_Toe_Jnt_R.pim" "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.cpim"
+		;
+connectAttr "Big_FK_Jnt_Toe_Jnt_R.rp" "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.crp"
+		;
+connectAttr "Big_FK_Jnt_Toe_Jnt_R.rpt" "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.crt"
+		;
+connectAttr "Big_FK_Jnt_Toe_Jnt_R.jo" "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.cjo"
+		;
+connectAttr "Big_Toe_Jnt_R_FK_CTRL.t" "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Big_Toe_Jnt_R_FK_CTRL.rp" "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Big_Toe_Jnt_R_FK_CTRL.rpt" "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Big_Toe_Jnt_R_FK_CTRL.r" "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Big_Toe_Jnt_R_FK_CTRL.ro" "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Big_Toe_Jnt_R_FK_CTRL.s" "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Big_Toe_Jnt_R_FK_CTRL.pm" "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.w0" "Big_FK_Jnt_Toe_Jnt_R_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Big_FK_Jnt_Toe_Jnt_R.ssc" "Big_FK_Jnt_Toe_Jnt_R_scaleConstraint1.tsc"
+		;
+connectAttr "Big_FK_Jnt_Toe_Jnt_R.pim" "Big_FK_Jnt_Toe_Jnt_R_scaleConstraint1.cpim"
+		;
+connectAttr "Big_Toe_Jnt_R_FK_CTRL.s" "Big_FK_Jnt_Toe_Jnt_R_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Big_Toe_Jnt_R_FK_CTRL.pm" "Big_FK_Jnt_Toe_Jnt_R_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Big_FK_Jnt_Toe_Jnt_R_scaleConstraint1.w0" "Big_FK_Jnt_Toe_Jnt_R_scaleConstraint1.tg[0].tw"
+		;
 connectAttr "Ankle_FK_Jnt_R.s" "pointer_Toe_FK_Jnt_R.is";
+connectAttr "pointer_Toe_FK_Jnt_R_parentConstraint1.ctx" "pointer_Toe_FK_Jnt_R.tx"
+		;
+connectAttr "pointer_Toe_FK_Jnt_R_parentConstraint1.cty" "pointer_Toe_FK_Jnt_R.ty"
+		;
+connectAttr "pointer_Toe_FK_Jnt_R_parentConstraint1.ctz" "pointer_Toe_FK_Jnt_R.tz"
+		;
+connectAttr "pointer_Toe_FK_Jnt_R_parentConstraint1.crx" "pointer_Toe_FK_Jnt_R.rx"
+		;
+connectAttr "pointer_Toe_FK_Jnt_R_parentConstraint1.cry" "pointer_Toe_FK_Jnt_R.ry"
+		;
+connectAttr "pointer_Toe_FK_Jnt_R_parentConstraint1.crz" "pointer_Toe_FK_Jnt_R.rz"
+		;
+connectAttr "pointer_Toe_FK_Jnt_R_scaleConstraint1.csx" "pointer_Toe_FK_Jnt_R.sx"
+		;
+connectAttr "pointer_Toe_FK_Jnt_R_scaleConstraint1.csy" "pointer_Toe_FK_Jnt_R.sy"
+		;
+connectAttr "pointer_Toe_FK_Jnt_R_scaleConstraint1.csz" "pointer_Toe_FK_Jnt_R.sz"
+		;
+connectAttr "pointer_Toe_FK_Jnt_R.ro" "pointer_Toe_FK_Jnt_R_parentConstraint1.cro"
+		;
+connectAttr "pointer_Toe_FK_Jnt_R.pim" "pointer_Toe_FK_Jnt_R_parentConstraint1.cpim"
+		;
+connectAttr "pointer_Toe_FK_Jnt_R.rp" "pointer_Toe_FK_Jnt_R_parentConstraint1.crp"
+		;
+connectAttr "pointer_Toe_FK_Jnt_R.rpt" "pointer_Toe_FK_Jnt_R_parentConstraint1.crt"
+		;
+connectAttr "pointer_Toe_FK_Jnt_R.jo" "pointer_Toe_FK_Jnt_R_parentConstraint1.cjo"
+		;
+connectAttr "pointer_Toe_Jnt_R_FK_CTRL.t" "pointer_Toe_FK_Jnt_R_parentConstraint1.tg[0].tt"
+		;
+connectAttr "pointer_Toe_Jnt_R_FK_CTRL.rp" "pointer_Toe_FK_Jnt_R_parentConstraint1.tg[0].trp"
+		;
+connectAttr "pointer_Toe_Jnt_R_FK_CTRL.rpt" "pointer_Toe_FK_Jnt_R_parentConstraint1.tg[0].trt"
+		;
+connectAttr "pointer_Toe_Jnt_R_FK_CTRL.r" "pointer_Toe_FK_Jnt_R_parentConstraint1.tg[0].tr"
+		;
+connectAttr "pointer_Toe_Jnt_R_FK_CTRL.ro" "pointer_Toe_FK_Jnt_R_parentConstraint1.tg[0].tro"
+		;
+connectAttr "pointer_Toe_Jnt_R_FK_CTRL.s" "pointer_Toe_FK_Jnt_R_parentConstraint1.tg[0].ts"
+		;
+connectAttr "pointer_Toe_Jnt_R_FK_CTRL.pm" "pointer_Toe_FK_Jnt_R_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "pointer_Toe_FK_Jnt_R_parentConstraint1.w0" "pointer_Toe_FK_Jnt_R_parentConstraint1.tg[0].tw"
+		;
+connectAttr "pointer_Toe_FK_Jnt_R.ssc" "pointer_Toe_FK_Jnt_R_scaleConstraint1.tsc"
+		;
+connectAttr "pointer_Toe_FK_Jnt_R.pim" "pointer_Toe_FK_Jnt_R_scaleConstraint1.cpim"
+		;
+connectAttr "pointer_Toe_Jnt_R_FK_CTRL.s" "pointer_Toe_FK_Jnt_R_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "pointer_Toe_Jnt_R_FK_CTRL.pm" "pointer_Toe_FK_Jnt_R_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "pointer_Toe_FK_Jnt_R_scaleConstraint1.w0" "pointer_Toe_FK_Jnt_R_scaleConstraint1.tg[0].tw"
+		;
 connectAttr "Ankle_FK_Jnt_R.s" "pinky_Toe_FK_Jnt_R.is";
+connectAttr "pinky_Toe_FK_Jnt_R_parentConstraint1.ctx" "pinky_Toe_FK_Jnt_R.tx";
+connectAttr "pinky_Toe_FK_Jnt_R_parentConstraint1.cty" "pinky_Toe_FK_Jnt_R.ty";
+connectAttr "pinky_Toe_FK_Jnt_R_parentConstraint1.ctz" "pinky_Toe_FK_Jnt_R.tz";
+connectAttr "pinky_Toe_FK_Jnt_R_parentConstraint1.crx" "pinky_Toe_FK_Jnt_R.rx";
+connectAttr "pinky_Toe_FK_Jnt_R_parentConstraint1.cry" "pinky_Toe_FK_Jnt_R.ry";
+connectAttr "pinky_Toe_FK_Jnt_R_parentConstraint1.crz" "pinky_Toe_FK_Jnt_R.rz";
+connectAttr "pinky_Toe_FK_Jnt_R_scaleConstraint1.csx" "pinky_Toe_FK_Jnt_R.sx";
+connectAttr "pinky_Toe_FK_Jnt_R_scaleConstraint1.csy" "pinky_Toe_FK_Jnt_R.sy";
+connectAttr "pinky_Toe_FK_Jnt_R_scaleConstraint1.csz" "pinky_Toe_FK_Jnt_R.sz";
+connectAttr "pinky_Toe_FK_Jnt_R.ro" "pinky_Toe_FK_Jnt_R_parentConstraint1.cro";
+connectAttr "pinky_Toe_FK_Jnt_R.pim" "pinky_Toe_FK_Jnt_R_parentConstraint1.cpim"
+		;
+connectAttr "pinky_Toe_FK_Jnt_R.rp" "pinky_Toe_FK_Jnt_R_parentConstraint1.crp";
+connectAttr "pinky_Toe_FK_Jnt_R.rpt" "pinky_Toe_FK_Jnt_R_parentConstraint1.crt";
+connectAttr "pinky_Toe_FK_Jnt_R.jo" "pinky_Toe_FK_Jnt_R_parentConstraint1.cjo";
+connectAttr "pinky_Toe_Jnt_R_FK_CTRL.t" "pinky_Toe_FK_Jnt_R_parentConstraint1.tg[0].tt"
+		;
+connectAttr "pinky_Toe_Jnt_R_FK_CTRL.rp" "pinky_Toe_FK_Jnt_R_parentConstraint1.tg[0].trp"
+		;
+connectAttr "pinky_Toe_Jnt_R_FK_CTRL.rpt" "pinky_Toe_FK_Jnt_R_parentConstraint1.tg[0].trt"
+		;
+connectAttr "pinky_Toe_Jnt_R_FK_CTRL.r" "pinky_Toe_FK_Jnt_R_parentConstraint1.tg[0].tr"
+		;
+connectAttr "pinky_Toe_Jnt_R_FK_CTRL.ro" "pinky_Toe_FK_Jnt_R_parentConstraint1.tg[0].tro"
+		;
+connectAttr "pinky_Toe_Jnt_R_FK_CTRL.s" "pinky_Toe_FK_Jnt_R_parentConstraint1.tg[0].ts"
+		;
+connectAttr "pinky_Toe_Jnt_R_FK_CTRL.pm" "pinky_Toe_FK_Jnt_R_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "pinky_Toe_FK_Jnt_R_parentConstraint1.w0" "pinky_Toe_FK_Jnt_R_parentConstraint1.tg[0].tw"
+		;
+connectAttr "pinky_Toe_FK_Jnt_R.ssc" "pinky_Toe_FK_Jnt_R_scaleConstraint1.tsc";
+connectAttr "pinky_Toe_FK_Jnt_R.pim" "pinky_Toe_FK_Jnt_R_scaleConstraint1.cpim";
+connectAttr "pinky_Toe_Jnt_R_FK_CTRL.s" "pinky_Toe_FK_Jnt_R_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "pinky_Toe_Jnt_R_FK_CTRL.pm" "pinky_Toe_FK_Jnt_R_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "pinky_Toe_FK_Jnt_R_scaleConstraint1.w0" "pinky_Toe_FK_Jnt_R_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Ankle_FK_Jnt_R.ro" "Ankle_FK_Jnt_R_parentConstraint1.cro";
+connectAttr "Ankle_FK_Jnt_R.pim" "Ankle_FK_Jnt_R_parentConstraint1.cpim";
+connectAttr "Ankle_FK_Jnt_R.rp" "Ankle_FK_Jnt_R_parentConstraint1.crp";
+connectAttr "Ankle_FK_Jnt_R.rpt" "Ankle_FK_Jnt_R_parentConstraint1.crt";
+connectAttr "Ankle_FK_Jnt_R.jo" "Ankle_FK_Jnt_R_parentConstraint1.cjo";
+connectAttr "Ankle_Jnt_R_FK_CTRL.t" "Ankle_FK_Jnt_R_parentConstraint1.tg[0].tt";
+connectAttr "Ankle_Jnt_R_FK_CTRL.rp" "Ankle_FK_Jnt_R_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ankle_Jnt_R_FK_CTRL.rpt" "Ankle_FK_Jnt_R_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ankle_Jnt_R_FK_CTRL.r" "Ankle_FK_Jnt_R_parentConstraint1.tg[0].tr";
+connectAttr "Ankle_Jnt_R_FK_CTRL.ro" "Ankle_FK_Jnt_R_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ankle_Jnt_R_FK_CTRL.s" "Ankle_FK_Jnt_R_parentConstraint1.tg[0].ts";
+connectAttr "Ankle_Jnt_R_FK_CTRL.pm" "Ankle_FK_Jnt_R_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ankle_FK_Jnt_R_parentConstraint1.w0" "Ankle_FK_Jnt_R_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ankle_FK_Jnt_R.ssc" "Ankle_FK_Jnt_R_scaleConstraint1.tsc";
+connectAttr "Ankle_FK_Jnt_R.pim" "Ankle_FK_Jnt_R_scaleConstraint1.cpim";
+connectAttr "Ankle_Jnt_R_FK_CTRL.s" "Ankle_FK_Jnt_R_scaleConstraint1.tg[0].ts";
+connectAttr "Ankle_Jnt_R_FK_CTRL.pm" "Ankle_FK_Jnt_R_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Ankle_FK_Jnt_R_scaleConstraint1.w0" "Ankle_FK_Jnt_R_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Knee_FK_Jnt_R.ro" "Knee_FK_Jnt_R_parentConstraint1.cro";
+connectAttr "Knee_FK_Jnt_R.pim" "Knee_FK_Jnt_R_parentConstraint1.cpim";
+connectAttr "Knee_FK_Jnt_R.rp" "Knee_FK_Jnt_R_parentConstraint1.crp";
+connectAttr "Knee_FK_Jnt_R.rpt" "Knee_FK_Jnt_R_parentConstraint1.crt";
+connectAttr "Knee_FK_Jnt_R.jo" "Knee_FK_Jnt_R_parentConstraint1.cjo";
+connectAttr "Knee_Jnt_R_FK_CTRL.t" "Knee_FK_Jnt_R_parentConstraint1.tg[0].tt";
+connectAttr "Knee_Jnt_R_FK_CTRL.rp" "Knee_FK_Jnt_R_parentConstraint1.tg[0].trp";
+connectAttr "Knee_Jnt_R_FK_CTRL.rpt" "Knee_FK_Jnt_R_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Knee_Jnt_R_FK_CTRL.r" "Knee_FK_Jnt_R_parentConstraint1.tg[0].tr";
+connectAttr "Knee_Jnt_R_FK_CTRL.ro" "Knee_FK_Jnt_R_parentConstraint1.tg[0].tro";
+connectAttr "Knee_Jnt_R_FK_CTRL.s" "Knee_FK_Jnt_R_parentConstraint1.tg[0].ts";
+connectAttr "Knee_Jnt_R_FK_CTRL.pm" "Knee_FK_Jnt_R_parentConstraint1.tg[0].tpm";
+connectAttr "Knee_FK_Jnt_R_parentConstraint1.w0" "Knee_FK_Jnt_R_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Knee_FK_Jnt_R.ssc" "Knee_FK_Jnt_R_scaleConstraint1.tsc";
+connectAttr "Knee_FK_Jnt_R.pim" "Knee_FK_Jnt_R_scaleConstraint1.cpim";
+connectAttr "Knee_Jnt_R_FK_CTRL.s" "Knee_FK_Jnt_R_scaleConstraint1.tg[0].ts";
+connectAttr "Knee_Jnt_R_FK_CTRL.pm" "Knee_FK_Jnt_R_scaleConstraint1.tg[0].tpm";
+connectAttr "Knee_FK_Jnt_R_scaleConstraint1.w0" "Knee_FK_Jnt_R_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Upper_Leg_FK_Jnt_R.ro" "Upper_Leg_FK_Jnt_R_parentConstraint1.cro";
+connectAttr "Upper_Leg_FK_Jnt_R.pim" "Upper_Leg_FK_Jnt_R_parentConstraint1.cpim"
+		;
+connectAttr "Upper_Leg_FK_Jnt_R.rp" "Upper_Leg_FK_Jnt_R_parentConstraint1.crp";
+connectAttr "Upper_Leg_FK_Jnt_R.rpt" "Upper_Leg_FK_Jnt_R_parentConstraint1.crt";
+connectAttr "Upper_Leg_FK_Jnt_R.jo" "Upper_Leg_FK_Jnt_R_parentConstraint1.cjo";
+connectAttr "Upper_Leg_Jnt_R_FK_CTRL.t" "Upper_Leg_FK_Jnt_R_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Upper_Leg_Jnt_R_FK_CTRL.rp" "Upper_Leg_FK_Jnt_R_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Upper_Leg_Jnt_R_FK_CTRL.rpt" "Upper_Leg_FK_Jnt_R_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Upper_Leg_Jnt_R_FK_CTRL.r" "Upper_Leg_FK_Jnt_R_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Upper_Leg_Jnt_R_FK_CTRL.ro" "Upper_Leg_FK_Jnt_R_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Upper_Leg_Jnt_R_FK_CTRL.s" "Upper_Leg_FK_Jnt_R_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Upper_Leg_Jnt_R_FK_CTRL.pm" "Upper_Leg_FK_Jnt_R_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Upper_Leg_FK_Jnt_R_parentConstraint1.w0" "Upper_Leg_FK_Jnt_R_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Upper_Leg_FK_Jnt_R.ssc" "Upper_Leg_FK_Jnt_R_scaleConstraint1.tsc";
+connectAttr "Upper_Leg_FK_Jnt_R.pim" "Upper_Leg_FK_Jnt_R_scaleConstraint1.cpim";
+connectAttr "Upper_Leg_Jnt_R_FK_CTRL.s" "Upper_Leg_FK_Jnt_R_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Upper_Leg_Jnt_R_FK_CTRL.pm" "Upper_Leg_FK_Jnt_R_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Upper_Leg_FK_Jnt_R_scaleConstraint1.w0" "Upper_Leg_FK_Jnt_R_scaleConstraint1.tg[0].tw"
+		;
 connectAttr "Hip_Ball_Socket_FK_Jnt_R.s" "Upper_Leg_IK_Jnt_R.is";
 connectAttr "Upper_Leg_IK_Jnt_R.s" "Knee_IK_Jnt_R.is";
 connectAttr "Knee_IK_Jnt_R.s" "Ankle_IK_Jnt_R.is";
 connectAttr "Hip_Ball_Socket_FK_Jnt_R.s" "Upper_Leg_RK_Jnt_R.is";
 connectAttr "Upper_Leg_RK_Jnt_R.s" "Knee_RK_Jnt_R.is";
 connectAttr "Knee_RK_Jnt_R.s" "Ankle_RK_Jnt_R.is";
+connectAttr "Hip_Ball_Socket_FK_Jnt_R.ro" "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.cro"
+		;
+connectAttr "Hip_Ball_Socket_FK_Jnt_R.pim" "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.cpim"
+		;
+connectAttr "Hip_Ball_Socket_FK_Jnt_R.rp" "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.crp"
+		;
+connectAttr "Hip_Ball_Socket_FK_Jnt_R.rpt" "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.crt"
+		;
+connectAttr "Hip_Ball_Socket_FK_Jnt_R.jo" "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.cjo"
+		;
+connectAttr "Hip_Ball_Socket_Jnt_R_FK_CTRL.t" "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Hip_Ball_Socket_Jnt_R_FK_CTRL.rp" "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Hip_Ball_Socket_Jnt_R_FK_CTRL.rpt" "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Hip_Ball_Socket_Jnt_R_FK_CTRL.r" "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Hip_Ball_Socket_Jnt_R_FK_CTRL.ro" "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Hip_Ball_Socket_Jnt_R_FK_CTRL.s" "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Hip_Ball_Socket_Jnt_R_FK_CTRL.pm" "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.w0" "Hip_Ball_Socket_FK_Jnt_R_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Hip_Ball_Socket_FK_Jnt_R.ssc" "Hip_Ball_Socket_FK_Jnt_R_scaleConstraint1.tsc"
+		;
+connectAttr "Hip_Ball_Socket_FK_Jnt_R.pim" "Hip_Ball_Socket_FK_Jnt_R_scaleConstraint1.cpim"
+		;
+connectAttr "Hip_Ball_Socket_Jnt_R_FK_CTRL.s" "Hip_Ball_Socket_FK_Jnt_R_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Hip_Ball_Socket_Jnt_R_FK_CTRL.pm" "Hip_Ball_Socket_FK_Jnt_R_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Hip_Ball_Socket_FK_Jnt_R_scaleConstraint1.w0" "Hip_Ball_Socket_FK_Jnt_R_scaleConstraint1.tg[0].tw"
+		;
 connectAttr "hips_FK_Jnt.ro" "hips_FK_Jnt_parentConstraint1.cro";
 connectAttr "hips_FK_Jnt.pim" "hips_FK_Jnt_parentConstraint1.cpim";
 connectAttr "hips_FK_Jnt.rp" "hips_FK_Jnt_parentConstraint1.crp";
