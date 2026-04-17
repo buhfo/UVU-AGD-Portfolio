@@ -456,11 +456,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2950044598611839294, guid: 9bdca1f1b42e3f14188f4607ec84ad57, type: 3}
       propertyPath: size.x
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2950044598611839294, guid: 9bdca1f1b42e3f14188f4607ec84ad57, type: 3}
       propertyPath: size.y
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2950044598611839294, guid: 9bdca1f1b42e3f14188f4607ec84ad57, type: 3}
       propertyPath: halls.Array.size
@@ -496,19 +496,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2950044598611839294, guid: 9bdca1f1b42e3f14188f4607ec84ad57, type: 3}
       propertyPath: halls.Array.data[1].maxPosition.x
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2950044598611839294, guid: 9bdca1f1b42e3f14188f4607ec84ad57, type: 3}
       propertyPath: halls.Array.data[1].maxPosition.y
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2950044598611839294, guid: 9bdca1f1b42e3f14188f4607ec84ad57, type: 3}
       propertyPath: halls.Array.data[2].maxPosition.x
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2950044598611839294, guid: 9bdca1f1b42e3f14188f4607ec84ad57, type: 3}
       propertyPath: halls.Array.data[2].maxPosition.y
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2950044598611839294, guid: 9bdca1f1b42e3f14188f4607ec84ad57, type: 3}
       propertyPath: halls.Array.data[2].minPosition.x
@@ -520,19 +520,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2950044598611839294, guid: 9bdca1f1b42e3f14188f4607ec84ad57, type: 3}
       propertyPath: halls.Array.data[3].maxPosition.x
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2950044598611839294, guid: 9bdca1f1b42e3f14188f4607ec84ad57, type: 3}
       propertyPath: halls.Array.data[3].maxPosition.y
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2950044598611839294, guid: 9bdca1f1b42e3f14188f4607ec84ad57, type: 3}
       propertyPath: halls.Array.data[3].minPosition.x
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2950044598611839294, guid: 9bdca1f1b42e3f14188f4607ec84ad57, type: 3}
       propertyPath: halls.Array.data[3].minPosition.y
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5199259299291176113, guid: 9bdca1f1b42e3f14188f4607ec84ad57, type: 3}
       propertyPath: m_LocalPosition.x
