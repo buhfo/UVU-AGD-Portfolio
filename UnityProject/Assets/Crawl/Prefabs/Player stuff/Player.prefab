@@ -303,9 +303,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementData: {fileID: 11400000, guid: 960d9f05f91ac0c46ad2c3907a04cbd7, type: 2}
-  player:
-    serializedVersion: 2
-    m_Bits: 256
   frontBlocked: 0
   playerInFront: 0
 --- !u!114 &8583603347983815405
