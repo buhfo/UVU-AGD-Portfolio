@@ -51,7 +51,6 @@ namespace Crawl.Scripts
                 movementData.rayLength
             );
             
-            Debug.Log(playerInFront);
             Debug.DrawRay(origin, transform.forward * movementData.rayLength, Color.red, 0.5f);
             Debug.DrawRay(origin, -transform.forward * movementData.rayLength, Color.blue, 0.5f);
         }

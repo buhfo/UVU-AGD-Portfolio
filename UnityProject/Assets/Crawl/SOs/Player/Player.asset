@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94440cd572df945428794b94aacad44d, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: Assembly-CSharp::EntityData
-  health: 10
+  health: 8
   healthMax: 10
   experience: 0
   experienceMax: 2147483647

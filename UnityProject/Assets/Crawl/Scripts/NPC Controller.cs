@@ -53,7 +53,7 @@ namespace Crawl.Scripts
         }
         
         
-        // this chooses whether to turn left or right but it still needs to be called though
+        // this chooses whether to turn left or right, but it still needs to be called though
         private void Rotate()
         {
             if (_lastMovement == 0)
