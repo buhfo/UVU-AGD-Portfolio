@@ -31,7 +31,7 @@ AnimatorStateTransition:
   m_Name: playerTakeDamage
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: LoseHealth
+    m_ConditionEvent: Remove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6409886835807548021}
@@ -100,7 +100,7 @@ AnimatorStateTransition:
   m_Name: playerTakeDamage
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: LoseHealth
+    m_ConditionEvent: Remove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6409886835807548021}
@@ -147,7 +147,7 @@ AnimatorController:
   m_Name: Heart
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: LoseHealth
+  - m_Name: Remove
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0

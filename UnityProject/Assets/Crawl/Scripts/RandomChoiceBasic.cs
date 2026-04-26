@@ -36,8 +36,6 @@ namespace Crawl.Scripts
         {
             var randomNumber = RandomNumber(minNum, maxNum);
 
-            Debug.Log("Random number rolled: " + randomNumber);
-
             foreach (var t in actions)
             {
                 if (t.number != randomNumber) continue;
@@ -45,7 +43,6 @@ namespace Crawl.Scripts
                 return;
             }
 
-            Debug.Log("No action assigned for number: " + randomNumber);
         }
     }
 }
