@@ -222,6 +222,7 @@ MonoBehaviour:
   startLocation: {fileID: 76023892936069177}
   canvas: {fileID: 5984456234101922543}
   removeTrigger: Remove
+  removeStateName: HeartExplode
 --- !u!114 &34608326457322118
 MonoBehaviour:
   m_ObjectHideFlags: 0

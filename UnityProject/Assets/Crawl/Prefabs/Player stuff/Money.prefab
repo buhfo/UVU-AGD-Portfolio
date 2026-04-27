@@ -118,9 +118,6 @@ MonoBehaviour:
       m_Calls: []
   respondEvent:
     m_PersistentCalls:
-      m_Calls: []
-  respondLateEvent:
-    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5640828919950614085}
         m_TargetAssemblyTypeName: Crawl.Scripts.RandomChoiceBasic, Assembly-CSharp
@@ -134,6 +131,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  respondLateEvent:
+    m_PersistentCalls:
+      m_Calls: []
   holdTime: 0.1
 --- !u!114 &5640828919950614085
 MonoBehaviour:
