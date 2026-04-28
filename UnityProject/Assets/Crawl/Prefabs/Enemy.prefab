@@ -188,7 +188,19 @@ MonoBehaviour:
   entityData: {fileID: 0}
   takeDamage:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6190206024569549949}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Take Damage
+          m_BoolArgument: 0
+        m_CallState: 2
   deathActivate:
     m_PersistentCalls:
       m_Calls:
@@ -207,16 +219,61 @@ MonoBehaviour:
   attackPlayer:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
+      - m_Target: {fileID: 6190206024569549949}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Attack
+          m_BoolArgument: 0
+        m_CallState: 2
+  startMoving:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6190206024569549949}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Walk
+          m_BoolArgument: 0
+        m_CallState: 2
+  stopMoving:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6190206024569549949}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Idle
+          m_BoolArgument: 0
+        m_CallState: 2
+  turnBody:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6190206024569549949}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Turn
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &7999332921123303630
@@ -311,6 +368,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7252775002857154158, guid: 4906b0ccb6231a647a0e6d80f5f2986e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6190206024569549949}
+    - targetCorrespondingSourceObject: {fileID: 7252775002857154158, guid: 4906b0ccb6231a647a0e6d80f5f2986e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 337188265586457338}
   m_SourcePrefab: {fileID: 100100000, guid: 4906b0ccb6231a647a0e6d80f5f2986e, type: 3}
 --- !u!4 &7317432181475003328 stripped
 Transform:
@@ -344,3 +404,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &337188265586457338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7982469124400091514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca2024820aba200458658f5bf4266512, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  enemyData: {fileID: 11400000, guid: 5cd9c36a1a2ad7b4d8f6d85f9b1a9486, type: 2}
+  entityData: {fileID: 11400000, guid: b8eab6c75a519a34bac6d37653f97389, type: 2}

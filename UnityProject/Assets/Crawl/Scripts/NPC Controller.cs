@@ -11,7 +11,7 @@ namespace Crawl.Scripts
         public EntityData template, playerStats;
         [HideInInspector]
         public EntityData entityData;
-        public UnityEvent takeDamage, deathActivate, attackPlayer;
+        public UnityEvent takeDamage, deathActivate, attackPlayer, startMoving, stopMoving, turnBody;
         
         private float _seconds;
         
@@ -48,6 +48,7 @@ namespace Crawl.Scripts
 
         private void Forward()
         {
+            startMoving.Invoke();
             _movementManager.MoveForward();
             _lastMovement = 0;
         }
@@ -64,9 +65,11 @@ namespace Crawl.Scripts
             switch (_lastMovement)
             {
                 case 1:
+                    turnBody.Invoke();
                     _movementManager.RotateLeft();
                     break;
                 case 2:
+                    turnBody.Invoke();
                     _movementManager.RotateRight();
                     break;
             }
@@ -84,9 +87,10 @@ namespace Crawl.Scripts
                     else Rotate();
                 else
                     Forward();
-        
+                stopMoving.Invoke();
                 yield return new WaitForSeconds(_seconds);
                 _movementManager.CheckSurroundings();
+                
             }
         }
         
@@ -100,7 +104,7 @@ namespace Crawl.Scripts
 
         private void DamagePlayer()
         {
-            playerStats.ChangeHealth(-entityData.attack);
+            attackPlayer.Invoke();
         }
         
     }
