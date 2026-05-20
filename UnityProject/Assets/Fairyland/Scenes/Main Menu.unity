@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 20089208}
   - component: {fileID: 20089207}
   - component: {fileID: 20089209}
+  - component: {fileID: 20089210}
   m_Layer: 5
   m_Name: background
   m_TagString: Untagged
@@ -356,6 +357,122 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &20089210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20089205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5caaab994aabc4d93886017f8f1ece6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  handlerList:
+  - action: {fileID: 11400000, guid: 6eadb0e846f5b2f41ac8658723f87e13, type: 2}
+    actionEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 20089209}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Enter
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 20089209}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: ResetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Nothing
+            m_BoolArgument: 0
+          m_CallState: 2
+  - action: {fileID: 11400000, guid: a61f6c9343e39df4da32b7f45c1c146c, type: 2}
+    actionEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 20089209}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Options
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 20089209}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: ResetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Nothing
+            m_BoolArgument: 0
+          m_CallState: 2
+  - action: {fileID: 11400000, guid: d6ab07fcb7c647b42877de6082fad489, type: 2}
+    actionEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 20089209}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Exit
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 20089209}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: ResetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Nothing
+            m_BoolArgument: 0
+          m_CallState: 2
+  - action: {fileID: 11400000, guid: dacd8f9594cee034ca36332781a29650, type: 2}
+    actionEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 20089209}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Nothing
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &228710865
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,6 +786,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: dacd8f9594cee034ca36332781a29650, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &695724636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,10 +864,10 @@ MonoBehaviour:
   onHoverEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 695724638}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.PrintCheck, Assembly-CSharp
-        m_MethodName: PrintMessage
-        m_Mode: 5
+      - m_Target: {fileID: 11400000, guid: 6eadb0e846f5b2f41ac8658723f87e13, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -747,43 +876,19 @@ MonoBehaviour:
           m_StringArgument: Hovering Start
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 20089209}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Enter
-          m_BoolArgument: 0
-        m_CallState: 2
   onHoverExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 695724638}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.PrintCheck, Assembly-CSharp
-        m_MethodName: PrintMessage
-        m_Mode: 5
+      - m_Target: {fileID: 11400000, guid: dacd8f9594cee034ca36332781a29650, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Stopped Hovering Start
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 20089209}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Nothing
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &785937542
@@ -1010,10 +1115,10 @@ MonoBehaviour:
   onHoverEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1167120265}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.PrintCheck, Assembly-CSharp
-        m_MethodName: PrintMessage
-        m_Mode: 5
+      - m_Target: {fileID: 11400000, guid: d6ab07fcb7c647b42877de6082fad489, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1022,43 +1127,19 @@ MonoBehaviour:
           m_StringArgument: Hovering Quit
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 20089209}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Exit
-          m_BoolArgument: 0
-        m_CallState: 2
   onHoverExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1167120265}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.PrintCheck, Assembly-CSharp
-        m_MethodName: PrintMessage
-        m_Mode: 5
+      - m_Target: {fileID: 11400000, guid: dacd8f9594cee034ca36332781a29650, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Stopped Hovering Quit
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 20089209}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Nothing
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1167120267
@@ -1108,6 +1189,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1942368307}
         m_TargetAssemblyTypeName: Crawl.Scripts.SceneController, Assembly-CSharp
         m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: dacd8f9594cee034ca36332781a29650, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: Raise
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1443,10 +1536,10 @@ MonoBehaviour:
   onHoverEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1676395978}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.PrintCheck, Assembly-CSharp
-        m_MethodName: PrintMessage
-        m_Mode: 5
+      - m_Target: {fileID: 11400000, guid: a61f6c9343e39df4da32b7f45c1c146c, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1455,43 +1548,19 @@ MonoBehaviour:
           m_StringArgument: Hovering Options
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 20089209}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Options
-          m_BoolArgument: 0
-        m_CallState: 2
   onHoverExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1676395978}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.PrintCheck, Assembly-CSharp
-        m_MethodName: PrintMessage
-        m_Mode: 5
+      - m_Target: {fileID: 11400000, guid: dacd8f9594cee034ca36332781a29650, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Stopped Hovering Options
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 20089209}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Nothing
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1676395980
@@ -1554,6 +1623,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: dacd8f9594cee034ca36332781a29650, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
