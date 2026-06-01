@@ -1,18 +1,18 @@
-using UnityEngine;
 using System.Collections;
+using Crawl.Scripts;
+using UnityEngine;
 
-
-namespace Crawl.Scripts
+namespace Fairyland.Scripts
 {
     public class MovementManager : MonoBehaviour
     {
         [Header("Movement Settings")]
         public MovementData movementData;
         
-        private bool _isMoving;
+        private bool isMoving;
         [HideInInspector]
         public bool frontBlocked;
-        private bool _backBlocked;
+        private bool backBlocked;
         [HideInInspector]
         public bool playerInFront;
 
@@ -45,7 +45,7 @@ namespace Crawl.Scripts
                 frontBlocked = false;
                 playerInFront = false;
             }
-            _backBlocked = Physics.Raycast(
+            backBlocked = Physics.Raycast(
                 origin,
                 -transform.forward,
                 movementData.rayLength
@@ -61,7 +61,7 @@ namespace Crawl.Scripts
 
         public void MoveForward()
         {
-            if (_isMoving) return;
+            if (isMoving) return;
 
             CheckSurroundings();
             if (frontBlocked) return;
@@ -74,10 +74,10 @@ namespace Crawl.Scripts
 
         public void MoveBackward()
         {
-            if (_isMoving) return;
+            if (isMoving) return;
 
             CheckSurroundings();
-            if (_backBlocked) return;
+            if (backBlocked) return;
 
             Vector3 targetPosition = Vector3Int.RoundToInt(transform.position)
                                      - transform.forward * movementData.distance;
@@ -87,7 +87,7 @@ namespace Crawl.Scripts
 
         public void RotateLeft()
         {
-            if (_isMoving) return;
+            if (isMoving) return;
 
             Quaternion targetRotation = Quaternion.Euler(
                 transform.eulerAngles - Vector3.up * movementData.turnRadius
@@ -98,7 +98,7 @@ namespace Crawl.Scripts
 
         public void RotateRight()
         {
-            if (_isMoving) return;
+            if (isMoving) return;
 
             Quaternion targetRotation = Quaternion.Euler(
                 transform.eulerAngles + Vector3.up * movementData.turnRadius
@@ -109,7 +109,7 @@ namespace Crawl.Scripts
         
         public void IdleHere()
         {
-            if (_isMoving) return;
+            if (isMoving) return;
 
             Quaternion targetRotation = transform.rotation;
 
@@ -122,7 +122,7 @@ namespace Crawl.Scripts
 
         private IEnumerator MoveTo(Vector3 targetPosition, Quaternion targetRotation)
         {
-            _isMoving = true;
+            isMoving = true;
 
             if (!movementData.smoothTransition)
             {
@@ -155,7 +155,7 @@ namespace Crawl.Scripts
             transform.position = targetPosition;
             transform.rotation = targetRotation;
 
-            _isMoving = false;
+            isMoving = false;
 
             // 🔥 Re-check after movement finishes
             CheckSurroundings();

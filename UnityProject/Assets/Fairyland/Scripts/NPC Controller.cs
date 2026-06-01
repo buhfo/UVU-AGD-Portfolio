@@ -1,21 +1,24 @@
 using System.Collections;
+using Crawl.Scripts;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
-namespace Crawl.Scripts
+namespace Fairyland.Scripts
 {
     public class NpcController : MonoBehaviour
     {
-        private MovementManager _movementManager;
+        private MovementManager movementManager;
         public EntityData template, playerStats;
         [HideInInspector]
         public EntityData entityData;
         public UnityEvent takeDamage, deathActivate, attackPlayer, startMoving, stopMoving, turnBody;
         
-        private float _seconds;
+        public bool paused = false;
         
-        private WaitForSeconds _waitForSeconds;
+        private float seconds;
+        
+        private WaitForSeconds waitForSeconds;
         
         /// <summary>
         ///  0 = forward
@@ -23,17 +26,30 @@ namespace Crawl.Scripts
         ///  2 = right
         ///  3 = attack
         /// </summary>
-        private int _lastMovement;
+        private int lastMovement;
+
+        public void Pause()
+        {
+            paused = true;
+        }
+        public void UnPause()
+        {
+            paused = false;
+        }
+        public void TogglePause()
+        {
+            paused = !paused;
+        }
         
         private void Awake()
         {
-            _movementManager = GetComponent<MovementManager>();
+            movementManager = GetComponent<MovementManager>();
             entityData = Instantiate(template);
             
             // Subscribe THIS GameObject to the event
             entityData.onHealthZero.AddListener(HandleDeath);
             
-            _seconds = entityData.tempo;
+            seconds = entityData.tempo;
         }
         private void Start()
         {
@@ -49,28 +65,28 @@ namespace Crawl.Scripts
         private void Forward()
         {
             startMoving.Invoke();
-            _movementManager.MoveForward();
-            _lastMovement = 0;
+            movementManager.MoveForward();
+            lastMovement = 0;
         }
         
         
         // this chooses whether to turn left or right, but it still needs to be called though
         private void Rotate()
         {
-            if (_lastMovement == 0)
+            if (lastMovement == 0)
             {
                 var choice = Random.Range(1, 3);
-                _lastMovement = choice;
+                lastMovement = choice;
             }
-            switch (_lastMovement)
+            switch (lastMovement)
             {
                 case 1:
                     turnBody.Invoke();
-                    _movementManager.RotateLeft();
+                    movementManager.RotateLeft();
                     break;
                 case 2:
                     turnBody.Invoke();
-                    _movementManager.RotateRight();
+                    movementManager.RotateRight();
                     break;
             }
         }
@@ -81,15 +97,16 @@ namespace Crawl.Scripts
         {
             while (true)
             {
-                if (_movementManager.frontBlocked)
-                    if (_movementManager.playerInFront)
+                yield return new WaitUntil(() => !paused);
+                if (movementManager.frontBlocked)
+                    if (movementManager.playerInFront)
                         DamagePlayer();
                     else Rotate();
                 else
                     Forward();
                 stopMoving.Invoke();
-                yield return new WaitForSeconds(_seconds);
-                _movementManager.CheckSurroundings();
+                yield return new WaitForSeconds(seconds);
+                movementManager.CheckSurroundings();
                 
             }
         }
