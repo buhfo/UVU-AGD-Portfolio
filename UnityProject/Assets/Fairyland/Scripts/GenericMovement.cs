@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Crawl.Scripts
+namespace Fairyland.Scripts
 {
     [CreateAssetMenu(menuName = "Crawl/MovementData")]
     public class MovementData : ScriptableObject

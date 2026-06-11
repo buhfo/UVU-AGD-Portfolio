@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Crawl.Scripts
+namespace Fairyland.Scripts
 {
     public class DungeonGenerator : MonoBehaviour
     {

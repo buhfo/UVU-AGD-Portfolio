@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Crawl.Scripts
+namespace Fairyland.Scripts
 {
     public class SceneController : MonoBehaviour
     {

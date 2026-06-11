@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Crawl.Scripts
+namespace Fairyland.Scripts
 {
     public class UIManager : MonoBehaviour
     {

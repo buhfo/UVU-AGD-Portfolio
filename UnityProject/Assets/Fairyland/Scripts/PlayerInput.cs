@@ -1,8 +1,7 @@
-using Fairyland.Scripts;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Crawl.Scripts
+namespace Fairyland.Scripts
 {
     [RequireComponent(typeof(MovementManager))]
     [RequireComponent(typeof(GameActionHandler))]

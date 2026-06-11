@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Crawl.Scripts
+namespace Fairyland.Scripts
 {
     public class HallBehavior : MonoBehaviour
     {

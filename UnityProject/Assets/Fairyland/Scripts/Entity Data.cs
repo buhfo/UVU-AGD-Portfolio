@@ -1,9 +1,8 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 
-namespace Crawl.Scripts
+namespace Fairyland.Scripts
 {
     [CreateAssetMenu(menuName = "Crawl/EntityData")]
     public class EntityData : ScriptableObject

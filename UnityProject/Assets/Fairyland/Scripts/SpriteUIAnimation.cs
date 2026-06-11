@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Crawl.Scripts
+namespace Fairyland.Scripts
 {
     public class SpriteUIAnimation : MonoBehaviour
     {

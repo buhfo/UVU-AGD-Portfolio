@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Crawl.Scripts
+namespace Fairyland.Scripts
 {
     public class RandomChoiceBasic : MonoBehaviour
     {
