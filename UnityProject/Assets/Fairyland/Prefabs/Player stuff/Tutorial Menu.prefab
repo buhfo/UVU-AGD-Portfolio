@@ -1114,14 +1114,15 @@ GameObject:
   m_Component:
   - component: {fileID: 6065070499506212189}
   - component: {fileID: 4916537976954017504}
-  - component: {fileID: 3927372146086267264}
+  - component: {fileID: 800913661621861833}
+  - component: {fileID: 55733163897916362}
   m_Layer: 0
   m_Name: Tutorial Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6065070499506212189
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1162,13 +1163,25 @@ MonoBehaviour:
   respondEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3927372146086267264}
-        m_TargetAssemblyTypeName: DisableOrDestroyBehaviour, Assembly-CSharp
-        m_MethodName: DestroyGameObject
-        m_Mode: 2
+      - m_Target: {fileID: 7386679305416940096}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
-          m_ObjectArgument: {fileID: 7386679305416940096}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: a6f0b4efd2ba4ff4782f5a6a77c27015, type: 2}
+        m_TargetAssemblyTypeName: QBoolData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1177,8 +1190,8 @@ MonoBehaviour:
   respondLateEvent:
     m_PersistentCalls:
       m_Calls: []
-  holdTime: 0.1
---- !u!114 &3927372146086267264
+  holdTime: 0
+--- !u!114 &800913661621861833
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1187,23 +1200,76 @@ MonoBehaviour:
   m_GameObject: {fileID: 7386679305416940096}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db292f06e9d8b44a896010ae967eb294, type: 3}
+  m_Script: {fileID: 11500000, guid: 23c6519b5e63bc24c8d376458ef667dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startEvent:
+  data: {fileID: 11400000, guid: a6f0b4efd2ba4ff4782f5a6a77c27015, type: 2}
+  trueAtSceneStartEvent:
     m_PersistentCalls:
-      m_Calls: []
-  beginDestroy:
+      m_Calls:
+      - m_Target: {fileID: 7386679305416940096}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 55733163897916362}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.PrintCheck, Assembly-CSharp
+        m_MethodName: PrintMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: TUTOTRUE
+          m_BoolArgument: 1
+        m_CallState: 2
+  falseAtSceneStartEvent:
     m_PersistentCalls:
-      m_Calls: []
-  endDestroyEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  canSelfDestructOnStart: 0
-  canTrigger: 0
-  canDestroy: 1
-  state: 0
-  seconds: 0.1
+      m_Calls:
+      - m_Target: {fileID: 7386679305416940096}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 55733163897916362}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.PrintCheck, Assembly-CSharp
+        m_MethodName: PrintMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: TUTOFALSE
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &55733163897916362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7386679305416940096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c5a7cbc9f068d44aa42db33e66d6bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8508201951785837181
 GameObject:
   m_ObjectHideFlags: 0

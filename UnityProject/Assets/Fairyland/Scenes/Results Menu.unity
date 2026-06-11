@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 1398734844}
   - component: {fileID: 1398734847}
   - component: {fileID: 1398734846}
-  - component: {fileID: 1398734845}
+  - component: {fileID: 1398734848}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -653,37 +653,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1398734845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398734843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2458f0d9a38bed478548b7a96a84505, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Crawl.Scripts.CrawlTextMeshProBehaviour
-  gameActionObj: {fileID: 11400000, guid: a7af994e13596a44383e8b2b6238f3c9, type: 2}
-  awakeEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1398734845}
-        m_TargetAssemblyTypeName: Crawl.Scripts.CrawlTextMeshProBehaviour, Assembly-CSharp
-        m_MethodName: UpdateText
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 5cd9c36a1a2ad7b4d8f6d85f9b1a9486, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Crawl.Scripts.EntityData, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  raiseEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1398734846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -784,6 +753,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398734843}
   m_CullTransparentMesh: 1
+--- !u!114 &1398734848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398734843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2458f0d9a38bed478548b7a96a84505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameActionObj: {fileID: 11400000, guid: a7af994e13596a44383e8b2b6238f3c9, type: 2}
+  awakeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1398734848}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.CrawlTextMeshProBehaviour, Assembly-CSharp
+        m_MethodName: UpdateText
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 5cd9c36a1a2ad7b4d8f6d85f9b1a9486, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Fairyland.Scripts.EntityData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  raiseEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1942368306
 GameObject:
   m_ObjectHideFlags: 0

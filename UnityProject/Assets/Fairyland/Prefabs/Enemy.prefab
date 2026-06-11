@@ -204,12 +204,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 5cd9c36a1a2ad7b4d8f6d85f9b1a9486, type: 2}
-        m_TargetAssemblyTypeName: Crawl.Scripts.EntityData, Assembly-CSharp
+        m_TargetAssemblyTypeName: Fairyland.Scripts.EntityData, Assembly-CSharp
         m_MethodName: ChangeExperience
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: b8eab6c75a519a34bac6d37653f97389, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Crawl.Scripts.EntityData, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Fairyland.Scripts.EntityData, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
