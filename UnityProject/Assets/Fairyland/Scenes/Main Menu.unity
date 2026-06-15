@@ -810,8 +810,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: a6f0b4efd2ba4ff4782f5a6a77c27015, type: 2}
-        m_TargetAssemblyTypeName: QBoolData, Assembly-CSharp
+      - m_Target: {fileID: 11400000, guid: 75fe0d0722249694a825a5bc46b78c65, type: 2}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.QBoolData, Assembly-CSharp
         m_MethodName: SetValue
         m_Mode: 6
         m_Arguments:
