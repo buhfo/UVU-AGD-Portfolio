@@ -1,0 +1,12 @@
+Here's what needs to be done for FairyLand
+
+1. Add sound effects in for player
+2. Add music in to bg
+3. EntityData Changes
+
+
+
+*EntityData Changes*
+- make the Entity Data SO hold ONLY the variables
+- make a script that takes the Entity Data variables and makes an IntData SO for each of them 
+- potentially make the Entity Data SO just have a list of variables that I can name there.
