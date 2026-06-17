@@ -10,3 +10,6 @@ Here's what needs to be done for FairyLand
 - make the Entity Data SO hold ONLY the variables
 - make a script that takes the Entity Data variables and makes an IntData SO for each of them 
 - potentially make the Entity Data SO just have a list of variables that I can name there.
+
+*** I need to make sure the script that takes the entitydata list converts the value to the type
+specified in the list. Right now it's just a string.
