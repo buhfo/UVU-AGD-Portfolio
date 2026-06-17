@@ -4,7 +4,7 @@ using UnityEngine.Serialization;
 
 namespace Fairyland.Scripts
 {
-    [CreateAssetMenu(menuName = "Crawl/EntityData")]
+    [CreateAssetMenu(menuName = "FairyLand/EntityData")]
     public class EntityData : ScriptableObject
     {
         [FormerlySerializedAs("Health")] [SerializeField] public int health;
@@ -15,8 +15,7 @@ namespace Fairyland.Scripts
         public float tempo = 2;
 
         public UnityEvent onHealthChanged, onHealthZero, onExperienceChanged, onExperienceMax, onAttackChanged;
-
-
+        
         // Helper methods for modifying values, to avoid code repetition. These are private because they should only be used within this class, and not exposed to other classes.
 
         // changes a value by adding to it, can be positive or negative
@@ -48,7 +47,6 @@ namespace Fairyland.Scripts
         {
             return value <= 0;
         }
-
 
         // change adds/subtracts from the current value, set replaces the current value with the new value
 
