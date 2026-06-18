@@ -10,29 +10,29 @@ namespace Fairyland.Scripts
         // once it gets those it should spawn a copy of the UI element, as well as tie each of those to the health stat inside an EntityData Object,
         // so like if I have 10 hearts, I would have 10 of the UI elements, and the animations on said UI element could be triggered by this script
         
-        public EntityData entityData;
+        public IntDataQ intDataQ;
         public GameObject uiPrefab;
-        private readonly Dictionary<int, GameObject> _uiElements = new Dictionary<int, GameObject>();
+        private readonly Dictionary<int, GameObject> uiElements = new Dictionary<int, GameObject>();
         public Vector2 uiOffset= new Vector2(0, 0);
         public RectTransform startLocation;
-        private RectTransform _nextLocation;
+        private RectTransform nextLocation;
         public Canvas canvas; 
         [SerializeField] private string removeTrigger = "Remove";
         [SerializeField] private string removeStateName = "Remove";
-        private void UICountGet(EntityData entityDataObj)
+        private void UICountGet(IntDataQ intDataQObj)
         { 
-            _nextLocation = startLocation;
+            nextLocation = startLocation;
             
-            var health = entityDataObj.health;
-            for (var i = 1; i <= health; i++)
+            var value = intDataQObj.value;
+            for (var i = 1; i <= value; i++)
             {
-                InstantiateUI(_nextLocation, i);
+                InstantiateUI(nextLocation, i);
             }
         }
 
         private void Start()
         {
-            UICountGet(entityData);
+            UICountGet(intDataQ);
         }
 
         private void PlayExitAnim(Dictionary<int, GameObject> uiElement, int i)
@@ -67,28 +67,28 @@ namespace Fairyland.Scripts
             uiElement.Remove(i);
         }
         
-        private void RemoveUI(Dictionary<int, GameObject> uiElement, EntityData entityDataObj)
+        private void RemoveUI(Dictionary<int, GameObject> uiElement, IntDataQ intDataQObj)
         {
-            if (entityDataObj.health < uiElement.Count)
+            if (intDataQObj.value < uiElement.Count)
             {
-                for (var i = uiElement.Count ; i > entityDataObj.health; i--)
+                for (var i = uiElement.Count ; i > intDataQObj.value; i--)
                 {
                     PlayExitAnim(uiElement, i);
                 }
             }
         }
-        private void AddUI(Dictionary<int, GameObject> uiElement, EntityData entityDataObj)
+        private void AddUI(Dictionary<int, GameObject> uiElement, IntDataQ intDataQObj)
         {
-            if (uiElement.Count >= entityDataObj.health) return;
-            for (var i = entityDataObj.health; i < uiElement.Count; i++)
+            if (uiElement.Count >= intDataQObj.value) return;
+            for (var i = intDataQObj.value; i < uiElement.Count; i++)
             {
-                InstantiateUI(_nextLocation, i);
+                InstantiateUI(nextLocation, i);
             }
         }
         public void UpdateUI()
         {
-            AddUI(_uiElements, entityData);
-            RemoveUI(_uiElements, entityData);
+            AddUI(uiElements, intDataQ);
+            RemoveUI(uiElements, intDataQ);
         }
 
         private void InstantiateUI(RectTransform locationChoice, int i)
@@ -106,8 +106,8 @@ namespace Fairyland.Scripts
                 uiRectTransform.localRotation = locationChoice.localRotation;
                 uiRectTransform.localScale = locationChoice.localScale;
             }
-            _uiElements.Add(i, uiElement);
-            _nextLocation.anchoredPosition += uiOffset;
+            uiElements.Add(i, uiElement);
+            nextLocation.anchoredPosition += uiOffset;
         }
     }
 }

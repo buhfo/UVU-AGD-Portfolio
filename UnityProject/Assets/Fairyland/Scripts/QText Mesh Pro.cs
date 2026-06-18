@@ -38,6 +38,8 @@ namespace Fairyland.Scripts
 
         private void Raise() => raiseEvent.Invoke();
         public void UpdateText(IntData intDataObj) => textObj.text = intDataObj.Value.ToString();
+        
+        public void UpdateText(IntDataQ intDataObj) => textObj.text = intDataObj.value.ToString();
     
         public void UpdateText(EntityData intDataObj) => textObj.text = intDataObj.experience.ToString();
     

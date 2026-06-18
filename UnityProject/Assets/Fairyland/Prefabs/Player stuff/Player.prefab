@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 422076f805bd0204d9dcf55149d9d1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Crawl.Scripts.UIManager
-  entityData: {fileID: 11400000, guid: 5cd9c36a1a2ad7b4d8f6d85f9b1a9486, type: 2}
+  intDataQ: {fileID: 11400000, guid: 1570c82785004734fad346a1d9f9b57d, type: 2}
   uiPrefab: {fileID: 2360566495404895010, guid: e10e5382602356f45934ca38fecd033e, type: 3}
   uiOffset: {x: 30, y: 0}
   startLocation: {fileID: 76023892936069177}
@@ -707,8 +707,8 @@ MonoBehaviour:
         m_MethodName: UpdateText
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 5cd9c36a1a2ad7b4d8f6d85f9b1a9486, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Fairyland.Scripts.EntityData, Assembly-CSharp
+          m_ObjectArgument: {fileID: 11400000, guid: 508d9e0fdf893c843a8c946d7582aaca, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Fairyland.Scripts.IntDataQ, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -722,8 +722,8 @@ MonoBehaviour:
         m_MethodName: UpdateText
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 5cd9c36a1a2ad7b4d8f6d85f9b1a9486, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Fairyland.Scripts.EntityData, Assembly-CSharp
+          m_ObjectArgument: {fileID: 11400000, guid: 508d9e0fdf893c843a8c946d7582aaca, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Fairyland.Scripts.IntDataQ, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
