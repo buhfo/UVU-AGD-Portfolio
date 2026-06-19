@@ -2,14 +2,16 @@ Here's what needs to be done for FairyLand
 
 1. Add sound effects in for player
 2. Add music in to bg
-3. EntityData Changes
+3. make level ups change player stats
+4. add in a timer based on the mana stat
+
+
+*LVL up stats*
+- make the players max health go up, as well as increase their current health by 1
+- make the damage the player does go up
+- increase the players luck stat
+- increase the players mana stat
 
 
 
-*EntityData Changes*
-- make the Entity Data SO hold ONLY the variables
-- make a script that takes the Entity Data variables and makes an IntData SO for each of them 
-- potentially make the Entity Data SO just have a list of variables that I can name there.
 
-*** I need to make sure the script that takes the entitydata list converts the value to the type
-specified in the list. Right now it's just a string.
