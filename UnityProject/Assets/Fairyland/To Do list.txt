@@ -8,10 +8,5 @@ Here's what needs to be done for FairyLand
 
 *LVL up stats*
 - make the players max health go up, as well as increase their current health by 1
-- make the damage the player does go up
-- increase the players luck stat
-- increase the players mana stat
-
-
-
-
+- I need something that will reset all stats to their default values, preferably based on the tutorial tbh, or potentially from a restart state
+- I need to make sure that when the player finishes a level, the mana stat is reset to whatever the max mana stat is
