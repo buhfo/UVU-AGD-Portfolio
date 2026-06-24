@@ -18,15 +18,15 @@ namespace Fairyland.Scripts
 
         public void StartCoroutine()
         {
-            StartCoroutine(Start());
+            StartCoroutine(CountDown());
         }
         
         public void StopCoroutine()
         {
-            StopCoroutine(Start());
+            StopCoroutine(CountDown());
         }
         
-        private IEnumerator Start()
+        private IEnumerator CountDown()
         {
             waitForSeconds = new WaitForSeconds(seconds);
             
