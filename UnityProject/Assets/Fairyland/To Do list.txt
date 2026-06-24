@@ -10,3 +10,7 @@ Here's what needs to be done for FairyLand
 - make the players max health go up, as well as increase their current health by 1
 - I need something that will reset all stats to their default values, preferably based on the tutorial tbh, or potentially from a restart state
 - I need to make sure that when the player finishes a level, the mana stat is reset to whatever the max mana stat is
+
+
+
+- for some reason the intdataQ for p-Damage is able to hit 0 even when the minimum is 1 and the max is 10
