@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f434da504d9a3a46a00ef39a89b6545, type: 3}
-  m_Name: P-Mana
+  m_Script: {fileID: 11500000, guid: 48bc8ee109581a148acf22a353229c9e, type: 3}
+  m_Name: P-T-Level
   m_EditorClassIdentifier: 
   value: 0
   minValue: 0
-  maxValue: 10
+  maxValue: 100
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []

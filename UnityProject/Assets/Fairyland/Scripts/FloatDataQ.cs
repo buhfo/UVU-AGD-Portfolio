@@ -3,29 +3,29 @@ using UnityEngine.Events;
 
 namespace Fairyland.Scripts
 {
-    [CreateAssetMenu(menuName = "FairyLand/IntDataQ")]
-    public class IntDataQ : ScriptableObject
+    [CreateAssetMenu(menuName = "FairyLand/FloatDataQ")]
+    public class FloatDataQ : ScriptableObject
     {
-        public int value, minValue, maxValue;
+        public float value, minValue, maxValue;
 
         public UnityEvent onValueChanged, onValueZero, onMinValueChanged, onMinValueMet, onMaxValueChanged, onMaxValueMet, onValueOutOfRange;
         
         // Helper methods for modifying values to avoid code repetition. These are private because they should only be used within this class, and not exposed to other classes.
 
         // changes a value by adding to it, can be positive or negative
-        private void UpdateValue(ref int currentValue, int amount)
+        private void UpdateValue(ref float currentValue, float amount)
         {
             currentValue += amount;
         }
     
         // just directly changes a value to the new value, regardless of the current value
-        private void SetValue(ref int currentValue, int data)
+        private void SetValue(ref float currentValue, float data)
         {
             currentValue = data;
         }
         
         // clamps the value to a maximum
-        private void ValueTopClamp(ref int currentValue, int max)
+        private void ValueTopClamp(ref float currentValue, float max)
         {
             if (currentValue > max)
             {
@@ -35,7 +35,7 @@ namespace Fairyland.Scripts
         }
 
         // clamps the value to a minimum
-        private void ValueBottomClamp(ref int currentValue, int min)
+        private void ValueBottomClamp(ref float currentValue, float min)
         {
             if (currentValue < min)
             {
@@ -45,13 +45,13 @@ namespace Fairyland.Scripts
         }
 
         // returns true if the value is zero or less
-        private bool ZeroCheck(int currentValue)
+        private bool ZeroCheck(float currentValue)
         {
             return currentValue <= 0;
         }
 
 
-        private bool MeetsValue(int currentValue, int checkValue)
+        private bool MeetsValue(float currentValue, float checkValue)
         {
             return currentValue == checkValue;
         }
@@ -63,26 +63,25 @@ namespace Fairyland.Scripts
         // change adds/subtracts from the current value, set replaces the current value with the new value
 
         // Value modifiers
-        public void ChangeValue(int amount)
+        public void ChangeValue(float amount)
         {
             UpdateValue(ref value, amount);
             CheckValue();
             onValueChanged.Invoke();
         }
-        public void SetValue(int data)
+        public void SetValue(float data)
         {
             SetValue(ref value, data);
             CheckValue();
             onValueChanged.Invoke();
         }
-        
-        public void ChangeValue(IntDataQ amount)
+        public void ChangeValue(FloatDataQ amount)
         {
             UpdateValue(ref value, amount.value);
             CheckValue();
             onValueChanged.Invoke();
         }
-        public void SetValue(IntDataQ data)
+        public void SetValue(FloatDataQ data)
         {
             SetValue(ref value, data.value);
             CheckValue();
@@ -117,62 +116,61 @@ namespace Fairyland.Scripts
         
         // Range modifiers
         // Max
-        public void ChangeMax(int amount)
+        public void ChangeMax(float amount)
         {
             UpdateValue(ref maxValue, amount);
             CheckValue();
             onMaxValueChanged.Invoke();
         }
         
-        public void SetMax(int data)
+        public void SetMax(float data)
         {
             SetValue(ref maxValue, data);
             CheckValue();
             onMaxValueChanged.Invoke();
         }
-        public void ChangeMax(IntDataQ amount)
+        public void ChangeMax(FloatDataQ amount)
         {
             UpdateValue(ref maxValue, amount.maxValue);
             CheckValue();
             onMaxValueChanged.Invoke();
         }
         
-        public void SetMax(IntDataQ data)
+        public void SetMax(FloatDataQ data)
         {
             SetValue(ref maxValue, data.maxValue);
             CheckValue();
             onMaxValueChanged.Invoke();
         }
         
-        
         // Min
-        public void ChangeMin(int amount)
+        public void ChangeMin(float amount)
         {
             UpdateValue(ref minValue, amount);
             CheckValue();
             onMinValueChanged.Invoke();
         }
         
-        public void SetMin(int data)
+        public void SetMin(float data)
         {
             SetValue(ref minValue, data);
             CheckValue();
             onMinValueChanged.Invoke();
         }
-        
-        public void ChangeMin(IntDataQ amount)
+        public void ChangeMin(FloatDataQ amount)
         {
             UpdateValue(ref minValue, amount.minValue);
             CheckValue();
             onMinValueChanged.Invoke();
         }
         
-        public void SetMin(IntDataQ data)
+        public void SetMin(FloatDataQ data)
         {
             SetValue(ref minValue, data.minValue);
             CheckValue();
             onMinValueChanged.Invoke();
         }
+
 
     }
 }

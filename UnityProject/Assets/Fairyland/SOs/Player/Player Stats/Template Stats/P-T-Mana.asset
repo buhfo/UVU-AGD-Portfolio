@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f434da504d9a3a46a00ef39a89b6545, type: 3}
-  m_Name: P-Mana
+  m_Name: P-T-Mana
   m_EditorClassIdentifier: 
   value: 0
   minValue: 0
