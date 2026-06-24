@@ -4,22 +4,25 @@ namespace Fairyland.Scripts
 {
     public class TimerFloatDataQ : MonoBehaviour
     {
-        public FloatDataQ template;
-        private FloatDataQ timer;
+        public FloatDataQ timer;
         private float seconds;
         private bool isRunning;
         
         private void Awake()
         {
-            timer = Instantiate(template);
-            
             // Subscribe THIS GameObject to the event
             timer.onMaxValueMet.AddListener(MaxMet);
             timer.onMinValueMet.AddListener(MinMet);
             
-            seconds = timer.value;
+            ResetTimer();
         }
-        
+
+        public void ResetTimer()
+        {
+            seconds = timer.minValue;
+            isRunning = true;
+        }
+
         private void MaxMet()
         {
             isRunning = false;
@@ -34,8 +37,8 @@ namespace Fairyland.Scripts
         {
             if (isRunning)
             {
-                seconds -= Time.deltaTime;
-                timer.ChangeValue(seconds);
+                seconds += Time.deltaTime;
+                timer.SetValue(seconds);
             }
         }
     }

@@ -52,6 +52,13 @@ namespace Fairyland.Scripts
             TimeSpan timeSpanObj = TimeSpan.FromSeconds(obj.Value);
             textObj.text = $"{timeSpanObj.Minutes}:{timeSpanObj.Seconds:d2}";
         }
+        public void UpdateText(FloatDataQ obj) => textObj.text = obj.value.ToString(CultureInfo.CurrentCulture);
+
+        public void UpdateTextWithTime(FloatDataQ obj)
+        {
+            TimeSpan timeSpanObj = TimeSpan.FromSeconds(obj.value);
+            textObj.text = $"{timeSpanObj.Minutes}:{timeSpanObj.Seconds:d2}";
+        }
 
         public void UpdateTextAsMoney(IntData obj)
         {
