@@ -8,7 +8,8 @@ namespace Fairyland.Scripts
     public class NpcController : MonoBehaviour
     {
         private MovementManager movementManager;
-        public EntityData template, playerStats;
+        public EntityData template;
+        public IntDataQ playerStats;
         [HideInInspector]
         public EntityData entityData;
         public UnityEvent takeDamage, deathActivate, attackPlayer, startMoving, stopMoving, turnBody;
@@ -114,7 +115,7 @@ namespace Fairyland.Scripts
         {
             if (!other.CompareTag("Player")) return;
             takeDamage.Invoke();
-            entityData.ChangeHealth(playerStats.attack * -1);
+            entityData.ChangeHealth(playerStats.value * -1);
         }
 
 

@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Crawl.Scripts.EnemyController
   template: {fileID: 11400000, guid: b8eab6c75a519a34bac6d37653f97389, type: 2}
-  playerStats: {fileID: 11400000, guid: 5cd9c36a1a2ad7b4d8f6d85f9b1a9486, type: 2}
+  playerStats: {fileID: 11400000, guid: eba3c0f7befa6e84c92d1ba925f59112, type: 2}
   entityData: {fileID: 0}
   takeDamage:
     m_PersistentCalls:
@@ -498,5 +498,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca2024820aba200458658f5bf4266512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  enemyData: {fileID: 11400000, guid: 5cd9c36a1a2ad7b4d8f6d85f9b1a9486, type: 2}
+  enemyData: {fileID: 11400000, guid: 1570c82785004734fad346a1d9f9b57d, type: 2}
   entityData: {fileID: 11400000, guid: b8eab6c75a519a34bac6d37653f97389, type: 2}
