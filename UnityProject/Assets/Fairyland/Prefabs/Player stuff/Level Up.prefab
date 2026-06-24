@@ -67,6 +67,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  respondLateEvent:
+    m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 11400000, guid: 1570c82785004734fad346a1d9f9b57d, type: 2}
         m_TargetAssemblyTypeName: Fairyland.Scripts.IntDataQ, Assembly-CSharp
         m_MethodName: ChangeValue
@@ -79,9 +82,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  respondLateEvent:
-    m_PersistentCalls:
-      m_Calls: []
   holdTime: 0.1
 --- !u!1 &1857812125640737153
 GameObject:

@@ -241,9 +241,12 @@ MonoBehaviour:
       m_Calls: []
   respondEvent:
     m_PersistentCalls:
+      m_Calls: []
+  respondLateEvent:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 317481045372940256}
-        m_TargetAssemblyTypeName: Crawl.Scripts.UIManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: Fairyland.Scripts.UIManager, Assembly-CSharp
         m_MethodName: UpdateUI
         m_Mode: 1
         m_Arguments:
@@ -254,9 +257,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  respondLateEvent:
-    m_PersistentCalls:
-      m_Calls: []
   holdTime: 0.1
 --- !u!1 &3262393552278850400
 GameObject:
