@@ -167,97 +167,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1507520335592623370
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 99741326388929926}
-  - component: {fileID: 5952128165342858596}
-  m_Layer: 8
-  m_Name: LevelUp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &99741326388929926
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507520335592623370}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2381640013432921475}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5952128165342858596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507520335592623370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65180f705bb904ee98a80edc6dcf0d55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action: {fileID: 11400000, guid: 0e04f76912c271448b3584802d1b2b93, type: 2}
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  respondEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: c921ec4e0eaf8f64d9187dbd1a516b74, type: 2}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.IntDataQ, Assembly-CSharp
-        m_MethodName: ChangeValue
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 648479c1c77b77d4bacc446dca1f680e, type: 2}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.IntDataQ, Assembly-CSharp
-        m_MethodName: SetValue
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 648479c1c77b77d4bacc446dca1f680e, type: 2}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.IntDataQ, Assembly-CSharp
-        m_MethodName: ChangeMax
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  respondLateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  holdTime: 0.1
 --- !u!1 &2352866319782673688
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,159 +258,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   holdTime: 0.1
---- !u!1 &2941235452405364373
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2381640013432921475}
-  - component: {fileID: 9111935032888665338}
-  - component: {fileID: 821134546983715407}
-  m_Layer: 8
-  m_Name: LevelUp Handler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2381640013432921475
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2941235452405364373}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3214586367270410356}
-  - {fileID: 7122979852470488100}
-  - {fileID: 312311815169205865}
-  - {fileID: 1933671564757671195}
-  - {fileID: 99741326388929926}
-  m_Father: {fileID: 6981240263222329470}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9111935032888665338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2941235452405364373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65180f705bb904ee98a80edc6dcf0d55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action: {fileID: 11400000, guid: 0e04f76912c271448b3584802d1b2b93, type: 2}
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  respondEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 821134546983715407}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.RandomChoiceBasic, Assembly-CSharp
-        m_MethodName: RollNumber
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  respondLateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  holdTime: 0.1
---- !u!114 &821134546983715407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2941235452405364373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1343a477000d51146916e33b2b89a2ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minNum: 1
-  maxNum: 4
-  rollOnStart: 0
-  actions:
-  - number: 1
-    onNumberRolled:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 11400000, guid: 17a968604925a0e46921c185bc280f83, type: 2}
-          m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
-          m_MethodName: Raise
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - number: 2
-    onNumberRolled:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 11400000, guid: 04dbd1df8fc49a9458c7edaddacc7929, type: 2}
-          m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
-          m_MethodName: Raise
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - number: 3
-    onNumberRolled:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 11400000, guid: cf4f84b161c4f4c4bab55b84807264f9, type: 2}
-          m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
-          m_MethodName: Raise
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - number: 4
-    onNumberRolled:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 11400000, guid: e97e82538459ef44d8062521d3c3dc24, type: 2}
-          m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
-          m_MethodName: Raise
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &3262393552278850400
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,152 +504,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Dmg
-          m_BoolArgument: 0
-        m_CallState: 2
-  respondLateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  holdTime: 0.1
---- !u!1 &3973799944967453779
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 312311815169205865}
-  - component: {fileID: 8316263304720750673}
-  m_Layer: 8
-  m_Name: LuckUp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &312311815169205865
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3973799944967453779}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2381640013432921475}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8316263304720750673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3973799944967453779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65180f705bb904ee98a80edc6dcf0d55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action: {fileID: 11400000, guid: cf4f84b161c4f4c4bab55b84807264f9, type: 2}
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  respondEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 6f909ef3244efed4696b9bc82408826f, type: 2}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.IntDataQ, Assembly-CSharp
-        m_MethodName: ChangeValue
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  respondLateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  holdTime: 0.1
---- !u!1 &7552846926451747281
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1933671564757671195}
-  - component: {fileID: 2295649652595485999}
-  m_Layer: 8
-  m_Name: ManaUp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1933671564757671195
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7552846926451747281}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2381640013432921475}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2295649652595485999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7552846926451747281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65180f705bb904ee98a80edc6dcf0d55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action: {fileID: 11400000, guid: e97e82538459ef44d8062521d3c3dc24, type: 2}
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  respondEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: be76956dde590044f9170baa0ef6543e, type: 2}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.IntDataQ, Assembly-CSharp
-        m_MethodName: ChangeMax
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: be76956dde590044f9170baa0ef6543e, type: 2}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.IntDataQ, Assembly-CSharp
-        m_MethodName: ChangeValue
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   respondLateEvent:
@@ -1157,9 +767,9 @@ Transform:
   - {fileID: 8740390754680785346}
   - {fileID: 1871575650758229102}
   - {fileID: 8621371631253699025}
-  - {fileID: 2381640013432921475}
   - {fileID: 5183495419228986310}
   - {fileID: 247232309728269120}
+  - {fileID: 7008148928920536848}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8593799099956458616
@@ -1435,152 +1045,6 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  respondLateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  holdTime: 0.1
---- !u!1 &8650228221193908925
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3214586367270410356}
-  - component: {fileID: 5123123355211210142}
-  m_Layer: 8
-  m_Name: HealthUp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3214586367270410356
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8650228221193908925}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2381640013432921475}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5123123355211210142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8650228221193908925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65180f705bb904ee98a80edc6dcf0d55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action: {fileID: 11400000, guid: 04dbd1df8fc49a9458c7edaddacc7929, type: 2}
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  respondEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 1570c82785004734fad346a1d9f9b57d, type: 2}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.IntDataQ, Assembly-CSharp
-        m_MethodName: ChangeValue
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 1570c82785004734fad346a1d9f9b57d, type: 2}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.IntDataQ, Assembly-CSharp
-        m_MethodName: ChangeMax
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  respondLateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  holdTime: 0.1
---- !u!1 &9133858042894756201
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7122979852470488100}
-  - component: {fileID: 7647109326030866507}
-  m_Layer: 8
-  m_Name: AttackUp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7122979852470488100
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9133858042894756201}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2381640013432921475}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7647109326030866507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9133858042894756201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65180f705bb904ee98a80edc6dcf0d55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action: {fileID: 11400000, guid: 17a968604925a0e46921c185bc280f83, type: 2}
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  respondEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: eba3c0f7befa6e84c92d1ba925f59112, type: 2}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.IntDataQ, Assembly-CSharp
-        m_MethodName: ChangeValue
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1997,6 +1461,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3259725362413745727, guid: 26aa2c5df4562a446a1cc4b6dcb09ca9, type: 3}
   m_PrefabInstance: {fileID: 7697680272854265337}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7973121123352165922
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6981240263222329470}
+    m_Modifications:
+    - target: {fileID: 1146101486942845234, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 449.1976
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146101486942845234, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 289.64236
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146101486942845234, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.706112
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146101486942845234, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146101486942845234, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146101486942845234, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146101486942845234, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146101486942845234, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146101486942845234, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146101486942845234, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857812125640737153, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: m_Name
+      value: Level Up
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0b230adb39987df458425562263e93ed, type: 3}
+--- !u!4 &7008148928920536848 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1146101486942845234, guid: 0b230adb39987df458425562263e93ed, type: 3}
+  m_PrefabInstance: {fileID: 7973121123352165922}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8495461155026041682
 PrefabInstance:
