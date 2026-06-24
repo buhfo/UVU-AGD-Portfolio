@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f434da504d9a3a46a00ef39a89b6545, type: 3}
   m_Name: P-Mana
   m_EditorClassIdentifier: 
-  value: 10
+  value: 0
   minValue: 0
-  maxValue: 180
+  maxValue: 3
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
