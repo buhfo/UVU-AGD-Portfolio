@@ -1514,11 +1514,64 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Up
       objectReference: {fileID: 0}
+    - target: {fileID: 7212887108778509492, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: respondEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7212887108778509492, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: respondEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7212887108778509492, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: respondEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 9840f0fd042a3704088a7918be9f6ffe, type: 2}
+    - target: {fileID: 7212887108778509492, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: respondEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7212887108778509492, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: respondEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ChangeMax
+      objectReference: {fileID: 0}
+    - target: {fileID: 7212887108778509492, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: respondEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Fairyland.Scripts.FloatDataQ, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7212887108778509492, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: respondEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7212887108778509492, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: respondEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4640042959119642691, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4179919414932429856}
   m_SourcePrefab: {fileID: 100100000, guid: 0b230adb39987df458425562263e93ed, type: 3}
+--- !u!1 &3369406206668000865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4640042959119642691, guid: 0b230adb39987df458425562263e93ed, type: 3}
+  m_PrefabInstance: {fileID: 7973121123352165922}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4179919414932429856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3369406206668000865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ad7801297ec6b4aa443364a6511f2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mana: {fileID: 0}
 --- !u!4 &7008148928920536848 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1146101486942845234, guid: 0b230adb39987df458425562263e93ed, type: 3}
