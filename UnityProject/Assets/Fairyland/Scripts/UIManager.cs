@@ -87,6 +87,7 @@ namespace Fairyland.Scripts
         }
         public void UpdateUI()
         {
+            UICountGet(intDataQ);
             AddUI(uiElements, intDataQ);
             RemoveUI(uiElements, intDataQ);
         }
