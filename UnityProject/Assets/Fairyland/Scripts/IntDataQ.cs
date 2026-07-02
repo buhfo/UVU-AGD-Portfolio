@@ -8,8 +8,18 @@ namespace Fairyland.Scripts
     {
         public int value, minValue, maxValue;
 
-        public UnityEvent onValueChanged, onValueZero, onMinValueChanged, onMinValueMet, onMaxValueChanged, onMaxValueMet, onValueOutOfRange;
-        
+        public UnityEvent onValueChanged,
+            onValueSubtracted,
+            onValueAdded,
+            onValueIncremented,
+            onValueDecremented,
+            onValueZero,
+            onMinValueChanged,
+            onMinValueMet,
+            onMaxValueChanged,
+            onMaxValueMet,
+            onValueOutOfRange;
+
         // Helper methods for modifying values to avoid code repetition. These are private because they should only be used within this class, and not exposed to other classes.
 
         // changes a value by adding to it, can be positive or negative
@@ -17,8 +27,18 @@ namespace Fairyland.Scripts
         {
             currentValue += amount;
         }
-    
-        // just directly changes a value to the new value, regardless of the current value
+
+        private void IncrementValue(ref int currentValue)
+        {
+            currentValue++;
+        }
+        
+        private void DecrementValue(ref int currentValue)
+        {
+            currentValue--;
+        }
+        
+    // just directly changes a value to the new value, regardless of the current value
         private void SetValue(ref int currentValue, int data)
         {
             currentValue = data;
@@ -74,6 +94,36 @@ namespace Fairyland.Scripts
             SetValue(ref value, data);
             CheckValue();
             onValueChanged.Invoke();
+        }
+
+        public void IncrementValue()
+        {
+            IncrementValue(ref value);
+            CheckValue();
+            onValueIncremented.Invoke();
+        }
+
+        public void DecrementValue()
+        {
+            DecrementValue(ref value);
+            CheckValue();
+            onValueDecremented.Invoke();
+        }
+        
+        public void AddValue(int amount)
+        {
+            amount = Mathf.Abs(amount);
+            UpdateValue(ref value, amount);
+            CheckValue();
+            onValueAdded.Invoke();
+        }
+        
+        public void SubtractValue(int amount)
+        {
+            amount = Mathf.Abs(amount);
+            UpdateValue(ref value, -amount);
+            CheckValue();
+            onValueSubtracted.Invoke();
         }
         
         public void ChangeValue(IntDataQ amount)

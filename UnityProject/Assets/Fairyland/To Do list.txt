@@ -2,15 +2,8 @@ Here's what needs to be done for FairyLand
 
 1. Add sound effects in for player
 2. Add music in to bg
-3. make level ups change player stats
-4. add in a timer based on the mana stat
-
-
-*LVL up stats*
-- make the players max health go up, as well as increase their current health by 1
-- I need something that will reset all stats to their default values, preferably based on the tutorial tbh, or potentially from a restart state
-- I need to make sure that when the player finishes a level, the mana stat is reset to whatever the max mana stat is
-
-
 
 - for some reason the intdataQ for p-Damage is able to hit 0 even when the minimum is 1 and the max is 10
+
+- health instantiation is weird. Player health itself is fine, but the UI for it isnt being super accurate, it either doesnt properly remove the hearts, or doesnt properly add them.
+- i should change the intdataQ script so that it emits a signal on the number being subtracted or added

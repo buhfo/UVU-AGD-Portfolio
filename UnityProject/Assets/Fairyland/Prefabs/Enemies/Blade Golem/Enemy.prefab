@@ -500,3 +500,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   enemyData: {fileID: 11400000, guid: 1570c82785004734fad346a1d9f9b57d, type: 2}
   entityData: {fileID: 11400000, guid: b8eab6c75a519a34bac6d37653f97389, type: 2}
+  event:
+    m_PersistentCalls:
+      m_Calls: []

@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 76023892936069177}
   - component: {fileID: 317481045372940256}
   - component: {fileID: 34608326457322118}
+  - component: {fileID: 4406535385994221348}
   m_Layer: 0
   m_Name: HealthPos
   m_TagString: Untagged
@@ -241,8 +242,40 @@ MonoBehaviour:
       m_Calls: []
   respondEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 317481045372940256}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.UIManager, Assembly-CSharp
+        m_MethodName: UpdateUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   respondLateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  holdTime: 0.1
+--- !u!114 &4406535385994221348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2352866319782673688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65180f705bb904ee98a80edc6dcf0d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: {fileID: 11400000, guid: 04dbd1df8fc49a9458c7edaddacc7929, type: 2}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  respondEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 317481045372940256}
@@ -257,6 +290,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  respondLateEvent:
+    m_PersistentCalls:
+      m_Calls: []
   holdTime: 0.1
 --- !u!1 &3262393552278850400
 GameObject:
