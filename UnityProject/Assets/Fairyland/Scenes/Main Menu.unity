@@ -473,6 +473,97 @@ MonoBehaviour:
             m_StringArgument: Nothing
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &203360941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 203360942}
+  - component: {fileID: 203360943}
+  m_Layer: 0
+  m_Name: Difficulty Fix
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &203360942
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203360941}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 254569139}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &203360943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203360941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65180f705bb904ee98a80edc6dcf0d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: {fileID: 11400000, guid: 2c97bb00ee73e4eaa872a0c22457596f, type: 2}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  respondEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 179d2ec6c93806f489900df95391204f, type: 2}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.FloatDataQ, Assembly-CSharp
+        m_MethodName: SetMax
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 0dbbb6e6f8489e74bb3509c63acbd79e, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Fairyland.Scripts.FloatDataQ, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 179d2ec6c93806f489900df95391204f, type: 2}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.FloatDataQ, Assembly-CSharp
+        m_MethodName: SetMin
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 0dbbb6e6f8489e74bb3509c63acbd79e, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Fairyland.Scripts.FloatDataQ, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 179d2ec6c93806f489900df95391204f, type: 2}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.FloatDataQ, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 0dbbb6e6f8489e74bb3509c63acbd79e, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Fairyland.Scripts.FloatDataQ, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  respondLateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  holdTime: 0.1
 --- !u!1 &213980081
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,6 +829,8 @@ Transform:
   - {fileID: 213980082}
   - {fileID: 1157275985}
   - {fileID: 671157844}
+  - {fileID: 787138085}
+  - {fileID: 203360942}
   m_Father: {fileID: 228710868}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &370625886
@@ -1515,6 +1608,97 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &787138084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 787138085}
+  - component: {fileID: 787138086}
+  m_Layer: 0
+  m_Name: Depth Fix
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &787138085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787138084}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 254569139}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &787138086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787138084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65180f705bb904ee98a80edc6dcf0d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: {fileID: 11400000, guid: 2c97bb00ee73e4eaa872a0c22457596f, type: 2}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  respondEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 8653817484409d745aabb3ddb5bd2a8d, type: 2}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.IntDataQ, Assembly-CSharp
+        m_MethodName: SetMax
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: cad58804508fdeb4abbedb93d6845548, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Fairyland.Scripts.IntDataQ, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 8653817484409d745aabb3ddb5bd2a8d, type: 2}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.IntDataQ, Assembly-CSharp
+        m_MethodName: SetMin
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: cad58804508fdeb4abbedb93d6845548, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Fairyland.Scripts.IntDataQ, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 8653817484409d745aabb3ddb5bd2a8d, type: 2}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.IntDataQ, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: cad58804508fdeb4abbedb93d6845548, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Fairyland.Scripts.IntDataQ, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  respondLateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  holdTime: 0.1
 --- !u!1 &869904121
 GameObject:
   m_ObjectHideFlags: 0
