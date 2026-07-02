@@ -150,7 +150,6 @@ GameObject:
   - component: {fileID: 5363133774134392417}
   - component: {fileID: 8622471431330276211}
   - component: {fileID: 1855917157252020917}
-  - component: {fileID: 8392596948243297586}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -299,18 +298,6 @@ MonoBehaviour:
           m_StringArgument: Hovering Start
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8392596948243297586}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.PrintCheck, Assembly-CSharp
-        m_MethodName: PrintMessage
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Hovering Start
-          m_BoolArgument: 0
-        m_CallState: 2
   onHoverExit:
     m_PersistentCalls:
       m_Calls:
@@ -326,18 +313,6 @@ MonoBehaviour:
           m_StringArgument: Stopped Hovering Start
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8392596948243297586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 371469993414677327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c5a7cbc9f068d44aa42db33e66d6bc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &538298314987475455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,7 +1090,6 @@ GameObject:
   - component: {fileID: 6065070499506212189}
   - component: {fileID: 4916537976954017504}
   - component: {fileID: 800913661621861833}
-  - component: {fileID: 55733163897916362}
   m_Layer: 0
   m_Name: Tutorial Menu
   m_TagString: Untagged
@@ -1219,18 +1193,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 55733163897916362}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.PrintCheck, Assembly-CSharp
-        m_MethodName: PrintMessage
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TUTOTRUE
-          m_BoolArgument: 1
-        m_CallState: 2
   falseAtSceneStartEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1246,30 +1208,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 55733163897916362}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.PrintCheck, Assembly-CSharp
-        m_MethodName: PrintMessage
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TUTOFALSE
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &55733163897916362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7386679305416940096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c5a7cbc9f068d44aa42db33e66d6bc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8508201951785837181
 GameObject:
   m_ObjectHideFlags: 0
