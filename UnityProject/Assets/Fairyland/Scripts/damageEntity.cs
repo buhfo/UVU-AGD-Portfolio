@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Fairyland.Scripts
 {
@@ -6,10 +7,11 @@ namespace Fairyland.Scripts
     {
         public IntDataQ enemyData;
         public EntityData entityData;
+        public UnityEvent @event;
         private void DamageOther()
         {
             enemyData.ChangeValue(-entityData.attack);
-            Debug.Log("Damage");
+            @event.Invoke();
         }
     }
 }
