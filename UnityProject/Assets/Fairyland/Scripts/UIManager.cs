@@ -65,6 +65,7 @@ namespace Fairyland.Scripts
         {
             Destroy(uiElement[i]);
             uiElement.Remove(i);
+            nextLocation.anchoredPosition -= uiOffset;
         }
         
         private void RemoveUI(Dictionary<int, GameObject> uiElement, IntDataQ intDataQObj)
@@ -80,7 +81,7 @@ namespace Fairyland.Scripts
         private void AddUI(Dictionary<int, GameObject> uiElement, IntDataQ intDataQObj)
         {
             if (uiElement.Count >= intDataQObj.value) return;
-            for (var i = uiElement.Count; i <= intDataQObj.value; i++)
+            for (var i = uiElement.Count + 1; i <= intDataQObj.value; i++)
             {
                 InstantiateUI(nextLocation, i);
             }
