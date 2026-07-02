@@ -80,14 +80,13 @@ namespace Fairyland.Scripts
         private void AddUI(Dictionary<int, GameObject> uiElement, IntDataQ intDataQObj)
         {
             if (uiElement.Count >= intDataQObj.value) return;
-            for (var i = intDataQObj.value; i < uiElement.Count; i++)
+            for (var i = uiElement.Count; i <= intDataQObj.value; i++)
             {
                 InstantiateUI(nextLocation, i);
             }
         }
         public void UpdateUI()
         {
-            UICountGet(intDataQ);
             AddUI(uiElements, intDataQ);
             RemoveUI(uiElements, intDataQ);
         }

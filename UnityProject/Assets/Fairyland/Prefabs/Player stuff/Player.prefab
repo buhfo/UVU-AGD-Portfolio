@@ -1582,6 +1582,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Up
       objectReference: {fileID: 0}
+    - target: {fileID: 3392155333698787868, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: actions.Array.data[0].onNumberRolled.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 04dbd1df8fc49a9458c7edaddacc7929, type: 2}
+    - target: {fileID: 3392155333698787868, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: actions.Array.data[2].onNumberRolled.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 04dbd1df8fc49a9458c7edaddacc7929, type: 2}
+    - target: {fileID: 3392155333698787868, guid: 0b230adb39987df458425562263e93ed, type: 3}
+      propertyPath: actions.Array.data[3].onNumberRolled.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 04dbd1df8fc49a9458c7edaddacc7929, type: 2}
     - target: {fileID: 7212887108778509492, guid: 0b230adb39987df458425562263e93ed, type: 3}
       propertyPath: respondEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
