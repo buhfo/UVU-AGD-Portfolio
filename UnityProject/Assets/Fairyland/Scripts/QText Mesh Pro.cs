@@ -40,6 +40,8 @@ namespace Fairyland.Scripts
         public void UpdateText(IntData intDataObj) => textObj.text = intDataObj.Value.ToString();
         
         public void UpdateText(IntDataQ intDataObj) => textObj.text = intDataObj.value.ToString();
+        
+        public void UpdateTextMax(IntDataQ intDataObj) => textObj.text = intDataObj.maxValue.ToString();
     
         public void UpdateText(EntityData intDataObj) => textObj.text = intDataObj.experience.ToString();
     
@@ -59,6 +61,15 @@ namespace Fairyland.Scripts
             TimeSpan timeSpanObj = TimeSpan.FromSeconds(obj.value);
             textObj.text = $"{timeSpanObj.Minutes}:{timeSpanObj.Seconds:d2}";
         }
+        
+        public void UpdateTextMax(FloatDataQ obj) => textObj.text = obj.maxValue.ToString(CultureInfo.CurrentCulture);
+
+        public void UpdateTextWithTimeMax(FloatDataQ obj)
+        {
+            TimeSpan timeSpanObj = TimeSpan.FromSeconds(obj.maxValue);
+            textObj.text = $"{timeSpanObj.Minutes}:{timeSpanObj.Seconds:d2}";
+        }
+
 
         public void UpdateTextAsMoney(IntData obj)
         {
