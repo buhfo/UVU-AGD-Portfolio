@@ -1125,6 +1125,18 @@ MonoBehaviour:
             m_StringArgument: MM
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 7204799940046724683}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: ResetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Unfoc MM
+            m_BoolArgument: 0
+          m_CallState: 2
   - action: {fileID: 11400000, guid: a1ff4f71ccd8c274591755674e405fec, type: 2}
     actionEvent:
       m_PersistentCalls:
@@ -1141,6 +1153,18 @@ MonoBehaviour:
             m_StringArgument: Resume
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 7204799940046724683}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: ResetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Unfoc Res
+            m_BoolArgument: 0
+          m_CallState: 2
   - action: {fileID: 11400000, guid: e7831570f88b5a945b8e794048688968, type: 2}
     actionEvent:
       m_PersistentCalls:
@@ -1155,6 +1179,18 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: Settings
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 7204799940046724683}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: ResetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Unfoc Set
             m_BoolArgument: 0
           m_CallState: 2
   - action: {fileID: 11400000, guid: 0df4304be87b79a448553f207ac7f492, type: 2}
