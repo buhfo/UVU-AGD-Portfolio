@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48bc8ee109581a148acf22a353229c9e, type: 3}
   m_Name: P-T-Level
   m_EditorClassIdentifier: 
-  value: 0
+  value: 1
   minValue: 0
   maxValue: 100
   onValueChanged:

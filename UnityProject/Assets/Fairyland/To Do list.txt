@@ -2,8 +2,5 @@ Here's what needs to be done for FairyLand
 
 1. Add sound effects in for player
 2. Add music in to bg
-3. figure out what the hell is wrong with UIManager
 
-
-
-- for some reason the intdataQ for p-Damage is able to hit 0 even when the minimum is 1 and the max is 10
+Figure out why the pause menu breaks after killing an enemy
