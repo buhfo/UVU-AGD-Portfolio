@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 8889732276354051853}
   - component: {fileID: 1170024446514936541}
   - component: {fileID: 8590629549463242210}
+  - component: {fileID: 1442055832906091799}
   m_Layer: 5
   m_Name: Youtube Icon
   m_TagString: Untagged
@@ -241,6 +242,31 @@ MonoBehaviour:
           m_StringArgument: Youtube Clicked
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1442055832906091799}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.LinkOpener, Assembly-CSharp
+        m_MethodName: OpenWebpage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1442055832906091799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2743704130531082688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6593ca9d6b568984894c8c2afa38dbb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  url: www.youtube.com/@Buhfo
 --- !u!1 &3172954293801875443
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,6 +279,7 @@ GameObject:
   - component: {fileID: 921058422819556420}
   - component: {fileID: 2067175825497846637}
   - component: {fileID: 3574278138274460124}
+  - component: {fileID: 65330025001071648}
   m_Layer: 5
   m_Name: Discord Icon
   m_TagString: Untagged
@@ -373,6 +400,31 @@ MonoBehaviour:
           m_StringArgument: Discord Clicked
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 65330025001071648}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.LinkOpener, Assembly-CSharp
+        m_MethodName: OpenWebpage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &65330025001071648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3172954293801875443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6593ca9d6b568984894c8c2afa38dbb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  url: https://www.unity.com
 --- !u!1 &4387930676502145325
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,6 +473,7 @@ GameObject:
   - component: {fileID: 5738586269233368904}
   - component: {fileID: 6748521607154579236}
   - component: {fileID: 5936051314722176691}
+  - component: {fileID: 2551004734718098875}
   m_Layer: 5
   m_Name: Insta Icon
   m_TagString: Untagged
@@ -541,6 +594,31 @@ MonoBehaviour:
           m_StringArgument: Insta Clicked
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2551004734718098875}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.LinkOpener, Assembly-CSharp
+        m_MethodName: OpenWebpage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2551004734718098875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4563796753775285097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6593ca9d6b568984894c8c2afa38dbb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  url: https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqbTNuV2Q0Q2RRNW1tNDNLR0VjNmxRdWg1NlJvUXxBQ3Jtc0tsNWxmZ1FrVzhOTV9qY3YxbWFyT3BjbTVfT0twd0xhWW9jOVlMQnJicXpqSlo2bTlCWGlRZmkydm95T3VsUFE0VEppdzhZWEhWRlVZY1NGU3k2bGpDNFZ2Z3NmWTlzMWhYTUQ5ZVJTejdNc1ZaOHRZdw&q=https%3A%2F%2Fwww.instagram.com%2Fbuhfo.digital%2F%3Figsh%3DMmQ5Znh2OHc1c3Az%26utm_source%3Dqr
 --- !u!1 &4594497895515568565
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,6 +835,7 @@ GameObject:
   - component: {fileID: 1148745866547785437}
   - component: {fileID: 6911097488906637416}
   - component: {fileID: 3817494983107172018}
+  - component: {fileID: 4995720204263880612}
   m_Layer: 5
   m_Name: Itch Icon
   m_TagString: Untagged
@@ -877,6 +956,31 @@ MonoBehaviour:
           m_StringArgument: Itch Clicked
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4995720204263880612}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.LinkOpener, Assembly-CSharp
+        m_MethodName: OpenWebpage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4995720204263880612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6939484238066035720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6593ca9d6b568984894c8c2afa38dbb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  url: https://buhfo.itch.io/
 --- !u!1 &7104093438377236970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,6 +1404,7 @@ GameObject:
   - component: {fileID: 3023850161707365309}
   - component: {fileID: 1989785539135762518}
   - component: {fileID: 5832484012564740662}
+  - component: {fileID: 4509438768436239649}
   m_Layer: 5
   m_Name: Tiktok Icon
   m_TagString: Untagged
@@ -1420,3 +1525,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4509438768436239649}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.LinkOpener, Assembly-CSharp
+        m_MethodName: OpenWebpage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4509438768436239649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8709186431050173411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6593ca9d6b568984894c8c2afa38dbb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  url: https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqa3RhVWkwWUJsaGRQZTIzRzhFeWtjSW1vcmliQXxBQ3Jtc0ttSVAwRjhINDZWQTBSWVFGUjBOXzRpX0ZvUFU2eW9hQ0lhcDJPVGRCVkc5aVNHcFktNmJFNDl4eTRXczJ1TktVeTJoNk0yZWNqMU42TlYzRWxLN1Iyc0pVaDhZM0lUdVNSS1hEeWpaME5TZkJ0dHVjRQ&q=https%3A%2F%2Fwww.tiktok.com%2F%40buhfo%3Flang%3Den
