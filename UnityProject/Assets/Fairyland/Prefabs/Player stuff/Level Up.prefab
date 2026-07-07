@@ -298,6 +298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 678173729744460691}
   - component: {fileID: 7212887108778509492}
+  - component: {fileID: 4072382999274048708}
   m_Layer: 5
   m_Name: Mana Up
   m_TagString: Untagged
@@ -359,6 +360,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   holdTime: 0.1
+--- !u!114 &4072382999274048708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4640042959119642691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ad7801297ec6b4aa443364a6511f2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mana: {fileID: 0}
 --- !u!1 &8129353529523861257
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,7 +537,7 @@ MonoBehaviour:
     onNumberRolled:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11400000, guid: cf4f84b161c4f4c4bab55b84807264f9, type: 2}
+        - m_Target: {fileID: 11400000, guid: e97e82538459ef44d8062521d3c3dc24, type: 2}
           m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
           m_MethodName: Raise
           m_Mode: 1
@@ -539,7 +553,7 @@ MonoBehaviour:
     onNumberRolled:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11400000, guid: e97e82538459ef44d8062521d3c3dc24, type: 2}
+        - m_Target: {fileID: 11400000, guid: cf4f84b161c4f4c4bab55b84807264f9, type: 2}
           m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
           m_MethodName: Raise
           m_Mode: 1
