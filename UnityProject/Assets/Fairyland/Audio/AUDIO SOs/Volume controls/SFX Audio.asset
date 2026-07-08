@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f434da504d9a3a46a00ef39a89b6545, type: 3}
   m_Name: SFX Audio
   m_EditorClassIdentifier: 
-  value: 1
-  minValue: 0
-  maxValue: 1
+  value: 0
+  minValue: -80
+  maxValue: 20
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -38,19 +38,7 @@ MonoBehaviour:
       m_Calls: []
   onMinValueMet:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 853cc5651aee734458b97ab391fa351c, type: 2}
-        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
-        m_MethodName: Raise
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onMaxValueChanged:
     m_PersistentCalls:
       m_Calls: []
