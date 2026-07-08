@@ -14,7 +14,7 @@ namespace Fairyland.Scripts
         public EntityData entityData;
         public UnityEvent takeDamage, deathActivate, attackPlayer, startMoving, stopMoving, turnBody;
         
-        public bool paused = false;
+        public QBoolData paused;
         
         private float seconds;
         
@@ -27,19 +27,6 @@ namespace Fairyland.Scripts
         ///  3 = attack
         /// </summary>
         private int lastMovement;
-
-        public void Pause()
-        {
-            paused = true;
-        }
-        public void UnPause()
-        {
-            paused = false;
-        }
-        public void TogglePause()
-        {
-            paused = !paused;
-        }
         
         private void Awake()
         {
@@ -97,7 +84,7 @@ namespace Fairyland.Scripts
         {
             while (true)
             {
-                yield return new WaitUntil(() => !paused);
+                yield return new WaitUntil(() => !paused.CurrentValue);
                 if (movementManager.frontBlocked)
                     if (movementManager.playerInFront)
                         DamagePlayer();

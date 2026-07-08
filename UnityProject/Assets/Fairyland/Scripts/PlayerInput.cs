@@ -18,8 +18,7 @@ namespace Fairyland.Scripts
         
         public float interactTime = 0.1f;
         
-        public bool paused = false;
-
+        public QBoolData paused;
         
         public UnityEvent interactEvent, pauseEvent, unpauseEvent, moveEvent;
 
@@ -33,24 +32,9 @@ namespace Fairyland.Scripts
             interactAction.holdTime =  interactTime;
         }
 
-        public void PauseToggle()
+        private void PauseControl()
         {
-            paused = !paused;
-        }
-
-        public void PauseOn()
-        {
-            paused = true;
-        }
-        
-        public void PauseOff()
-        {
-            paused = false;
-        }
-
-        public void PauseControl()
-        {
-            if (paused)
+            if (paused.CurrentValue)
             {
                 unpauseEvent.Invoke();
             }
@@ -64,7 +48,7 @@ namespace Fairyland.Scripts
         {
             if (Input.GetKeyUp(pause)) PauseControl();
             
-            if (paused) return;
+            if (paused.CurrentValue) return;
             if (Input.GetKeyUp(forward))
             {
                 controller.MoveForward();

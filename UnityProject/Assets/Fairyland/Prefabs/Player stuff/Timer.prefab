@@ -355,6 +355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 11400000, guid: 9840f0fd042a3704088a7918be9f6ffe, type: 2}
+  paused: {fileID: 11400000, guid: 7377562956471dd4a824b8cae6d3349e, type: 2}
 --- !u!114 &6214049255805481546
 MonoBehaviour:
   m_ObjectHideFlags: 0

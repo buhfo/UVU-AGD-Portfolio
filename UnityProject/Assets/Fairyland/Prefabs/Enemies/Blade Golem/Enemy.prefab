@@ -121,8 +121,6 @@ GameObject:
   - component: {fileID: 3014751148238150035}
   - component: {fileID: 920272664462158300}
   - component: {fileID: 7999332921123303630}
-  - component: {fileID: 3496510710039053329}
-  - component: {fileID: 5090143129452120512}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -287,7 +285,7 @@ MonoBehaviour:
           m_StringArgument: Turn
           m_BoolArgument: 0
         m_CallState: 2
-  paused: 0
+  paused: {fileID: 11400000, guid: 7377562956471dd4a824b8cae6d3349e, type: 2}
 --- !u!65 &7999332921123303630
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -309,76 +307,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3496510710039053329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6067521914493877834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65180f705bb904ee98a80edc6dcf0d55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action: {fileID: 11400000, guid: 6ff7c3389d8c3034aafa03283455703e, type: 2}
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  respondEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 920272664462158300}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.NpcController, Assembly-CSharp
-        m_MethodName: Pause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  respondLateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  holdTime: 0.1
---- !u!114 &5090143129452120512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6067521914493877834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65180f705bb904ee98a80edc6dcf0d55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action: {fileID: 11400000, guid: 344a34242ae333e45aa25204a13586dc, type: 2}
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  respondEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 920272664462158300}
-        m_TargetAssemblyTypeName: Fairyland.Scripts.NpcController, Assembly-CSharp
-        m_MethodName: UnPause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  respondLateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  holdTime: 0.1
 --- !u!1001 &747708658062079764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -500,3 +428,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   enemyData: {fileID: 11400000, guid: 1570c82785004734fad346a1d9f9b57d, type: 2}
   entityData: {fileID: 11400000, guid: b8eab6c75a519a34bac6d37653f97389, type: 2}
+  event:
+    m_PersistentCalls:
+      m_Calls: []

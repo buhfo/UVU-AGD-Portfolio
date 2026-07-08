@@ -5,6 +5,7 @@ namespace Fairyland.Scripts
     public class TimerFloatDataQ : MonoBehaviour
     {
         public FloatDataQ timer;
+        public QBoolData paused;
         private float seconds;
         private bool isRunning;
         
@@ -35,7 +36,7 @@ namespace Fairyland.Scripts
         
         private void FixedUpdate()
         {
-            if (isRunning)
+            if (isRunning && !paused.CurrentValue)
             {
                 seconds += Time.deltaTime;
                 timer.SetValue(seconds);

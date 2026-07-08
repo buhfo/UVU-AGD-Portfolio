@@ -811,6 +811,7 @@ GameObject:
   - component: {fileID: 6295169559167067795}
   - component: {fileID: 1241838455950666154}
   - component: {fileID: 7334787276504461969}
+  - component: {fileID: 2641127373555246850}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -875,7 +876,7 @@ MonoBehaviour:
   interact: 32
   pause: 27
   interactTime: 0.1
-  paused: 0
+  paused: {fileID: 11400000, guid: 7377562956471dd4a824b8cae6d3349e, type: 2}
   interactEvent:
     m_PersistentCalls:
       m_Calls:
@@ -895,25 +896,25 @@ MonoBehaviour:
   pauseEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 6ff7c3389d8c3034aafa03283455703e, type: 2}
-        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
-        m_MethodName: Raise
-        m_Mode: 1
+      - m_Target: {fileID: 11400000, guid: 7377562956471dd4a824b8cae6d3349e, type: 2}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.QBoolData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
   unpauseEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 344a34242ae333e45aa25204a13586dc, type: 2}
-        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
-        m_MethodName: Raise
-        m_Mode: 1
+      - m_Target: {fileID: 11400000, guid: 7377562956471dd4a824b8cae6d3349e, type: 2}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.QBoolData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1050,29 +1051,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 950457351514350288}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2641127373555246850}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.PrintCheck, Assembly-CSharp
+        m_MethodName: PrintMessage
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 8583603347983815405}
-        m_TargetAssemblyTypeName: Crawl.Scripts.PlayerInput, Assembly-CSharp
-        m_MethodName: PauseOff
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
+          m_StringArgument: unpaused
+          m_BoolArgument: 0
         m_CallState: 2
   respondLateEvent:
     m_PersistentCalls:
@@ -1109,34 +1098,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 950457351514350288}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2641127373555246850}
+        m_TargetAssemblyTypeName: Fairyland.Scripts.PrintCheck, Assembly-CSharp
+        m_MethodName: PrintMessage
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8583603347983815405}
-        m_TargetAssemblyTypeName: Crawl.Scripts.PlayerInput, Assembly-CSharp
-        m_MethodName: PauseOn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
+          m_StringArgument: paused
+          m_BoolArgument: 1
         m_CallState: 2
   respondLateEvent:
     m_PersistentCalls:
       m_Calls: []
   holdTime: 0.1
+--- !u!114 &2641127373555246850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8578977834633937685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c5a7cbc9f068d44aa42db33e66d6bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8759355028360565430
 GameObject:
   m_ObjectHideFlags: 0
