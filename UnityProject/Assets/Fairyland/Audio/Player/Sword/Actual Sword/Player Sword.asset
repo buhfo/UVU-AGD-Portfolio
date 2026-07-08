@@ -1,0 +1,203 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-8116963435838476296
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sword_Whooshes [2026-07-07 121201]-6_{-8116963435838476296}
+  m_AudioClip: {fileID: 8300000, guid: 8dab1fb192bc13f4c895eb4c48f6a2a4, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-7346176027466830327
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sword_Whooshes [2026-07-07 121202]-4_{-7346176027466830327}
+  m_AudioClip: {fileID: 8300000, guid: 8cafa276046121246baa2f79679c1f5a, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-3840835603938307207
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sword_Whooshes [2026-07-07 121201]_{-3840835603938307207}
+  m_AudioClip: {fileID: 8300000, guid: 81e45ae91cb81664dbef29a7842e858a, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-3709672430806076336
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sword_Whooshes [2026-07-07 121202]-1_{-3709672430806076336}
+  m_AudioClip: {fileID: 8300000, guid: 6ec003ebb6702df4e8e7a83bc187f029, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-220076010126576335
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sword_Slash_{-220076010126576335}
+  m_AudioClip: {fileID: 8300000, guid: b7e01a3d8454ffd448025edb5474d64b, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1218228048353297511
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sword_Whooshes [2026-07-07 121202]-3_{1218228048353297511}
+  m_AudioClip: {fileID: 8300000, guid: b8f0dd2abd1f2dd418b51a19214f0d82, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &3545979076494798894
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sword_Whooshes [2026-07-07 121202]_{3545979076494798894}
+  m_AudioClip: {fileID: 8300000, guid: 10f687fd89de28e43855e62c70993898, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &5272139624676434970
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sword_Whooshes [2026-07-07 121201]-1_{5272139624676434970}
+  m_AudioClip: {fileID: 8300000, guid: 236efccdf68ffc348a366ac7c1d6b411, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &5430682483994975741
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sword_Whooshes [2026-07-07 121201]-7_{5430682483994975741}
+  m_AudioClip: {fileID: 8300000, guid: e71dda51e73907a45b144a3cac320fee, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &6207528119789389902
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sword_Whooshes [2026-07-07 121202]-2_{6207528119789389902}
+  m_AudioClip: {fileID: 8300000, guid: 964bef7d209804946bb1479722a243a2, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player Sword
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: 0, y: 0}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: -220076010126576335}
+  - {fileID: -3840835603938307207}
+  - {fileID: 5272139624676434970}
+  - {fileID: 6618473555249170035}
+  - {fileID: 7244577549430735934}
+  - {fileID: 7005834030373091357}
+  - {fileID: 8680554030654619276}
+  - {fileID: -8116963435838476296}
+  - {fileID: 5430682483994975741}
+  - {fileID: 8509595898649563048}
+  - {fileID: 3545979076494798894}
+  - {fileID: -3709672430806076336}
+  - {fileID: 6207528119789389902}
+  - {fileID: 1218228048353297511}
+  - {fileID: -7346176027466830327}
+  - {fileID: 8066364380672446214}
+  m_AvoidRepeatingLast: 0
+  m_PlaybackMode: 1
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 0
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &6618473555249170035
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sword_Whooshes [2026-07-07 121201]-2_{6618473555249170035}
+  m_AudioClip: {fileID: 8300000, guid: e2bb6135a26e4e14cb4826f9fea767d7, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &7005834030373091357
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sword_Whooshes [2026-07-07 121201]-4_{7005834030373091357}
+  m_AudioClip: {fileID: 8300000, guid: a21b044fb307869488ddece8cad29813, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &7244577549430735934
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sword_Whooshes [2026-07-07 121201]-3_{7244577549430735934}
+  m_AudioClip: {fileID: 8300000, guid: ba2e83c069060de46bbc2f8d6b0bce91, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &8066364380672446214
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sword_Whooshes [2026-07-07 121202]-5_{8066364380672446214}
+  m_AudioClip: {fileID: 8300000, guid: 814e054be5e9f034a92b2c020722ec9b, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &8509595898649563048
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sword_Whooshes [2026-07-07 121201]-8_{8509595898649563048}
+  m_AudioClip: {fileID: 8300000, guid: 81e22f40d57f8c6478137753911f3764, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &8680554030654619276
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sword_Whooshes [2026-07-07 121201]-5_{8680554030654619276}
+  m_AudioClip: {fileID: 8300000, guid: 2b3fd3d770bf894418656d48e5ddc68e, type: 3}
+  m_Volume: 0
+  m_Enabled: 1

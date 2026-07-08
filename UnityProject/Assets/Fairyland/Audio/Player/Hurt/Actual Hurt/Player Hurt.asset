@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-6997674672577264313
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Death [2026-07-07 121343]-2_{-6997674672577264313}
+  m_AudioClip: {fileID: 8300000, guid: ed6674c2ca4fb2a4c8b77fa031b10f4a, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-4866716635624922201
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Hurt [2026-07-07 120551]_{-4866716635624922201}
+  m_AudioClip: {fileID: 8300000, guid: 97ec5d56bfe1a8c4ba0e6f50cd14d407, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-4424712275879938173
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Death [2026-07-07 121343]_{-4424712275879938173}
+  m_AudioClip: {fileID: 8300000, guid: 2129ea942fa4eb94aa683bd6caca00b5, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-4102985398640060818
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Hurt [2026-07-07 120551]-4_{-4102985398640060818}
+  m_AudioClip: {fileID: 8300000, guid: c65be549f75c7c6488af6491b1d96d23, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-557591513284407428
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Hurt [2026-07-07 120551]-1_{-557591513284407428}
+  m_AudioClip: {fileID: 8300000, guid: 87903e3dc6b6af04a8bb2824b340dc0e, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &2161392680499546437
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Hurt [2026-07-07 120551]-3_{2161392680499546437}
+  m_AudioClip: {fileID: 8300000, guid: 2da33343f67f03947b38ceed3ba78ec9, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &2998203636419066727
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Hurt [2026-07-07 120551]-2_{2998203636419066727}
+  m_AudioClip: {fileID: 8300000, guid: dbf669cb47bd27b439904685d307c242, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &6377941178479479177
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Death [2026-07-07 121343]-1_{6377941178479479177}
+  m_AudioClip: {fileID: 8300000, guid: 4072b90d1d93c4d4f9ead046003de6a9, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player Hurt
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: 0, y: 0}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: -4424712275879938173}
+  - {fileID: 6377941178479479177}
+  - {fileID: -6997674672577264313}
+  - {fileID: -4866716635624922201}
+  - {fileID: -557591513284407428}
+  - {fileID: 2998203636419066727}
+  - {fileID: 2161392680499546437}
+  - {fileID: -4102985398640060818}
+  m_AvoidRepeatingLast: 0
+  m_PlaybackMode: 1
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 0
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0

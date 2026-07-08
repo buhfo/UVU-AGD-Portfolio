@@ -21,7 +21,7 @@ namespace Fairyland.Scripts
         public bool paused = false;
 
         
-        public UnityEvent interactEvent, pauseEvent, unpauseEvent;
+        public UnityEvent interactEvent, pauseEvent, unpauseEvent, moveEvent;
 
         GameActionHandler interactAction;
         MovementManager controller;
@@ -65,10 +65,26 @@ namespace Fairyland.Scripts
             if (Input.GetKeyUp(pause)) PauseControl();
             
             if (paused) return;
-            if (Input.GetKeyUp(forward)) controller.MoveForward();
-            if (Input.GetKeyUp(back)) controller.MoveBackward();
-            if (Input.GetKeyUp(turnLeft)) controller.RotateLeft();
-            if (Input.GetKeyUp(turnRight)) controller.RotateRight();
+            if (Input.GetKeyUp(forward))
+            {
+                controller.MoveForward();
+                moveEvent.Invoke();
+            }
+            if (Input.GetKeyUp(back))
+            {
+                controller.MoveBackward();
+                moveEvent.Invoke();
+            }
+            if (Input.GetKeyUp(turnLeft))
+            {
+                controller.RotateLeft();
+                moveEvent.Invoke();
+            }
+            if (Input.GetKeyUp(turnRight))
+            {
+                controller.RotateRight();
+                moveEvent.Invoke();
+            }
             if (Input.GetKeyUp(interact)) interactEvent.Invoke();
         }
     }
