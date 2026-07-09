@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-5142352261067236407
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Attacking [2026-07-09 091114]-2_{-5142352261067236407}
+  m_AudioClip: {fileID: 8300000, guid: eea33f68ecedb274b8c56356cc4e747b, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2616927800916570845
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Attacking [2026-07-09 091115]-1_{-2616927800916570845}
+  m_AudioClip: {fileID: 8300000, guid: c59a95fa99d6ea1448ae12f25060b121, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1326024193001104347
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Attacking [2026-07-09 091114]-4_{-1326024193001104347}
+  m_AudioClip: {fileID: 8300000, guid: 49b412c1952946a4aa3f3c82d32631f3, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1046066147242435027
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Attacking [2026-07-09 091114]-5_{-1046066147242435027}
+  m_AudioClip: {fileID: 8300000, guid: bb526cece53445e4db3eb15c5db3e75b, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &2602478909231309798
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Attacking [2026-07-09 091114]-3_{2602478909231309798}
+  m_AudioClip: {fileID: 8300000, guid: 32bfc7797ebb2964caaa9d7963a067ca, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &3693057177922684092
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Attacking [2026-07-09 091114]-1_{3693057177922684092}
+  m_AudioClip: {fileID: 8300000, guid: 6e0226fdc86b7444590e4dc4c5d3bcbb, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &4143211745788041988
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Attacking [2026-07-09 091115]-2_{4143211745788041988}
+  m_AudioClip: {fileID: 8300000, guid: 938c8e683878d644fa9f1976b9ef7299, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &4944101766014197086
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Attacking [2026-07-09 091114]_{4944101766014197086}
+  m_AudioClip: {fileID: 8300000, guid: 85785f389dffa034696c1f9f1a4390e1, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &5193421900421595990
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Attacking [2026-07-09 091114]-6_{5193421900421595990}
+  m_AudioClip: {fileID: 8300000, guid: f366bac3ca79e0d4dae81a2dda981544, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BG-Attack
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: -168, y: 288}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: 4944101766014197086}
+  - {fileID: 3693057177922684092}
+  - {fileID: -5142352261067236407}
+  - {fileID: 2602478909231309798}
+  - {fileID: -1326024193001104347}
+  - {fileID: -1046066147242435027}
+  - {fileID: 5193421900421595990}
+  - {fileID: 6702023565712964337}
+  - {fileID: -2616927800916570845}
+  - {fileID: 4143211745788041988}
+  m_AvoidRepeatingLast: 0
+  m_PlaybackMode: 1
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &6702023565712964337
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Attacking [2026-07-09 091115]_{6702023565712964337}
+  m_AudioClip: {fileID: 8300000, guid: b5ec63fe440aaa84baadd16c31786a8d, type: 3}
+  m_Volume: 0
+  m_Enabled: 1

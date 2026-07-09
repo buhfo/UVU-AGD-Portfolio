@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-119015505771566616
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Death [2026-07-09 091440]-3_{-119015505771566616}
+  m_AudioClip: {fileID: 8300000, guid: 7473b7a3b6b6c8440901837d84c342a0, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1313277232992032389
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Death [2026-07-09 091440]-2_{1313277232992032389}
+  m_AudioClip: {fileID: 8300000, guid: 32a4f9592fdf9af4f8c0b0c94479ce19, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &5749632285121388369
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Death [2026-07-09 091440]_{5749632285121388369}
+  m_AudioClip: {fileID: 8300000, guid: 018a3b8276cd5034fb5467931a4ade99, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BG-Death
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: -168.00006, y: 120.00002}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: 5749632285121388369}
+  - {fileID: 8715312530184528341}
+  - {fileID: 1313277232992032389}
+  - {fileID: -119015505771566616}
+  m_AvoidRepeatingLast: 0
+  m_PlaybackMode: 1
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &8715312530184528341
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Death [2026-07-09 091440]-1_{8715312530184528341}
+  m_AudioClip: {fileID: 8300000, guid: fcadda41a487cbf49ac1a1bc49dab38b, type: 3}
+  m_Volume: 0
+  m_Enabled: 1

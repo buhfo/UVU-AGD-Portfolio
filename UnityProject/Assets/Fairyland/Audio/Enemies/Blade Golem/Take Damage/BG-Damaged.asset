@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-9142379151533371118
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Take Damage [2026-07-09 091620]_{-9142379151533371118}
+  m_AudioClip: {fileID: 8300000, guid: 87eadf22654b14641adbec7b4671848c, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-3665075615691505969
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Take Damage [2026-07-09 091620]-1_{-3665075615691505969}
+  m_AudioClip: {fileID: 8300000, guid: 5d9624d633bb2b14984b5b372f52ba9a, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-3587554458754822526
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Take Damage [2026-07-09 091620]-2_{-3587554458754822526}
+  m_AudioClip: {fileID: 8300000, guid: 4b1babd383fd44e4a90ea1765de56826, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2669996635979938434
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Take Damage [2026-07-09 091620]-4_{-2669996635979938434}
+  m_AudioClip: {fileID: 8300000, guid: 72847a9a933290a4b8372676a915f88a, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &4721449143416369301
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Take Damage [2026-07-09 091620]-3_{4721449143416369301}
+  m_AudioClip: {fileID: 8300000, guid: 4758d6699eb64c642a8a78d4e68a4711, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BG-Damaged
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: -167.99998, y: 120.00002}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: -9142379151533371118}
+  - {fileID: -3665075615691505969}
+  - {fileID: -3587554458754822526}
+  - {fileID: 4721449143416369301}
+  - {fileID: -2669996635979938434}
+  m_AvoidRepeatingLast: 0
+  m_PlaybackMode: 1
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0

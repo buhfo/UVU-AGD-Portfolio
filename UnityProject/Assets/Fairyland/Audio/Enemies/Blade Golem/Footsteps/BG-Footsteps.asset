@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-8975650807193679779
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Walking [2026-07-09 091901]-2_{-8975650807193679779}
+  m_AudioClip: {fileID: 8300000, guid: 25e13f7d80f481c49b1f07fd2d8f6608, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-8501014926380177997
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Walking [2026-07-09 091901]-6_{-8501014926380177997}
+  m_AudioClip: {fileID: 8300000, guid: 41eb1db9bae315745a05bd280293f097, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-6416386142452934827
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Walking [2026-07-09 091901]_{-6416386142452934827}
+  m_AudioClip: {fileID: 8300000, guid: 311729451957a0a4ba7e1b25158ec4cf, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-5385242682761658378
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Walking [2026-07-09 091901]-3_{-5385242682761658378}
+  m_AudioClip: {fileID: 8300000, guid: d5778cfc654d5844482081a2f3dfbcc2, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2811832425204000412
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Walking [2026-07-09 091901]-9_{-2811832425204000412}
+  m_AudioClip: {fileID: 8300000, guid: f7eab7fcea0f19a4985a46cd2b056bd0, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &600067668584237407
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Walking [2026-07-09 091901]-8_{600067668584237407}
+  m_AudioClip: {fileID: 8300000, guid: b80cdd9175e19db488a9ffa285da9376, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &644297787194790604
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Walking [2026-07-09 091901]-1_{644297787194790604}
+  m_AudioClip: {fileID: 8300000, guid: e0f7e93a3cf91ee499bb983775bceeb0, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1034780152684489848
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Walking [2026-07-09 091901]-4_{1034780152684489848}
+  m_AudioClip: {fileID: 8300000, guid: b1162e17d80a05f4ea25ee3cdcddbd2f, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &2908361482921166374
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Walking [2026-07-09 091901]-5_{2908361482921166374}
+  m_AudioClip: {fileID: 8300000, guid: c4695ff585c400f47856b6b16d458e81, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BG-Footsteps
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: -167.99998, y: 216.00009}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: -6416386142452934827}
+  - {fileID: 644297787194790604}
+  - {fileID: -8975650807193679779}
+  - {fileID: -5385242682761658378}
+  - {fileID: 1034780152684489848}
+  - {fileID: 2908361482921166374}
+  - {fileID: -8501014926380177997}
+  - {fileID: 8496418427205655419}
+  - {fileID: 600067668584237407}
+  - {fileID: -2811832425204000412}
+  m_AvoidRepeatingLast: 0
+  m_PlaybackMode: 1
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &8496418427205655419
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Walking [2026-07-09 091901]-7_{8496418427205655419}
+  m_AudioClip: {fileID: 8300000, guid: d83505dbdd85dca498c959e671fdd986, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
