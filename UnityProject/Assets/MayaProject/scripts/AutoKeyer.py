@@ -12,21 +12,21 @@ def _get_selection():
     return sel
 
 
-def _safe_key(obj, attr, frame, value, force_eased=False):
+def _safe_key(obj, attr, frame, value, force_auto=False):
     plug = "{}.{}".format(obj, attr)
 
     if cmds.getAttr(plug, lock=True):
         cmds.warning("{} is locked, skipping.".format(plug))
         return
 
-    if force_eased:
+    if force_auto:
         cmds.setKeyframe(
             obj,
             attribute=attr,
             time=frame,
             value=value,
-            inTangentType="spline",
-            outTangentType="spline"
+            inTangentType="auto",
+            outTangentType="auto"
         )
 
         cmds.keyTangent(
@@ -35,8 +35,8 @@ def _safe_key(obj, attr, frame, value, force_eased=False):
             time=(frame, frame),
             edit=True,
             lock=False,
-            inTangentType="spline",
-            outTangentType="spline"
+            inTangentType="auto",
+            outTangentType="auto"
         )
     else:
         cmds.setKeyframe(obj, attribute=attr, time=frame, value=value)
@@ -60,7 +60,7 @@ def apply_keys(*_):
 
     start = cmds.intField("ak_start", q=True, value=True)
     step = cmds.intField("ak_step", q=True, value=True)
-    force_eased = cmds.checkBox("ak_forceEased", q=True, value=True)
+    force_auto = cmds.checkBox("ak_forceAuto", q=True, value=True)
 
     do_rot = cmds.checkBox("ak_doRot", q=True, value=True)
     seq = _get_sequence()
@@ -111,11 +111,11 @@ def apply_keys(*_):
             # Base keys on the start frame
             if do_rot:
                 for a in set(seq):
-                    _safe_key(obj, "rotate" + a, frame, base_r[a], force_eased)
+                    _safe_key(obj, "rotate" + a, frame, base_r[a], force_auto)
 
             if do_trans:
                 for a in AXES:
-                    _safe_key(obj, "translate" + a, frame, base_t[a], force_eased)
+                    _safe_key(obj, "translate" + a, frame, base_t[a], force_auto)
 
             # Phase 1: rotation, one axis after another
             if do_rot:
@@ -124,7 +124,7 @@ def apply_keys(*_):
                     amt = amounts[a]
 
                     # Hold key so this axis stays still until its turn
-                    _safe_key(obj, attr, frame, cur_r[a], force_eased)
+                    _safe_key(obj, attr, frame, cur_r[a], force_auto)
 
                     values = []
 
@@ -139,13 +139,13 @@ def apply_keys(*_):
 
                     for v in values:
                         frame += step
-                        _safe_key(obj, attr, frame, v, force_eased)
+                        _safe_key(obj, attr, frame, v, force_auto)
                         cur_r[a] = v
 
             # Phase 2: translation, after all rotation is done
             if do_trans:
                 for a in AXES:
-                    _safe_key(obj, "translate" + a, frame, cur_t[a], force_eased)
+                    _safe_key(obj, "translate" + a, frame, cur_t[a], force_auto)
 
                 for _ in range(t_cycles):
                     frame += step
@@ -156,7 +156,7 @@ def apply_keys(*_):
                             "translate" + a,
                             frame,
                             base_t[a] + t_off[i],
-                            force_eased
+                            force_auto
                         )
 
                     frame += step
@@ -167,7 +167,7 @@ def apply_keys(*_):
                             "translate" + a,
                             frame,
                             base_t[a],
-                            force_eased
+                            force_auto
                         )
 
     finally:
@@ -231,8 +231,8 @@ def show_ui():
     cmds.intField("ak_step", value=24, minValue=1, width=100, parent=row)
 
     cmds.checkBox(
-        "ak_forceEased",
-        label="Force keys to be eased",
+        "ak_forceAuto",
+        label="Force keys to be automatic",
         value=True,
         parent=main_col
     )
