@@ -18,7 +18,7 @@ child_ctrl_grp = cmds.listRelatives(child_ctrl, parent=True)[0]  # [child contro
 # create constraints
 p_constraint1 = cmds.parentConstraint(parent_ctrl, child_ctrl_grp, mo=True, skipRotate=['x', 'y', 'z'], weight=1)[0]  # constrain translate
 p_constraint2 = cmds.parentConstraint(parent_ctrl, child_ctrl_grp, mo=True, skipTranslate=['x', 'y', 'z'], skipRotate=[], weight=1)[0]  # constrain rotate
-cmds.scaleConstraint(parent_ctrl, child_ctrl_grp, weight = 1)
+cmds.scaleConstraint(parent_ctrl, child_ctrl_grp, mo=True, weight=1)
 
 # create attributes on the child control
 if not cmds.attributeQuery('FollowTranslate', node=child_ctrl, exists = True):
