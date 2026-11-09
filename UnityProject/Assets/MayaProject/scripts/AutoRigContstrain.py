@@ -8,8 +8,9 @@ import maya.cmds as cmds  # type: ignore
 #   CTRL_SUFFIX should be "_Jnt_Ctrl"
 CTRL_SUFFIX = "_Jnt_Ctrl"
 
-# Change this if your constrained object uses a different ending.
-# The script makes sure this is the object being constrained.
+# This is the ending of the object that should be constrained.
+# Example:
+#   L_Eye_Jnt
 JOINT_SUFFIX = "_Jnt"
 
 
@@ -70,16 +71,21 @@ def find_node_by_exact_short_name(short_name):
     return matches
 
 
-def constrain_joint_to_control(control, joint):
-    """
-    Apply parent and scale constraints so the joint follows the control.
-    The joint is the constrained object.
-    """
+def delete_existing_constraints(joint):
+    """Delete existing parent and scale constraints directly under the joint."""
     parent_constraints = cmds.listRelatives(joint, type="parentConstraint") or []
     scale_constraints = cmds.listRelatives(joint, type="scaleConstraint") or []
 
     for constraint in parent_constraints + scale_constraints:
         cmds.delete(constraint)
+
+
+def constrain_joint_to_control(control, joint):
+    """
+    Apply parent and scale constraints so the joint follows the control.
+    The joint is the constrained object.
+    """
+    delete_existing_constraints(joint)
 
     parent_constraint = cmds.parentConstraint(control, joint, mo=True, weight=1)[0]
     scale_constraint = cmds.scaleConstraint(control, joint, mo=True, weight=1)[0]
@@ -129,4 +135,30 @@ def auto_rig_constrain(ctrl_suffix=CTRL_SUFFIX, joint_suffix=JOINT_SUFFIX):
 
         if len(matching_joints) > 1:
             cmds.warning(
-                "Multiple joints found named '{
+                "Multiple joints found named '{0}'. Using first match: '{1}'.".format(
+                    matching_joint_name,
+                    matching_joints[0]
+                )
+            )
+
+        joint = matching_joints[0]
+
+        if not strip_namespace(joint).endswith(joint_suffix):
+            cmds.warning(
+                "Matched object '{0}' does not end with '{1}'. Skipping.".format(
+                    joint,
+                    joint_suffix
+                )
+            )
+            skipped_count += 1
+            continue
+
+        constrain_joint_to_control(control, joint)
+        constrained_count += 1
+
+    print("Auto rig constrain complete.")
+    print("Constrained: {0}".format(constrained_count))
+    print("Skipped: {0}".format(skipped_count))
+
+
+auto_rig_constrain(CTRL_SUFFIX, JOINT_SUFFIX)
