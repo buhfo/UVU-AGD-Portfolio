@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Amii Rig.ma
-//Last modified: Tue, Nov 10, 2026 04:21:44 PM
+//Last modified: Tue, Nov 10, 2026 04:51:37 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "ngst2SkinLayerData" -dataType "ngst2SkinLayerDataStorage" "ngSkinTools2" "2.4.0";
@@ -14,18 +14,18 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202512041342-b90de33065";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26300)";
-fileInfo "UUID" "4F9A8880-45EC-269A-F3F2-03AB567E40F2";
+fileInfo "UUID" "3AB6E8B7-4BB9-4845-E238-92AE6BA58223";
 createNode transform -s -n "persp";
 	rename -uid "464DFD4D-40E2-C4E8-5A12-D9AAEB6D27DF";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.3534760967784583 6.8190172300216325 -3.6749770958277468 ;
-	setAttr ".r" -type "double3" -413.3999999917109 -2391.2000000001576 0 ;
+	setAttr ".t" -type "double3" 7.7076457132429725 4.9666411724862556 2.7397166643169548 ;
+	setAttr ".r" -type "double3" -377.99999999002762 -284.7999999998919 6.2254991180665872e-15 ;
 	setAttr ".rpt" -type "double3" 3.4357346658253312e-16 -4.8155135043217366e-17 -1.7445627065801211e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C0806C75-4BE7-CA34-A08C-69B7077E50A4";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 5.9209234132135009;
+	setAttr ".coi" 7.3601536875196993;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -71,7 +71,7 @@ createNode camera -s -n "frontShape" -p "front";
 createNode transform -s -n "side";
 	rename -uid "07333A4F-41AF-F883-EEA0-28BB3AB8EC90";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1000.1010123368393 3.058536383023752 -1.0326664981835263 ;
+	setAttr ".t" -type "double3" 1000.1010123368393 3.3174479876561249 -0.12353370464485103 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "B3FB5075-47FF-87F6-69DE-9F9FFEB404B4";
@@ -583,12 +583,12 @@ createNode joint -n "R_Shoulder_IK_Jnt" -p "Spine_02_Jnt";
 	setAttr ".oc" 4;
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
-	setAttr ".r" -type "double3" -6.6027146252228369e-05 3.0681785343350721e-05 0.00072077446044752904 ;
+	setAttr ".r" -type "double3" -6.6033048933311311e-05 3.0681168594985588e-05 0.00057966119404124876 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
 	setAttr ".jo" -type "double3" 1.1817790739366389 150.14668461564173 6.2289080331073876 ;
-	setAttr ".pa" -type "double3" -6.6021281284715284e-05 3.0682504486531619e-05 0.00083234642498997754 ;
+	setAttr ".pa" -type "double3" -6.602144856743024e-05 3.0682299556092925e-05 0.00063924257628842544 ;
 	setAttr ".bps" -type "matrix" -0.094088706298965638 -0.86218406930404567 0.49778102212248276 0
 		 0.99500014660290748 -0.098260033896328355 0.017879429489919302 0 0.033496620832250752 0.49697444237808552 0.86711843482641471 0
 		 0.00028355400000002644 3.7500000000000013 0.66964499999999971 1;
@@ -599,12 +599,12 @@ createNode joint -n "R_Elbow_IK_Jnt" -p "R_Shoulder_IK_Jnt";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 5;
 	setAttr ".t" -type "double3" 0.8000110387802124 1.789719161602779e-16 -2.5720532976640546e-16 ;
-	setAttr ".r" -type "double3" -7.1259691480312565e-19 -1.6847183202191973e-18 -0.0013857302964145502 ;
+	setAttr ".r" -type "double3" -5.7284774878849159e-19 -1.4071411831917558e-18 -0.0011139713359579219 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
 	setAttr ".jo" -type "double3" 0 0 10.394892925439944 ;
-	setAttr ".pa" -type "double3" -8.2308824052871722e-19 -1.9041833918663346e-18 -0.0016005938498349472 ;
+	setAttr ".pa" -type "double3" -6.3185289734305964e-19 -1.5243399128125648e-18 -0.0012287139275947872 ;
 	setAttr ".bps" -type "matrix" 0.08695704784869307 -0.86576437114923321 0.49283924912491806 0
 		 0.9956487574552888 0.05889360976849585 -0.072215611235906613 0 0.033496620832250752 0.49697444237808552 0.86711843482641471 0
 		 -0.074988449663721618 3.0602432270963211 1.0678753125932827 1;
@@ -898,7 +898,7 @@ createNode joint -n "R_Pointer_01_Jnt" -p "R_Hand_Jnt";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
 	setAttr ".jo" -type "double3" 153.90560119995905 -25.855916038947015 0.73468915019510539 ;
-	setAttr ".pa" -type "double3" -4.6118042881220995e-14 9.5416640443905503e-15 7.9513867036587544e-16 ;
+	setAttr ".pa" -type "double3" -4.6118042881220995e-14 9.5416640443905503e-15 7.9513867036587535e-16 ;
 	setAttr ".bps" -type "matrix" -0.35556722875079644 -0.79898558300168177 0.48496802368191394 0
 		 -0.43993802901985513 -0.31473001191205885 -0.84107047874952812 0 0.82463717867957165 -0.51241297578935097 -0.23959646446076391 0
 		 0.17558050155639657 1.9758433103561441 1.8533018827438363 1;
@@ -1319,12 +1319,12 @@ createNode joint -n "L_Shoulder_IK_Jnt" -p "Spine_02_Jnt";
 	setAttr ".oc" 4;
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
-	setAttr ".r" -type "double3" 0.0031129399382258784 0.00029407423408782141 -2.3657225047576157e-09 ;
+	setAttr ".r" -type "double3" 0.0031129381873312265 0.00029407417766939609 -2.3657225486445615e-09 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
 	setAttr ".jo" -type "double3" -178.81822092606336 29.853315384358265 6.2289080331074143 ;
-	setAttr ".pa" -type "double3" 0.0031129411067255981 0.00029407425842944317 -2.365717828173163e-09 ;
+	setAttr ".pa" -type "double3" 0.0031129388879056162 0.00029407419783646641 -2.365722597268265e-09 ;
 	setAttr ".bps" -type "matrix" 0.094103314820920062 0.86218492638905975 0.49777677612279825 0
 		 -0.99500063660415283 0.098244985242083985 0.017934771593549993 0 -0.033440982297846956 -0.49697593058645639 0.86711972940343141 0
 		 0.00028355399999990252 3.7500000000000009 -0.66964500000000049 1;
@@ -1335,12 +1335,12 @@ createNode joint -n "L_Elbow_IK_Jnt" -p "L_Shoulder_IK_Jnt";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 5;
 	setAttr ".t" -type "double3" -0.80001723766326904 -5.3031782509815883e-07 -1.6454501130525045e-06 ;
-	setAttr ".r" -type "double3" 5.9217573089887214e-11 4.0455337052669633e-10 7.1705801906742034e-06 ;
+	setAttr ".r" -type "double3" 9.0838509807925275e-11 3.9669638270730521e-10 1.0999500593962032e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
 	setAttr ".jo" -type "double3" 0 0 10.394892925439944 ;
-	setAttr ".pa" -type "double3" 3.4215243143421531e-11 2.3374635731710106e-10 4.1430800335385208e-06 ;
+	setAttr ".pa" -type "double3" 7.7487776940457948e-11 3.9991863727357738e-10 9.3828851793793913e-06 ;
 	setAttr ".bps" -type "matrix" -0.086970653539728049 0.86576084908700512 0.49284303546973296 0
 		 -0.9956494393740335 -0.058932814338648123 -0.072174214705106127 0 -0.033440982297846956 -0.49697593058645639 0.86711972940343141 0
 		 -0.075000137285947857 3.0602379624833507 -1.0678764377200749 1;
@@ -1443,7 +1443,7 @@ createNode joint -n "L_Thumb_01_Jnt" -p "L_Hand_Jnt";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
 	setAttr ".jo" -type "double3" 81.964098950472916 12.615682539860522 -44.120374081807121 ;
-	setAttr ".pa" -type "double3" 4.6913181551586881e-14 -1.2722218725854061e-14 -1.9083328088781107e-14 ;
+	setAttr ".pa" -type "double3" 4.6913181551586875e-14 -1.2722218725854059e-14 -1.9083328088781107e-14 ;
 	setAttr ".bps" -type "matrix" -0.25563108536531093 0.93126746445938768 -0.25960288487290983 0
 		 0.94178439564167638 0.30053637385824683 0.15073168251558292 0 0.21839162145282848 -0.20595824243647104 -0.95387960563777896 0
 		 0.22758100000000031 2.0914200000000003 -1.4931199999999996 1;
@@ -1634,7 +1634,7 @@ createNode joint -n "L_Pointer_01_Jnt" -p "L_Hand_Jnt";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
 	setAttr ".jo" -type "double3" 153.90560119995902 -25.855916038947047 0.73468915019509839 ;
-	setAttr ".pa" -type "double3" 9.9392333795735688e-16 -4.1347210859025721e-14 -2.3059021440610491e-14 ;
+	setAttr ".pa" -type "double3" 9.9392333795735688e-16 -4.1347210859025715e-14 -2.3059021440610491e-14 ;
 	setAttr ".bps" -type "matrix" 0.35556722875079722 0.79898558300168143 0.48496802368191383 0
 		 0.43993802901985579 0.31473001191205824 -0.84107047874952845 0 -0.82463717867957109 0.51241297578935197 -0.23959646446076427 0
 		 0.17558100000000043 1.9758400000000005 -1.8532999999999995 1;
@@ -99321,11 +99321,11 @@ createNode scaleConstraint -n "R_Hand_Ctrl_Grp_scaleConstraint1" -p "R_Hand_Ctrl
 	setAttr ".o" -type "double3" 1.0000000000000002 1.0000000000000002 -1 ;
 	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "4B0B7378-4CE0-2233-AFF7-869131C8EC4E";
+	rename -uid "FD978FC6-4A95-D91A-C9E2-0298F1DDD44A";
 	setAttr -s 15 ".lnk";
 	setAttr -s 15 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "1E5A12FF-41CD-0FA9-F2CD-83AD1FE0FAB7";
+	rename -uid "C8A2A6DF-48FE-CF49-CB01-9B94D36DD97E";
 	setAttr ".cdl" 2;
 	setAttr -s 5 ".dli[1:4]"  1 2 3 4;
 	setAttr -s 4 ".dli";
@@ -99333,14 +99333,14 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "BA18717C-4E69-1433-26FF-D189842A4688";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "D7822387-4BED-20A2-ACA6-589C482C672A";
+	rename -uid "B158E599-4116-B4EE-F234-DD9475FAC94D";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "3EE72862-4B84-B725-A719-77BBAB4419B8";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "094FF868-45E8-1F0A-7F80-D68DC031950D";
+	rename -uid "075FE654-40EF-F052-9C4D-328718D3D4FE";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "B898C997-4845-6056-B915-9F98B6A24C98";
+	rename -uid "7E5FC7BE-45FF-E064-6F2A-9E8689D34C45";
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "8802CE8F-4FA3-DC48-DA4E-C78D49887181";
 	setAttr ".version" -type "string" "5.4.8.2";
@@ -99558,15 +99558,15 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 548\n            -height 319\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 548\n            -height 318\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
-		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 548\n            -height 318\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
 		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1103\n            -height 684\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
@@ -101287,11 +101287,22 @@ createNode groupParts -n "groupParts5";
 createNode skinCluster -n "skinCluster1";
 	rename -uid "69F5047B-4A20-7183-0CFB-AE8E92125FF2";
 	setAttr -s 4218 ".wl";
-	setAttr ".wl[0:499].w"
+	setAttr ".wl[0:272].w"
 		1 0 1
+		3 2 0.084418426000000005 3 0.19318508600000001 4 0.722396488
 		1 0 1
+		3 2 0.085630629999999999 3 0.195980775 4 0.71838859500000007
 		1 0 1
 		1 0 1
+		4 0 0.137023969 2 0.39666558199999996 3 0.33737356000000002 
+		4 0.128936889
+		4 0 0.13732087600000001 2 0.39668630800000004 3 0.33720491000000002 
+		4 0.12878790600000001
+		3 0 0.74659759499999989 2 0.227583912 3 0.025818493000000001
+		4 0 0.74654574600000001 2 0.227633953 3 0.025819482000000001 
+		4 8.1900000000000001e-07
+		3 2 0.218719316 3 0.41040989899999997 4 0.37087078499999998
+		3 2 0.219325821 3 0.41092408999999996 4 0.369750089
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101299,9 +101310,19 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.067521725000000005 3 0.16044703399999999 4 0.77203124099999998
 		1 0 1
+		3 2 0.069452614999999995 3 0.165051687 4 0.76549569800000006
 		1 0 1
 		1 0 1
+		4 0 0.13270674399999999 2 0.39334772400000007 3 0.35403538099999998 
+		4 0.11991015100000001
+		4 0 0.13210437 2 0.39328428699999995 3 0.35442837500000002 
+		4 0.120182968
+		3 0 0.74091458399999999 2 0.24066507400000001 3 0.018420341999999999
+		3 0 0.74082874600000004 2 0.23188858900000001 3 0.027282665000000001
+		3 2 0.21695067300000001 3 0.42469750799999995 4 0.35835181900000002
+		3 2 0.21494897099999999 3 0.42289702099999987 4 0.36215400800000003
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101310,7 +101331,17 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		4 0 0.13289600600000001 2 0.39478489199999994 3 0.34893977599999998 
+		4 0.123379326
+		3 2 0.070996983 3 0.166288344 4 0.76271467300000007
+		3 0 0.74094467199999992 2 0.22993086500000001 3 0.029124463
+		3 2 0.21960089999999999 3 0.42050323500000014 4 0.35989586499999998
 		1 0 1
+		3 2 0.069042438999999997 3 0.16170241099999999 4 0.76925515
+		4 0 0.13224714900000001 2 0.39473548700000005 3 0.34931560099999998 
+		4 0.12370176300000001
+		3 0 0.74102659299999996 2 0.244977424 3 0.013995983
+		3 2 0.217620067 3 0.41876922500000008 4 0.363610708
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101327,16 +101358,36 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.13601782100000001 3 0.31024859500000002 4 0.55373358399999995
+		3 2 0.074075526000000003 3 0.17095695999999999 4 0.75496751399999995
 		1 0 1
 		1 0 1
+		3 2 0.075449418000000004 3 0.17231331799999999 4 0.75223726400000002
 		1 0 1
 		1 0 1
 		1 0 1
 		1 0 1
+		4 0 0.46107192200000008 2 0.36431735599999998 3 0.14923076099999999 
+		4 0.025379960999999999
+		3 2 0.31122546299999998 3 0.43821696099999996 4 0.250557576
+		4 0 0.13988973499999999 2 0.39686464999999999 3 0.33559665300000002 
+		4 0.127648962
+		4 0 0.13451264800000001 2 0.39574220299999985 3 0.34318731299999999 
+		4 0.12655783600000001
+		4 0 0.46118179699999995 2 0.36429303600000001 3 0.14908816599999999 
+		4 0.025437001000000001
+		2 0 0.93167184999999997 2 0.068328150000000004
+		3 0 0.74251861199999991 2 0.22907799500000001 3 0.028403392999999999
+		3 0 0.75014854600000003 2 0.22922557900000001 3 0.020625874999999998
+		3 2 0.31095710700000001 3 0.43817585899999995 4 0.25086703399999999
+		3 2 0.13717034 3 0.31290527200000001 4 0.54992438799999999
+		3 2 0.21863349200000001 3 0.40948148099999992 4 0.37188502699999998
+		3 2 0.22070105500000001 3 0.41584144700000009 4 0.36345749799999999
 		1 0 1
 		1 0 1
 		1 0 1
 		1 0 1
+		3 0 0.93158878300000003 2 0.067428111999999998 3 0.00098310499999999996
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101344,8 +101395,13 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.067876138000000003 3 0.16070788499999999 4 0.77141597699999997
 		1 0 1
 		1 0 1
+		4 0 0.132016258 2 0.39380751999999986 3 0.35283940200000002 
+		4 0.12133682
+		3 0 0.74084491399999997 2 0.242839099 3 0.016315987000000001
+		3 2 0.215672433 3 0.42188005600000006 4 0.362447511
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101353,9 +101409,20 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.30484885099999998 3 0.45770147799999999 4 0.237449671
+		3 2 0.30591960299999998 3 0.4575946520000001 4 0.236485745
+		3 0 0.93007341599999993 2 0.068876620999999999 3 0.0010499629999999999
+		3 0 0.92967352599999997 2 0.070114094000000002 3 0.00021238
+		4 0 0.44858276899999994 2 0.36959461399999999 3 0.15271444100000001 
+		4 0.029108175999999999
+		4 0 0.44841841199999993 2 0.36963753799999999 3 0.15280947 
+		4 0.02913458
 		1 0 1
 		1 0 1
+		3 2 0.039858538999999998 3 0.09438713 4 0.86575433099999999
 		1 0 1
+		3 2 0.13396302700000001 3 0.321412904 4 0.54462406900000004
+		3 2 0.13162017600000001 3 0.31570988 4 0.55266994400000002
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101364,8 +101431,30 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.069811512000000006 3 0.16530394900000001 4 0.76488453899999997
+		4 0 0.132619133 2 0.39386804000000003 3 0.35245389199999999 
+		4 0.12105893500000001
+		3 0 0.74075879000000011 2 0.230940121 3 0.028301089000000001
+		3 2 0.21766672500000001 3 0.42366779199999999 4 0.35866548300000001
 		1 0 1
+		3 2 0.071970434999999999 3 0.166087023 4 0.761942542
+		4 0 0.133777705 2 0.39569778200000005 3 0.34355439799999998 
+		4 0.12697011499999999
+		4 0 0.742497776 2 0.22909616699999999 3 0.028405341000000001 
+		4 7.1600000000000001e-07
+		3 2 0.219036921 3 0.41438828900000008 4 0.36657478999999998
 		1 0 1
+		3 2 0.13464910399999999 3 0.31541351099999998 4 0.549937385
+		4 0 0.44843619499999993 2 0.369692786 3 0.15180490699999999 
+		4 0.030066111999999999
+		3 0 0.92977360200000003 2 0.070156897999999995 3 6.9499999999999995e-05
+		3 2 0.30867227600000002 3 0.44972268999999993 4 0.241605034
+		3 2 0.30973690199999998 3 0.44961210000000007 4 0.240650998
+		3 0 0.93013581900000009 2 0.068557412999999998 3 0.001306768
+		4 0 0.44830196500000008 2 0.36972987899999998 3 0.151880072 
+		4 0.030088084000000001
+		3 2 0.040853794999999998 3 0.095623533999999996 4 0.86352267100000002
+		3 2 0.137060299 3 0.32108435800000001 4 0.54185534299999993
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101396,9 +101485,21 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.13843462400000001 3 0.31867132399999998 4 0.54289405199999996
+		3 2 0.138929988 3 0.315114905 4 0.54595510700000005
 		1 0 1
+		3 2 0.042185862999999997 3 0.097377750999999999 4 0.86043638600000005
 		1 0 1
 		1 0 1
+		4 0 0.46797325499999998 2 0.36193188700000001 3 0.156085897 
+		4 0.014008961
+		4 0 0.45230452800000004 2 0.36795611499999997 3 0.15096763099999999 
+		4 0.028771726000000001
+		3 0 0.93046799699999994 2 0.068211954000000005 3 0.001320049
+		3 0 0.93281430700000001 2 0.066759553999999999 3 0.00042613900000000002
+		4 0 6.4000000000000004e-08 2 0.31192538600000003 3 0.43488353999999996 
+		4 0.25319100999999999
+		3 2 0.31150443900000002 3 0.44343660499999987 4 0.24505895599999999
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101407,11 +101508,27 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.30595906299999998 3 0.455479945 4 0.238560992
+		3 0 0.92971635200000002 2 0.070138221000000001 3 0.000145427
+		4 0 0.44817090499999995 2 0.36959976999999999 3 0.153235802 
+		4 0.028993523
 		1 0 1
+		3 2 0.13265972400000001 3 0.31592531600000001 4 0.55141496000000001
 		1 0 1
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.136144612 3 0.31337995800000001 4 0.55047542999999999
+		4 0 0.45207407499999996 2 0.36801351900000001 3 0.15110257499999999 
+		4 0.028809831000000001
+		3 0 0.93028136399999994 2 0.069704877999999998 3 1.3757999999999999e-05
+		3 2 0.31061464500000002 3 0.44347508199999996 4 0.24591027300000001
+		3 2 0.30702618399999998 3 0.45536957500000008 4 0.23760424099999999
+		3 0 0.93010570000000004 2 0.068773767999999999 3 0.001120532
+		4 0 0.4480074 2 0.36964276600000001 3 0.15333084199999999 4 
+		0.029018992
+		3 2 0.040046539999999999 3 0.094577429000000005 4 0.86537603100000005
+		3 2 0.135031754 3 0.32163157199999998 4 0.54333667400000007
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101454,12 +101571,25 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.084419915999999998 3 0.192764607 4 0.72281547699999993
 		1 0 1
+		3 2 0.085611732999999995 3 0.195505864 4 0.71888240299999995
 		1 0 1
 		1 0 1
+		4 0 0.128521474 2 0.40067858100000014 3 0.33718143299999997 
+		4 0.13361851199999999
+		4 0 0.12886197199999999 2 0.40068318100000005 3 0.33705379299999999 
+		4 0.13340105399999999
+		3 0 0.72872628500000003 2 0.24305790699999999 3 0.028215807999999998
+		4 0 0.7286329399999999 2 0.24312149399999999 3 0.028242553 
+		4 3.0130000000000002e-06
+		3 2 0.219350341 3 0.40892362599999993 4 0.37172603300000001
+		3 2 0.21998521500000001 3 0.40948344100000006 4 0.37053134399999998
 		1 0 1
 		1 0 1
 		1 0 1
+		1 0 1;
+	setAttr ".wl[273:549].w"
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101470,7 +101600,17 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		4 0 0.132063918 2 0.39652883400000005 3 0.34545995499999999 
+		4 0.12594729299999999
+		3 2 0.070746350999999999 3 0.165766372 4 0.76348727699999996
+		3 0 0.73783281800000011 2 0.23331564799999999 3 0.028851534000000002
+		3 2 0.220186727 3 0.42011284399999999 4 0.35970042899999999
 		1 0 1
+		3 2 0.068811070000000002 3 0.16121996399999999 4 0.76996896599999998
+		4 0 0.131415424 2 0.39648152399999992 3 0.34583276400000001 
+		4 0.12627028800000001
+		3 0 0.73791350299999992 2 0.235505347 3 0.026581150000000001
+		3 2 0.218184091 3 0.41837898600000006 4 0.36343692300000002
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101487,16 +101627,36 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.13576215599999999 3 0.30881046899999998 4 0.55542737500000006
+		3 2 0.073692256999999997 3 0.169883697 4 0.75642404600000002
 		1 0 1
 		1 0 1
+		3 2 0.074868039999999997 3 0.17061837299999999 4 0.75451358700000004
 		1 0 1
 		1 0 1
 		1 0 1
 		1 0 1
+		4 0 0.43636097599999996 2 0.379030178 3 0.15377714200000001 
+		4 0.030831704000000001
+		3 2 0.31261079400000003 3 0.43660344999999995 4 0.25078575600000003
+		4 0 0.12844766299999999 2 0.40185406499999993 3 0.33373778399999998 
+		4 0.13596048799999999
+		4 0 0.130641321 2 0.39899138999999995 3 0.340192944 4 
+		0.130174345
+		4 0 0.43665289400000007 2 0.37892784899999998 3 0.153654966 
+		4 0.030764290999999999
+		3 0 0.92633375399999995 2 0.072876502999999995 3 0.00078974299999999998
+		3 0 0.7332407070000001 2 0.238218914 3 0.028540379000000001
+		3 0 0.72716617699999997 2 0.24288728200000001 3 0.029946541
+		3 2 0.31229909 3 0.43661348699999997 4 0.25108742299999998
+		3 2 0.13695214999999999 3 0.311533748 4 0.55151410200000006
+		3 2 0.218415256 3 0.40722379799999997 4 0.37436094600000003
+		3 2 0.22171522699999999 3 0.41491573600000003 4 0.36336903700000001
 		1 0 1
 		1 0 1
 		1 0 1
 		1 0 1
+		3 0 0.92622760599999998 2 0.073037640000000001 3 0.00073475400000000001
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101504,8 +101664,13 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.067818182000000005 3 0.16066620500000001 4 0.77151561300000004
 		1 0 1
 		1 0 1
+		4 0 0.132056639 2 0.39419447099999994 3 0.351747741 4 
+		0.122001149
+		3 0 0.74035276899999991 2 0.23763004500000001 3 0.022017186000000001
+		3 2 0.21587342200000001 3 0.42184996499999999 4 0.36227661300000003
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101521,8 +101686,30 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.069737821000000005 3 0.16523028100000001 4 0.76503189800000004
+		4 0 0.13265943999999999 2 0.39425584100000005 3 0.35135924499999999 
+		4 0.121725474
+		3 0 0.74026683199999999 2 0.23181516499999999 3 0.027918003
+		3 2 0.21787656899999999 3 0.4236271800000001 4 0.35849625099999999
 		1 0 1
+		3 2 0.071580497000000007 3 0.16499997299999999 4 0.76341953000000007
+		4 0 0.12987549600000001 2 0.39895521599999995 3 0.34057327999999998 
+		4 0.13059600800000001
+		4 0 0.73318964600000003 2 0.238258887 3 0.028550369999999999 
+		4 1.097e-06
+		3 2 0.220018305 3 0.41345743799999995 4 0.36652425700000002
 		1 0 1
+		3 2 0.134026532 3 0.31441237100000002 4 0.551561097
+		4 0 0.44648243899999995 2 0.37160047699999998 3 0.150968411 
+		4 0.030948672999999999
+		3 0 0.92868141900000001 2 0.070424672999999993 3 0.00089390800000000001
+		3 2 0.30976760399999997 3 0.44820085400000004 4 0.24203154199999999
+		3 2 0.31082644300000001 3 0.44807518599999996 4 0.24109837100000001
+		3 0 0.92904788800000004 2 0.069861308999999996 3 0.001090803
+		4 0 0.44636683600000004 2 0.37162625799999999 3 0.15103535700000001 
+		4 0.030971549000000001
+		3 2 0.040844295000000003 3 0.095574937999999998 4 0.86358076699999997
+		3 2 0.13643079899999999 3 0.32008645200000002 4 0.54348274900000004
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101553,9 +101740,20 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.13776723799999999 3 0.31689264299999997 4 0.54534011900000001
+		3 2 0.13853056399999999 3 0.31303263100000001 4 0.54843680500000003
 		1 0 1
+		3 2 0.041580573000000003 3 0.095835370000000003 4 0.86258405699999996
 		1 0 1
 		1 0 1
+		4 0 0.43469271200000004 2 0.38015816699999999 3 0.15371225599999999 
+		4 0.031436865000000001
+		4 0 0.44188860199999991 2 0.37511313000000002 3 0.15198562800000001 
+		4 0.031012640000000001
+		3 0 0.92755569500000001 2 0.071473330000000002 3 0.00097097500000000001
+		3 0 0.92603230300000006 2 0.073382486999999996 3 0.00058520999999999996
+		3 2 0.31023257500000001 3 0.43628838900000005 4 0.25347903599999999
+		3 2 0.31306696699999997 3 0.44116720700000006 4 0.24576582599999999
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101564,11 +101762,27 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.30628231900000003 3 0.45511442699999988 4 0.23860325399999999
+		3 0 0.92943780799999998 2 0.070133212 3 0.00042897999999999998
+		4 0 0.44843852400000001 2 0.36994682099999998 3 0.15180548999999999 
+		4 0.029809164999999999
 		1 0 1
+		3 2 0.13231896100000001 3 0.31563670300000002 4 0.55204433599999991
 		1 0 1
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.135490582 3 0.31161946099999999 4 0.55288995699999999
+		4 0 0.44151748199999996 2 0.37524373700000002 3 0.152171426 
+		4 0.031067355000000001
+		3 0 0.92737117300000005 2 0.071536037999999996 3 0.001092789
+		3 2 0.31218711599999999 3 0.44123006200000003 4 0.24658282200000001
+		3 2 0.30734738900000003 3 0.45499924199999997 4 0.237653369
+		3 0 0.92982853899999995 2 0.069124241000000003 3 0.00104722
+		4 0 0.44827592500000002 2 0.36998962000000002 3 0.151897799 
+		4 0.029836656
+		3 2 0.040131554 3 0.094790925999999998 4 0.86507751999999993
+		3 2 0.134684157 3 0.32134449999999998 4 0.54397134300000005
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101612,10 +101826,16 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.17881173 3 0.377606043 4 0.44358222700000005
+		3 2 0.099445470999999994 3 0.22725427400000001 4 0.67330025500000001
+		3 2 0.072068633000000007 3 0.16753131800000001 4 0.76040004899999991
+		3 2 0.078277942000000003 3 0.179652279 4 0.74206977900000004
 		1 0 1
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.077790486000000006 3 0.17779344999999999 4 0.74441606400000004
+		3 2 0.077486983999999995 3 0.177090989 4 0.74542202700000004
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101624,7 +101844,40 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		4 0 0.61426097999999996 2 0.30517595600000003 3 0.077109088000000006 
+		4 0.0034539760000000001
+		4 0 0.29536957000000003 2 0.39601592699999993 3 0.24150455900000001 
+		4 0.067109944000000005
+		3 2 0.26292442500000002 3 0.44530604900000009 4 0.291769526
+		4 0 0.00060225199999999995 2 0.37714128099999999 3 0.41947363099999996 
+		4 0.20278283599999999
+		4 0 0.138775546 2 0.39662288699999998 3 0.33647081499999998 
+		4 0.12813075199999999
+		4 0 0.13870316199999999 2 0.39662357699999995 3 0.33650388199999998 
+		4 0.128169379
+		4 0 0.133497474 2 0.39509168800000005 3 0.34684162099999999 
+		4 0.124569217
+		4 0 0.135827376 2 0.39602479100000004 3 0.34034775699999997 
+		4 0.12780007600000001
+		4 0 0.295558714 2 0.39602041799999993 3 0.24132216500000001 
+		4 0.067098702999999996
+		4 0 0.61435142899999995 2 0.30509539600000002 3 0.077087998000000005 
+		4 0.0034651769999999998
 		1 0 1
+		3 0 0.85105339200000008 2 0.14721833400000001 3 0.0017282739999999999
+		3 0 0.74142004400000006 2 0.229550752 3 0.029029203999999999
+		3 0 0.74422611000000005 2 0.22845831699999999 3 0.027315572999999999
+		3 0 0.74903849999999994 2 0.227332007 3 0.023629493000000001
+		4 0 0.74902213800000006 2 0.22736851599999999 3 0.023609337000000001 
+		4 8.9999999999999995e-09
+		3 2 0.37715739999999998 3 0.41972283900000007 4 0.20311976100000001
+		3 2 0.26250835500000003 3 0.44491412799999996 4 0.29257751700000001
+		3 2 0.100111466 3 0.22879738399999999 4 0.67109114999999997
+		3 2 0.180135341 3 0.37924446000000001 4 0.4406201990000001
+		3 2 0.21833323700000001 3 0.40951870600000007 4 0.37214805699999998
+		3 2 0.21818021800000001 3 0.40939042599999992 4 0.37242935599999999
+		3 2 0.220441359 3 0.41826983699999992 4 0.36128880400000002
+		3 2 0.220308118 3 0.41330539500000008 4 0.36638648699999998
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101633,11 +101886,15 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 0 0.85103105900000009 2 0.14250157499999999 3 0.0064673659999999996
+		3 0 0.99992096200000002 2 7.8757999999999994e-05 3 2.8000000000000002e-07
 		1 0 1
 		1 0 1
 		1 0 1
 		1 0 1
 		1 0 1
+		1 0 1;
+	setAttr ".wl[550:813].w"
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101646,10 +101903,20 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.068356855999999994 3 0.16111420700000001 4 0.77052893700000002
+		3 2 0.067612652999999995 3 0.16050756499999999 4 0.77187978200000007
 		1 0 1
 		1 0 1
 		1 0 1
 		1 0 1
+		4 0 0.132041994 2 0.39420912700000005 3 0.35145094799999999 
+		4 0.122297931
+		4 0 0.132058236 2 0.39327264800000006 3 0.35449935100000002 
+		4 0.120169765
+		3 0 0.74090036500000001 2 0.243887085 3 0.01521255
+		3 0 0.74088015799999996 2 0.24187241000000001 3 0.017247432
+		3 2 0.21656762800000001 3 0.42059211699999988 4 0.362840255
+		3 2 0.21510780400000001 3 0.42265765199999999 4 0.36223454399999999
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101664,13 +101931,35 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.25592457899999999 3 0.46102939400000015 4 0.28304602699999998
+		3 2 0.36775364799999999 3 0.44552794299999993 4 0.186718409
+		3 2 0.25742958399999999 3 0.46243237600000003 4 0.28013803999999998
+		4 0 0.00061467300000000004 2 0.36820399599999998 3 0.44512209200000008 
+		4 0.18605923899999999
+		3 0 0.84827660500000002 2 0.14508363599999999 3 0.0066397590000000003
 		1 0 1
+		3 0 0.84821399500000005 2 0.148366464 3 0.0034195409999999999
+		3 0 0.99960125200000005 2 0.00039866100000000002 3 8.6999999999999998e-08
+		4 0 0.28513730399999998 2 0.39774255800000008 3 0.25075403299999999 
+		4 0.066366104999999995
+		4 0 0.60459200300000004 2 0.31078145099999999 3 0.075813134000000004 
+		4 0.0088134119999999996
+		4 0 0.28535855500000001 2 0.39772598500000006 3 0.25061693800000001 
+		4 0.066298521999999999
+		4 0 0.60436899499999996 2 0.310886259 3 0.075911919999999994 
+		4 0.0088328260000000002
 		1 0 1
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.040605970999999998 3 0.096260839000000001 4 0.86313318999999999
+		3 2 0.042518054999999999 3 0.100820038 4 0.856661907
 		1 0 1
 		1 0 1
+		3 2 0.097007392999999997 3 0.231454617 4 0.67153799000000003
+		3 2 0.17717503600000001 3 0.38892020900000002 4 0.43390475499999986
+		3 2 0.095149269999999994 3 0.226976815 4 0.67787391500000005
+		3 2 0.17515234900000001 3 0.38705623099999997 4 0.4377914200000001
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101687,11 +101976,54 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.069546672000000004 3 0.16511428 4 0.76533904799999997
+		3 2 0.070291725999999999 3 0.165685839 4 0.764022435
+		4 0 0.13265985599999999 2 0.39333475600000001 3 0.35411077000000002 
+		4 0.11989461799999999
+		4 0 0.132655357 2 0.39426009199999995 3 0.351082373 4 
+		0.122002178
+		3 0 0.74079436599999993 2 0.23133584500000001 3 0.027869788999999999
+		3 0 0.74081434999999995 2 0.230401562 3 0.028784087999999999
+		3 2 0.21710663199999999 3 0.42446000500000008 4 0.358433363
+		3 2 0.218557908 3 0.42235877399999994 4 0.35908331799999998
 		1 0 1
 		1 0 1
+		3 2 0.075938177999999995 3 0.17426846700000001 4 0.74979335499999999
+		3 2 0.070050561999999997 3 0.16283376399999999 4 0.76711567400000003
+		4 0 0.135257603 2 0.39600899400000006 3 0.34059476700000002 
+		4 0.128138636
+		4 0 0.13277913999999999 2 0.39504687799999993 3 0.34721679999999999 
+		4 0.124957182
+		4 0 0.7441573119999999 2 0.228512885 3 0.027328211000000002 
+		4 1.592e-06
+		3 0 0.74148933299999997 2 0.24540215100000001 3 0.013108516000000001
+		3 2 0.219122649 3 0.41227249099999996 4 0.36860485999999998
+		3 2 0.21852131399999999 3 0.41660174099999997 4 0.36487694500000001
 		1 0 1
 		1 0 1
+		3 2 0.097012040999999993 3 0.22729178799999999 4 0.67569617100000001
+		3 2 0.177784153 3 0.384438316 4 0.43777753100000011
+		4 0 0.28477228599999999 2 0.39841240599999994 3 0.24914929199999999 
+		4 0.067666015999999996
+		4 0 0.60452055400000004 2 0.30993997899999998 3 0.076445891000000002 
+		4 0.0090935760000000008
+		3 0 0.84810517000000007 2 0.14972579799999999 3 0.002169032
+		3 0 0.99966522600000007 2 0.00033476900000000001 3 5.0000000000000001e-09
+		3 2 0.25983772100000002 3 0.45452661099999986 4 0.28563566800000001
+		3 2 0.37236986799999999 3 0.43402697200000007 4 0.19360316
+		3 2 0.26137903000000001 3 0.45586566599999995 4 0.28275530399999999
+		4 0 0.00061972600000000002 2 0.37283284 3 0.43361195800000002 
+		4 0.19293547599999999
+		3 0 0.84817060099999997 2 0.14392587900000001 3 0.0079035200000000007
 		1 0 1
+		4 0 0.28503867500000002 2 0.39839010399999997 3 0.249000104 
+		4 0.067571117
+		4 0 0.60432061100000001 2 0.31003742000000001 3 0.076527742999999995 
+		4 0.0091142259999999996
+		3 2 0.041878779999999997 3 0.098041671999999996 4 0.86007954799999997
+		3 2 0.043811229 3 0.102578346 4 0.85361042499999995
+		3 2 0.098889108000000003 3 0.231708519 4 0.66940237299999994
+		3 2 0.179799135 3 0.386271325 4 0.43392954000000006
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101729,6 +102061,1021 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 2 0.137967863 3 0.32013984600000001 4 0.54189229100000003
+		3 2 0.10036854000000001 3 0.231466967 4 0.66816449300000003
+		3 2 0.13823849699999999 3 0.31647593400000001 4 0.54528556900000003
+		3 2 0.18106372400000001 3 0.38279860799999998 4 0.43613766799999998
+		3 2 0.13642158400000001 3 0.31038065399999998 4 0.55319776200000004
+		3 2 0.101216555 3 0.23054618900000001 4 0.66823725600000006
+		3 2 0.13620129 3 0.30985970200000001 4 0.55393900799999995
+		3 2 0.181356709 3 0.38101791000000002 4 0.43762538099999987
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 2 0.041331680000000003 3 0.096090132999999994 4 0.862578187
+		3 2 0.043168457 3 0.099630681999999998 4 0.85720086100000004
+		3 2 0.043580829000000001 3 0.099953466000000005 4 0.85646570499999997
+		3 2 0.045327078 3 0.104623642 4 0.85004928000000002
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		4 0 0.46632580600000006 2 0.362393301 3 0.14981631000000001 
+		4 0.021464582999999999
+		4 0 0.30064783299999998 2 0.39440278700000003 3 0.24350519200000001 
+		4 0.061444187999999997
+		4 0 0.46628517300000005 2 0.36240705400000001 3 0.15001624499999999 
+		4 0.021291528000000001
+		4 0 0.6197851310000001 2 0.30856598200000002 3 0.071577315000000002 
+		4 7.1571999999999998e-05
+		4 0 0.44965946900000009 2 0.36918517299999998 3 0.15123597999999999 
+		4 0.029919378
+		4 0 0.28860697099999999 2 0.39805897100000004 3 0.244308513 
+		4 0.069025544999999994
+		4 0 0.45618129399999996 2 0.36632610300000001 3 0.14993182799999999 
+		4 0.027560774999999999
+		4 0 0.60738956700000002 2 0.307861204 3 0.078772050999999996 
+		4 0.0059771779999999997
+		3 0 0.93023446200000004 2 0.068364149999999999 3 0.0014013879999999999
+		3 0 0.84871277300000003 2 0.14367832999999999 3 0.0076088969999999999
+		3 0 0.93081779799999997 2 0.068009333000000005 3 0.001172869
+		1 0 1
+		3 0 0.93240886099999998 2 0.066855334000000002 3 0.00073580499999999997
+		3 0 0.85335781100000008 2 0.142362197 3 0.0042799919999999998
+		3 0 0.93243910899999993 2 0.067412546000000004 3 0.000148345
+		1 0 1
+		3 2 0.31137619999999999 3 0.43592934700000008 4 0.25269445299999999
+		3 2 0.26256397100000001 3 0.44267612399999995 4 0.29475990499999999
+		3 2 0.311312168 3 0.43590681800000008 4 0.25278101400000003
+		4 0 0.0024371380000000002 2 0.37749983500000001 3 0.41626581400000007 
+		4 0.203797213
+		3 2 0.31082811500000002 3 0.44654929799999987 4 0.242622587
+		3 2 0.26309732000000002 3 0.45051279399999994 4 0.28638988599999998
+		3 2 0.31162052600000001 3 0.44057458499999996 4 0.247804889
+		4 0 0.00071534300000000001 2 0.374777317 3 0.42689283000000006 
+		4 0.19761450999999999
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 2 0.30727718999999998 3 0.45280391900000005 4 0.239918891
+		3 2 0.257061294 3 0.45922303300000006 4 0.283715673
+		3 2 0.30512026599999997 3 0.45713117599999992 4 0.237748558
+		3 2 0.36859196999999999 3 0.44306671600000003 4 0.18834131400000001
+		3 0 0.92972981500000007 2 0.070165492999999995 3 0.00010469200000000001
+		3 0 0.84819866200000005 2 0.14890150499999999 3 0.0028998330000000001
+		3 0 0.92970435299999998 2 0.070144355000000005 3 0.000151292
+		3 0 0.99962893600000002 2 0.00037102400000000002 3 4.0000000000000001e-08
+		4 0 0.44807082100000001 2 0.36974491500000001 3 0.152580576 
+		4 0.029603688
+		4 0 0.28462911499999999 2 0.39793144999999996 3 0.25106552700000001 
+		4 0.066373907999999995
+		4 0 0.44839566600000008 2 0.36959155500000002 3 0.15297913899999999 
+		4 0.029033639999999999
+		1 0 0.60436118700000008;
+	setAttr ".wl[813:1112].w"
+		3 2 0.31049984200000003 3 0.076071104000000001 4 0.0090678670000000003
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 2 0.13358873700000001 3 0.31579626799999999 4 0.550614995
+		3 2 0.095675456000000006 3 0.22712601299999999 4 0.67719853099999994
+		3 2 0.13193827599999999 3 0.31572907 4 0.55233265399999998
+		3 2 0.17592128100000001 3 0.38637733200000002 4 0.43770138699999989
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 2 0.136275703 3 0.31196009299999999 4 0.55176420400000004
+		3 2 0.098578262 3 0.22731927900000001 4 0.67410245899999999
+		3 2 0.13555113299999999 3 0.314519993 4 0.54992887400000001
+		3 2 0.17911097400000001 3 0.38094879999999998 4 0.4399402260000001
+		4 0 0.45594765800000003 2 0.36638109400000002 3 0.150093216 
+		4 0.027578031999999999
+		4 0 0.288176865 2 0.39808296000000004 3 0.244555251 4 
+		0.069184923999999995
+		4 0 0.44954106399999993 2 0.36921410999999998 3 0.15130917299999999 
+		4 0.029935653
+		4 0 0.60728837499999999 2 0.30791204 3 0.078830239999999996 
+		4 0.005969345
+		2 0 0.93088467900000005 2 0.069115320999999993
+		3 0 0.84868771999999992 2 0.15030713800000001 3 0.0010051420000000001
+		3 0 0.92992411699999999 2 0.070037760000000004 3 3.8123000000000001e-05
+		2 0 0.99975253100000006 2 0.000247469
+		3 2 0.31102517800000001 3 0.44057174599999993 4 0.248403076
+		3 2 0.26182943600000003 3 0.44938442500000009 4 0.288786139
+		3 2 0.30978784399999998 3 0.44663762099999998 4 0.24357453500000001
+		3 2 0.37442531800000001 3 0.42724667100000008 4 0.198328011
+		3 2 0.30619025999999999 3 0.45702337099999996 4 0.236786369
+		3 2 0.258579271 3 0.46060172100000008 4 0.28081900799999998
+		3 2 0.30834346099999999 3 0.45269009500000007 4 0.238966444
+		4 0 0.00060820799999999995 2 0.36903989399999998 3 0.44266667700000001 
+		4 0.18768522100000001
+		3 0 0.93010095500000001 2 0.068826718999999995 3 0.001072326
+		3 0 0.84825700300000006 2 0.144521328 3 0.007221669
+		3 0 0.93010907399999998 2 0.068615497999999997 3 0.0012754279999999999
+		1 0 1
+		4 0 0.44823139200000001 2 0.36963459999999998 3 0.15307426199999999 
+		4 0.029059746000000001
+		4 0 0.28485058800000002 2 0.39791447399999996 3 0.25093091299999998 
+		4 0.066304025000000003
+		4 0 0.44791436400000001 2 0.36978645900000001 3 0.152671425 
+		4 0.029627752
+		4 0 0.60413858600000003 2 0.31060609700000003 3 0.076167568000000005 
+		4 0.0090877489999999991
+		3 2 0.039890029 3 0.094398284999999998 4 0.86571168600000004
+		3 2 0.040866010000000001 3 0.096590014000000002 4 0.86254397599999999
+		3 2 0.040412317000000003 3 0.095095246999999994 4 0.86449243600000003
+		3 2 0.042782867000000002 3 0.101141932 4 0.85607520100000001
+		3 2 0.134289924 3 0.32142843399999999 4 0.54428164200000007
+		3 2 0.097542320000000002 3 0.231593464 4 0.67086421600000001
+		3 2 0.13597862799999999 3 0.32148500400000002 4 0.54253636800000005
+		3 2 0.177938503 3 0.388230468 4 0.43383102900000009
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 2 0.17882691100000001 3 0.37580785 4 0.44536523899999997
+		3 2 0.099694420000000006 3 0.22728293599999999 4 0.673022644
+		3 2 0.071685191999999995 3 0.16659257699999999 4 0.76172223100000003
+		3 2 0.078219018000000001 3 0.17918235099999999 4 0.74259863100000001
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 2 0.077862137999999997 3 0.17757841599999999 4 0.74455944600000001
+		3 2 0.077496399999999993 3 0.17673509300000001 4 0.74576850699999997
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		4 0 0.59147309599999998 2 0.32142770500000001 3 0.079627211000000003 
+		4 0.0074719879999999997
+		4 0 0.276251258 2 0.40561444500000005 3 0.24490536299999999 
+		4 0.073228933999999996
+		3 2 0.26441785099999998 3 0.44498815599999997 4 0.29059399299999999
+		4 0 0.00055716000000000001 2 0.377238511 3 0.41799074299999994 
+		4 0.204213586
+		4 0 0.128194583 2 0.40157554199999995 3 0.33508058800000001 
+		4 0.13514928700000001
+		4 0 0.12810354400000001 2 0.40157237899999998 3 0.33510010099999998 
+		4 0.135223976
+		4 0 0.13143234400000001 2 0.39771615399999999 3 0.34286987699999999 
+		4 0.12798162499999999
+		4 0 0.129764398 2 0.40018123099999997 3 0.33788045100000003 
+		4 0.13217392
+		4 0 0.27657366500000002 2 0.40557656999999997 3 0.24472466600000001 
+		4 0.073125098999999999
+		4 0 0.59168283599999993 2 0.321316777 3 0.079556768999999999 
+		4 0.0074436179999999999
+		2 0 0.99999994199999998 2 5.8000000000000003e-08
+		3 0 0.839192995 2 0.15308132999999999 3 0.0077256750000000004
+		3 0 0.73571152299999998 2 0.23543807999999999 3 0.028850397
+		3 0 0.73079082699999998 2 0.24061977700000001 3 0.028589396
+		3 0 0.72731806099999996 2 0.24400604100000001 3 0.028675897999999998
+		4 0 0.72728810999999993 2 0.24401524899999999 3 0.028695439999999999 
+		4 1.201e-06
+		3 2 0.37721717500000002 3 0.41822697099999995 4 0.20455585400000001
+		3 2 0.26397356599999999 3 0.44460617000000008 4 0.29142026399999998
+		3 2 0.10039999099999999 3 0.22890872200000001 4 0.67069128700000002
+		3 2 0.18008007400000001 3 0.37691972499999998 4 0.44300020100000004
+		3 2 0.218534589 3 0.40724753899999994 4 0.37421787200000001
+		3 2 0.21836023500000001 3 0.40710694800000008 4 0.37453281700000002
+		3 2 0.22128969400000001 3 0.417554341 4 0.36115596500000002
+		3 2 0.221259871 3 0.4122360510000001 4 0.36650407800000001
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 0 0.83915960200000006 2 0.154681978 3 0.0061584200000000004
+		3 0 0.99991326199999997 2 8.6643000000000004e-05 3 9.5000000000000004e-08
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 2 0.068219373999999999 3 0.160897072 4 0.77088355399999997
+		3 2 0.067586594999999999 3 0.160500272 4 0.77191313299999997
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		4 0 0.131850879 2 0.39532846399999988 3 0.34864093800000001 
+		4 0.12417971899999999
+		4 0 0.13211863900000001 2 0.39366782700000008 3 0.35325037399999998 
+		4 0.12096316
+		3 0 0.73942459799999993 2 0.23630037800000001 3 0.024275023999999999
+		3 0 0.74079729299999997 2 0.23917535700000001 3 0.020027349999999999
+		3 2 0.216923378 3 0.42042498200000006 4 0.36265164
+		3 2 0.21519824100000001 3 0.42266447499999998 4 0.362137284
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 2 0.069512732999999993 3 0.16509117600000001 4 0.76539609100000006
+		3 2 0.070136492999999994 3 0.165433412 4 0.76443009500000003
+		4 0 0.13272028399999999 2 0.39373060999999998 3 0.35285866999999999 
+		4 0.120690436
+		4 0 0.13246330100000001 2 0.39538378599999996 3 0.348263184 
+		4 0.123889729
+		3 0 0.74071187199999999 2 0.231832074 3 0.027456054000000001
+		3 0 0.7393388219999999 2 0.23250201700000001 3 0.028159160999999999
+		3 2 0.217200105 3 0.42445934199999996 4 0.35834055300000001
+		3 2 0.21892893599999999 3 0.42218489199999992 4 0.358886172
+		1 0 1
+		1 0 1
+		3 2 0.075963289000000003 3 0.173999244 4 0.75003746700000007
+		3 2 0.069669102999999996 3 0.16189737800000001 4 0.76843351900000001
+		1 0 0.1291476;
+	setAttr ".wl[1112:1365].w"
+		3 2 0.40014052100000003 3 0.33820236999999997 4 0.132509509
+		4 0 0.13070267399999999 2 0.39767412299999993 3 0.343256491 
+		4 0.12836671199999999
+		4 0 0.73067584200000002 2 0.24070782399999999 3 0.028612926 
+		4 3.4079999999999998e-06
+		3 0 0.73577655499999994 2 0.236096889 3 0.028126556
+		3 2 0.220043775 3 0.41118011199999993 4 0.36877611300000002
+		3 2 0.21933966099999999 3 0.41588302000000005 4 0.36477731899999999
+		1 0 1
+		1 0 1
+		3 2 0.096523768999999995 3 0.22634716499999999 4 0.677129066
+		3 2 0.17790766199999999 3 0.38419036299999998 4 0.43790197500000005
+		4 0 0.283759541 2 0.40013262699999996 3 0.24577153299999999 
+		4 0.070336299000000005
+		4 0 0.60181984699999991 2 0.312524317 3 0.076982846999999993 
+		4 0.0086729890000000007
+		3 0 0.84592674000000001 2 0.14753788400000001 3 0.0065353759999999999
+		3 0 0.99965980499999996 2 0.00033973599999999999 3 4.5900000000000002e-07
+		3 2 0.26089198000000002 3 0.45391982599999997 4 0.28518819400000001
+		3 2 0.37260650200000001 3 0.43314912500000008 4 0.194244373
+		3 2 0.26244806500000001 3 0.45525439999999995 4 0.28229753499999999
+		4 0 0.00063208600000000002 2 0.37304983400000002 3 0.43274553899999996 
+		4 0.19357254099999999
+		3 0 0.84598420100000005 2 0.14673061700000001 3 0.0072851820000000003
+		1 0 1
+		4 0 0.28404178800000002 2 0.40010251300000005 3 0.24561446100000001 
+		4 0.070241237999999998
+		4 0 0.60163171500000001 2 0.31261140700000001 3 0.077065968999999998 
+		4 0.0086909090000000001
+		3 2 0.041952093000000003 3 0.098201495999999999 4 0.85984641100000003
+		3 2 0.043868347000000002 3 0.102705502 4 0.85342615099999997
+		3 2 0.098385130000000001 3 0.230738101 4 0.67087676899999993
+		3 2 0.179937548 3 0.38598199599999999 4 0.43408045600000006
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 2 0.13728197 3 0.318565351 4 0.54415267899999997
+		3 2 0.099775634000000002 3 0.22988777899999999 4 0.67033658699999998
+		3 2 0.13791394400000001 3 0.314936828 4 0.54714922799999999
+		3 2 0.18133718900000001 3 0.38185321100000003 4 0.43680959999999996
+		3 2 0.13563819699999999 3 0.307894169 4 0.55646763399999999
+		3 2 0.100488326 3 0.22839345999999999 4 0.67111821400000005
+		3 2 0.13541131000000001 3 0.30736543199999999 4 0.55722325800000005
+		3 2 0.18020760399999999 3 0.37620967399999999 4 0.44358272200000004
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 2 0.040856468999999999 3 0.094902656000000002 4 0.86424087500000002
+		3 2 0.04260916 3 0.098199214000000007 4 0.85919162599999999
+		3 2 0.042689900000000003 3 0.097709783999999994 4 0.85960031599999998
+		3 2 0.044800310000000003 3 0.103265098 4 0.85193459199999999
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		4 0 0.43477780499999996 2 0.38023595199999999 3 0.153651912 
+		4 0.031334331
+		4 0 0.27518771199999997 2 0.40643951299999992 3 0.244352544 
+		4 0.074020231000000006
+		4 0 0.43469600999999986 2 0.38025597700000002 3 0.15369350500000001 
+		4 0.031354508000000003
+		4 0 0.58982325299999994 2 0.32241197300000002 3 0.079070761000000003 
+		4 0.0086940130000000004
+		4 0 0.44436050099999996 2 0.373115737 3 0.15163949700000001 
+		4 0.030884265000000001
+		4 0 0.28054831899999999 2 0.40301550100000005 3 0.24429020900000001 
+		4 0.072145971000000003
+		4 0 0.43926645999999991 2 0.37696310100000002 3 0.15333914300000001 
+		4 0.030431296
+		4 0 0.5968893420000001 2 0.31668769899999999 3 0.078666514000000007 
+		4 0.0077564449999999998
+		3 0 0.92836798899999995 2 0.070509330999999995 3 0.00112268
+		3 0 0.84250272199999998 2 0.15035680700000001 3 0.0071404709999999998
+		3 0 0.92668905499999998 2 0.072540450000000006 3 0.00077049499999999995
+		1 0 1
+		3 0 0.92601846899999996 2 0.073402232999999997 3 0.00057929800000000001
+		3 0 0.83813286400000009 2 0.15491164599999999 3 0.0069554899999999999
+		3 0 0.92605759700000001 2 0.073228184000000002 3 0.00071421899999999999
+		1 0 1
+		3 2 0.31152106800000001 3 0.43554909099999989 4 0.25292984099999999
+		3 2 0.26293883600000001 3 0.44333512100000011 4 0.29372604299999999
+		3 2 0.31139264100000003 3 0.43558939400000007 4 0.25301796500000001
+		4 0 0.0018875840000000001 2 0.37646152700000002 3 0.41547361699999996 
+		4 0.20617727199999999
+		3 2 0.31249774899999999 3 0.44407998900000006 4 0.243422262
+		3 2 0.26508831799999999 3 0.44924463899999995 4 0.28566704300000001
+		3 2 0.31323972999999999 3 0.43848955800000006 4 0.248270712
+		4 0 0.00071217999999999997 2 0.37664424699999999 3 0.42289529200000009 
+		4 0.199748281
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 2 0.30782971799999997 3 0.452173249 4 0.239997033
+		3 2 0.257437531 3 0.45909372799999987 4 0.28346874100000002
+		3 2 0.305261114 3 0.45696961400000008 4 0.237769272
+		3 2 0.36898763299999998 3 0.44234283900000004 4 0.188669528
+		3 0 0.92914432600000008 2 0.070241971 3 0.00061370299999999995
+		3 0 0.84773211399999993 2 0.14769677 3 0.0045711160000000001
+		3 0 0.92959760599999997 2 0.070150279999999995 3 0.00025211400000000001
+		3 0 0.99962744000000003 2 0.00037225600000000001 3 3.0400000000000002e-07
+		4 0 0.44779520100000003 2 0.37054207 3 0.15125659499999999 
+		4 0.030406134000000001
+		4 0 0.285204607 2 0.39825942899999994 3 0.24886378200000001 
+		4 0.067672181999999997
+		4 0 0.44863594899999992 2 0.36968053200000001 3 0.15232754900000001 
+		4 0.029355969999999999
+		4 0 0.60416649399999989 2 0.31091208799999998 3 0.076510997999999997 
+		4 0.00841042
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 2 0.13297811200000001 3 0.315064552 4 0.55195733599999997
+		3 2 0.095463641000000002 3 0.22686472199999999 4 0.67767163699999999
+		3 2 0.13180344299999999 3 0.31575039199999999 4 0.55244616499999999
+		3 2 0.17594622600000001 3 0.38658751899999999 4 0.43746625499999997
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 2 0.135944491 3 0.31042054800000002 4 0.55363496099999998
+		3 2 0.098000858999999996 3 0.22577244899999999 4 0.67622669200000007
+		3 2 0.134871834 3 0.31295595799999998 4 0.552172208
+		3 2 0.17937703399999999 3 0.38015041799999999 4 0.44047254800000007
+		4 0 0.43882739500000006 2 0.37712115699999998 3 0.153531529 
+		4 0.030519919
+		4 0 0.28000066499999998 2 0.40309131199999992 3 0.24457200700000001 
+		4 0.072336016000000003
+		4 0 0.44417834099999992 2 0.37318437700000001 3 0.15171984099999999 
+		4 0.030917441
+		4 0 0.59669630800000006 2 0.31679697400000001 3 0.078748539000000006 
+		4 0.0077581789999999996
+		3 0 0.92677784900000004 2 0.072044911000000003 3 0.00117724
+		3 0 0.842469252 2 0.14972714200000001 3 0.0078036060000000003
+		3 0 0.92805328300000001 2 0.071004218999999993 3 0.00094249799999999995
+		3 0 0.9997423769999999 2 0.00025708300000000002 3 5.4000000000000002e-07
+		3 2 0.31263777799999998 3 0.43851953700000007 4 0.24884268500000001
+		3 2 0.26378478599999999 3 0.44814011199999992 4 0.28807510200000003
+		3 2 0.31146412299999998 3 0.44419459700000008 4 0.24434127999999999
+		3 2 0.37627244399999998 3 0.42329295300000014 4 0.20043460299999999
+		3 2 0.306330665 3 0.45685905799999993 4 0.23681027700000001
+		3 2 0.258961263 3 0.46046952499999988 4 0.28056921200000001
+		3 2 0.30889027899999999 3 0.45205408499999999 4 0.23905563599999999
+		4 0 0.00061876800000000001 2 0.36943187700000002 3 0.44193511100000005 
+		4 0.188014244
+		3 0 0.92999480900000009 2 0.069024773999999997 3 0.00098041699999999992
+		3 0 0.84779335599999994 2 0.14525286100000001 3 0.0069537829999999998
+		3 0 0.92952679599999999 2 0.069342962999999994 3 0.0011302409999999999
+		1 0 1
+		4 0 0.44847231399999998 2 0.36972346099999998 3 0.152421215 
+		4 0.029383010000000001
+		4 0 0.285427241 2 0.39824169099999995 3 0.24872886499999999 
+		4 0.067602203
+		4 0 0.44764286299999995 2 0.37058098 3 0.15134414199999999 
+		4 0.030432015
+		4 0 0.60394435700000004 2 0.31101733199999998 3 0.076609443999999999 
+		4 0.0084288669999999996
+		3 2 0.039929311000000002 3 0.094500280000000006 4 0.86557040900000004
+		3 2 0.041030130999999997 3 0.097001285000000007 4 0.86196858399999998
+		3 2 0.040452989000000002 3 0.095195221999999996 4 0.86435178899999998
+		3 2 0.042931816999999997 3 0.101522182 4 0.855546001
+		3 2 0.13415359299999999 3 0.32145909299999997 4 0.54438731400000007
+		3 2 0.097321010999999999 3 0.231319671 4 0.67135931799999993
+		3 2 0.13535412599999999 3 0.32074882100000002 4 0.54389705300000002
+		3 2 0.17797063299999999 3 0.388418914 4 0.43361045299999995
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1;
+	setAttr ".wl[1366:1676].w"
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 2 0.180671208 3 0.38464816200000002 4 0.43468063000000007
+		3 2 0.099666003000000003 3 0.23157875999999999 4 0.66875523700000006
+		3 2 0.10071635499999999 3 0.23098813900000001 4 0.66829550599999998
+		3 2 0.18084320300000001 3 0.38091229100000001 4 0.43824450599999998
+		3 2 0.17941384899999999 3 0.37955861499999999 4 0.441027536
+		3 2 0.099989491999999999 3 0.22797225099999999 4 0.67203825700000008
+		3 2 0.099872468000000006 3 0.227694376 4 0.67243315599999998
+		3 2 0.179163608 3 0.379127559 4 0.44170883299999997
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 2 0.044322404000000003 3 0.103046346 4 0.85263125000000006
+		3 2 0.042322542999999997 3 0.098387435999999995 4 0.85929002099999996
+		3 2 0.048023388 3 0.11016354 4 0.841813072
+		3 2 0.048350635000000003 3 0.110917473 4 0.84073189199999998
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		4 0 0.61821915800000005 2 0.30495644599999999 3 0.074691851000000004 
+		4 0.002132545
+		4 0 0.29918620600000001 2 0.39480204299999994 3 0.241897309 
+		4 0.064114441999999994
+		4 0 0.29913116499999998 2 0.39480182000000003 3 0.241995553 
+		4 0.064071461999999996
+		4 0 0.61819194199999994 2 0.30505377299999997 3 0.074657741 
+		4 0.0020965440000000001
+		4 0 0.60532876899999999 2 0.30927375400000001 3 0.077142609000000001 
+		4 0.0082548680000000003
+		4 0 0.28625447199999998 2 0.39852218400000006 3 0.246521974 
+		4 0.068701369999999998
+		4 0 0.29177529400000002 2 0.39720344600000002 3 0.24239650600000001 
+		4 0.068624753999999996
+		4 0 0.61042777199999998 2 0.30637942499999998 3 0.078781535 
+		4 0.0044112680000000003
+		1 0 1
+		3 0 0.84826315799999996 2 0.14384476900000001 3 0.0078920729999999994
+		3 0 0.84961605500000004 2 0.14327293899999999 3 0.0071110059999999996
+		1 0 1
+		3 0 0.99996732200000005 2 3.2611000000000003e-05 3 6.7000000000000004e-08
+		3 0 0.85258020899999998 2 0.14187424100000001 3 0.0055455499999999998
+		3 0 0.85258717699999997 2 0.14469701300000001 3 0.0027158099999999999
+		1 0 1
+		4 0 0.00034005500000000002 2 0.37795680300000001 3 0.41755313600000005 
+		4 0.20415000599999999
+		3 2 0.26257328299999999 3 0.44331786100000009 4 0.29410885599999997
+		3 2 0.26245549299999998 3 0.44320535699999997 4 0.29433914999999999
+		3 2 0.37802167599999997 3 0.41770211400000007 4 0.20427621000000001
+		4 0 0.00064603499999999999 2 0.37385876699999998 3 0.43040933400000014 
+		4 0.195085864
+		3 2 0.26256627300000002 3 0.45313358999999998 4 0.28430013700000001
+		3 2 0.263283343 3 0.44776461400000006 4 0.28895204299999999
+		4 0 0.00074389200000000001 2 0.376016768 3 0.42282941599999996 
+		4 0.20040992399999999
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 2 0.370780006 3 0.438021155 4 0.19119883900000001
+		3 2 0.258353677 3 0.45712830499999996 4 0.28451801799999998
+		3 2 0.256188947 3 0.46057185099999987 4 0.28323920200000002
+		3 2 0.36808099399999999 3 0.44457446100000009 4 0.187344545
+		3 0 0.99964702299999997 2 0.00035295900000000002 3 1.7999999999999999e-08
+		3 0 0.84814670300000006 2 0.14924707300000001 3 0.0026062239999999999
+		3 0 0.84822874800000003 2 0.148676111 3 0.003095141
+		3 0 0.99961043299999996 2 0.00038948999999999999 3 7.7000000000000001e-08
+		4 0 0.60426143100000007 2 0.31031442799999998 3 0.076230731999999995 
+		4 0.0091934089999999996
+		4 0 0.284481647 2 0.39820700899999995 3 0.25036919099999999 
+		4 0.066942153000000004
+		4 0 0.28489638900000003 2 0.39768060300000002 3 0.25144929500000002 
+		4 0.065973713000000003
+		4 0 0.60450629900000008 2 0.31064286899999999 3 0.075920105000000002 
+		4 0.0089307269999999994
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 2 0.176785374 3 0.38558103300000002 4 0.43763359299999988
+		3 2 0.096271427000000007 3 0.22725235499999999 4 0.67647621800000002
+		3 2 0.095309010999999999 3 0.227041624 4 0.67764936499999995
+		3 2 0.17533505599999999 3 0.386809134 4 0.43785581000000007
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		3 2 0.17905077999999999 3 0.379018574 4 0.44193064599999998
+		3 2 0.099204751999999993 3 0.227501182 4 0.67329406599999997
+		3 2 0.097803204000000005 3 0.22723670800000001 4 0.67496008799999996
+		3 2 0.17866020399999999 3 0.38279941099999998 4 0.43854038500000009
+		4 0 0.61027549199999997 2 0.30646859900000001 3 0.078839118 
+		4 0.0044167909999999998
+		4 0 0.29140370599999998 2 0.397215384 3 0.24263854200000001 
+		4 0.068742367999999998
+		4 0 0.28590617899999998 2 0.39854737999999995 3 0.24671483799999999 
+		4 0.068831603000000005
+		4 0 0.60546810500000003 2 0.30920302999999999 3 0.077103555000000004 
+		4 0.0082253099999999996
+		2 0 0.99987987 2 0.00012013
+		3 0 0.84964157200000001 2 0.149690352 3 0.00066807599999999998
+		3 0 0.84821044800000001 2 0.150099604 3 0.0016899479999999999
+		2 0 0.99969037000000005 2 0.00030962999999999997
+		3 2 0.37587732600000001 3 0.42314182199999995 4 0.20098085199999999
+		3 2 0.262425136 3 0.44699355799999996 4 0.29058130599999998
+		3 2 0.26106137000000001 3 0.45183238499999995 4 0.28710624499999998
+		3 2 0.37340083299999999 3 0.43080186999999998 4 0.19579729700000001
+		4 0 0.00061209399999999998 2 0.36853225899999997 3 0.44416695300000003 
+		4 0.18668869399999999
+		3 2 0.257697116 3 0.46196801499999995 4 0.28033486899999999
+		3 2 0.25988440000000002 3 0.45848621799999995 4 0.28162938199999998
+		4 0 0.000608769 2 0.371237384 3 0.43760660099999993 4 
+		0.190547246
+		1 0 1
+		3 0 0.84828942499999993 2 0.14471103599999999 3 0.0069995389999999999
+		3 0 0.848216254 2 0.14431802599999999 3 0.0074657200000000003
+		1 0 1
+		4 0 0.60428327799999992 2 0.310748737 3 0.076017599000000005 
+		4 0.0089503859999999994
+		4 0 0.28511716799999998 2 0.39766418800000003 3 0.25131302100000003 
+		4 0.065905622999999997
+		4 0 0.28471506299999999 2 0.39818827499999992 3 0.25023121799999998 
+		4 0.066865443999999996
+		4 0 0.60404361200000001 2 0.31041938899999999 3 0.076323751999999995 
+		4 0.0092132470000000008
+		3 2 0.042559465999999997 3 0.10084019 4 0.85660034399999996
+		3 2 0.040644175999999997 3 0.096278806999999994 4 0.86307701700000006
+		3 2 0.041355026000000003 3 0.097363107000000004 4 0.86128186699999998
+		3 2 0.043269908000000003 3 0.10188854 4 0.854841552
+		3 2 0.177356235 3 0.38867413499999998 4 0.43396962999999994
+		3 2 0.097170852000000002 3 0.23151877800000001 4 0.67131036999999993
+		3 2 0.098143870999999994 3 0.231699556 4 0.67015657299999998
+		3 2 0.178801298 3 0.38742521000000002 4 0.43377349200000009
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101788,7 +103135,7 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1;
-	setAttr ".wl[500:999].w"
+	setAttr ".wl[1677:1985].w"
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101822,10 +103169,22 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.180859666 3 0.38397903100000003 4 0.435161303
+		3 2 0.099088318999999994 3 0.230237834 4 0.67067384699999999
+		3 2 0.100176047 3 0.22930172600000001 4 0.67052222699999997
+		3 2 0.18111939699999999 3 0.379532488 4 0.43934811500000004
+		3 2 0.17892307800000001 3 0.37462615199999999 4 0.44645076999999994
+		3 2 0.099863127999999995 3 0.22717563800000001 4 0.67296123399999996
+		3 2 0.099707703999999994 3 0.226812455 4 0.67347984100000002
+		3 2 0.178297974 3 0.374044133 4 0.44765789300000003
 		1 0 1
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.043992180999999998 3 0.10220905600000001 4 0.85379876300000002
+		3 2 0.041980256000000001 3 0.097519740999999993 4 0.86050000300000007
+		3 2 0.048820939000000001 3 0.111776506 4 0.83940255500000005
+		3 2 0.049300918999999999 3 0.112879698 4 0.83781938300000003
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101834,9 +103193,41 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		4 0 0.58993706200000007 2 0.32259523600000001 3 0.079604215000000006 
+		4 0.0078634870000000006
+		4 0 0.27512871700000002 2 0.40617178399999992 3 0.245510901 
+		4 0.073188597999999994
+		4 0 0.275042277 2 0.40618552699999994 3 0.245527094 4 
+		0.073245102000000006
+		4 0 0.58987603100000008 2 0.32262007799999998 3 0.079617776000000001 
+		4 0.0078861150000000008
+		4 0 0.59945730100000005 2 0.31440808199999998 3 0.077775762999999998 
+		4 0.0083588540000000006
+		4 0 0.28248198499999999 2 0.40143076899999991 3 0.24491064900000001 
+		4 0.071176596999999994
+		4 0 0.27852250099999998 2 0.40449049600000003 3 0.24413016800000001 
+		4 0.072856834999999995
+		4 0 0.59416514499999995 2 0.31894985799999998 3 0.080129967999999996 
+		4 0.0067550290000000001
 		1 0 1
+		3 0 0.84438965099999996 2 0.14847690799999999 3 0.0071334409999999999
+		3 0 0.84061642300000006 2 0.15275502899999999 3 0.0066285479999999997
 		1 0 1
+		3 0 0.99996437800000004 2 3.5586000000000001e-05 3 3.5999999999999998e-08
+		3 0 0.83822505400000002 2 0.15508992699999999 3 0.0066850190000000004
+		3 0 0.83823586399999994 2 0.15417783500000001 3 0.0075863010000000002
 		1 0 1
+		4 0 0.00030170899999999999 2 0.37731657099999999 3 0.41627683100000007 
+		4 0.20610488900000001
+		3 2 0.26352056200000001 3 0.44354773999999997 4 0.29293169800000002
+		3 2 0.26338048400000003 3 0.44344381699999985 4 0.29317569900000001
+		3 2 0.377346762 3 0.41641981600000011 4 0.206233422
+		4 0 0.000655469 2 0.37552995900000002 3 0.42673244499999985 
+		4 0.197082127
+		3 2 0.26423006999999998 3 0.45199501200000003 4 0.28377491799999999
+		3 2 0.26507911099999998 3 0.44692937899999996 4 0.28799151000000001
+		4 0 0.00071683399999999996 2 0.377087962 3 0.42014926100000005 
+		4 0.20204594300000001
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101869,10 +103260,30 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.37012881800000003 3 0.43927126599999994 4 0.19059991600000001
+		3 2 0.25905708799999999 3 0.45681043399999988 4 0.28413247800000002
+		3 2 0.256336648 3 0.46053825099999995 4 0.28312510099999999
+		3 2 0.36828410900000003 3 0.44418035699999997 4 0.187535534
+		3 0 0.99964439199999999 2 0.00035522199999999998 3 3.8599999999999999e-07
+		3 0 0.84704502299999995 2 0.147475729 3 0.0054792479999999999
+		3 0 0.84808241800000006 2 0.148155646 3 0.003761936
+		3 0 0.99960946700000008 2 0.00039036700000000003 3 1.66e-07
+		4 0 0.60330440500000004 2 0.31147857699999998 3 0.076700490999999996 
+		4 0.0085165269999999994
+		4 0 0.28476829799999998 2 0.39907385099999992 3 0.24705233200000001 
+		4 0.069105519000000004
+		4 0 0.28527178399999997 2 0.39780420400000005 3 0.25028898700000002 
+		4 0.066635025000000001
+		4 0 0.60452366299999993 2 0.31078539599999999 3 0.076162162000000005 
+		4 0.0085287790000000002
 		1 0 1
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.176823438 3 0.385624562 4 0.43755199999999994
+		3 2 0.095898528999999996 3 0.226663638 4 0.67743783300000004
+		3 2 0.095208157000000002 3 0.22694083200000001 4 0.677851011
+		3 2 0.17536376000000001 3 0.386964747 4 0.43767149299999997
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101889,8 +103300,51 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
+		3 2 0.17936871200000001 3 0.37801506400000001 4 0.44261622400000006
+		3 2 0.098725799000000003 3 0.22595929000000001 4 0.67531491099999996
+		3 2 0.097238850000000002 3 0.22592131300000001 4 0.67683983699999994
+		3 2 0.17883142599999999 3 0.38220664199999999 4 0.438961932
+		4 0 0.59387642200000001 2 0.31911438199999997 3 0.080213378000000002 
+		4 0.0067958180000000003
+		4 0 0.27799403099999997 2 0.40455827200000005 3 0.244417103 
+		4 0.073030594000000004
+		4 0 0.28207607899999998 2 0.40148395500000006 3 0.245121913 
+		4 0.071318053000000006
+		4 0 0.59955745299999996 2 0.31436973800000001 3 0.077729129999999994 
+		4 0.0083436789999999997
+		3 0 0.99987292699999997 2 0.00012677599999999999 3 2.9700000000000003e-07
+		3 0 0.84065351300000002 2 0.15122398100000001 3 0.0081225059999999998
+		3 0 0.84433814500000004 2 0.14857709799999999 3 0.0070847569999999997
+		3 0 0.99968222399999995 2 0.000317106 3 6.7000000000000004e-07
+		3 2 0.37690685800000001 3 0.42049651800000004 4 0.202596624
+		3 2 0.26419263300000001 3 0.44617337499999993 4 0.28963399200000001
+		3 2 0.26269942899999998 3 0.45070454800000009 4 0.28659602299999998
+		3 2 0.37507700599999999 3 0.42713974699999996 4 0.197783247
+		4 0 0.00061723699999999997 2 0.36873395799999997 3 0.44376838900000004 
+		4 0.18688041599999999
+		3 2 0.25784658799999999 3 0.46193313799999997 4 0.28022027399999999
+		3 2 0.26059897700000001 3 0.45816430899999994 4 0.281236714
+		4 0 0.00062024900000000002 2 0.37056650800000002 3 0.43887587300000003 
+		4 0.18993736999999999
 		1 0 1
+		3 0 0.84814443500000003 2 0.14513477999999999 3 0.006720785
+		3 0 0.84710485199999996 2 0.14590573900000001 3 0.0069894090000000002
 		1 0 1
+		4 0 0.60430060100000005 2 0.31089051299999998 3 0.076261319999999994 
+		4 0.0085475659999999995
+		4 0 0.28549333599999999 2 0.39778720300000003 3 0.25015268200000002 
+		4 0.066566779000000006
+		4 0 0.285005762 2 0.39905233600000006 3 0.24691457 4 0.069027331999999997
+		4 0 0.60308988599999991 2 0.31157968800000002 3 0.076795903999999998 
+		4 0.0085345219999999992
+		3 2 0.042632911000000002 3 0.101031261 4 0.85633582799999997
+		3 2 0.040724759999999999 3 0.096484137999999997 4 0.86279110199999998
+		3 2 0.041465973000000003 3 0.097643409 4 0.860890618
+		3 2 0.043365331999999999 3 0.10213831600000001 4 0.85449635199999996
+		3 2 0.17738725799999999 3 0.388817729 4 0.43379501300000006
+		3 2 0.097065263999999998 3 0.23141245199999999 4 0.67152228400000002
+		3 2 0.097756075999999997 3 0.231088923 4 0.67115500100000003
+		3 2 0.17885135799999999 3 0.38743650699999999 4 0.43371213500000011
 		1 0 1
 		1 0 1
 		1 0 1
@@ -101983,1268 +103437,493 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1;
-	setAttr ".wl[1000:1499].w"
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1;
-	setAttr ".wl[1500:1999].w"
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1;
+	setAttr ".wl[1986:2485].w"
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
 		1 5 1
 		1 5 1
 		1 5 1
@@ -103291,7 +103970,7 @@ createNode skinCluster -n "skinCluster1";
 		1 5 1
 		1 5 1
 		1 5 1;
-	setAttr ".wl[2000:2499].w"
+	setAttr ".wl[2486:2985].w"
 		1 5 1
 		1 5 1
 		1 5 1
@@ -103788,512 +104467,11 @@ createNode skinCluster -n "skinCluster1";
 		1 5 1
 		1 5 1
 		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1;
-	setAttr ".wl[2500:2999].w"
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 5 1
-		1 6 1
-		1 6 1
-		1 6 1
-		1 6 1
-		1 6 1
-		1 6 1
-		1 6 1
-		1 6 1
-		1 6 1
-		1 6 1
-		1 6 1
-		1 6 1
-		1 6 1
-		1 6 1
 		1 6 1
 		1 6 1
 		1 6 1
 		1 6 1;
-	setAttr ".wl[3000:3499].w"
+	setAttr ".wl[2986:3485].w"
 		1 6 1
 		1 6 1
 		1 6 1
@@ -104494,6 +104672,20 @@ createNode skinCluster -n "skinCluster1";
 		1 6 1
 		1 6 1
 		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
 		1 9 1
 		1 9 1
 		1 9 1
@@ -104736,20 +104928,6 @@ createNode skinCluster -n "skinCluster1";
 		1 8 1
 		1 8 1
 		1 8 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
-		1 0 1
 		1 0 1
 		1 0 1
 		1 0 1
@@ -104794,7 +104972,21 @@ createNode skinCluster -n "skinCluster1";
 		1 0 1
 		1 0 1
 		1 0 1;
-	setAttr ".wl[3500:3858].w"
+	setAttr ".wl[3486:3855].w"
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
 		1 0 1
 		1 0 1
 		1 0 1
@@ -105180,16 +105372,16 @@ createNode skinCluster -n "skinCluster1";
 		7 0 5.9744999999999998e-05 37 0.25967688500000002 38 0.57126939700000001 
 		40 0.003435451 41 0.001373513 43 0.111414952 44 0.052770057000000002
 		3 37 0.86504900100000004 43 0.13378733400000001 44 0.0011636649999999999
-		7 0 9.9580000000000002e-06 37 0.91173373199999996 38 0.066497524000000002 
-		40 0.00065978399999999996 41 0.000231561 43 0.015991646000000002 44 
-		0.0048757949999999996
+		6 0 9.9580000000000002e-06 37 0.91173373199999996 38 0.066497524000000002 
+		40 0.00065978399999999996 41 0.000231561 43 0.015991646000000002;
+	setAttr ".wl[3855:3943].w"
+		1 44 0.0048757949999999996
 		5 0 0.00018292100000000001 37 0.70197118000000003 40 0.22262024399999999 
 		43 0.062503697999999996 44 0.012721957000000001
 		5 0 1.6367000000000001e-05 37 0.74924422400000001 40 0.14995847700000001 
 		43 0.088801114 44 0.011979818
-		3 0 1.0013000000000001e-05 37 0.271704116 38 0.25598593400000003;
-	setAttr ".wl[3858:3945].w"
-		4 40 0.00051721000000000004 41 0.00022792299999999999 43 0.28954686699999993 
+		7 0 1.0013000000000001e-05 37 0.271704116 38 0.25598593400000003 
+		40 0.00051721000000000004 41 0.00022792299999999999 43 0.28954686699999993 
 		44 0.18200793700000001
 		6 0 7.6823999999999995e-05 37 0.40697952800000015 40 0.35443323900000001 
 		41 0.022044985 43 0.15883218599999999 44 0.057633238000000003
@@ -105369,14 +105561,15 @@ createNode skinCluster -n "skinCluster1";
 		7 0 7.1999999999999996e-08 37 0.010522213000000001 38 0.98488485400000003 
 		40 6.9550000000000003e-06 41 2.8760000000000001e-06 43 0.003239455 44 
 		0.0013435750000000001
-		7 0 5.1e-08 37 0.0058776369999999998 38 0.99083508499999995 40 
-		4.6550000000000003e-06 41 1.9640000000000002e-06 43 0.00228977 44 0.00099083799999999996
+		1 0 5.1e-08;
+	setAttr ".wl[3943:4031].w"
+		6 37 0.0058776369999999998 38 0.99083508499999995 40 4.6550000000000003e-06 
+		41 1.9640000000000002e-06 43 0.00228977 44 0.00099083799999999996
 		7 0 3.4e-08 37 0.0018297980000000001 38 0.99663163700000001 40 
 		2.2230000000000001e-06 41 9.5900000000000005e-07 43 0.001052852 44 0.00048249700000000003
-		1 0 1.2839999999999999e-06;
-	setAttr ".wl[3945:4033].w"
-		6 37 0.027893003999999999 38 0.94721514399999995 40 7.2718000000000004e-05 
-		41 3.0477999999999999e-05 43 0.017163479999999998 44 0.0076238920000000002
+		7 0 1.2839999999999999e-06 37 0.027893003999999999 38 0.94721514399999995 
+		40 7.2718000000000004e-05 41 3.0477999999999999e-05 43 0.017163479999999998 
+		44 0.0076238920000000002
 		7 0 1.7864e-05 37 0.170094467 38 0.62200942100000001 40 0.00095458499999999998 
 		41 0.00040806399999999997 43 0.136198606 44 0.070316992999999994
 		7 0 5.2507999999999999e-05 37 0.247013752 38 0.32808157700000007 
@@ -105548,16 +105741,15 @@ createNode skinCluster -n "skinCluster1";
 		5 0 2.0426999999999999e-05 37 0.94371724099999987 40 0.041849579999999997 
 		43 0.012376814 44 0.0020359380000000002
 		1 37 1
-		7 0 3.7330000000000001e-06 37 0.86546217000000003 38 0.118269042 
-		40 0.00024479999999999999 41 8.6774000000000006e-05 43 0.013008238 44 
-		0.0029252430000000001
+		5 0 3.7330000000000001e-06 37 0.86546217000000003 38 0.118269042 
+		40 0.00024479999999999999 41 8.6774000000000006e-05;
+	setAttr ".wl[4031:4110].w"
+		2 43 0.013008238 44 0.0029252430000000001
 		7 0 7.4220000000000003e-06 37 0.71056931099999998 38 0.26254120600000003 
 		40 0.00047674300000000001 41 0.00017213600000000001 43 0.020813946 44 
 		0.005419236
-		5 0 8.3950000000000001e-06 37 0.53923002100000006 38 0.42984389499999998 
-		40 0.00052955600000000004 41 0.000194525;
-	setAttr ".wl[4033:4112].w"
-		2 43 0.023386653 44 0.006806955
+		7 0 8.3950000000000001e-06 37 0.53923002100000006 38 0.42984389499999998 
+		40 0.00052955600000000004 41 0.000194525 43 0.023386653 44 0.006806955
 		7 0 4.746e-06 37 0.382293043 38 0.58413896799999998 40 0.000294111 
 		41 0.00010984699999999999 43 0.025468192000000001 44 0.0076910930000000004
 		7 0 3.2629999999999999e-06 37 0.23706996499999999 38 0.73562759900000008 
@@ -105744,13 +105936,14 @@ createNode skinCluster -n "skinCluster1";
 		41 0.065998647999999993 43 0.16208922200000001 44 0.080622358000000005
 		6 0 0.000194997 37 0.31930357300000001 40 0.40207589200000005 
 		41 0.084226799000000005 43 0.128475588 44 0.065723150999999994
-		6 0 0.00034485400000000002 37 0.317814231 40 0.41379031900000013 
-		41 0.103670419 43 0.108472496 44 0.055907681000000001
+		1 0 0.00034485400000000002;
+	setAttr ".wl[4110:4197].w"
+		5 37 0.317814231 40 0.41379031900000013 41 0.103670419 43 
+		0.108472496 44 0.055907681000000001
 		6 0 0.00068418899999999998 37 0.323503553 40 0.41047849699999994 
 		41 0.112830528 43 0.10131235700000001 44 0.051190876000000003
-		3 0 0.0020710780000000001 37 0.35623622500000002 40 0.36430931600000005;
-	setAttr ".wl[4112:4199].w"
-		3 41 0.095005185000000006 43 0.121949428 44 0.060428768000000001
+		6 0 0.0020710780000000001 37 0.35623622500000002 40 0.36430931600000005 
+		41 0.095005185000000006 43 0.121949428 44 0.060428768000000001
 		6 0 0.0023664089999999999 37 0.37701328700000003 40 0.316600408 
 		41 0.083331754999999993 43 0.148723355 44 0.071964786000000003
 		6 0 0.0023968660000000001 37 0.4018878429999998 40 0.25294644100000002 
@@ -105917,16 +106110,15 @@ createNode skinCluster -n "skinCluster1";
 		7 0 4.5410000000000002e-06 37 0.43205663900000002 38 0.52429288699999999 
 		40 0.00027415000000000002 41 0.000104382 43 0.033064225000000003 44 
 		0.010203176
-		7 0 8.0290000000000005e-06 37 0.27211642800000002 38 0.68125042799999991 
-		40 0.00047823599999999999 41 0.00018522499999999999 43 0.034101592999999999 
-		44 0.011860061
+		6 0 8.0290000000000005e-06 37 0.27211642800000002 38 0.68125042799999991 
+		40 0.00047823599999999999 41 0.00018522499999999999 43 0.034101592999999999;
+	setAttr ".wl[4197:4217].w"
+		1 44 0.011860061
 		7 0 2.9809999999999999e-06 37 0.15714720500000001 38 0.81006731799999998 
 		40 0.00017863699999999999 41 6.9185999999999998e-05 43 0.024481665 44 
 		0.0080530080000000004
-		6 0 1.928e-06 37 0.091755729999999994 38 0.88593219899999998 
-		40 0.000116927 41 4.5524e-05 43 0.016563708999999999;
-	setAttr ".wl[4199:4217].w"
-		1 44 0.0055839829999999998
+		7 0 1.928e-06 37 0.091755729999999994 38 0.88593219899999998 
+		40 0.000116927 41 4.5524e-05 43 0.016563708999999999 44 0.0055839829999999998
 		7 0 1.2580000000000001e-06 37 0.055474730999999999 38 0.92913634700000003 
 		40 7.6936999999999999e-05 41 3.0150000000000001e-05 43 0.011330483000000001 
 		44 0.0039500940000000003
@@ -106438,8 +106630,8 @@ createNode dagPose -n "bindPose1";
 	setAttr ".bp" yes;
 createNode ngst2SkinLayerData -n "ngSkinToolsData_skinCluster1";
 	rename -uid "16B4EFEE-4433-A3E4-6D5B-3EA5CF3BD78E";
-	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 16 38090 {
-"o/EcYHoQAAADAAAACwAAAENPR19XZWlnaHRzAQARAQTwPwEjCQEE8D/+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CA==",
+	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 16 64345 {
+"q5AlYHoQAAAEAAAACwAAAENPR19XZWlnaHRzAQARAQTwPwEjCQEE8D/+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CA==",
 "AP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAP4IAC4IAA7YgybogwEB/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/uCD/g==",
 "4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4IP+4A==",
 "g/7gg/7gg/7gg/7gg/7gg/7gg/7gg/7gg/7gg/7gg/7gg/7gg/7gg/7gg/7gg8rggwAAAQEE8D8BBgAA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggA/ggANggAAAHp1AUBPAwAAABIZWFkX1dlaWdodHMZHAzwP3oQBSP+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQBKAQD+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0X+F0VSF0X+50z+5w==",
@@ -106475,8 +106667,33 @@ createNode ngst2SkinLayerData -n "ngSkinToolsData_skinCluster1";
 "UhUfQsY8ED/3X1nakb0SP5BOIu2Pbgo/9RpqORhd5j6+MLj6K+HjPvALdhtLKOQ+z+/yt+sCJz9FzlZcxr01PxVdy+ilXEM/NgQc1D8hUT8QFL/+eEVoPycTO2s17nM/w03cdYfdej8j7bsXhll5PwAAAAAAKTv+AQByAQC4L7Ob11QGhD6aaDAOVgb6Pqm3KXIPaxU/jk8OrZevOT8IBlIR0WsmP+6HOJgV+ghC0ALwnxLwXTFPzoU/wp1OV5usmj/6O7VF7eunPzZhzJJJ5bA/INX7NeOPtT8q6owFJYq6PxrEHCd24rw/Pst4g0JSuD9SzFvdOlW1P1Oxylqm4rE/8kQCe6sDrD8GdylisWKlP2hOuKkW/pw/ITUOXdRikj8pw2irk/mDPwg4cKxMwnY/asWHUsxLZT+KcSMMF5daP96KJ/EYiUw/xkTYRQfWLT9ePQHw0AtlF6xcvJY/VFp1o8lKsD/647+svhqzP4guovlZbMM/SIUv8dyqyj9xkuCli53RPyqSyi/cPdQ/dp1A/67C1D8OOLaVoFzQP5Jf1TyODcw/rpbGX/ojxz8/x/Vsv6XBP+g6zkLGErk/OtwGTf/msD+C/CTt6VuiP3176QitlYk/0GGD9C/cbD9gGJTG9QZWP87xKpumIEw/Vjm3iYGOQD9D7K5EGabWP8RuZpRh5NQ/JfLZHNRt0z+K9GzfIF7RP6Tu3TrPacQ/WBC2kjKFrT8AXukAegEA8FgETxnB3X+SP2yV8n8+BKw/0fN8KgZluz9xp8tLXPbFP6LLwECY184/gIaaJmuG1D9swRA0T2rYP7hAKUGYHto/obPMY8tr3D8CyfLRhJ7bP6hDdW4Sidk/ADp4APBpQoY5r8+npT9qNaUMWlC/PxCcnKBOUcs/Ko5a2AVo1D+ldh0+iSPYPyOfQF/CDto/2suxUMHq2j8WchfMqhTbP3ksCKnCztg/kOnvRqJR0j+3K6U9J87IP7zXpIXJULo/GBDaZy36pD8AADp5AHoBAPC2CkmtTvYbJj+mpFPl4GFBP+v1pqZJnkI/WVNB8f9cGz/MHatDJEcoP+T02eoCIxI/DF55vUHeBz/ImhgvYJ3/PhrExad3Xu8+emZ/LTaExT5SY/hhgySzPqq8WGsGcJ4+4lVHJtJx5j6UMvxJdu4CPy2RtcAtBhE/flfiUubJHz9W9dhWXnglP8zK9ayf/Ew/eDucXSsbWz+TPTESxbZoP9LRRu+V+W0/UL3EPl82az9iPTggrwphQogDACZ66AD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==",
 "AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAO4BAAUBAAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+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",
-"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"};
+"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"};
 	setAttr ".imo" -type "string" "{}";
 select -ne :time1;
 	setAttr ".o" 0;
